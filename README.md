@@ -1,5 +1,7 @@
 # Shaswat Raj — Portfolio
 
+🍅 **I'm Coming babygirl** 🍅
+
 Full-stack developer & AI product builder from India. I turn rough ideas into launch-ready products.
 
 **[sh20raj.github.io](https://sh20raj.github.io)**
