@@ -1,9 +1,10 @@
 ## Welcome to GitHub Pages
 
 
-### Our Repos
-- [SopPlayer](sopplayer/)
-
+### [Our Repos](https://github.com/SH20RAJ?tab=repositories&q=&type=&language=&sort=stargazers)
+- Sopplayer - Stylish HTML5 Video Player :- https://sh20raj.github.io/Sopplayer/
+- AudiPlay - A Free HTML5 Audio Player :- https://github.com/SH20RAJ/AudiPlay
+## See More Repos :- [https://github.com/SH20RAJ?tab=repositories](https://github.com/SH20RAJ?tab=repositories&q=&type=&language=&sort=stargazers)
 
 For more details see [Basic writing and formatting syntax](sopplayer/).
 
