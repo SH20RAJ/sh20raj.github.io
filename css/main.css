@@ -59,11 +59,13 @@ html {
 	html {
 		font-size: 10px;
 	}
+  
 }
 @media only screen and (max-width:400px) {
 	html {
 		font-size: 9.411764705882353px;
 	}
+  
 }
 
 html, body {
@@ -1060,6 +1062,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	.section-intro h1 {
 		font-size: 3rem;
 	}
+  .typewriter h1{
+    letter-spacing: 0.15em;
+  }
 }
 @media only screen and (max-width:600px) {
 	.section-intro h1 {
@@ -1069,11 +1074,17 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 		font-size: 1.5rem;
 		letter-spacing: .3rem;
 	}
+  .typewriter h1{
+    letter-spacing: 0.15em;
+  }
 }
 @media only screen and (max-width:400px) {
 	.section-intro h1 {
 		font-size: 2.4rem;
 	}
+  .typewriter h1{
+    letter-spacing: 0;
+  }
 }
 
 
