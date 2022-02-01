@@ -137,9 +137,7 @@
    				<img src="images/profile-pic.jpg" alt="Profile Picture">
 
    				<p class="lead">Hlw buddy, I'm Shaswat. My aim is to learn everything that will be needed to make the world a better place to leave. So, I'm currently working on myself first. 🚀 </p>
-           <p class="lead">
-             One of my Aim is to plant 1 Million+ Trees then Counting, around the globe, because I love this thing from my childhood.
-           </p>
+           
    			</div>   			
 
    		</div>   		
@@ -181,7 +179,7 @@
 
    			<h3>More About Me..</h3>
          <p> I Love 💖 </p>
-   			<ul>
+   			<ul class="disc">
            <li>Nature ☘️</li>
            <li>Exploring 🍂</li>
            <li>Music 🎼</li>
@@ -250,6 +248,13 @@
           <!--From :- https://codepen.io/isladjan/pen/bGpjZwN?editors=1010 -->
      </center> 
     </section>  
+
+ <section id="styles" class="grey-section"></section>
+<script>
+  fetch('about.html')
+  .then(response => response.text())
+  .then(data => document.getElementById('styles').innerHTML = data);
+</script>
  
    <!-- resume Section
    ================================================== -->
