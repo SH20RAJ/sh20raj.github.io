@@ -1,4 +1,11 @@
-import React, { useState, useEffect } from 'react';import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';import { Badge } from '@/components/ui/badge';import { Button } from '@/components/ui/button';import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';import { ExternalLink, Calendar, Clock, Eye, Heart, MessageCircle } from 'lucide-react';interface DevToBlog {
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ExternalLink, Calendar, Clock, Eye, Heart, MessageCircle } from 'lucide-react';
+
+interface DevToBlog {
   id: number;
   title: string;
   description: string;
@@ -20,8 +27,11 @@ import React, { useState, useEffect } from 'react';import { Card, CardContent, C
 }
 
 const Blog = () => {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const [blogs, setBlogs] = useState<DevToBlog[]>([]);
-  const [selectedBlog, setSelectedBlog] = useState<DevToBlog | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -90,20 +100,44 @@ const Blog = () => {
     fetchBlogs();
   }, [fallbackBlogs]);
 
-  // Fetch individual blog content when opening dialog
-  const fetchBlogContent = async (blog: DevToBlog) => {
-    try {
-      const response = await fetch(`https://dev.to/api/articles/${blog.id}`);
-      if (response.ok) {
-        const fullBlog = await response.json();
-        setSelectedBlog({ ...blog, body_html: fullBlog.body_html });
-      } else {
-        setSelectedBlog(blog);
-      }
-    } catch (error) {
-      console.error('Error fetching blog content:', error);
-      setSelectedBlog(blog);
+  // Check if we're viewing a specific blog
+  const isFullScreenView = !!slug;
+  const fullScreenBlog = location.state?.blog || null;
+
+  // Fetch full blog content for full-screen view
+  useEffect(() => {
+    if (isFullScreenView && fullScreenBlog && !fullScreenBlog.body_html) {
+      const fetchBlogContent = async () => {
+        try {
+          const response = await fetch(`https://dev.to/api/articles/${fullScreenBlog.id}`);
+          if (response.ok) {
+            const fullBlog = await response.json();
+            // Update the blog in location state
+            navigate(location.pathname, { 
+              state: { blog: { ...fullScreenBlog, body_html: fullBlog.body_html } },
+              replace: true 
+            });
+          }
+        } catch (error) {
+          console.error('Error fetching blog content:', error);
+        }
+      };
+      fetchBlogContent();
     }
+  }, [isFullScreenView, fullScreenBlog, navigate, location.pathname]);
+
+  // Create slug from title
+  const createSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  };
+
+  // Handle full screen blog viewing
+  const openBlogFullScreen = (blog: DevToBlog) => {
+    const blogSlug = createSlug(blog.title);
+    navigate(`/blog/${blogSlug}`, { state: { blog } });
   };
 
   if (loading) {
@@ -132,6 +166,100 @@ const Blog = () => {
     );
   }
 
+  // Full screen blog view
+  if (isFullScreenView && fullScreenBlog) {
+    return (
+      <div className="max-w-4xl mx-auto p-6 space-y-8">
+        <div className="flex items-center gap-4 mb-6">
+          <Button variant="outline" onClick={() => navigate('/blog')}>
+            ← Back to Blog
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <a href={fullScreenBlog.url} target="_blank" rel="noopener noreferrer">
+              Open on dev.to <ExternalLink className="h-3 w-3 ml-1" />
+            </a>
+          </Button>
+        </div>
+        
+        <article className="space-y-6">
+          <header className="space-y-4">
+            <h1 className="text-4xl font-bold leading-tight">{fullScreenBlog.title}</h1>
+            <p className="text-xl text-muted-foreground">{fullScreenBlog.description}</p>
+            
+            <div className="flex items-center gap-6 py-4 border-b">
+              <div className="flex items-center gap-3">
+                {fullScreenBlog.user.profile_image && (
+                  <img 
+                    src={fullScreenBlog.user.profile_image} 
+                    alt={fullScreenBlog.user.name}
+                    className="w-10 h-10 rounded-full"
+                  />
+                )}
+                <div>
+                  <p className="font-medium">{fullScreenBlog.user.name}</p>
+                  <p className="text-sm text-muted-foreground">@{fullScreenBlog.user.username}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <Calendar className="h-4 w-4" />
+                  {fullScreenBlog.readable_publish_date}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Clock className="h-4 w-4" />
+                  {fullScreenBlog.reading_time_minutes} min read
+                </span>
+                <span className="flex items-center gap-1">
+                  <Heart className="h-4 w-4" />
+                  {fullScreenBlog.public_reactions_count}
+                </span>
+                <span className="flex items-center gap-1">
+                  <MessageCircle className="h-4 w-4" />
+                  {fullScreenBlog.comments_count}
+                </span>
+              </div>
+            </div>
+          </header>
+
+          <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:scroll-mt-20 prose-img:rounded-lg">
+            {fullScreenBlog.body_html ? (
+              <div dangerouslySetInnerHTML={{ __html: fullScreenBlog.body_html }} />
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground mb-6">Content not available for preview.</p>
+                <Button size="lg" asChild>
+                  <a href={fullScreenBlog.url} target="_blank" rel="noopener noreferrer">
+                    Read Full Article on dev.to <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </Button>
+              </div>
+            )}
+          </div>
+
+          <footer className="pt-8 border-t">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Heart className="h-4 w-4" />
+                  {fullScreenBlog.public_reactions_count} reactions
+                </span>
+                <span className="flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  {fullScreenBlog.comments_count} comments
+                </span>
+              </div>
+              <Button asChild>
+                <a href={fullScreenBlog.url} target="_blank" rel="noopener noreferrer">
+                  Engage on dev.to <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </footer>
+        </article>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       {/* Header */}
@@ -155,18 +283,6 @@ const Blog = () => {
               Visit dev.to Profile <ExternalLink className="h-3 w-3 ml-1" />
             </a>
           </Button>
-        </div>
-      </div>
-
-      {/* GitHub Contribution Graph */}
-      <div className="space-y-4">
-        <h2 className="text-2xl font-semibold">📊 GitHub Activity</h2>
-        <div className="rounded-lg overflow-hidden border">
-          <img 
-            src="https://github-readme-activity-graph.vercel.app/graph?username=sh20raj&bg_color=d1ebff&color=000000&line=e594e0&point=54e316&area=true&hide_border=true"
-            alt="Shaswat's GitHub Activity Graph"
-            className="w-full h-auto"
-          />
         </div>
       </div>
 
@@ -239,88 +355,14 @@ const Blog = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-2">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="default" 
-                      size="sm" 
-                      className="flex-1"
-                      onClick={() => fetchBlogContent(blog)}
-                    >
-                      Read Here
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                    <DialogHeader>
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex-1">
-                          <DialogTitle className="text-xl leading-tight mb-2">
-                            {selectedBlog?.title}
-                          </DialogTitle>
-                          <DialogDescription className="text-base">
-                            {selectedBlog?.description}
-                          </DialogDescription>
-                        </div>
-                      </div>
-                      
-                      {/* Article Meta */}
-                      <div className="flex items-center gap-4 py-4 border-b">
-                        <div className="flex items-center gap-2">
-                          {selectedBlog?.user.profile_image && (
-                            <img 
-                              src={selectedBlog.user.profile_image} 
-                              alt={selectedBlog.user.name}
-                              className="w-8 h-8 rounded-full"
-                            />
-                          )}
-                          <div>
-                            <p className="font-medium text-sm">{selectedBlog?.user.name}</p>
-                            <p className="text-xs text-muted-foreground">@{selectedBlog?.user.username}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground ml-auto">
-                          <span>{selectedBlog?.readable_publish_date}</span>
-                          <span>{selectedBlog?.reading_time_minutes} min read</span>
-                        </div>
-                      </div>
-                    </DialogHeader>
-
-                    {/* Article Content */}
-                    <div className="prose prose-sm max-w-none dark:prose-invert">
-                      {selectedBlog?.body_html ? (
-                        <div dangerouslySetInnerHTML={{ __html: selectedBlog.body_html }} />
-                      ) : (
-                        <div className="text-center py-8">
-                          <p className="text-muted-foreground mb-4">Content preview not available.</p>
-                          <Button asChild>
-                            <a href={selectedBlog?.url} target="_blank" rel="noopener noreferrer">
-                              Read Full Article on dev.to <ExternalLink className="h-4 w-4 ml-2" />
-                            </a>
-                          </Button>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Footer Actions */}
-                    <div className="flex justify-between items-center pt-4 border-t">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Heart className="h-3 w-3" />
-                          {selectedBlog?.public_reactions_count} reactions
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MessageCircle className="h-3 w-3" />
-                          {selectedBlog?.comments_count} comments
-                        </span>
-                      </div>
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={selectedBlog?.url} target="_blank" rel="noopener noreferrer">
-                          Open on dev.to <ExternalLink className="h-3 w-3 ml-1" />
-                        </a>
-                      </Button>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => openBlogFullScreen(blog)}
+                >
+                  Read Full Article
+                </Button>
 
                 <Button variant="outline" size="sm" asChild>
                   <a href={blog.url} target="_blank" rel="noopener noreferrer">

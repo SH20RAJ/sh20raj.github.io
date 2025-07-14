@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -9,10 +8,12 @@ const Home = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       {/* Hero Section */}
-      <div className="text-center space-y-6 py-12">
-        <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
-          <span className="text-white font-bold text-2xl">SR</span>
-        </div>
+      <div className="flex flex-col items-center justify-center text-center space-y-6 py-12">
+        <img
+          src="/profile.jpg"
+          alt="Profile"
+          className="w-24 h-24 rounded-lg object-cover"
+        />
         <h1 className="text-4xl font-bold text-foreground mb-4">
           Hi, I'm Shaswat Raj 👋
         </h1>
@@ -25,15 +26,15 @@ const Home = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4 pt-6">
           <Button asChild size="lg">
-            <Link to="/projects">View My Work</Link>
+        <Link to="/projects">View My Work</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <Link to="/contact">Get In Touch</Link>
+        <Link to="/contact">Get In Touch</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="https://startups.shraj.workers.dev" target="_blank" rel="noopener noreferrer">
-              Startup Portfolio
-            </a>
+        <a href="https://startups.shraj.workers.dev" target="_blank" rel="noopener noreferrer">
+          Startup Portfolio
+        </a>
           </Button>
         </div>
       </div>
@@ -177,6 +178,60 @@ const Home = () => {
             </div>
           </div>
         </CollapsibleSection>
+      </div>
+
+      {/* Live Stats Overview */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold text-foreground">📊 Live Developer Stats</h2>
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/stats">View All Stats →</Link>
+          </Button>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Card className="hover:shadow-md transition-shadow border-blue-200 dark:border-blue-800">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-blue-600 mb-1">46</div>
+              <p className="text-sm text-muted-foreground mb-1">NPM Packages</p>
+              <p className="text-xs text-green-600">1331.7% avg quality</p>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-md transition-shadow border-green-200 dark:border-green-800">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-green-600 mb-1">471</div>
+              <p className="text-sm text-muted-foreground mb-1">GitHub Repos</p>
+              <p className="text-xs text-green-600">181 total stars</p>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-md transition-shadow border-orange-200 dark:border-orange-800">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-orange-600 mb-1">55</div>
+              <p className="text-sm text-muted-foreground mb-1">LeetCode Solved</p>
+              <p className="text-xs text-green-600">57.67% acceptance</p>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-md transition-shadow border-purple-200 dark:border-purple-800">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-purple-600 mb-1">6356K</div>
+              <p className="text-sm text-muted-foreground mb-1">Downloads</p>
+              <p className="text-xs text-green-600">Total NPM downloads</p>
+            </CardContent>
+          </Card>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card className="hover:shadow-md transition-shadow">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-indigo-600 mb-1">91</div>
+              <p className="text-sm text-muted-foreground">GitHub Followers</p>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-md transition-shadow">
+            <CardContent className="pt-6 text-center">
+              <div className="text-2xl font-bold text-pink-600 mb-1">Live</div>
+              <p className="text-sm text-muted-foreground">Real-time Data</p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   );

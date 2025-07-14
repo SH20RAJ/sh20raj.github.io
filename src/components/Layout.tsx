@@ -43,9 +43,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           {/* Header */}
           <div className="flex h-16 shrink-0 items-center px-6 border-b border-border">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">SR</span>
-              </div>
+               
+               <img
+              src="/profile.jpg"
+              alt="Profile"
+              className="w-8 h-8 rounded-lg object-cover"
+              />
               <div>
                 <h1 className="text-sm font-semibold text-foreground">Shaswat Raj</h1>
                 <p className="text-xs text-muted-foreground">Full Stack Developer</p>

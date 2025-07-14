@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -85,6 +86,8 @@ const Stats = () => {
     github: true,
     leetcode: true
   });
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeTab = searchParams.get('tab') || 'github';
 
   // Update current time every second
   useEffect(() => {
@@ -318,6 +321,11 @@ const Stats = () => {
     </Card>
   );
 
+  // Handle tab changes with URL updates
+  const handleTabChange = (value: string) => {
+    setSearchParams({ tab: value });
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
@@ -417,7 +425,11 @@ const Stats = () => {
       </div>
 
       {/* Detailed Stats Tabs */}
-      <Tabs defaultValue="github" className="space-y-6">
+      <Tabs 
+        value={activeTab}
+        onValueChange={handleTabChange}
+        className="space-y-6"
+      >
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="github" className="flex items-center gap-2">
             <Github className="h-4 w-4" />
@@ -819,6 +831,28 @@ const Stats = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* GitHub Contribution Graph */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <GitCommit className="h-5 w-5 text-green-600" />
+                GitHub Contribution Graph
+              </CardTitle>
+              <CardDescription>
+                Visual representation of my coding activity over the past year
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-lg overflow-hidden border">
+                <img 
+                  src="https://github-readme-activity-graph.vercel.app/graph?username=sh20raj&bg_color=d1ebff&color=000000&line=e594e0&point=54e316&area=true&hide_border=true"
+                  alt="Shaswat's GitHub Activity Graph"
+                  className="w-full h-auto"
+                />
+              </div>
+            </CardContent>
+          </Card>
         </TabsContent>
       </Tabs>
 
