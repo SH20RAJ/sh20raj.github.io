@@ -1,13 +1,14 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Folder, User, Pen, Mail, Menu, Sun, Moon } from 'lucide-react';
+import { Home, Folder, User, Pen, Mail, Menu, Sun, Moon, BarChart3 } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '📁 Projects', href: '/projects', icon: Folder },
+  { name: '📊 Stats', href: '/stats', icon: BarChart3 },
   { name: '🧑‍💻 About', href: '/about', icon: User },
   { name: '✍️ Blog', href: '/blog', icon: Pen },
   { name: '📬 Contact', href: '/contact', icon: Mail },
