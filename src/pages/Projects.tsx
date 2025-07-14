@@ -3,7 +3,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Search, Filter, X } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Search, Filter, X, Package, Star, GitFork, Users, Calendar, Download, ExternalLink, Github } from 'lucide-react';
 import projectsData from '@/data/projects.json';
 
 // Transform the JSON data to match the expected format
@@ -41,6 +42,61 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState(false);
+  const [npmPackages, setNpmPackages] = useState<any[]>([]);
+  const [githubStats, setGithubStats] = useState<any>(null);
+  const [npmLoading, setNpmLoading] = useState(true);
+  const [githubLoading, setGithubLoading] = useState(true);
+
+  // Fetch NPM packages
+  useEffect(() => {
+    const fetchNpmPackages = async () => {
+      try {
+        const response = await fetch('https://registry.npmjs.org/-/v1/search?text=maintainer:sh20raj&size=250');
+        const data = await response.json();
+        setNpmPackages(data.objects || []);
+      } catch (error) {
+        console.error('Error fetching NPM packages:', error);
+      } finally {
+        setNpmLoading(false);
+      }
+    };
+
+    fetchNpmPackages();
+  }, []);
+
+  // Fetch GitHub stats
+  useEffect(() => {
+    const fetchGithubStats = async () => {
+      try {
+        const response = await fetch('https://api.github.com/users/SH20RAJ');
+        const data = await response.json();
+        setGithubStats(data);
+      } catch (error) {
+        console.error('Error fetching GitHub stats:', error);
+      } finally {
+        setGithubLoading(false);
+      }
+    };
+
+    fetchGithubStats();
+  }, []);
+
+  // Calculate NPM stats
+  const npmStats = useMemo(() => {
+    if (!npmPackages.length) return { totalDownloads: 0, totalPackages: 0 };
+    
+    const totalDownloads = npmPackages.reduce((sum, pkg) => 
+      sum + (pkg.downloads?.monthly || 0), 0
+    );
+    
+    return {
+      totalDownloads,
+      totalPackages: npmPackages.length,
+      weeklyDownloads: npmPackages.reduce((sum, pkg) => 
+        sum + (pkg.downloads?.weekly || 0), 0
+      )
+    };
+  }, [npmPackages]);
 
   // URL state management
   useEffect(() => {
@@ -116,10 +172,189 @@ const Projects = () => {
         </p>
         <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
           <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full">{filteredProjects.length} of {projectsData.length} Projects</span>
-          <span className="px-3 py-1 bg-green-100 dark:bg-green-900 rounded-full">100K+ GitHub Stars</span>
-          <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 rounded-full">50+ NPM Packages</span>
+          <span className="px-3 py-1 bg-green-100 dark:bg-green-900 rounded-full">{npmStats.totalPackages} NPM Packages</span>
+          <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 rounded-full">{githubStats?.public_repos || 0} GitHub Repos</span>
         </div>
       </div>
+
+      {/* Live Stats Section */}
+      <div className="grid gap-6 md:grid-cols-2">
+        {/* NPM Stats */}
+        <Card className="border-blue-200 dark:border-blue-800">
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2">
+              <Package className="h-4 w-4 text-blue-600" />
+              NPM Packages
+            </CardTitle>
+            <Badge variant="secondary" className="ml-auto">
+              Live Data
+            </Badge>
+          </CardHeader>
+          <CardContent>
+            {npmLoading ? (
+              <div className="animate-pulse space-y-2">
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-blue-600">{npmStats.totalPackages}</span>
+                  <span className="text-sm text-muted-foreground">Published Packages</span>
+                </div>
+                <div className="space-y-1">
+                  <div className="flex justify-between text-sm">
+                    <span>Monthly Downloads:</span>
+                    <span className="font-medium">{npmStats.totalDownloads.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span>Weekly Downloads:</span>
+                    <span className="font-medium">{npmStats.weeklyDownloads.toLocaleString()}</span>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
+                    View NPM Profile <ExternalLink className="h-3 w-3 ml-1" />
+                  </a>
+                </Button>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* GitHub Stats */}
+        <Card className="border-green-200 dark:border-green-800">
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2">
+              <Github className="h-4 w-4 text-green-600" />
+              GitHub Profile
+            </CardTitle>
+            <Badge variant="secondary" className="ml-auto">
+              Live Data
+            </Badge>
+          </CardHeader>
+          <CardContent>
+            {githubLoading ? (
+              <div className="animate-pulse space-y-2">
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+              </div>
+            ) : githubStats ? (
+              <div className="space-y-3">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-green-600">{githubStats.public_repos}</div>
+                    <div className="text-xs text-muted-foreground">Repositories</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-green-600">{githubStats.followers}</div>
+                    <div className="text-xs text-muted-foreground">Followers</div>
+                  </div>
+                </div>
+                <div className="space-y-1 text-sm">
+                  <div className="flex justify-between">
+                    <span>Public Gists:</span>
+                    <span className="font-medium">{githubStats.public_gists}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Following:</span>
+                    <span className="font-medium">{githubStats.following}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Member Since:</span>
+                    <span className="font-medium">{new Date(githubStats.created_at).getFullYear()}</span>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer">
+                    View GitHub Profile <ExternalLink className="h-3 w-3 ml-1" />
+                  </a>
+                </Button>
+              </div>
+            ) : (
+              <div className="text-center text-muted-foreground">
+                Failed to load GitHub data
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* NPM Packages Section */}
+      {npmPackages.length > 0 && (
+        <div className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold">NPM Packages</h2>
+            <Button variant="outline" asChild>
+              <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
+                View All on NPM <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          </div>
+          
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {npmPackages.slice(0, 6).map((pkg) => (
+              <Card key={pkg.package.name} className="hover:shadow-md transition-shadow">
+                <CardHeader className="pb-3">
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-lg font-semibold flex items-center gap-2">
+                      <Package className="h-4 w-4 text-blue-600" />
+                      {pkg.package.name}
+                    </CardTitle>
+                    <Badge variant="outline">v{pkg.package.version}</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {pkg.package.description || "No description available"}
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="flex items-center gap-1">
+                        <Download className="h-3 w-3" />
+                        Quality:
+                      </span>
+                      <span className="font-medium">{(pkg.score.final * 100).toFixed(0)}%</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        Updated:
+                      </span>
+                      <span className="font-medium">
+                        {new Date(pkg.package.date).toLocaleDateString()}
+                      </span>
+                    </div>
+                    {pkg.package.keywords && pkg.package.keywords.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {pkg.package.keywords.slice(0, 3).map((keyword: string) => (
+                          <Badge key={keyword} variant="secondary" className="text-xs">
+                            {keyword}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex gap-2 mt-4">
+                    <Button variant="outline" size="sm" className="flex-1" asChild>
+                      <a href={pkg.package.links?.npm} target="_blank" rel="noopener noreferrer">
+                        NPM <ExternalLink className="h-3 w-3 ml-1" />
+                      </a>
+                    </Button>
+                    {pkg.package.links?.repository && (
+                      <Button variant="outline" size="sm" className="flex-1" asChild>
+                        <a href={pkg.package.links.repository} target="_blank" rel="noopener noreferrer">
+                          Code <Github className="h-3 w-3 ml-1" />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Search and Filter Controls */}
       <div className="space-y-4">
@@ -226,8 +461,12 @@ const Projects = () => {
         )}
       </div>
 
-      {/* Projects Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Featured Projects Section */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold">Featured Projects</h2>
+        
+        {/* Projects Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -244,6 +483,7 @@ const Projects = () => {
             </Button>
           </div>
         )}
+      </div>
       </div>
 
       <div className="mt-12 p-6 bg-muted rounded-lg">
