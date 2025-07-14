@@ -26,6 +26,48 @@ interface DevToBlog {
   };
 }
 
+// Fallback data in case API fails - moved outside component to prevent recreation
+const fallbackBlogs: DevToBlog[] = [
+  {
+    id: 1,
+    title: 'Building AI-Powered Voice Applications with OpenAI Whisper and ElevenLabs',
+    description: 'A comprehensive guide to creating natural voice conversation platforms using modern AI APIs, WebRTC, and real-time processing techniques.',
+    url: 'https://dev.to/sh20raj/building-ai-voice-apps',
+    published_at: '2024-12-15T10:00:00Z',
+    readable_publish_date: 'Dec 15',
+    public_reactions_count: 45,
+    comments_count: 12,
+    page_views_count: 1250,
+    reading_time_minutes: 12,
+    tag_list: ['ai', 'voice', 'openai', 'webrtc'],
+    cover_image: '',
+    user: {
+      name: 'Shaswat Raj',
+      username: 'sh20raj',
+      profile_image: ''
+    }
+  },
+  {
+    id: 2,
+    title: 'Scaling React Applications: Lessons from 100K+ Users',
+    description: 'Performance optimization strategies, caching techniques, and architecture decisions that helped scale applications to handle massive user loads.',
+    url: 'https://dev.to/sh20raj/scaling-react-apps',
+    published_at: '2024-12-01T10:00:00Z',
+    readable_publish_date: 'Dec 1',
+    public_reactions_count: 78,
+    comments_count: 23,
+    page_views_count: 2100,
+    reading_time_minutes: 10,
+    tag_list: ['react', 'performance', 'scalability', 'architecture'],
+    cover_image: '',
+    user: {
+      name: 'Shaswat Raj',
+      username: 'sh20raj',
+      profile_image: ''
+    }
+  }
+];
+
 const Blog = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -34,48 +76,6 @@ const Blog = () => {
   const [blogs, setBlogs] = useState<DevToBlog[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  // Fallback data in case API fails
-  const fallbackBlogs: DevToBlog[] = [
-    {
-      id: 1,
-      title: 'Building AI-Powered Voice Applications with OpenAI Whisper and ElevenLabs',
-      description: 'A comprehensive guide to creating natural voice conversation platforms using modern AI APIs, WebRTC, and real-time processing techniques.',
-      url: 'https://dev.to/sh20raj/building-ai-voice-apps',
-      published_at: '2024-12-15T10:00:00Z',
-      readable_publish_date: 'Dec 15',
-      public_reactions_count: 45,
-      comments_count: 12,
-      page_views_count: 1250,
-      reading_time_minutes: 12,
-      tag_list: ['ai', 'voice', 'openai', 'webrtc'],
-      cover_image: '',
-      user: {
-        name: 'Shaswat Raj',
-        username: 'sh20raj',
-        profile_image: ''
-      }
-    },
-    {
-      id: 2,
-      title: 'Scaling React Applications: Lessons from 100K+ Users',
-      description: 'Performance optimization strategies, caching techniques, and architecture decisions that helped scale applications to handle massive user loads.',
-      url: 'https://dev.to/sh20raj/scaling-react-apps',
-      published_at: '2024-12-01T10:00:00Z',
-      readable_publish_date: 'Dec 1',
-      public_reactions_count: 78,
-      comments_count: 23,
-      page_views_count: 2100,
-      reading_time_minutes: 10,
-      tag_list: ['react', 'performance', 'scalability', 'architecture'],
-      cover_image: '',
-      user: {
-        name: 'Shaswat Raj',
-        username: 'sh20raj',
-        profile_image: ''
-      }
-    }
-  ];
 
   // Fetch blogs from dev.to API
   useEffect(() => {
@@ -98,7 +98,7 @@ const Blog = () => {
     };
 
     fetchBlogs();
-  }, [fallbackBlogs]);
+  }, []); // Remove fallbackBlogs from dependency array to prevent infinite loop
 
   // Check if we're viewing a specific blog
   const isFullScreenView = !!slug;
