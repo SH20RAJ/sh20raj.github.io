@@ -32,8 +32,8 @@ const Contact = () => {
       icon: Globe,
       title: 'Portfolio',
       description: 'Visit my complete portfolio website',
-      value: 'shaswat.live',
-      link: 'https://shaswat.live',
+      value: 'sh20raj.github.io',
+      link: 'https://sh20raj.github.io',
     },
   ];
 
@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="space-y-4 text-center">
         <h1 className="text-3xl font-bold text-foreground">📬 Contact</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          I'm always interested in hearing about new opportunities, collaborations, 
+          I'm always interested in hearing about new opportunities, collaborations,
           or just having a chat about technology, AI, and full-stack development.
         </p>
         <div className="flex flex-wrap justify-center gap-2 text-sm text-muted-foreground">
@@ -54,11 +54,10 @@ const Contact = () => {
 
       <div className="grid md:grid-cols-2 gap-6">
         {contactMethods.map((method, index) => (
-          <Card 
-            key={index} 
-            className={`hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${
-              method.primary ? 'border-blue-200 dark:border-blue-800 bg-gradient-to-b from-blue-50/50 dark:from-blue-950/20' : ''
-            }`}
+          <Card
+            key={index}
+            className={`hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${method.primary ? 'border-blue-200 dark:border-blue-800 bg-gradient-to-b from-blue-50/50 dark:from-blue-950/20' : ''
+              }`}
           >
             <CardHeader className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 bg-accent rounded-lg flex items-center justify-center">
@@ -75,9 +74,9 @@ const Contact = () => {
               <p className="font-mono text-sm text-muted-foreground mb-4">
                 {method.value}
               </p>
-              <Button 
-                variant={method.primary ? "default" : "outline"} 
-                size="sm" 
+              <Button
+                variant={method.primary ? "default" : "outline"}
+                size="sm"
                 asChild
                 className="w-full"
               >
@@ -102,8 +101,8 @@ const Contact = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-muted-foreground">
-            I've founded and co-founded multiple innovative startups across AI/ML, productivity, 
-            social media, and health tech sectors. Explore live stats, investment opportunities, 
+            I've founded and co-founded multiple innovative startups across AI/ML, productivity,
+            social media, and health tech sectors. Explore live stats, investment opportunities,
             and try products on my startup dashboard.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -113,7 +112,7 @@ const Contact = () => {
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://shaswat.live/projects" target="_blank" rel="noopener noreferrer">
+              <a href="https://sh20raj.github.io/projects" target="_blank" rel="noopener noreferrer">
                 📁 View All Projects
               </a>
             </Button>
@@ -178,7 +177,7 @@ const Contact = () => {
           Ready to build something amazing together?
         </h3>
         <p className="text-muted-foreground mb-6">
-          Whether you have a startup idea, need technical leadership, or want to collaborate 
+          Whether you have a startup idea, need technical leadership, or want to collaborate
           on open source projects, I'd love to hear from you.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

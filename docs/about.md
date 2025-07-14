@@ -50,7 +50,7 @@ I value clean, maintainable code that solves real problems. I believe in continu
 - **GitHub**: [@SH20RAJ](https://github.com/SH20RAJ)
 - **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
 - **Twitter**: [@SH20RAJ](https://twitter.com/SH20RAJ)
-- **Portfolio**: [shaswat.live](https://shaswat.live)
+- **Portfolio**: [sh20raj.github.io](https://sh20raj.github.io)
 - **Dev Community**: [dev.to/sh20raj](https://dev.to/sh20raj)
 - **CodePen**: [codepen.io/sh20raj](https://codepen.io/sh20raj)
 - **Resume**: [View Resume](https://docs.google.com/document/d/1_c8_1teca5JlCIFnsSC0rqoHcvxD5VJrlE-DeKZSXf4/edit?usp=sharing)
