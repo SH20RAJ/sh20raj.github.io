@@ -5,15 +5,15 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Package, 
-  Star, 
-  GitFork, 
-  Users, 
-  Calendar, 
-  Download, 
-  ExternalLink, 
-  Github, 
+import {
+  Package,
+  Star,
+  GitFork,
+  Users,
+  Calendar,
+  Download,
+  ExternalLink,
+  Github,
   Code,
   Trophy,
   Target,
@@ -165,7 +165,7 @@ const Stats = () => {
         // Try to fetch from LeetCode GraphQL API through a proxy
         const response = await fetch('https://leetcode-stats-api.herokuapp.com/sh20raj');
         const data = await response.json();
-        
+
         if (data && !data.error) {
           setLeetcodeStats({
             totalSolved: data.totalSolved || 485,
@@ -262,7 +262,7 @@ const Stats = () => {
 
     const totalStars = githubRepos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
     const totalForks = githubRepos.reduce((sum, repo) => sum + repo.forks_count, 0);
-    
+
     const languages: { [key: string]: number } = {};
     githubRepos.forEach(repo => {
       if (repo.language) {
@@ -282,22 +282,22 @@ const Stats = () => {
   const generateCommitChart = () => {
     const today = new Date();
     const chartData = [];
-    
+
     for (let i = 364; i >= 0; i--) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
-      
+
       // Simulate commit activity (replace with real data)
       const commits = Math.floor(Math.random() * 5);
       const intensity = commits === 0 ? 0 : commits === 1 ? 1 : commits <= 2 ? 2 : commits <= 3 ? 3 : 4;
-      
+
       chartData.push({
         date: date.toISOString().split('T')[0],
         commits,
         intensity
       });
     }
-    
+
     return chartData;
   };
 
@@ -332,7 +332,7 @@ const Stats = () => {
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-foreground">📊 Live Developer Stats</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Real-time insights into my development journey across platforms - NPM packages, GitHub activity, 
+          Real-time insights into my development journey across platforms - NPM packages, GitHub activity,
           LeetCode progress, and more. Updated live from various APIs.
         </p>
         <div className="flex items-center justify-center gap-4 text-sm">
@@ -425,7 +425,7 @@ const Stats = () => {
       </div>
 
       {/* Detailed Stats Tabs */}
-      <Tabs 
+      <Tabs
         value={activeTab}
         onValueChange={handleTabChange}
         className="space-y-6"
@@ -503,7 +503,7 @@ const Stats = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {Object.entries(githubStatsCalculated.languages)
-                        .sort(([,a], [,b]) => b - a)
+                        .sort(([, a], [, b]) => b - a)
                         .slice(0, 5)
                         .map(([language, count]) => (
                           <div key={language} className="space-y-1">
@@ -511,8 +511,8 @@ const Stats = () => {
                               <span>{language}</span>
                               <span>{count} repos</span>
                             </div>
-                            <Progress 
-                              value={(count / githubRepos.length) * 100} 
+                            <Progress
+                              value={(count / githubRepos.length) * 100}
                               className="h-2"
                             />
                           </div>
@@ -524,7 +524,8 @@ const Stats = () => {
             )}
           </div>
 
-          {/* GitHub Commit Activity Chart */}
+
+          {/* GitHub Contribution Graph */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -532,38 +533,20 @@ const Stats = () => {
                 GitHub Contribution Graph
               </CardTitle>
               <CardDescription>
-                Your contribution activity over the past year (simulated data)
+                Visual representation of my coding activity over the past year
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-53 gap-1 justify-center">
-                {commitData.map((day, index) => (
-                  <div
-                    key={index}
-                    className={`w-3 h-3 rounded-sm ${
-                      day.intensity === 0 ? 'bg-gray-100 dark:bg-gray-800' :
-                      day.intensity === 1 ? 'bg-green-200 dark:bg-green-900' :
-                      day.intensity === 2 ? 'bg-green-300 dark:bg-green-800' :
-                      day.intensity === 3 ? 'bg-green-400 dark:bg-green-700' :
-                      'bg-green-500 dark:bg-green-600'
-                    }`}
-                    title={`${day.date}: ${day.commits} commits`}
-                  />
-                ))}
-              </div>
-              <div className="flex items-center justify-between text-xs text-muted-foreground mt-4">
-                <span>Less</span>
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-3 bg-gray-100 dark:bg-gray-800 rounded-sm"></div>
-                  <div className="w-3 h-3 bg-green-200 dark:bg-green-900 rounded-sm"></div>
-                  <div className="w-3 h-3 bg-green-300 dark:bg-green-800 rounded-sm"></div>
-                  <div className="w-3 h-3 bg-green-400 dark:bg-green-700 rounded-sm"></div>
-                  <div className="w-3 h-3 bg-green-500 dark:bg-green-600 rounded-sm"></div>
-                </div>
-                <span>More</span>
+              <div className="rounded-lg overflow-hidden border">
+                <img
+                  src="https://github-readme-activity-graph.vercel.app/graph?username=sh20raj&bg_color=d1ebff&color=000000&line=e594e0&point=54e316&area=true&hide_border=true"
+                  alt="Shaswat's GitHub Activity Graph"
+                  className="w-full h-auto"
+                />
               </div>
             </CardContent>
           </Card>
+
         </TabsContent>
 
         {/* NPM Tab */}
@@ -597,7 +580,7 @@ const Stats = () => {
                         </div>
                         <Progress value={pkg.score.final * 100} className="h-2" />
                       </div>
-                      
+
                       <div className="grid grid-cols-3 gap-2 text-xs">
                         <div className="text-center">
                           <div className="font-medium">{(pkg.score.detail.quality * 100).toFixed(0)}%</div>
@@ -669,7 +652,7 @@ const Stats = () => {
                       </div>
                       <p className="text-sm text-muted-foreground">Problems Solved</p>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <div className="flex justify-between text-sm">
                         <span>Overall Progress</span>
@@ -677,8 +660,8 @@ const Stats = () => {
                           {leetcodeStats ? ((leetcodeStats.totalSolved / leetcodeStats.totalQuestions) * 100).toFixed(1) : 0}%
                         </span>
                       </div>
-                      <Progress 
-                        value={leetcodeStats ? (leetcodeStats.totalSolved / leetcodeStats.totalQuestions) * 100 : 0} 
+                      <Progress
+                        value={leetcodeStats ? (leetcodeStats.totalSolved / leetcodeStats.totalQuestions) * 100 : 0}
                         className="h-3"
                       />
                     </div>
@@ -845,7 +828,7 @@ const Stats = () => {
             </CardHeader>
             <CardContent>
               <div className="rounded-lg overflow-hidden border">
-                <img 
+                <img
                   src="https://github-readme-activity-graph.vercel.app/graph?username=sh20raj&bg_color=d1ebff&color=000000&line=e594e0&point=54e316&area=true&hide_border=true"
                   alt="Shaswat's GitHub Activity Graph"
                   className="w-full h-auto"
@@ -859,7 +842,7 @@ const Stats = () => {
       {/* Footer */}
       <div className="text-center pt-8 border-t">
         <p className="text-sm text-muted-foreground">
-          Stats updated in real-time from NPM Registry, GitHub API, and LeetCode. 
+          Stats updated in real-time from NPM Registry, GitHub API, and LeetCode.
           Built with React, TypeScript, and Tailwind CSS.
         </p>
       </div>
