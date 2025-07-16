@@ -20,105 +20,50 @@ const Home = () => {
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Full Stack Developer | Open Source Enthusiast | AI & Web Innovation Specialist
         </p>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Passionate Full Stack Developer with 5+ years of experience building scalable web applications 
-          and innovative digital solutions. Creator of 40+ open-source projects with 100K+ GitHub stars.
-        </p>
+
         <div className="flex flex-wrap justify-center gap-4 pt-6">
           <Button asChild size="lg">
-        <Link to="/projects">View My Work</Link>
+            <Link to="/projects">View My Work</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-        <Link to="/contact">Get In Touch</Link>
+            <Link to="/contact">Get In Touch</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-        <a href="https://startups.shraj.workers.dev" target="_blank" rel="noopener noreferrer">
-          Startup Portfolio
-        </a>
+            <a href="https://startups.shraj.workers.dev" target="_blank" rel="noopener noreferrer">
+              Startup Portfolio
+            </a>
           </Button>
         </div>
       </div>
 
       {/* Quick Links */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card className="hover:shadow-md transition-shadow">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+      <div className="flex flex-wrap justify-center gap-4 py-6">
+        <Link to="/projects" className="px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors flex items-center gap-2">
               📁 Featured Projects
-            </CardTitle>
-            <CardDescription>
-              10+ innovative full-stack applications and tools
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button variant="ghost" asChild className="w-full justify-start">
-              <Link to="/projects">Browse Projects →</Link>
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card className="hover:shadow-md transition-shadow">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        </Link>
+        
+        <Link to="/blog" className="px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors flex items-center gap-2">
               ✍️ Tech Insights
-            </CardTitle>
-            <CardDescription>
-              Thoughts on AI, web development, and innovation
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button variant="ghost" asChild className="w-full justify-start">
-              <Link to="/blog">Read Blog →</Link>
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card className="hover:shadow-md transition-shadow">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        </Link>
+        
+        <Link to="/stats" className="px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors flex items-center gap-2">
+              🏆 Achievements
+        </Link>
+        
+        <Link to="/stats" className="px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors flex items-center gap-2">
+              📊 Live Stats
+        </Link>
+        
+        <Link to="/about" className="px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-colors flex items-center gap-2">
               🧑‍💻 About Me
-            </CardTitle>
-            <CardDescription>
-              5+ years experience, 40+ open source projects
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button variant="ghost" asChild className="w-full justify-start">
-              <Link to="/about">Learn More →</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Key Achievements */}
-      <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">🏆 Key Achievements</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-blue-600">400+</div>
-              <p className="text-muted-foreground">Active Repositories</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-green-600">100K+</div>
-              <p className="text-muted-foreground">Combined GitHub Stars</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-purple-600">8</div>
-              <p className="text-muted-foreground">Active Startups</p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+        </Link>
+            </div>
+      
 
       {/* Skills Overview */}
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">🚀 What I Do</h2>
-        
+
         <CollapsibleSection title="Frontend Development" icon="⚛️" defaultOpen>
           <div className="space-y-3">
             <p className="text-muted-foreground">
@@ -180,59 +125,7 @@ const Home = () => {
         </CollapsibleSection>
       </div>
 
-      {/* Live Stats Overview */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold text-foreground">📊 Live Developer Stats</h2>
-          <Button variant="outline" size="sm" asChild>
-            <Link to="/stats">View All Stats →</Link>
-          </Button>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card className="hover:shadow-md transition-shadow border-blue-200 dark:border-blue-800">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">46</div>
-              <p className="text-sm text-muted-foreground mb-1">NPM Packages</p>
-              <p className="text-xs text-green-600">1331.7% avg quality</p>
-            </CardContent>
-          </Card>
-          <Card className="hover:shadow-md transition-shadow border-green-200 dark:border-green-800">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-green-600 mb-1">471</div>
-              <p className="text-sm text-muted-foreground mb-1">GitHub Repos</p>
-              <p className="text-xs text-green-600">181 total stars</p>
-            </CardContent>
-          </Card>
-          <Card className="hover:shadow-md transition-shadow border-orange-200 dark:border-orange-800">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-orange-600 mb-1">55</div>
-              <p className="text-sm text-muted-foreground mb-1">LeetCode Solved</p>
-              <p className="text-xs text-green-600">57.67% acceptance</p>
-            </CardContent>
-          </Card>
-          <Card className="hover:shadow-md transition-shadow border-purple-200 dark:border-purple-800">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-purple-600 mb-1">6356K</div>
-              <p className="text-sm text-muted-foreground mb-1">Downloads</p>
-              <p className="text-xs text-green-600">Total NPM downloads</p>
-            </CardContent>
-          </Card>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4">
-          <Card className="hover:shadow-md transition-shadow">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-indigo-600 mb-1">91</div>
-              <p className="text-sm text-muted-foreground">GitHub Followers</p>
-            </CardContent>
-          </Card>
-          <Card className="hover:shadow-md transition-shadow">
-            <CardContent className="pt-6 text-center">
-              <div className="text-2xl font-bold text-pink-600 mb-1">Live</div>
-              <p className="text-sm text-muted-foreground">Real-time Data</p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+
     </div>
   );
 };

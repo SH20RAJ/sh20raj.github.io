@@ -348,17 +348,17 @@ const Stats = () => {
 
       {/* Quick Overview Cards */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-        <Card className="border-blue-200 dark:border-blue-800">
+        <Card className="border-purple-200 dark:border-purple-800">
           <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">NPM Packages</CardTitle>
-            <Package className="h-4 w-4 text-blue-600 ml-auto" />
+            <CardTitle className="text-sm font-medium">Downloads</CardTitle>
+            <Download className="h-4 w-4 text-purple-600 ml-auto" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-blue-600">
-              {loading.npm ? '...' : npmStats.totalPackages}
+            <div className="text-2xl font-bold text-purple-600">
+              {loading.npm ? '...' : `${(npmStats.totalDownloads / 1000).toFixed(0)}K`}
             </div>
             <p className="text-xs text-muted-foreground">
-              {loading.npm ? 'Loading...' : `${npmStats.averageQuality.toFixed(1)}% avg quality`}
+              {loading.npm ? 'Loading...' : 'Total NPM downloads'}
             </p>
           </CardContent>
         </Card>
@@ -378,6 +378,24 @@ const Stats = () => {
           </CardContent>
         </Card>
 
+
+
+        <Card className="border-blue-200 dark:border-blue-800">
+          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">NPM Packages</CardTitle>
+            <Package className="h-4 w-4 text-blue-600 ml-auto" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-blue-600">
+              {loading.npm ? '...' : npmStats.totalPackages}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {loading.npm ? 'Loading...' : `${npmStats.averageQuality.toFixed(1)}% avg quality`}
+            </p>
+          </CardContent>
+        </Card>
+
+
         <Card className="border-yellow-200 dark:border-yellow-800">
           <CardHeader className="flex flex-row items-center space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">LeetCode Solved</CardTitle>
@@ -393,20 +411,6 @@ const Stats = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-purple-200 dark:border-purple-800">
-          <CardHeader className="flex flex-row items-center space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Downloads</CardTitle>
-            <Download className="h-4 w-4 text-purple-600 ml-auto" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-purple-600">
-              {loading.npm ? '...' : `${(npmStats.totalDownloads / 1000).toFixed(0)}K`}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              {loading.npm ? 'Loading...' : 'Total NPM downloads'}
-            </p>
-          </CardContent>
-        </Card>
 
         <Card className="border-indigo-200 dark:border-indigo-800">
           <CardHeader className="flex flex-row items-center space-y-0 pb-2">
