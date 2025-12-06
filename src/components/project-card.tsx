@@ -61,7 +61,7 @@ export function ProjectCard({
           />
         )}
         {image && (
-          <Image
+          <img
             src={image}
             alt={title}
             width={500}

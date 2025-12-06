@@ -9,7 +9,7 @@
 - **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
 - **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
 - **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
-- **Portfolio**: [shaswat.live](https://shaswat.live)
+- **Portfolio**: [sh20raj.github.io](https://sh20raj.github.io)
 - **Location**: India
 
 ---
@@ -88,7 +88,7 @@ Passionate Full Stack Developer with 5+ years of experience building scalable we
 
 ## 🚀 Featured Projects
 
-Check out my [Portfolio Website](https://shaswat.live) for a full list of projects.
+Check out my [Portfolio Website](https://sh20raj.github.io) for a full list of projects.
 
 ---
 
@@ -126,4 +126,4 @@ I'm always excited to discuss new opportunities, collaborate on interesting proj
 - **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
 - **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
 - **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
-- **Portfolio**: [shaswat.live](https://shaswat.live)
+- **Portfolio**: [sh20raj.github.io](https://sh20raj.github.io)
