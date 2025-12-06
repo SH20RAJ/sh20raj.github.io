@@ -1,87 +1,129 @@
-# Shaswat Raj - Portfolio
+# Shaswat Raj - Full Stack Developer Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
-
-## 🚀 Features
-
-- **Modern Design**: Clean and professional UI with dark/light theme support
-- **Responsive**: Fully responsive design that works on all devices
-- **Fast Performance**: Built with Vite for lightning-fast development and builds
-- **Type Safe**: Full TypeScript support for better development experience
-- **Accessible**: Built with accessibility best practices in mind
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI primitives with custom styling
-- **Icons**: Lucide React
-- **Routing**: React Router DOM
-- **Deployment**: GitHub Pages
-
-## 📦 Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/SH20RAJ/sh20raj.github.io.git
-cd sh20raj.github.io
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser and visit `http://localhost:8080`
-
-## 🔧 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## 🚀 Deployment
-
-This portfolio is automatically deployed to GitHub Pages using GitHub Actions. Every push to the main branch triggers a new deployment.
-
-The deployment workflow:
-1. Builds the project using `npm run build`
-2. Deploys the `dist` folder to GitHub Pages
-3. Site is available at: https://sh20raj.github.io
-
-## 📝 Customization
-
-To customize this portfolio for your own use:
-
-1. Update personal information in the components
-2. Replace images in the `public` folder
-3. Modify the theme colors in `tailwind.config.ts`
-4. Update the content in each page component
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/SH20RAJ/sh20raj.github.io/issues).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Shaswat Raj**
-- GitHub: [@SH20RAJ](https://github.com/SH20RAJ)
-- LinkedIn: [shaswat-raj](https://linkedin.com/in/sh20raj)
-- Twitter: [@SH20RAJ](https://twitter.com/SH20RAJ)
-- Email: sh20raj@gmail.com
+*Full Stack Developer | Open Source Enthusiast | AI & Web Innovation Specialist*
 
 ---
 
-⭐️ Star this repo if you found it helpful!
+## 📫 Contact Information
+
+- **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
+- **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
+- **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
+- **Portfolio**: [shaswat.live](https://shaswat.live)
+- **Location**: India
+
+---
+
+## 🎯 Professional Summary
+
+Passionate Full Stack Developer with 5+ years of experience building scalable web applications and innovative digital solutions. Proven expertise in modern JavaScript frameworks, AI integration, and leading cross-functional teams. Creator of 40+ open-source projects with combined 100K+ GitHub stars, demonstrating strong technical leadership and community contribution.
+
+**Key Strengths:**
+
+- **Full-Stack Mastery**: Expert in Next.js, React, Node.js, and modern web technologies
+- **AI Integration**: Advanced experience with OpenAI, DeepSeek, and AI-powered applications
+- **Open Source Leadership**: Maintained 40+ repositories with significant community impact
+- **Scalable Architecture**: Proven ability to design and implement enterprise-level solutions
+- **Team Leadership**: Experience leading development teams and mentoring junior developers
+
+---
+
+## 🛠 Technical Skills
+
+### Programming Languages
+
+- **JavaScript** (95%) - Expert level with ES6+, async/await, modern features
+- **TypeScript** (90%) - Strong typing, interfaces, generics, advanced patterns
+- **Python** (80%) - Web development, data processing, automation scripts
+- **PHP** (85%) - Laravel, custom frameworks, legacy system maintenance
+- **HTML5** (98%) - Semantic markup, accessibility, modern standards
+- **CSS3** (95%) - Flexbox, Grid, animations, responsive design
+- **C/C++** (70%) - Algorithm implementation, system programming
+
+### Frontend Technologies
+
+- **React** (95%) - Hooks, Context API, performance optimization, testing
+- **Next.js** (95%) - SSR, SSG, API routes, middleware, deployment
+- **Vue.js** (85%) - Composition API, Vuex, Nuxt.js
+- **Angular** (75%) - Services, RxJS, TypeScript integration
+- **TailwindCSS** (95%) - Utility-first approach, custom configurations
+- **Framer Motion** (90%) - Complex animations, page transitions
+- **SCSS/Sass** (90%) - Advanced features, mixins, functions
+
+### Backend Technologies
+
+- **Node.js** (90%) - Express, API development, microservices
+- **Laravel** (85%) - Eloquent ORM, authentication, API development
+- **Express.js** (90%) - Middleware, routing, RESTful APIs
+- **RESTful APIs** (95%) - Design, implementation, documentation
+- **GraphQL** (75%) - Schema design, resolvers, Apollo
+
+### Databases
+
+- **MySQL** (90%) - Complex queries, optimization, indexing
+- **MongoDB** (85%) - Aggregation pipelines, indexing, replication
+- **PostgreSQL** (85%) - Advanced features, performance tuning
+- **Firebase** (90%) - Realtime database, authentication, hosting
+- **Redis** (70%) - Caching, session management
+
+### DevOps & Tools
+
+- **Git/GitHub** (95%) - Advanced workflows, branching strategies
+- **Docker** (80%) - Containerization, multi-stage builds
+- **AWS** (75%) - EC2, S3, Lambda, CloudFront
+- **Cloudflare** (80%) - CDN, security, edge computing
+- **VS Code** (98%) - Extensions development, productivity optimization
+- **GitHub Actions** (85%) - CI/CD pipelines, automation
+
+### AI & Modern Technologies
+
+- **OpenAI Integration** (90%) - GPT models, embeddings, fine-tuning
+- **WebRTC** (85%) - Peer-to-peer communication, video/audio
+- **WebSockets** (85%) - Real-time applications, Socket.io
+- **PWA Development** (90%) - Service workers, offline functionality
+- **Web Scraping** (90%) - Data extraction, automation
+- **Browser Extensions** (85%) - Chrome/Firefox extension development
+
+---
+
+## 🚀 Featured Projects
+
+Check out my [Portfolio Website](https://shaswat.live) for a full list of projects.
+
+---
+
+## 🏆 Key Achievements
+
+### Open Source Impact
+
+- **400+ Active Repositories**: Maintained and developed diverse range of projects
+- **1K+ Combined GitHub Stars**: Demonstrating community value and adoption
+- **50+ NPM Packages**: Published libraries used by developers worldwide
+- **Community Contributions**: Regular contributor to major open-source projects
+
+### Technical Accomplishments
+
+- **Performance Optimization**: Achieved 90+ Lighthouse scores across all projects
+- **Scalability**: Built applications handling 10K+ concurrent users
+- **Security**: Implemented enterprise-grade security measures and encryption
+- **Innovation**: First to implement several cutting-edge features in local ecosystem
+
+### Professional Recognition
+
+- **GitHub Arctic Code Vault Contributor**: Code preserved for future generations
+- **Top Developer**: Ranked in top 1% of developers in region
+- **Mentor & Speaker**: Regular tech talks and mentoring sessions
+- **Client Satisfaction**: 100% client retention rate with 5-star reviews
+
+---
+
+## 🤝 Let's Connect
+
+I'm always excited to discuss new opportunities, collaborate on interesting projects, or share knowledge about web development and emerging technologies.
+
+**Best ways to reach me:**
+
+- **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
+- **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
+- **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
+- **Portfolio**: [shaswat.live](https://shaswat.live)
