@@ -76,7 +76,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Technical Lead",
-      logoUrl: "/ieee.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg",
       start: "Feb 2025",
       end: "Present",
       description:
@@ -88,7 +88,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Organizer - Ranchi Chapter",
-      logoUrl: "/cncf.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cncf-logo.svg",
       start: "June 2025",
       end: "Present",
       description:
@@ -100,7 +100,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Technical Manager",
-      logoUrl: "/hirebuddy.png",
+      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=hirebuddy.ai",
       start: "Sept 2024",
       end: "June 2025",
       description:
@@ -112,7 +112,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Member",
-      logoUrl: "/edc.png",
+      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=edcbitmesra.in",
       start: "Mar 2025",
       end: "Sept 2025",
       description:
@@ -124,7 +124,7 @@ export const DATA = {
       school: "Birla Institute of Technology, Mesra",
       href: "https://www.bitmesra.ac.in",
       degree: "Bachelor of Technology - BTech, Computer Science",
-      logoUrl: "/bitmesra.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/en/8/87/B._I._T._Mesra_logo.png",
       start: "2024",
       end: "2028",
     },
@@ -132,7 +132,7 @@ export const DATA = {
       school: "Jawahar Navodaya Vidyalaya (JNV)",
       href: "",
       degree: "Schooling",
-      logoUrl: "/jnv.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/c4/Jawahar_Navodaya_Vidyalaya_logo.png",
       start: "",
       end: "",
     },
