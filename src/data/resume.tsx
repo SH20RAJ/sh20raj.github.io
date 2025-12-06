@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Shaswat Raj",
   initials: "SH",
-  url: "https://shaswat.live",
+  url: "https://sh20raj.github.io",
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
@@ -140,7 +140,7 @@ export const DATA = {
   projects: [
     {
       title: "Kishan AI",
-      href: "https://kishanai.shaswat.live",
+      href: "https://kishanai.strivio.world",
       dates: "2025",
       active: true,
       description:
@@ -156,11 +156,11 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://kishanai.shaswat.live",
+          href: "https://kishanai.strivio.world",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "https://kishanai.strivio.world/_next/image?url=%2Fog-image.png&w=1920&q=75",
       video: "",
     },
     {
@@ -1288,6 +1288,16 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "AICTE Productization Fellowship (APF) 2025",
+      dates: "May - July 2025",
+      location: "Ranchi, Jharkhand",
+      description:
+        "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers. #APF2025 #YUKTI2025 #AICTE #Innovation #Agritech #FarmTech #AI #BITMesra #CSE #Productization #IIC #StudentInnovator #KishanAI #MoE #StartupIndia",
+      image:
+        "https://pbs.twimg.com/profile_images/1633400336214302720/0p534a6e_400x400.jpg",
+      links: [],
+    },
     {
       title: "Hack Western 5",
       dates: "November 23rd - 25th, 2018",
