@@ -88,7 +88,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Organizer - Ranchi Chapter",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cncf-logo.svg",
+      logoUrl: "https://imgs.search.brave.com/JmHmf_08NAu4zZUJbgy8SgnIwuyan5V235q0Yv_aKYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5na2l0LmNvbS9w/bmcvZnVsbC8zNjgt/MzY4MjgyM19jbmNm/LWZvdW5kYXRpb24t/bG9nby1wbmcucG5n",
       start: "June 2025",
       end: "Present",
       description:
@@ -100,7 +100,7 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Technical Manager",
-      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=hirebuddy.ai",
+      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=hirebuddy.net",
       start: "Sept 2024",
       end: "June 2025",
       description:
@@ -118,13 +118,25 @@ export const DATA = {
       description:
         "Contributed to the entrepreneurial ecosystem through startup ideation and incubation. Assisted in organizing flagship events and hackathons. Applied real-world business and product strategies.",
     },
+    {
+      company: "Dhwani - Music Club, BIT Mesra",
+      href: "https://www.linkedin.com/company/dhwani-music-club-bit-mesra/posts/?feedView=all",
+      badges: [],
+      location: "Ranchi, Jharkhand",
+      title: "Member",
+      logoUrl: "https://media.licdn.com/dms/image/v2/C4E0BAQFwSL_2ajeeng/company-logo_200_200/company-logo_200_200/0/1656767415382/dhwani_music_club_bit_mesra_logo?e=1766620800&v=beta&t=gq1sToZsGr6o4N5unZglyyCRk4KuBGKULsgumfcTYlQ",
+      start: "Mar 2025",
+      end: "Sept 2025",
+      description: "Actively participated in musical events and performances, showcasing a passion for music and contributing to the club's vibrant atmosphere. I'm into music also.",
+
+    },
   ],
   education: [
     {
       school: "Birla Institute of Technology, Mesra",
       href: "https://www.bitmesra.ac.in",
       degree: "Bachelor of Technology - BTech, Computer Science",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/en/8/87/B._I._T._Mesra_logo.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/en/d/d2/Birla_Institute_of_Technology_Mesra.png",
       start: "2024",
       end: "2028",
     },
@@ -132,7 +144,7 @@ export const DATA = {
       school: "Jawahar Navodaya Vidyalaya (JNV)",
       href: "",
       degree: "Schooling",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/c4/Jawahar_Navodaya_Vidyalaya_logo.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png",
       start: "",
       end: "",
     },
