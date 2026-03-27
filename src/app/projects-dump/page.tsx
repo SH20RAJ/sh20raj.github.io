@@ -4,38 +4,36 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { useResume } from "@/lib/resume-context";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function ProjectsPage() {
+export default function ProjectsDumpPage() {
     const { data } = useResume();
-    const bestProjects = data.projects.slice(0, 4);
 
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-10 py-12 px-4 md:px-6">
             <section id="header">
                 <div className="mx-auto w-full max-w-2xl space-y-8">
                     <div className="flex flex-col items-start gap-4">
-                        {/* Back Button */}
                         <BlurFade delay={BLUR_FADE_DELAY}>
                             <Link
-                                href="/"
+                                href="/projects"
                                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 group -ml-4"
                             >
                                 <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                                Back to Home
+                                Back to Projects
                             </Link>
                         </BlurFade>
 
                         <BlurFade delay={BLUR_FADE_DELAY * 2}>
                             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                                Best Projects
+                                Project Archive
                             </h1>
                         </BlurFade>
                         <BlurFade delay={BLUR_FADE_DELAY * 3}>
                             <p className="text-muted-foreground md:text-xl">
-                                A curated list of my most impactful projects and open-source contributions.
+                                A complete dump of all projects I&apos;ve worked on, including experiments and legacy tools.
                             </p>
                         </BlurFade>
                     </div>
@@ -44,9 +42,9 @@ export default function ProjectsPage() {
 
             <section id="projects">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto w-full">
-                    {bestProjects.map((project, id) => (
+                    {data.projects.map((project, id) => (
                         <BlurFade
-                            key={project.title}
+                            key={`${project.title}-${id}`}
                             delay={BLUR_FADE_DELAY * 4 + id * 0.05}
                         >
                             <ProjectCard
@@ -63,16 +61,6 @@ export default function ProjectsPage() {
                         </BlurFade>
                     ))}
                 </div>
-                
-                <BlurFade delay={BLUR_FADE_DELAY * 6} className="flex justify-center mt-12">
-                    <Link
-                        href="/projects-dump"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all font-medium border border-border/50 shadow-sm"
-                    >
-                        View Project Archive (Dump)
-                        <ExternalLink className="h-4 w-4" />
-                    </Link>
-                </BlurFade>
             </section>
         </main>
     );
