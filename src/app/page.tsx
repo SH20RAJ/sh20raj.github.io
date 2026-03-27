@@ -82,8 +82,8 @@ export default function Page() {
               <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Dev.to Followers" className="rounded-md" />
               </a>
-              <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github-star-counter.workers.dev%2Fuser%2FSH20RAJ&query=%24.stars&label=Total%20GitHub%20Stars&logo=github&color=black&style=flat-square" alt="Total GitHub Stars" className="rounded-md" />
+              <a href="https://github.com/search?q=user%3ASH20RAJ+org%3Ash20raj-dump+org%3ALoveShade+org%3AINDIECDN+org%3Atechshade+org%3Amindos-labs+fork%3Atrue" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Duser%3ASH20RAJ%2Borg%3Ash20raj-dump%2Borg%3ALoveShade%2Borg%3AINDIECDN%2Borg%3Atechshade%2Borg%3Amindos-labs%2Bfork%3Atrue&query=%24.total_count&label=Collective%20Repos&logo=github&color=black&style=flat-square" alt="Total GitHub Projects" className="rounded-md" />
               </a>
             </div>
             <p className="text-xs text-muted-foreground italic">
