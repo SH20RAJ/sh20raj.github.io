@@ -95,6 +95,12 @@ export const DATA = {
         icon: "codeforces",
         navbar: false,
       },
+      NPM: {
+        name: "NPM",
+        url: "https://www.npmjs.com/~sh20raj",
+        icon: "npm",
+        navbar: true,
+      },
       NotionProjects: {
         name: "My Projects (Notion)",
         url: "https://www.notion.so/My-Projects-281f46ab158180968fe6e9ca8f1bec3f?source=copy_link",

@@ -72,6 +72,22 @@ export default function Page() {
             />
           </div>
         </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.3}>
+          <div className="mt-6 flex flex-col gap-2">
+            <h3 className="text-sm font-semibold">NPM Activity</h3>
+            <div className="flex flex-wrap gap-2">
+               <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/npm/dt/sh20raj?style=flat-square&logo=npm&label=Total%20Downloads&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
+              </a>
+              <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/npm/v/sh20raj?style=flat-square&logo=npm&label=Latest%20Package&color=cb3837" alt="NPM Latest Version" className="rounded-md" />
+              </a>
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              Building and maintaining open-source packages for the JavaScript ecosystem.
+            </p>
+          </div>
+        </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
           <div className="mt-4">
             <Link

@@ -262,4 +262,12 @@ export const Icons = {
       />
     </svg>
   ),
+  npm: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="currentColor"
+        d="M0 7.334v8h6.666v1.332H12V15.334h12v-8H0zm6.666 6.666H5.334v-4h-1.334v4H1.334v-5.332h5.332v5.332zm6.668 0h-1.334v1.334H9.334v-6.666h5.332v5.332h-1.332zm6.666 0h-1.334v-4h-1.334v4h-1.334v-5.332H20v5.332z"
+      />
+    </svg>
+  ),
 };
