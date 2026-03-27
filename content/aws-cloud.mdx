@@ -1,0 +1,30 @@
+---
+title: "Architecting for the Cloud: AWS Mastery at Scale"
+publishedAt: "2026-03-27"
+summary: "Deep dive into AWS services, serverless architecture, and scaling web applications."
+---
+
+Cloud infrastructure is the backbone of modern software. Having built and grown several startups, I’ve seen firsthand how the right AWS architecture can make or break a product.
+
+## My AWS Toolkit
+
+### 1. Serverless with AWS Lambda
+I'm a huge proponent of serverless. Most of my microservices leverage Lambda combined with:
+- **API Gateway**: For efficient routing.
+- **DynamoDB**: For ultra-fast NoSQL storage.
+- **S3**: For scalable asset hosting.
+
+### 2. DevOps & Infrastructure as Code (IaC)
+I don't manually click through the console. I use:
+- **AWS CDK**: To define infrastructure in TypeScript.
+- **CloudFormation**: For reliable, repeatable stacks.
+
+### 3. Real-time Systems
+For my trading systems and live dashboards, I utilize:
+- **AWS AppSync**: For managed GraphQL and real-time pub/sub.
+- **SQS & SNS**: For decoupled, event-driven architectures.
+
+## Scaling to 500+ Projects
+Managing a huge volume of projects taught me the importance of **Cost Optimization**. I implement automated shutdown scripts for dev environments and leverage Spot Instances for batch processing.
+
+AWS isn't just about hosting; it's about building resilient, auto-scaling ecosystems that can handle the modern web's demands.

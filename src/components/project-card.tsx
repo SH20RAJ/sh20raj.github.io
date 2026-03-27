@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+import { IconRenderer } from "@/components/icon-renderer";
+
 interface Props {
   title: string;
   href?: string;
@@ -21,7 +23,7 @@ interface Props {
   image?: string;
   video?: string;
   links?: readonly {
-    icon: React.ReactNode;
+    icon: string;
     type: string;
     href: string;
   }[];
@@ -103,7 +105,7 @@ export function ProjectCard({
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
                 <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
+                  <IconRenderer icon={link.icon} className="size-3" />
                   {link.type}
                 </Badge>
               </Link>

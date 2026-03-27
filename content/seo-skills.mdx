@@ -1,0 +1,34 @@
+---
+title: "Mastering Technical SEO: A Developer's Perspective"
+publishedAt: "2026-03-27"
+summary: "How to build search-engine-ready applications using Next.js and modern web standards."
+---
+
+SEO is often seen as a marketing discipline, but for developers, it's a technical optimization challenge. In this post, I'll share my journey of mastering SEO and how I implement it across my 500+ projects.
+
+## Core Pillars of Technical SEO
+
+### 1. Performance & Core Web Vitals
+Google prioritizes speed. Using Next.js, I leverage:
+- **Server-Side Rendering (SSR)** for fresh content.
+- **Static Site Generation (SSG)** for blistering speed.
+- **Image Optimization**: Using the `next/image` component to serve WebP formats with proper sizing.
+
+### 2. Semantic HTML5
+Search engines read structure. I ensure every project uses:
+- `<h1>` for primary titles.
+- `<article>`, `<section>`, and `<nav>` for layout clarity.
+- **Alt tags** for every meaningful image.
+
+### 3. Metadata Automation
+I build dynamic metadata generators that automatically set:
+- OpenGraph tags for social sharing.
+- Twitter Cards for engagement.
+- Canonical URLs to prevent duplicate content issues.
+
+## AI and SEO
+In 2026, AI-driven search (like Perplexity or Gemini) is changing the game. My strategy now includes:
+- **Schema.org JSON-LD**: Providing structured data that LLMs can easily parse.
+- **Content Quality**: Focusing on high-signal content rather than keyword stuffing.
+
+Building at scale requires automated SEO tests. I integrate Lighthouse CI into my GitHub Actions to ensure every push meets the highest standards.

@@ -62,6 +62,16 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.2}>
+          <div className="mt-6 flex flex-col gap-2">
+            <h3 className="text-sm font-semibold">GitHub Activity</h3>
+            <img 
+              src="https://ghchart.rshah.org/SH20RAJ" 
+              alt="SH20RAJ's Github chart" 
+              className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
+            />
+          </div>
+        </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
           <div className="mt-4">
             <Link

@@ -42,6 +42,20 @@ export default function ProjectsPage() {
                 </div>
             </section>
 
+            <BlurFade delay={BLUR_FADE_DELAY * 4}>
+                <div className="flex justify-center w-full mb-8">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
+                        <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
+                        <img 
+                            alt="github-snake" 
+                            src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" 
+                            className="w-full max-w-2xl rounded-lg border bg-card p-2 shadow-sm"
+                        />
+                    </picture>
+                </div>
+            </BlurFade>
+
             <section id="projects">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto w-full">
                     {bestProjects.map((project, id) => (

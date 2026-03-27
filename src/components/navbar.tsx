@@ -10,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { IconRenderer } from "@/components/icon-renderer";
 
 export default function Navbar() {
   return (
@@ -27,7 +28,7 @@ export default function Navbar() {
                     "size-12"
                   )}
                 >
-                  <item.icon className="size-4" />
+                  <IconRenderer icon={item.icon} className="size-4" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -50,7 +51,7 @@ export default function Navbar() {
                       "size-12"
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <IconRenderer icon={social.icon} className="size-4" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>

@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Shaswat Raj",
@@ -35,8 +34,8 @@ export const DATA = {
     "WebRTC",
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/", icon: "home", label: "Home" },
+    { href: "/blog", icon: "notebook", label: "Blog" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -45,79 +44,79 @@ export const DATA = {
       GitHub: {
         name: "GitHub",
         url: "https://github.com/SH20RAJ",
-        icon: Icons.github,
+        icon: "github",
         navbar: true,
       },
       GitHubDump: {
         name: "GitHub Dump",
         url: "https://github.com/sh20raj-dump",
-        icon: Icons.github,
+        icon: "github",
         navbar: false,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://linkedin.com/in/sh20raj",
-        icon: Icons.linkedin,
+        icon: "linkedin",
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/sh20raj",
-        icon: Icons.x,
+        icon: "x",
         navbar: true,
       },
       DevTo: {
         name: "Dev Community",
         url: "https://dev.to/sh20raj",
-        icon: Icons.devto,
+        icon: "devto",
         navbar: true,
       },
       Codepen: {
         name: "Codepen",
         url: "https://codepen.io/sh20raj",
-        icon: Icons.codepen,
+        icon: "codepen",
         navbar: false,
       },
       Upwork: {
         name: "Upwork",
         url: "https://www.upwork.com/freelancers/~01a63e5aa20a7895dd",
-        icon: Icons.upwork,
+        icon: "upwork",
         navbar: false,
       },
       Peerlist: {
         name: "Peerlist",
         url: "https://peerlist.io/sh20raj",
-        icon: Icons.peerlist,
+        icon: "peerlist",
         navbar: false,
       },
       Codeforces: {
         name: "Codeforces",
         url: "https://codeforces.com/profile/sh20raj",
-        icon: Icons.codeforces,
+        icon: "codeforces",
         navbar: false,
       },
       NotionProjects: {
         name: "My Projects (Notion)",
         url: "https://www.notion.so/My-Projects-281f46ab158180968fe6e9ca8f1bec3f?source=copy_link",
-        icon: Icons.notion,
+        icon: "notion",
         navbar: false,
       },
       Resume: {
         name: "Resume (Notion)",
         url: "https://www.notion.so/Resume-277f46ab15818041b9ced7e568400015?source=copy_link",
-        icon: Icons.notion,
+        icon: "notion",
         navbar: false,
       },
       Ideas: {
         name: "Ideas",
         url: "https://github.com/SH20RAJ/ideas",
-        icon: Icons.globe,
+        icon: "globe",
         navbar: true,
       },
       email: {
         name: "Send Email",
         url: "mailto:sh20raj@gmail.com",
-        icon: Icons.email,
+        icon: "email",
         navbar: false,
       },
     },
@@ -223,7 +222,7 @@ export const DATA = {
         {
           type: "Website",
           href: "https://kishanai.strivio.world",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
       ],
       image: "https://kishanai.strivio.world/_next/image?url=%2Fog-image.png&w=1920&q=75",
@@ -241,12 +240,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://notesflow.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/notesflow",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -265,12 +264,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://reflecto.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/reflecto",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -295,12 +294,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sketchflow.space",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/sketchflow",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -319,12 +318,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://creoyt.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/creoyt",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -343,12 +342,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://bitsyll.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/bitsyll",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -367,12 +366,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://socialscribe.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/SocialScribe",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -397,12 +396,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://aayechup.shade.cool",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/aayechup",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -427,12 +426,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://article.shade.cool/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/article",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -457,12 +456,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://multiversal.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/Multiversal",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -481,12 +480,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://playtube.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/playtube",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -511,12 +510,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://scaleboard.org",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/scaleboard",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -535,12 +534,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://peerdrop.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/peerdrop",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -565,12 +564,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://gitproxy.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/gitproxy",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -595,12 +594,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://bg-rem.streamlit.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/image-bg-remover",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -619,12 +618,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://devart-react.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/devart-react",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -643,12 +642,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://waitlist-js.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/waitlist.js",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -673,12 +672,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://github.com/SH20RAJ/TubeSonic/releases",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/TubeSonic",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -696,7 +695,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/nomouse",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/projects/nomouse.jpg",
@@ -714,12 +713,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/Sopplayer/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/Sopplayer",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -738,12 +737,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/soundwave/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/soundwave",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -768,12 +767,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/vibly/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/vibly",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -800,12 +799,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://npmjs.com/package/markmind-editor",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/markmind-editor",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -829,12 +828,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/steamlit/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/steamlit",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -853,12 +852,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://octopress.netlify.app",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/OctoPress",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -883,12 +882,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://github.com/SH20RAJ/youtube-remote-uploader/releases",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/youtube-remote-uploader",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -914,12 +913,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sequence.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/sequence-game",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -944,12 +943,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sopgame.pages.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/sopgame",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -968,12 +967,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://marketplace.visualstudio.com/items?itemName=sh20raj.codeseek-shade",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/CodeSeek",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -997,12 +996,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/toggle-search-engine/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/toggle-search-engine",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1027,12 +1026,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://www.npmjs.com/package/@sh20raj/safestore",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/SafeStore",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1057,12 +1056,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://www.npmjs.com/package/create-tanstack-app",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/create-tanstack-app",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1087,12 +1086,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://www.npmjs.com/package/create-gi",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/create-gi",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1111,12 +1110,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/bitplayer/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/bitplayer",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1141,12 +1140,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://www.npmjs.com/package/sheetflow",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/SheetFlow",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1171,12 +1170,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://www.npmjs.com/package/@sh20raj/sanskrit",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/sanskrit",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1195,12 +1194,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/AuraAI/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/AuraAI",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1225,12 +1224,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://api.dictionaryapi.dev/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/OpenDictionaryAPI",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1255,12 +1254,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://aisanta.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/aisanta",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1285,12 +1284,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://insta-dl.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/instagram-downloader-web",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1316,12 +1315,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://phpgram.pages.dev",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/phpgram",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
@@ -1340,12 +1339,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://sh20raj.github.io/AppPages/",
-          icon: <Icons.globe className="size-3" />,
+          icon: "globe",
         },
         {
           type: "Source",
           href: "https://github.com/SH20RAJ/AppPages",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image:
