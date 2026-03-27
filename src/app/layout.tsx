@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ResumeProvider } from "@/lib/resume-context";
@@ -89,18 +90,7 @@ export default function RootLayout({
           <ResumeProvider>
             <TooltipProvider delayDuration={0}>
               {children}
-              <div className="mt-12 mb-20 flex justify-center w-full">
-                <a 
-                  href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fsh20raj%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img 
-                    src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fsh20raj%2F&countColor=%23263759" 
-                    alt="Visitor Count"
-                  />
-                </a>
-              </div>
+              <Footer />
               <Navbar />
             </TooltipProvider>
           </ResumeProvider>

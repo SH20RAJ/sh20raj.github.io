@@ -76,8 +76,11 @@ export default function Page() {
           <div className="mt-6 flex flex-col gap-2">
             <h3 className="text-sm font-semibold">NPM Activity</h3>
             <div className="flex flex-wrap gap-2">
-               <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/npm/dy/sh20raj?style=flat-square&logo=npm&label=NPM%20Downloads%20(Year)&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
+               <a href="https://npm-stat.com/charts.html?author=sh20raj" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/npm-stat/dy/sh20raj?style=flat-square&logo=npm&label=NPM%20Downloads%20(Year)&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
+              </a>
+              <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Dev.to Followers" className="rounded-md" />
               </a>
               <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github-star-counter.workers.dev%2Fuser%2FSH20RAJ&query=%24.stars&label=Total%20GitHub%20Stars&logo=github&color=black&style=flat-square" alt="Total GitHub Stars" className="rounded-md" />
@@ -285,7 +288,7 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.Twitter.url}
                   className="text-blue-500 hover:underline"
                 >
                   with a direct question on twitter

@@ -59,17 +59,17 @@ export const DATA = {
         icon: "linkedin",
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://x.com/sh20raj",
+      Twitter: {
+        name: "Twitter",
+        url: "https://x.com/SH20RAJ/",
         icon: "x",
         navbar: true,
       },
-      DevTo: {
+      DevCommunity: {
         name: "Dev Community",
         url: "https://dev.to/sh20raj",
         icon: "devto",
-        navbar: true,
+        navbar: false,
       },
       Codepen: {
         name: "Codepen",
@@ -99,7 +99,7 @@ export const DATA = {
         name: "NPM",
         url: "https://www.npmjs.com/~sh20raj",
         icon: "npm",
-        navbar: true,
+        navbar: false,
       },
       NotionProjects: {
         name: "My Projects (Notion)",
