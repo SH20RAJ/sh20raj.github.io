@@ -228,9 +228,11 @@ export const DATA = {
           icon: "github",
         },
         {
-          type: "Stats",
-          href: "https://www.jsdelivr.com/package/gh/sh20raj/sopplayer?tab=stats",
+          type: "jsDelivr",
+          href: "https://www.jsdelivr.com/package/gh/sh20raj/sopplayer",
           icon: "globe",
+          badgeImage:
+            "https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge",
         },
       ],
       image:

@@ -26,6 +26,7 @@ interface Props {
     icon: string;
     type: string;
     href: string;
+    badgeImage?: string;
   }[];
   className?: string;
 }
@@ -104,9 +105,25 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  <IconRenderer icon={link.icon} className="size-3" />
-                  {link.type}
+                <Badge
+                  key={idx}
+                  className={cn(
+                    "flex gap-2 px-2 py-1 text-[10px]",
+                    link.badgeImage ? "p-0 overflow-hidden" : ""
+                  )}
+                >
+                  {link.badgeImage ? (
+                    <img
+                      src={link.badgeImage}
+                      alt={link.type}
+                      className="h-5 w-auto"
+                    />
+                  ) : (
+                    <>
+                      <IconRenderer icon={link.icon} className="size-3" />
+                      {link.type}
+                    </>
+                  )}
                 </Badge>
               </Link>
             ))}
