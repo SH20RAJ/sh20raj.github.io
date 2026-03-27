@@ -77,10 +77,10 @@ export default function Page() {
             <h3 className="text-sm font-semibold">NPM Activity</h3>
             <div className="flex flex-wrap gap-2">
                <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/npm/dt/sh20raj?style=flat-square&logo=npm&label=Total%20Downloads&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
+                <img src="https://img.shields.io/npm/dy/sh20raj?style=flat-square&logo=npm&label=NPM%20Downloads%20(Year)&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
               </a>
-              <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/npm/v/sh20raj?style=flat-square&logo=npm&label=Latest%20Package&color=cb3837" alt="NPM Latest Version" className="rounded-md" />
+              <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github-star-counter.workers.dev%2Fuser%2FSH20RAJ&query=%24.stars&label=Total%20GitHub%20Stars&logo=github&color=black&style=flat-square" alt="Total GitHub Stars" className="rounded-md" />
               </a>
             </div>
             <p className="text-xs text-muted-foreground italic">
