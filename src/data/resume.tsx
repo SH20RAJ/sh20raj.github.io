@@ -210,6 +210,36 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Bitotsav 2026",
+      href: "https://bitotsav.bitmesra.ac.in/",
+      dates: "2026",
+      active: true,
+      description:
+        "Led the complete technical orchestration for BIT Mesra's flagship cultural fest (5,000+ participants). Built a high-concurrency QR entry system with Redis, an offline-capable scanning server (mCert), and integrated AI features. Managed everything from architecture to real-time crisis handling.",
+      technologies: [
+        "Next.js",
+        "PostgreSQL",
+        "Redis",
+        "OpenAI",
+        "System Architecture",
+        "Offline-First",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://bitotsav.bitmesra.ac.in/",
+          icon: "globe",
+        },
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
+          icon: "linkedin",
+        },
+      ],
+      image: "https://i.pinimg.com/1200x/73/b1/d1/73b1d15ca4899050485c4ba3a6359521.jpg",
+      video: "",
+    },
+    {
       title: "Kishan AI",
       href: "https://kishanai.strivio.world",
       dates: "2025",
