@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "System Design | Web Dev | DevOps | Open-Source",
   summary:
-    "Passionate Full Stack Developer with a keen interest in web development and open-source projects. I love learning and exploring new technologies. I have a strong background in building scalable web applications and contributing to the open-source community.",
+    "Coding since class 7, I am a passionate Full Stack Developer with over 45k+ followers on Dev Community and a portfolio of 500+ NON-AI generated projects. I have worked and grown several startups, maintaining a strong focus on System Design, Web Dev, and Open-Source. My journey is defined by scale, innovation, and a commitment to building impactful tools.",
   avatarUrl: "/profile.jpg",
   skills: [
     "JavaScript",
@@ -48,6 +48,12 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
+      GitHubDump: {
+        name: "GitHub Dump",
+        url: "https://github.com/sh20raj-dump",
+        icon: Icons.github,
+        navbar: false,
+      },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://linkedin.com/in/sh20raj",
@@ -59,6 +65,48 @@ export const DATA = {
         url: "https://x.com/sh20raj",
         icon: Icons.x,
         navbar: true,
+      },
+      DevTo: {
+        name: "Dev Community",
+        url: "https://dev.to/sh20raj",
+        icon: Icons.devto,
+        navbar: true,
+      },
+      Codepen: {
+        name: "Codepen",
+        url: "https://codepen.io/sh20raj",
+        icon: Icons.codepen,
+        navbar: false,
+      },
+      Upwork: {
+        name: "Upwork",
+        url: "https://www.upwork.com/freelancers/~01a63e5aa20a7895dd",
+        icon: Icons.upwork,
+        navbar: false,
+      },
+      Peerlist: {
+        name: "Peerlist",
+        url: "https://peerlist.io/sh20raj",
+        icon: Icons.peerlist,
+        navbar: false,
+      },
+      Codeforces: {
+        name: "Codeforces",
+        url: "https://codeforces.com/profile/sh20raj",
+        icon: Icons.codeforces,
+        navbar: false,
+      },
+      NotionProjects: {
+        name: "My Projects (Notion)",
+        url: "https://www.notion.so/My-Projects-281f46ab158180968fe6e9ca8f1bec3f?source=copy_link",
+        icon: Icons.notion,
+        navbar: false,
+      },
+      Resume: {
+        name: "Resume (Notion)",
+        url: "https://www.notion.so/Resume-277f46ab15818041b9ced7e568400015?source=copy_link",
+        icon: Icons.notion,
+        navbar: false,
       },
       Ideas: {
         name: "Ideas",
