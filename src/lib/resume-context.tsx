@@ -15,13 +15,19 @@ const ResumeContext = createContext<ResumeContextType | undefined>(undefined);
 
 export function ResumeProvider({ children }: { children: React.ReactNode }) {
   const [data, setData] = useState<ResumeData>(INITIAL_DATA);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
+    setIsMounted(true);
     const savedData = localStorage.getItem("resume-data");
     if (savedData) {
       try {
-        setData(JSON.parse(savedData));
+        const parsed = JSON.parse(savedData);
+        // Only update if it looks like our data structure
+        if (parsed && typeof parsed === "object" && "name" in parsed) {
+          setData(parsed);
+        }
       } catch (e) {
         console.error("Failed to parse saved resume data", e);
       }
@@ -30,8 +36,10 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
 
   // Save to localStorage whenever data changes
   useEffect(() => {
-    localStorage.setItem("resume-data", JSON.stringify(data));
-  }, [data]);
+    if (isMounted) {
+      localStorage.setItem("resume-data", JSON.stringify(data));
+    }
+  }, [data, isMounted]);
 
   const updateData = (newData: Partial<ResumeData>) => {
     setData((prev) => ({ ...prev, ...newData }));
@@ -41,6 +49,11 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
     setData(INITIAL_DATA);
     localStorage.removeItem("resume-data");
   };
+
+  // Prevent hydration mismatch by only rendering children after mount
+  if (!isMounted) {
+    return <div className="invisible">{children}</div>;
+  }
 
   return (
     <ResumeContext.Provider value={{ data, updateData, resetData }}>

@@ -77,7 +77,7 @@ export default function Page() {
             <h3 className="text-sm font-semibold">NPM Activity</h3>
             <div className="flex flex-wrap gap-2">
                <a href="https://npm-stat.com/charts.html?author=sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/npm-stat/dy/sh20raj?style=flat-square&logo=npm&label=NPM%20Downloads%20(Year)&color=cb3837" alt="NPM Total Downloads" className="rounded-md" />
+                <img src="https://img.shields.io/npm-stat/dy/sh20raj" alt="NPM Total Downloads" className="rounded-md" />
               </a>
               <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Dev.to Followers" className="rounded-md" />
