@@ -183,11 +183,10 @@ export const DATA = {
       badges: [],
       location: "Ranchi, Jharkhand",
       title: "Member",
-      logoUrl: "https://media.licdn.com/dms/image/v2/C4E0BAQFwSL_2ajeeng/company-logo_200_200/company-logo_200_200/0/1656767415382/dhwani_music_club_bit_mesra_logo?e=1766620800&v=beta&t=gq1sToZsGr6o4N5unZglyyCRk4KuBGKULsgumfcTYlQ",
+      logoUrl: "https://i.pinimg.com/736x/e5/a8/97/e5a8972fe2fab9b3e7515ccd5871cc11.jpg",
       start: "Mar 2025",
-      end: "Sept 2025",
+      end: "Present",
       description: "Actively participated in musical events and performances, showcasing a passion for music and contributing to the club's vibrant atmosphere. I'm into music also.",
-
     },
   ],
   education: [
