@@ -1,14 +1,27 @@
 ---
-title: "Open Source Tips for 2026"
+title: "Open Source tips for 2026: Success at Scale"
 publishedAt: "2024-06-15"
-summary: "Best practices for maintaining high-impact open-source repositories."
+summary: "Hard-earned lessons from maintaining 40+ active repositories and managing a community of 45k+."
 ---
 
-Maintaining 40+ repositories has taught me that consistency and documentation are key to community growth.
+Maintaining open-source projects is a marathon, not a sprint. When you cross the threshold of 40+ active repositories, "manual" becomes your enemy. Here are my expanded tips for maintaining high-impact projects in 2026.
 
-### My Top 3 Tips:
-1. **Automate everything** with GitHub Actions.
-2. **Prioritize documentation** so users can help themselves.
-3. **Be responsive** to issues and PRs.
+### 1. Automation is Your Co-Pilot
+If you have to do it more than twice, automate it. In 2026, we utilize **Agentic CI/CD**.
+- **Self-Healing Builds**: Use GitHub Actions that can attempt basic fixes (like dependency bumps or linting) before even notifying you.
+- **Automated Issue Triage**: Use LLM-integrated workflows to categorize issues and provide immediate "first-step" guidance to contributors.
 
-Happy coding!
+### 2. Documentation as a Product
+Documentation isn't an afterthought; it's the interface of your project.
+- **Interactive Examples**: Don't just show code; provide a link to a live environment (like StackBlitz or CodeSandbox).
+- **The "Why" Section**: Explain the philosophy behind your architectural choices. It helps contributors stay aligned with your vision.
+
+### 3. Community Responsiveness
+A project is only as healthy as its community.
+- **Set Realistic Expectations**: Use `CONTRIBUTING.md` to state your response times and preferred communication channels.
+- **Celebrate Contributors**: Use automation to publicly thank contributors on Twitter or in your project's changelog.
+
+### 4. The "Dump" Philosophy
+Don't be afraid to open-source your experiments. My **[sh20raj-dump](https://github.com/sh20raj-dump)** contains hundreds of projects. While not all are "production-ready," they serve as a valuable resource for others to see different approaches to common problems. Unpolished code can be just as educational as a polished library.
+
+Open source is about building in public, learning in public, and growing together.

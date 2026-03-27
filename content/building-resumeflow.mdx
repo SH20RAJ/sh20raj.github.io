@@ -1,15 +1,33 @@
 ---
-title: "Building ResumeFlow: A SaaS Case Study"
+title: "Building ResumeFlow: A Deep Dive into SaaS Transformation"
 publishedAt: "2024-06-10"
-summary: "How I transformed a static portfolio into a dynamic resume builder SaaS."
+summary: "A technical case study on transforming a static portfolio into a dynamic, state-managed Resume Builder SaaS."
 ---
 
-Transforming a portfolio into a SaaS involves more than just adding an editor. It requires thinking about state, persistence, and real-time feedback.
+The transition from a static portfolio to a Resume Builder SaaS (ResumeFlow) was a masterclass in modern React patterns. It wasn't just about adding a `/editor` route; it was about redesigning the data flow of the entire application.
 
-### The Stack:
-- **Frontend**: Next.js 15, Tailwind CSS
-- **State**: React Context with useResume hook
-- **UI**: Shadcn UI components
-- **Preview**: Real-time rendering logic
+### The Core Challenge: State Management
+At the heart of ResumeFlow is the global `ResumeProvider`. We needed a way to:
+- Allow real-time editing of deeply nested data.
+- Ensure the preview reflects changes instantly without full-page reloads.
+- Persist user progress across sessions using `localStorage` (with a plan for DB migration).
 
-Check out the editor to build your own!
+### The Technical Stack
+We chose a stack that prioritizes developer velocity and type safety:
+- **Framework**: Next.js 16 (for enhanced build speeds and React 19 stability).
+- **Styling**: Tailwind CSS with custom design tokens for a premium, unified look.
+- **UI Components**: A customized implementation of Shadcn UI, specifically for the complex form inputs required in the editor.
+- **Icons**: A centralized `Icons` library to maintain visual consistency across the dashboard.
+
+### Key Features Implemented
+1. **Dynamic Form Engine**: A modular form system that allows users to add/remove education, work experience, and project entries dynamically.
+2. **Live Preview**: Using React Context to pipe editor state directly into the existing portfolio components.
+3. **Project Dump Integration**: A specific logic to handle the transition between "Best Projects" and a full archive, ensuring the UI remains clean.
+
+### Future Roadmap
+The journey doesn't end here. The next phases include:
+- **PDF Export**: Moving from browser print triggers to a dedicated server-side PDF generation library.
+- **Multi-user Support**: Implementing Auth.js for cloud-saved resumes.
+- **AI Resume Analysis**: Integrating LLMs to provide real-time suggestions for better word choice and impact statements.
+
+ResumeFlow is more than a project; it's an evolving platform for professional storytelling.
