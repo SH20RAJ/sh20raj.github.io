@@ -50,14 +50,11 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
     localStorage.removeItem("resume-data");
   };
 
-  // Prevent hydration mismatch by only rendering children after mount
-  if (!isMounted) {
-    return <div className="invisible">{children}</div>;
-  }
-
   return (
     <ResumeContext.Provider value={{ data, updateData, resetData }}>
-      {children}
+      <div className={!isMounted ? "invisible" : ""}>
+        {children}
+      </div>
     </ResumeContext.Provider>
   );
 }
