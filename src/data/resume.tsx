@@ -210,6 +210,35 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Sopplayer",
+      href: "https://sh20raj.github.io/Sopplayer/players/",
+      dates: "2020 - Present",
+      active: true,
+      description:
+        "A sleek and feature-rich HTML5 video player integration. Enhances standard video elements with custom skinning, intuitive controls, and cross-browser compatibility. [![](https://data.jsdelivr.net/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.net/package/gh/sh20raj/sopplayer)",
+      technologies: ["HTML5", "CSS3", "JavaScript", "jsDelivr", "Open Source"],
+      links: [
+        {
+          type: "Website",
+          href: "https://sh20raj.github.io/Sopplayer/players/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/Sopplayer",
+          icon: "github",
+        },
+        {
+          type: "Stats",
+          href: "https://www.jsdelivr.com/package/gh/sh20raj/sopplayer?tab=stats",
+          icon: "globe",
+        },
+      ],
+      image:
+        "https://1.bp.blogspot.com/-MXdsGGbh59A/X-cM2B2eQ6I/AAAAAAAAAZU/KLEP-6BI85gMXR-7NjBWIdxnCKyIaNzbACLcBGAsYHQ/w640-h361/sopplayer.JPG",
+      video: "",
+    },
+    {
       title: "Bitotsav 2026",
       href: "https://bitotsav.bitmesra.ac.in/",
       dates: "2026",
