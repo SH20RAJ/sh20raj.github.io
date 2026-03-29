@@ -74,10 +74,10 @@ export default function Page() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4.3}>
           <div className="mt-6 flex flex-col gap-2">
-            <h3 className="text-sm font-semibold">NPM Activity</h3>
+            <h3 className="text-sm font-semibold">Activity</h3>
             <div className="flex flex-wrap gap-2">
                <a href="https://npm-stat.com/charts.html?author=sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/npm-stat/dy/sh20raj" alt="NPM Total Downloads" className="rounded-md" />
+                <img src="https://img.shields.io/badge/downloads-1.1M%2Fyear-3b82f6?style=flat-square&logo=npm" alt="1.1 Million downloads / year" className="rounded-md" />
               </a>
               <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Dev.to Followers" className="rounded-md" />
