@@ -128,55 +128,7 @@ export const DATA = {
     },
   },
 
-  work: [
-    {
-      company: "IEEE Student Branch-BIT Mesra",
-      href: "https://www.ieee.org",
-      badges: [],
-      location: "Ranchi, Jharkhand",
-      title: "Technical Lead",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg",
-      start: "Feb 2025",
-      end: "Present",
-      description:
-        "Leading technical initiatives and fostering collaboration on impactful tech projects. Exploring emerging technologies and organizing events to promote innovation and networking.",
-    },
-    {
-      company: "Cloud Native Computing Foundation (CNCF)",
-      href: "https://www.cncf.io",
-      badges: [],
-      location: "Ranchi, Jharkhand",
-      title: "Organizer - Ranchi Chapter",
-      logoUrl: "https://imgs.search.brave.com/JmHmf_08NAu4zZUJbgy8SgnIwuyan5V235q0Yv_aKYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5na2l0LmNvbS9w/bmcvZnVsbC8zNjgt/MzY4MjgyM19jbmNm/LWZvdW5kYXRpb24t/bG9nby1wbmcucG5n",
-      start: "June 2025",
-      end: "Present",
-      description:
-        "Initiated and leading the CNCF Ranchi Chapter. Organizing meetups, workshops, and sessions on Kubernetes, Docker, and Prometheus. Building a local cloud-native community and promoting open-source culture.",
-    },
-    {
-      company: "Entrepreneurship Development Cell",
-      href: "https://www.edcbitmesra.in",
-      badges: [],
-      location: "Ranchi, Jharkhand",
-      title: "Member",
-      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=edcbitmesra.in",
-      start: "Mar 2025",
-      end: "Sept 2025",
-      description:
-        "Contributed to the entrepreneurial ecosystem through startup ideation and incubation. Assisted in organizing flagship events and hackathons. Applied real-world business and product strategies.",
-    },
-    {
-      company: "Dhwani - Music Club, BIT Mesra",
-      href: "https://www.linkedin.com/company/dhwani-music-club-bit-mesra/posts/?feedView=all",
-      badges: [],
-      location: "Ranchi, Jharkhand",
-      title: "Member",
-      logoUrl: "https://i.pinimg.com/736x/e5/a8/97/e5a8972fe2fab9b3e7515ccd5871cc11.jpg",
-      start: "Mar 2025",
-      end: "Present",
-      description: "Actively participated in musical events and performances, showcasing a passion for music and contributing to the club's vibrant atmosphere. I'm into music also.",
-    },
-  ],
+  work: [],
   education: [
     {
       school: "Birla Institute of Technology, Mesra",
