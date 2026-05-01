@@ -154,18 +154,6 @@ export const DATA = {
         "Initiated and leading the CNCF Ranchi Chapter. Organizing meetups, workshops, and sessions on Kubernetes, Docker, and Prometheus. Building a local cloud-native community and promoting open-source culture.",
     },
     {
-      company: "Hirebuddy",
-      href: "",
-      badges: [],
-      location: "Ranchi, Jharkhand",
-      title: "Technical Manager",
-      logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=hirebuddy.net",
-      start: "Sept 2024",
-      end: "June 2025",
-      description:
-        "Oversaw technical operations and enhanced AI-driven job matching. implemented automation features reducing user effort by 70%. Collaborated with cross-functional teams to increase user engagement by 50%.",
-    },
-    {
       company: "Entrepreneurship Development Cell",
       href: "https://www.edcbitmesra.in",
       badges: [],
