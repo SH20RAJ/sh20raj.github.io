@@ -162,36 +162,36 @@ export const DATA = {
         "https://1.bp.blogspot.com/-MXdsGGbh59A/X-cM2B2eQ6I/AAAAAAAAAZU/KLEP-6BI85gMXR-7NjBWIdxnCKyIaNzbACLcBGAsYHQ/w640-h361/sopplayer.JPG",
       video: "",
     },
-    {
-      title: "Bitotsav 2026",
-      href: "https://bitotsav.bitmesra.ac.in/",
-      dates: "2026",
-      active: true,
-      description:
-        "Led the complete technical orchestration for BIT Mesra's flagship cultural fest (5,000+ participants). Built a high-concurrency QR entry system with Redis, an offline-capable scanning server (mCert), and integrated AI features. Managed everything from architecture to real-time crisis handling.",
-      technologies: [
-        "Next.js",
-        "PostgreSQL",
-        "Redis",
-        "OpenAI",
-        "System Architecture",
-        "Offline-First",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://bitotsav.bitmesra.ac.in/",
-          icon: "globe",
-        },
-        {
-          type: "LinkedIn",
-          href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
-          icon: "linkedin",
-        },
-      ],
-      image: "https://i.pinimg.com/1200x/73/b1/d1/73b1d15ca4899050485c4ba3a6359521.jpg",
-      video: "",
-    },
+    // {
+    //   title: "Bitotsav 2026",
+    //   href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
+    //   dates: "2026",
+    //   active: true,
+    //   description:
+    //     "Led the complete technical orchestration for a flagship cultural fest (5,000+ participants). Built a high-concurrency QR entry system with Redis, an offline-capable scanning server (mCert), and integrated AI features. Managed everything from architecture to real-time crisis handling.",
+    //   technologies: [
+    //     "Next.js",
+    //     "PostgreSQL",
+    //     "Redis",
+    //     "OpenAI",
+    //     "System Architecture",
+    //     "Offline-First",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Post",
+    //       href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
+    //       icon: "globe",
+    //     },
+    //     {
+    //       type: "LinkedIn",
+    //       href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
+    //       icon: "linkedin",
+    //     },
+    //   ],
+    //   image: "https://i.pinimg.com/1200x/73/b1/d1/73b1d15ca4899050485c4ba3a6359521.jpg",
+    //   video: "",
+    // },
     {
       title: "Kishan AI",
       href: "https://kishanai.strivio.world",
@@ -267,7 +267,7 @@ export const DATA = {
     },
     {
       title: "SketchFlow",
-      href: "https://sketchflow.space",
+      href: "https://sketchflow.netlify.app",
       dates: "",
       active: true,
       description:
@@ -282,7 +282,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://sketchflow.space",
+          href: "https://sketchflow.netlify.app",
           icon: "globe",
         },
         {
@@ -319,30 +319,30 @@ export const DATA = {
         "https://i.ibb.co/KjtyYb44/Screenshot-2025-05-22-at-9-41-59-AM.png",
       video: "",
     },
-    {
-      title: "Bitsyll",
-      href: "https://bitsyll.pages.dev/",
-      dates: "",
-      active: true,
-      description:
-        "A comprehensive platform for BIT Mesra students that provides centralized access to study materials, lecture notes, assignments, and previous year question papers to enhance the learning experience.",
-      technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-      links: [
-        {
-          type: "Website",
-          href: "https://bitsyll.pages.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/bitsyll",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://i.ibb.co/Jj4bmhFB/Screenshot-2025-05-22-at-9-43-32-AM.png",
-      video: "",
-    },
+    // {
+    //   title: "Bitsyll",
+    //   href: "https://bitsyll.pages.dev/",
+    //   dates: "",
+    //   active: true,
+    //   description:
+    //     "A comprehensive platform that provides centralized access to study materials, lecture notes, assignments, and previous year question papers to enhance the learning experience.",
+    //   technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://bitsyll.pages.dev/",
+    //       icon: "globe",
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/SH20RAJ/bitsyll",
+    //       icon: "github",
+    //     },
+    //   ],
+    //   image:
+    //     "https://i.ibb.co/Jj4bmhFB/Screenshot-2025-05-22-at-9-43-32-AM.png",
+    //   video: "",
+    // },
     {
       title: "SocialScribe",
       href: "https://socialscribe.pages.dev",
@@ -1346,7 +1346,7 @@ export const DATA = {
       dates: "May - July 2025",
       location: "Ranchi, Jharkhand",
       description:
-        "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers. #APF2025 #YUKTI2025 #AICTE #Innovation #Agritech #FarmTech #AI #BITMesra #CSE #Productization #IIC #StudentInnovator #KishanAI #MoE #StartupIndia",
+        "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers. #APF2025 #YUKTI2025 #AICTE #Innovation #Agritech #FarmTech #AI #CSE #Productization #IIC #StudentInnovator #KishanAI #MoE #StartupIndia",
       image:
         "https://pbs.twimg.com/profile_images/1633400336214302720/0p534a6e_400x400.jpg",
       links: [],
