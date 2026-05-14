@@ -12,7 +12,7 @@ import { ArrowLeftIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import Link from "next/link";
 
 export default function EditorPage() {
-  const { data, updateData } = useResume();
+  const { data, updateData, resetData } = useResume();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -521,7 +521,7 @@ export default function EditorPage() {
       <div className="flex justify-end gap-4 mt-8">
         <Button variant="outline" onClick={() => {
           if (confirm("Are you sure you want to reset all data to defaults?")) {
-            // resetData() would be here if exported from hook
+            resetData();
           }
         }}>Reset Data</Button>
         <Button onClick={() => window.print()}>Download PDF</Button>

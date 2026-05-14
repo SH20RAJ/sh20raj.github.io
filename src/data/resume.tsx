@@ -1,5 +1,26 @@
 import { Icons } from "@/components/icons";
 
+export interface WorkExperience {
+  company: string;
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+  href: string;
+  badges: string[];
+  logoUrl: string;
+  location: string;
+}
+
+export interface Education {
+  school: string;
+  degree: string;
+  start: string;
+  end: string;
+  href: string;
+  logoUrl: string;
+}
+
 export const DATA = {
   name: "Shaswat Raj",
   initials: "SH",
@@ -128,8 +149,8 @@ export const DATA = {
     },
   },
 
-  work: [],
-  education: [],
+  work: [] as WorkExperience[],
+  education: [] as Education[],
   projects: [
     {
       title: "Sopplayer",
