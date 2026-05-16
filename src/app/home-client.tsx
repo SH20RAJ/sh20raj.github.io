@@ -31,7 +31,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export function HomeClient({ DATA }: { DATA: any }) {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-32 pb-20">
       <div className="fixed bottom-4 right-4 z-50">
         <Link href="/editor">
           <Button variant="outline" size="icon" className="rounded-full shadow-lg bg-background hover:bg-accent transition-all hover:scale-110">
@@ -40,90 +40,101 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </Link>
       </div>
 
-      <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
-              <h1>
+      <section id="hero" className="pt-20">
+        <div className="mx-auto w-full max-w-7xl px-8 space-y-12">
+          <div className="gap-12 flex flex-col lg:flex-row justify-between items-center lg:items-start">
+            <div className="flex-col flex flex-1 space-y-4 text-center md:text-left">
+              <div className="space-y-2">
+                <h1>
+                  <BlurFadeText
+                    delay={BLUR_FADE_DELAY}
+                    className="text-4xl font-extrabold tracking-tighter sm:text-6xl xl:text-7xl/none"
+                    yOffset={8}
+                    text="Shaswat Raj"
+                  />
+                </h1>
                 <BlurFadeText
-                  delay={BLUR_FADE_DELAY}
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                  yOffset={8}
-                  text="Shaswat Raj"
+                  className="max-w-[700px] text-xl md:text-2xl font-bold text-primary/80"
+                  delay={BLUR_FADE_DELAY * 1.5}
+                  text="Full-Stack Developer & Open Source Builder"
                 />
-              </h1>
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl font-semibold text-muted-foreground"
-                delay={BLUR_FADE_DELAY * 1.5}
-                text="Full-Stack Developer & Open Source Builder"
-              />
+              </div>
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <p className="max-w-[600px] text-sm md:text-base text-muted-foreground mt-2">
-                  Helping founders turn rough ideas into launch-ready products.
+                <p className="max-w-[600px] text-base md:text-lg text-muted-foreground leading-relaxed mx-auto md:mx-0">
+                  Helping founders turn rough ideas into launch-ready products. I build AI tools, SaaS apps, and automation systems with speed and precision.
                 </p>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link href="/services" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">View Services</Link>
-                  <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">View Projects</Link>
-                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">Contact Me</Link>
+                <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+                  <Link href="/services" className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-bold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">View Services</Link>
+                  <Link href="/projects" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">View Projects</Link>
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">Contact Me</Link>
                 </div>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt="Shaswat Raj — Full Stack Developer" src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <Avatar className="size-48 md:size-64 border-8 border-background relative shadow-2xl">
+                  <AvatarImage alt="Shaswat Raj" src={DATA.avatarUrl} className="object-cover" />
+                  <AvatarFallback className="text-4xl">{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
             </BlurFade>
           </div>
         </div>
       </section>
 
-      {/* GitHub Activity & Proof Section */}
-      <section id="activity" className="space-y-6">
+      <section id="activity" className="mx-auto w-full max-w-7xl px-8 space-y-12">
         <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-          <div className="flex flex-col gap-2">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">GitHub Activity</h3>
-            <img
-              src="https://ghchart.rshah.org/SH20RAJ"
-              alt="GitHub contribution chart of Shaswat Raj showing daily coding activity"
-              className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
-              loading="lazy"
-              width={800}
-              height={120}
-            />
-          </div>
-        </BlurFade>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <div className="h-px flex-1 bg-border" />
+              <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-[0.2em]">Live Activity</h3>
+              <div className="h-px flex-1 bg-border" />
+            </div>
+            <div className="space-y-4">
+               <div className="flex flex-col gap-2">
+                <h4 className="text-sm font-semibold">GitHub Activity</h4>
+                <img
+                  src="https://ghchart.rshah.org/SH20RAJ"
+                  alt="GitHub contribution chart"
+                  className="w-full rounded-2xl border bg-white p-4 dark:invert dark:hue-rotate-180 shadow-sm"
+                  loading="lazy"
+                  width={800}
+                  height={120}
+                />
+              </div>
 
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex flex-col gap-2">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Activity & Proof</h3>
-            <div className="flex flex-wrap gap-2">
-              <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Shaswat Raj has 45k+ followers on Dev.to" className="rounded-md" loading="lazy" />
-              </a>
-              <a href="https://github.com/search?q=user%3ASH20RAJ+org%3Ash20raj-dump+org%3ALoveShade+org%3AINDIECDN+org%3Atechshade+org%3Amindos-labs+fork%3Atrue" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Duser%3ASH20RAJ%2Borg%3Ash20raj-dump%2Borg%3ALoveShade%2Borg%3AINDIECDN%2Borg%3Atechshade%2Borg%3Amindos-labs%2Bfork%3Atrue&query=%24.total_count&label=Collective%20Repos&logo=github&color=black&style=flat-square" alt="Total number of GitHub repositories by Shaswat Raj" className="rounded-md" loading="lazy" />
-              </a>
-              <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/npm-50%2B%20Packages-cb3837?style=flat-square&logo=npm" alt="Shaswat Raj maintains 50+ npm packages" className="rounded-md" loading="lazy" />
-              </a>
+              <div className="flex flex-col gap-2 pt-2">
+                <h4 className="text-sm font-semibold">Activity & Proof</h4>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
+                    <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=for-the-badge&logo=dev.to" alt="Dev.to" className="rounded-lg" loading="lazy" />
+                  </a>
+                  <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
+                    <img src="https://img.shields.io/badge/GitHub-Collective-black?style=for-the-badge&logo=github" alt="GitHub" className="rounded-lg" loading="lazy" />
+                  </a>
+                  <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
+                    <img src="https://img.shields.io/badge/npm-50%2B%20Packages-cb3837?style=for-the-badge&logo=npm" alt="npm" className="rounded-lg" loading="lazy" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </BlurFade>
       </section>
 
       {/* About Section */}
-      <section id="about">
+      <section id="about" className="mx-auto w-full max-w-7xl px-8">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="about">
-            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
-              About
+          <AccordionItem value="about" className="border-b-0">
+            <AccordionTrigger className="text-2xl font-bold py-4 hover:no-underline hover:text-primary transition-colors">
+              About & Vision
             </AccordionTrigger>
             <AccordionContent>
               <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
-                <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-6">
+                <div className="prose max-w-full text-pretty font-sans text-base md:text-lg text-muted-foreground dark:prose-invert space-y-4 pt-4">
                   <p>
                     I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, Cloudflare, and modern AI APIs.
                   </p>
@@ -139,19 +150,15 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 </div>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 0.4}>
-                <div className="mt-4">
+                <div className="mt-8 flex items-center gap-4">
                   <Link
                     href="https://sh20raj.github.io/ideas/"
-                    className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-primary bg-primary/10 px-4 py-2 rounded-full hover:bg-primary/20 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span>Explore my Startup & Project Ideas</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
+                    <span>Explore Startup Ideas</span>
+                    <ArrowRightIcon className="size-4" />
                   </Link>
                 </div>
               </BlurFade>
@@ -161,10 +168,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
       </section>
 
       {/* Technical Depth Section */}
-      <section id="skills">
+      <section id="skills" className="mx-auto w-full max-w-7xl px-8">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="skills">
-            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+          <AccordionItem value="skills" className="border-b-0">
+            <AccordionTrigger className="text-2xl font-bold py-4 hover:no-underline hover:text-primary transition-colors">
               Technical Depth
             </AccordionTrigger>
             <AccordionContent>
@@ -177,15 +184,15 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
                     { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
                   ].map((group, idx) => (
-                    <AccordionItem key={group.category} value={`skill-${idx}`}>
-                      <AccordionTrigger className="text-sm font-semibold text-muted-foreground uppercase tracking-wider py-2 hover:no-underline">
+                    <AccordionItem key={group.category} value={`skill-${idx}`} className="border-b-0">
+                      <AccordionTrigger className="text-sm font-semibold text-muted-foreground uppercase tracking-wider py-2 hover:no-underline hover:text-foreground">
                         {group.category}
                       </AccordionTrigger>
                       <AccordionContent>
                         <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
-                          <div className="flex flex-wrap gap-1 pt-1 pb-4">
+                          <div className="flex flex-wrap gap-2 pt-1 pb-4">
                             {group.skills.map((skill) => (
-                              <Badge key={skill} variant="secondary">{skill}</Badge>
+                              <Badge key={skill} variant="secondary" className="px-3 py-1 rounded-full">{skill}</Badge>
                             ))}
                           </div>
                         </BlurFade>
@@ -200,25 +207,25 @@ export function HomeClient({ DATA }: { DATA: any }) {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="projects">
-        <div className="space-y-12 w-full py-12">
+      <section id="projects" className="w-full py-20 bg-muted/20">
+        <div className="mx-auto max-w-7xl px-6 space-y-12">
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Featured Projects
+              <div className="space-y-4">
+                <div className="inline-block rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
+                  Portfolio
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-4xl font-extrabold tracking-tighter sm:text-6xl">
                   Products I&apos;ve Built
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto leading-relaxed">
                   AI tools, SaaS apps, developer utilities, and open-source projects — shipped and running in production.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.slice(0, 8).map((project: any, id: number) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {DATA.projects.slice(0, 6).map((project: any, id: number) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 9 + id * 0.05}
@@ -238,12 +245,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
             ))}
           </div>
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-12">
               <Link
                 href="/projects"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                className="group inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base font-bold text-primary-foreground shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 gap-2"
               >
-                View All Projects
+                Explore All 500+ Projects
+                <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </BlurFade>
@@ -251,24 +259,24 @@ export function HomeClient({ DATA }: { DATA: any }) {
       </section>
 
       {/* Ways I Can Help Section */}
-      <section id="services">
-        <div className="space-y-12 w-full py-12">
+      <section id="services" className="w-full py-20">
+        <div className="mx-auto max-w-7xl px-6 space-y-16">
           <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              <div className="space-y-4">
+                <div className="inline-block rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Services
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-4xl font-extrabold tracking-tighter sm:text-6xl">
                   Ways I Can Help
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
+                <p className="text-muted-foreground md:text-xl max-w-[700px] mx-auto leading-relaxed">
                   From landing pages to AI systems — I help founders and creators ship products fast.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-[1000px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesHubData.services.map((service, id) => {
               const Icon = {
                 layout: LayoutIcon,
@@ -282,24 +290,23 @@ export function HomeClient({ DATA }: { DATA: any }) {
               return (
                 <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
                   <Link href={service.href} className="group block h-full">
-                    <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full border bg-card/50 backdrop-blur-sm group-hover:-translate-y-2 group-hover:border-primary/50">
-                      <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <ArrowRightIcon className="size-4 text-primary" />
+                    <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full border-0 bg-secondary/30 backdrop-blur-sm group-hover:-translate-y-2 group-hover:bg-secondary/50 rounded-3xl p-4">
+                      <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <ArrowRightIcon className="size-5 text-primary" />
                       </div>
-                      <CardHeader className="pb-2">
-                        <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                          <Icon className="size-5" />
+                      <CardHeader className="pb-4">
+                        <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                          <Icon className="size-7" />
                         </div>
-                        <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors">
+                        <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">
                           {service.title}
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-base text-muted-foreground leading-relaxed">
                           {service.description}
                         </p>
                       </CardContent>
-                      <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500" />
                     </Card>
                   </Link>
                 </BlurFade>
@@ -308,21 +315,28 @@ export function HomeClient({ DATA }: { DATA: any }) {
           </div>
           
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <div className="flex flex-col items-center gap-6 mt-12 bg-muted/30 p-8 rounded-2xl border border-dashed">
-              <h3 className="text-xl font-bold">Ready to ship?</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/services"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 active:scale-95"
-                >
-                  View All Services
-                </Link>
-                <Link
-                  href="mailto:sh20raj@gmail.com"
-                  className="inline-flex h-12 items-center justify-center rounded-full border bg-background px-8 text-sm font-semibold shadow-sm hover:bg-accent transition-all hover:scale-105 active:scale-95"
-                >
-                  Book a Consultation
-                </Link>
+            <div className="relative overflow-hidden rounded-[3rem] bg-primary p-12 text-center text-primary-foreground">
+              <div className="absolute top-0 right-0 -mr-16 -mt-16 size-64 rounded-full bg-white/10 blur-3xl" />
+              <div className="absolute bottom-0 left-0 -ml-16 -mb-16 size-64 rounded-full bg-black/10 blur-3xl" />
+              <div className="relative z-10 space-y-6">
+                <h3 className="text-3xl font-bold sm:text-5xl">Ready to ship?</h3>
+                <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-xl">
+                  Let&apos;s turn your vision into a production-ready product in record time.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 pt-4">
+                  <Link
+                    href="/services"
+                    className="inline-flex h-14 items-center justify-center rounded-full bg-white px-10 text-base font-bold text-black shadow-xl transition-all hover:scale-105 active:scale-95"
+                  >
+                    Explore Services
+                  </Link>
+                  <Link
+                    href="mailto:sh20raj@gmail.com"
+                    className="inline-flex h-14 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 px-10 text-base font-bold text-white shadow-xl backdrop-blur-md transition-all hover:bg-white/20 hover:scale-105 active:scale-95"
+                  >
+                    Start a Project
+                  </Link>
+                </div>
               </div>
             </div>
           </BlurFade>
