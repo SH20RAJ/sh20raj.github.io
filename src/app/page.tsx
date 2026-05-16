@@ -128,9 +128,6 @@ export default function Page() {
           <div className="mt-6 flex flex-col gap-2">
             <h3 className="text-sm font-semibold">Activity & Proof</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="https://npm-stat.com/charts.html?author=sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/downloads-1.1M%2Fyear-3b82f6?style=flat-square&logo=npm" alt="1.1 Million npm downloads per year for Shaswat Raj's packages" className="rounded-md" loading="lazy" />
-              </a>
               <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Shaswat Raj has 45k+ followers on Dev.to" className="rounded-md" loading="lazy" />
               </a>

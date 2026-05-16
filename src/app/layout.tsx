@@ -140,7 +140,6 @@ export default function RootLayout({
         "https://codepen.io/sh20raj",
         "https://peerlist.io/sh20raj",
         "https://codeforces.com/profile/sh20raj",
-        "https://www.upwork.com/freelancers/~01a63e5aa20a7895dd",
       ],
     },
   };

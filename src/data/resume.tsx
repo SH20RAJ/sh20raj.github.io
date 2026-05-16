@@ -93,12 +93,6 @@ export const DATA = {
         icon: "codepen",
         navbar: false,
       },
-      Upwork: {
-        name: "Upwork",
-        url: "https://www.upwork.com/freelancers/~01a63e5aa20a7895dd",
-        icon: "upwork",
-        navbar: false,
-      },
       Peerlist: {
         name: "Peerlist",
         url: "https://peerlist.io/sh20raj",
