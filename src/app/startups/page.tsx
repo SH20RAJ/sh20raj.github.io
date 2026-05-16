@@ -15,31 +15,31 @@ const startups = [
   {
     name: "Debo",
     status: "Running",
-    description: "An AI memory product that captures useful context from notes, links, videos, and audio.",
+    description: "Your Life's Memory Engine. AI-powered product that captures context and makes it searchable.",
     link: "https://debo.life",
   },
   {
     name: "IndexFast",
     status: "Running",
-    description: "Faster search engine discovery tool with sitemap fetching and IndexNow integration.",
+    description: "The first MCP-native indexing platform. Index URLs to Google and Bing instantly from your IDE.",
     link: "https://indexfast.co",
   },
   {
-    name: "MCPPure",
+    name: "MCP Pure",
     status: "Running",
-    description: "High-performance Model Context Protocol (MCP) servers for AI agents.",
+    description: "A central hub for high-performance Model Context Protocol (MCP) servers on Cloudflare Workers.",
     link: "https://mcppure.shraj.workers.dev/",
   },
   {
     name: "Wify",
     status: "Running",
-    description: "A modern WiFi utility and management platform for network tools.",
+    description: "A modern, mobile-first, swipe-based text story platform with TikTok-style UX.",
     link: "https://wify.my",
   },
   {
     name: "Unstory",
     status: "Running",
-    description: "A premium SaaS factory and collection of specialized intelligence tools.",
+    description: "Strategic intelligence platform tracking AI, markets, and power shifts for high-agency professionals.",
     link: "https://unstory.app",
   },
   {
@@ -47,12 +47,6 @@ const startups = [
     status: "Running",
     description: "A collection of fast, simple browser tools for developers and creators.",
     link: "https://30tools.com",
-  },
-  {
-    name: "Draftly AI",
-    status: "Running",
-    description: "AI-driven content generation for technical writers.",
-    link: "https://draftly.ai",
   },
 ];
 

@@ -129,7 +129,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "An AI memory product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through AI chat. Designed the product around ingestion, transcripts, embeddings, retrieval, and long-term personal context.",
+        "Your Life's Memory Engine. An AI-powered product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through a seamless AI chat interface.",
       technologies: ["Next.js", "TypeScript", "AI SDK", "Vector Search", "Cloudflare"],
       links: [
         {
@@ -147,8 +147,8 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "A tool for faster search engine discovery using sitemap fetching, feed parsing, IndexNow, and Bing submission. Website owners publish pages but wait too long for search engines to discover them — IndexFast automates that with a dashboard for adding sites, connecting sitemap/RSS/feed URLs, and submitting them automatically.",
-      technologies: ["Next.js", "TypeScript", "IndexNow API", "Bing API", "Cron Jobs"],
+        "The first MCP-native indexing platform. Stop waiting for Google to crawl your site. Index your URLs to Google, Bing, and IndexNow instantly from your AI IDE (Cursor or VS Code).",
+      technologies: ["Next.js", "TypeScript", "IndexNow API", "Bing API", "MCP"],
       links: [
         {
           type: "Website",
@@ -165,13 +165,13 @@ export const DATA = {
       video: "",
     },
     {
-      title: "MCPPure",
+      title: "MCP Pure",
       href: "https://mcppure.shraj.workers.dev/",
       dates: "2025",
       active: true,
       description:
-        "High-performance Model Context Protocol (MCP) servers for AI agents. Provides essential context and tools for LLMs to interact with the real world through specialized servers.",
-      technologies: ["TypeScript", "Node.js", "AI", "MCP", "Cloudflare Workers"],
+        "A central, open-source hub for high-performance Model Context Protocol (MCP) servers. Built with Hono and Bun, and deployed on Cloudflare Workers for maximum speed and reliability.",
+      technologies: ["TypeScript", "Hono", "Bun", "MCP", "Cloudflare Workers"],
       links: [
         {
           type: "Website",
@@ -180,34 +180,11 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/mcppure",
+          href: "https://github.com/shade-solutions/mcp-pure",
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/SH20RAJ/mcppure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Wify",
-      href: "https://wify.my",
-      dates: "2025",
-      active: true,
-      description:
-        "A modern WiFi utility and management platform designed for speed and simplicity. Build and manage high-speed network utilities and tools.",
-      technologies: ["Next.js", "TypeScript", "Cloudflare", "APIs"],
-      links: [
-        {
-          type: "Website",
-          href: "https://wify.my",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/wify",
-          icon: "github",
-        },
-      ],
-      image: "https://socialify.git.ci/SH20RAJ/wify/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/shade-solutions/mcp-pure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
@@ -216,7 +193,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "A premium SaaS factory and collection of specialized intelligence tools. Building the next generation of digital products and high-authority publications.",
+        "Strategic intelligence platform tracking AI, markets, and power shifts. Deciphering complex trends for high-agency professionals, founders, and operators through deep analysis and tracking.",
       technologies: ["Next.js", "Tailwind CSS", "AI", "PostgreSQL", "SEO"],
       links: [
         {
@@ -224,13 +201,31 @@ export const DATA = {
           href: "https://unstory.app",
           icon: "globe",
         },
+      ],
+      image: "https://socialify.git.ci/unstory-app/unstory/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "Wify",
+      href: "https://wify.my",
+      dates: "2025",
+      active: true,
+      description:
+        "A modern, mobile-first, swipe-based text story platform. It brings the addictive vertical swipe UX of TikTok and Shorts into the world of text-based storytelling and immersive experiences.",
+      technologies: ["Next.js", "TypeScript", "Cloudflare", "Tailwind CSS"],
+      links: [
+        {
+          type: "Website",
+          href: "https://wify.my",
+          icon: "globe",
+        },
         {
           type: "Source",
-          href: "https://github.com/unstory-app",
+          href: "https://github.com/unstory-app/storix",
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/unstory-app/unstory/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/unstory-app/storix/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
