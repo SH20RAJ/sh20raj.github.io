@@ -87,17 +87,7 @@ export default function Page() {
             </AccordionTrigger>
             <AccordionContent>
               <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
-                <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-3">
-                  <p>
-                    I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
-                  </p>
-                  <p>
-                    I like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages with 1M+ annual npm downloads, and have 45k+ followers on Dev.to.
-                  </p>
-                </div>
-              </BlurFade>
-              <BlurFade delay={BLUR_FADE_DELAY * 0.2}>
-                <div className="mt-6 flex flex-col gap-2">
+                <div className="mt-2 flex flex-col gap-2">
                   <h3 className="text-sm font-semibold">GitHub Activity</h3>
                   <img
                     src="https://ghchart.rshah.org/SH20RAJ"
@@ -107,6 +97,16 @@ export default function Page() {
                     width={800}
                     height={120}
                   />
+                </div>
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY * 0.2}>
+                <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-6">
+                  <p>
+                    I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
+                  </p>
+                  <p>
+                    I like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages with 1M+ annual npm downloads, and have 45k+ followers on Dev.to.
+                  </p>
                 </div>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 0.3}>
