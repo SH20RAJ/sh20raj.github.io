@@ -343,19 +343,20 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Recognition Section */}
-      <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
+      {/* Bottom Interactive Sections */}
+      <section id="details" className="mx-auto w-full max-w-5xl px-8 space-y-12">
+        {/* Recognition Section */}
+        <div id="hackathons">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="recognition">
-              <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
-                <div className="flex flex-col items-start">
-                  <h2 className="text-xl font-bold">Fellowships & Achievements</h2>
-                  <p className="text-xs font-normal text-muted-foreground">Shortlisted for competitive fellowships and product impact.</p>
+            <AccordionItem value="recognition" className="border-0 bg-secondary/20 rounded-[2rem] px-8 mb-4">
+              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-1">
+                  <h2 className="text-2xl font-black">Fellowships & Achievements</h2>
+                  <p className="text-sm font-medium text-muted-foreground/60 italic">Competitive impact and industry recognition.</p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pt-4">
-                <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              <AccordionContent className="pt-4 pb-10">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-dashed">
                   {DATA.hackathons.map((project: any, id: number) => (
                     <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 0.1 + id * 0.05}>
                       <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
@@ -366,84 +367,101 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section id="faq">
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="faq">
-            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
-              Frequently Asked Questions
-            </AccordionTrigger>
-            <AccordionContent className="pt-4">
-              <Accordion type="single" collapsible className="w-full space-y-2">
-                {[
-                  { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
-                  { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
-                  { q: "What technologies does Shaswat Raj use?", a: "Next.js, React, TypeScript, Node.js, Python, Tailwind CSS, PostgreSQL, MongoDB, Cloudflare, Vercel, OpenAI, Claude, Gemini APIs, GitHub Actions, and more." },
-                  { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
-                  { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
-                ].map((faq, id) => (
-                  <AccordionItem key={faq.q} value={`faq-${id}`} className="border rounded-lg px-4 shadow-sm bg-card">
-                    <AccordionTrigger className="text-sm font-semibold py-3 hover:no-underline">
-                      {faq.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-sm text-muted-foreground pb-4">
-                      {faq.a}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </section>
+        {/* FAQ Section */}
+        <div id="faq">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq" className="border-0 bg-secondary/20 rounded-[2rem] px-8 mb-4">
+              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-1">
+                  <h2 className="text-2xl font-black">Frequently Asked Questions</h2>
+                  <p className="text-sm font-medium text-muted-foreground/60 italic">Everything you might want to know.</p>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-4 pb-10">
+                <Accordion type="single" collapsible className="w-full space-y-4 pt-6 border-t border-dashed">
+                  {[
+                    { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
+                    { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
+                    { q: "What technologies does Shaswat Raj use?", a: "Next.js, React, TypeScript, Node.js, Python, Tailwind CSS, PostgreSQL, MongoDB, Cloudflare, Vercel, OpenAI, Claude, Gemini APIs, GitHub Actions, and more." },
+                    { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
+                    { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
+                  ].map((faq, id) => (
+                    <AccordionItem key={faq.q} value={`faq-${id}`} className="border-0 rounded-2xl px-6 bg-background/50">
+                      <AccordionTrigger className="text-base font-bold py-4 hover:no-underline">
+                        {faq.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-base text-muted-foreground/80 pb-6">
+                        {faq.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
 
-      {/* Builder Proof Section */}
-      <section id="proof">
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="proof">
-            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
-              Builder Proof
-            </AccordionTrigger>
-            <AccordionContent>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4">
-                {[
-                  { label: "500+ Projects Shipped", desc: "Full-stack products, tools, APIs, and open-source packages" },
-                  { label: "AI Tools & SaaS Apps", desc: "AI products, developer utilities, and content platforms" },
-                  { label: "Open-Source Builder", desc: "50+ npm packages, 1M+ annual downloads" },
-                  { label: "Fast Product Execution", desc: "Ideas to working demos in days, not months" },
-                  { label: "45k+ Dev.to Followers", desc: "Technical writing and developer community" },
-                  { label: "AICTE APF 2025", desc: "Top 500 across India for AI product fellowship" },
-                ].map((item, id) => (
-                  <BlurFade key={item.label} delay={id * 0.05}>
-                    <div className="rounded-lg border bg-card p-4 text-card-foreground shadow-sm h-full">
-                      <p className="text-sm font-semibold">{item.label}</p>
-                      <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
-                    </div>
-                  </BlurFade>
-                ))}
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        {/* Builder Proof Section */}
+        <div id="proof">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="proof" className="border-0 bg-secondary/20 rounded-[2rem] px-8">
+              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-1">
+                  <h2 className="text-2xl font-black">Builder Proof</h2>
+                  <p className="text-sm font-medium text-muted-foreground/60 italic">Quantified impact and track record.</p>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-4 pb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 border-t border-dashed">
+                  {[
+                    { label: "500+ Projects Shipped", desc: "Full-stack products, tools, APIs, and open-source packages" },
+                    { label: "AI Tools & SaaS Apps", desc: "AI products, developer utilities, and content platforms" },
+                    { label: "Open-Source Builder", desc: "50+ npm packages, 1M+ annual downloads" },
+                    { label: "Fast Product Execution", desc: "Ideas to working demos in days, not months" },
+                    { label: "45k+ Dev.to Followers", desc: "Technical writing and developer community" },
+                    { label: "AICTE APF 2025", desc: "Top 500 across India for AI product fellowship" },
+                  ].map((item, id) => (
+                    <BlurFade key={item.label} delay={id * 0.05}>
+                      <div className="rounded-2xl border bg-background/50 p-6 shadow-sm h-full">
+                        <p className="text-lg font-black">{item.label}</p>
+                        <p className="text-sm text-muted-foreground mt-2">{item.desc}</p>
+                      </div>
+                    </BlurFade>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+      <section id="contact" className="w-full pb-32">
+        <div className="mx-auto max-w-7xl px-8">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Contact</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Want to build something fast?</h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;m open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 mt-6">
-                <a href="mailto:sh20raj@gmail.com" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">Email Me</a>
-                <a href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">View GitHub</a>
-                <a href="https://linkedin.com/in/sh20raj" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">Connect on LinkedIn</a>
-                <a href="https://x.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">Follow on X</a>
+            <div className="relative overflow-hidden rounded-[3rem] bg-foreground text-background p-12 md:p-24 text-center space-y-8">
+              <div className="absolute top-0 right-0 -mr-24 -mt-24 size-96 rounded-full bg-primary/20 blur-3xl" />
+              <div className="absolute bottom-0 left-0 -ml-24 -mb-24 size-96 rounded-full bg-blue-500/20 blur-3xl" />
+              
+              <div className="relative z-10 space-y-6">
+                <div className="inline-block rounded-full bg-background/10 text-background px-4 py-1.5 text-xs font-bold uppercase tracking-widest border border-background/20">
+                  Let&apos;s Work Together
+                </div>
+                <h2 className="text-4xl font-black tracking-tighter sm:text-7xl leading-tight">
+                  Want to build <span className="text-primary">something fast?</span>
+                </h2>
+                <p className="mx-auto max-w-[700px] text-background/60 text-lg md:text-2xl leading-relaxed">
+                  I&apos;m open to internships, startup work, freelance projects, AI product builds, and founder-led teams.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6 pt-8">
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-12 text-lg font-black text-primary-foreground shadow-2xl transition-all hover:scale-105 active:scale-95">
+                    Email Me
+                  </Link>
+                  <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-16 items-center justify-center rounded-full border-2 border-background/20 bg-transparent px-12 text-lg font-black text-background transition-all hover:bg-background/10 hover:scale-105 active:scale-95">
+                    View GitHub
+                  </Link>
+                </div>
               </div>
             </div>
           </BlurFade>
