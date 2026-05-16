@@ -43,22 +43,17 @@ export default function Page() {
                   delay={BLUR_FADE_DELAY}
                   className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   yOffset={8}
-                  text="Shaswat Raj — Full-Stack Developer & Open Source Builder"
+                  text="Shaswat Raj"
                 />
               </h1>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl font-semibold text-muted-foreground"
                 delay={BLUR_FADE_DELAY * 1.5}
-                text="I help founders and creators turn rough ideas into launch-ready products"
+                text="Full-Stack Developer & Open Source Builder"
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <p className="max-w-[600px] text-sm md:text-base text-muted-foreground mt-2">
-                  I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, Cloudflare, and modern AI APIs.
-                </p>
-              </BlurFade>
-              <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
-                <p className="max-w-[600px] text-sm text-muted-foreground mt-1">
-                  I move fast from vague ideas to working products — landing pages, dashboards, APIs, AI workflows, browser tools, MCP integrations, and public launches.
+                  Helping founders turn rough ideas into launch-ready products.
                 </p>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -101,6 +96,12 @@ export default function Page() {
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 0.2}>
                 <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-6">
+                  <p>
+                    I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, Cloudflare, and modern AI APIs.
+                  </p>
+                  <p>
+                    I move fast from vague ideas to working products — landing pages, dashboards, APIs, AI workflows, browser tools, MCP integrations, and public launches.
+                  </p>
                   <p>
                     I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
                   </p>
