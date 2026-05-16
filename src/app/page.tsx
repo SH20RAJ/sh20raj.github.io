@@ -12,6 +12,12 @@ import { Button } from "@/components/ui/button";
 import { Edit2Icon } from "lucide-react";
 import { servicesHubData } from "@/data/services";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -164,24 +170,30 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Technical Depth</h2>
           </BlurFade>
-          {[
-            { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
-            { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
-            { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
-            { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
-            { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
-          ].map((group) => (
-            <BlurFade key={group.category} delay={BLUR_FADE_DELAY * 7.5}>
-              <div className="space-y-2">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{group.category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {group.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary">{skill}</Badge>
-                  ))}
-                </div>
-              </div>
-            </BlurFade>
-          ))}
+          <Accordion type="single" collapsible className="w-full">
+            {[
+              { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
+              { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
+              { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
+              { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
+              { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
+            ].map((group, idx) => (
+              <AccordionItem key={group.category} value={`item-${idx}`}>
+                <AccordionTrigger className="text-sm font-semibold text-muted-foreground uppercase tracking-wider py-2 hover:no-underline">
+                  {group.category}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
+                    <div className="flex flex-wrap gap-1 pt-1 pb-4">
+                      {group.skills.map((skill) => (
+                        <Badge key={skill} variant="secondary">{skill}</Badge>
+                      ))}
+                    </div>
+                  </BlurFade>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
       {/* Featured Projects Section */}
@@ -284,33 +296,31 @@ export default function Page() {
       {/* Recognition Section */}
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Recognition</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Fellowships & Achievements</h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">Shortlisted for competitive fellowships and building products that create real impact.</p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
-                  <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="recognition">
+              <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+                <div className="flex flex-col items-start">
+                  <h2 className="text-xl font-bold">Fellowships & Achievements</h2>
+                  <p className="text-xs font-normal text-muted-foreground">Shortlisted for competitive fellowships and product impact.</p>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-4">
+                <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+                  {DATA.hackathons.map((project, id) => (
+                    <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 0.1 + id * 0.05}>
+                      <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
+                    </BlurFade>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section id="faq">
-        <BlurFade delay={BLUR_FADE_DELAY * 15.5}>
-          <h2 className="text-xl font-bold mb-6">Frequently Asked Questions</h2>
-        </BlurFade>
-        <div className="space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-2">
           {[
             { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
             { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
@@ -318,14 +328,16 @@ export default function Page() {
             { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
             { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
           ].map((faq, id) => (
-            <BlurFade key={faq.q} delay={BLUR_FADE_DELAY * 16 + id * 0.05}>
-              <div className="rounded-lg border bg-card p-4 text-card-foreground shadow-sm">
-                <h3 className="text-sm font-semibold">{faq.q}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{faq.a}</p>
-              </div>
-            </BlurFade>
+            <AccordionItem key={faq.q} value={`faq-${id}`} className="border rounded-lg px-4 shadow-sm bg-card">
+              <AccordionTrigger className="text-sm font-semibold py-3 hover:no-underline">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground pb-4">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </section>
 
       {/* Contact Section */}

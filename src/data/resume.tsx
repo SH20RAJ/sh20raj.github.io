@@ -137,8 +137,13 @@ export const DATA = {
           href: "https://debo.life",
           icon: "globe",
         },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/debo",
+          icon: "github",
+        },
       ],
-      image: "https://socialify.git.ci/SH20RAJ/debo/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://debo.life/og-image.png",
       video: "",
     },
     {
@@ -157,11 +162,11 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/indexfast",
+          href: "https://github.com/SH20RAJ/index-fast",
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/SH20RAJ/indexfast/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://www.indexfast.co/opengraph-image.png",
       video: "",
     },
     {
@@ -184,7 +189,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/shade-solutions/mcp-pure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://mcppure.shraj.workers.dev/og-image.png",
       video: "",
     },
     {
@@ -202,7 +207,7 @@ export const DATA = {
           icon: "globe",
         },
       ],
-      image: "https://socialify.git.ci/unstory-app/unstory/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://unstory.app/og-image.png",
       video: "",
     },
     {
@@ -225,7 +230,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/unstory-app/storix/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://wify.my/og-image.png",
       video: "",
     },
     {
@@ -248,7 +253,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://30tools.com/og-image.jpg",
       video: "",
     },
   ],
