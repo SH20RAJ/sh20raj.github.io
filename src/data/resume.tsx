@@ -56,8 +56,10 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: "home", label: "Home" },
-    { href: "/blog", icon: "notebook", label: "Blog" },
-    { href: "/startups", icon: "globe", label: "Startups" },
+    { href: "/projects", icon: "briefcase", label: "Work" },
+    { href: "/services", icon: "wrench", label: "Services" },
+    { href: "/landing-pages", icon: "layout", label: "Landing Pages" },
+    { href: "mailto:sh20raj@gmail.com", icon: "mail", label: "Contact" },
   ],
   contact: {
     email: "sh20raj@gmail.com",

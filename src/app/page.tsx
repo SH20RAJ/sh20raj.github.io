@@ -10,6 +10,8 @@ import Link from "next/link";
 import { useResume } from "@/lib/resume-context";
 import { Button } from "@/components/ui/button";
 import { Edit2Icon } from "lucide-react";
+import { servicesHubData } from "@/data/services";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -41,7 +43,7 @@ export default function Page() {
               <BlurFadeText
                 className="max-w-[600px] md:text-xl font-semibold text-muted-foreground"
                 delay={BLUR_FADE_DELAY * 1.5}
-                text="Full-Stack Developer & AI Product Builder"
+                text="I help founders and creators turn rough ideas into launch-ready products"
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <p className="max-w-[600px] text-sm md:text-base text-muted-foreground mt-2">
@@ -55,9 +57,9 @@ export default function Page() {
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">View Projects</Link>
-                  <Link href="#contact" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">Contact Me</Link>
-                  <Link href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">GitHub</Link>
+                  <Link href="/services" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">View Services</Link>
+                  <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">View Projects</Link>
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">Contact Me</Link>
                 </div>
               </BlurFade>
             </div>
@@ -235,37 +237,50 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      {/* What I Can Help With Section */}
+      {/* Ways I Can Help Section */}
       <section id="services">
-        <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
-          <h2 className="text-xl font-bold mb-4">What I Can Help With</h2>
-        </BlurFade>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {["Building MVPs from scratch", "Creating landing pages that convert", "Building AI tools and chat interfaces", "Integrating APIs and automation", "Creating dashboards and internal tools", "Improving SEO and technical performance", "Shipping startup-style products fast", "Building open-source developer tools"].map((item, id) => (
-            <BlurFade key={item} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
-              <div className="flex items-start gap-2 rounded-lg border bg-card p-3 text-card-foreground shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0 text-primary"><polyline points="20 6 9 17 4 12" /></svg>
-                <span className="text-sm">{item}</span>
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Services
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Ways I Can Help
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
+                  From landing pages to AI systems — I help founders and creators ship products fast.
+                </p>
               </div>
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Work With Me Section */}
-      <section id="why-me">
-        <BlurFade delay={BLUR_FADE_DELAY * 12}>
-          <h2 className="text-xl font-bold mb-4">Why Work With Me</h2>
-        </BlurFade>
-        <div className="space-y-2">
-          {["I ship fast — ideas to working demos in days", "I build full-stack — frontend, backend, APIs, AI, infra", "I understand product, not just code", "I can turn vague ideas into working software", "I care about UI, UX, SEO, and launch", "I'm comfortable with AI tools, APIs, automation, and modern web stacks"].map((item, id) => (
-            <BlurFade key={item} delay={BLUR_FADE_DELAY * 12.5 + id * 0.05}>
-              <div className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0 text-primary"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
-                <span className="text-sm">{item}</span>
-              </div>
-            </BlurFade>
-          ))}
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {servicesHubData.services.map((service, id) => (
+              <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                <Link href={service.href} className="block h-full">
+                  <Card className="hover:shadow-md transition-all h-full">
+                    <CardHeader>
+                      <CardTitle className="text-base">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </BlurFade>
+            ))}
+          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="flex justify-center mt-8">
+              <Link
+                href="/services"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+              >
+                View All Services
+              </Link>
+            </div>
+          </BlurFade>
         </div>
       </section>
 

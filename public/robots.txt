@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /editor
-
-Sitemap: https://sh20raj.github.io/sitemap.xml

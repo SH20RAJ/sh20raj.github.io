@@ -34,7 +34,7 @@ export default function Footer() {
           >
             <img 
               src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fsh20raj%2F&countColor=%23263759" 
-              alt="Visitor Count"
+              alt="Visitor count badge for Shaswat Raj's portfolio"
             />
           </a>
         </div>
