@@ -58,8 +58,6 @@ export const DATA = {
     { href: "/", icon: "home", label: "Home" },
     { href: "/projects", icon: "briefcase", label: "Work" },
     { href: "/services", icon: "wrench", label: "Services" },
-    { href: "/landing-pages", icon: "layout", label: "Landing Pages" },
-    { href: "mailto:sh20raj@gmail.com", icon: "mail", label: "Contact" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -81,12 +79,6 @@ export const DATA = {
         name: "LinkedIn",
         url: "https://linkedin.com/in/sh20raj",
         icon: "linkedin",
-        navbar: true,
-      },
-      Twitter: {
-        name: "Twitter",
-        url: "https://x.com/SH20RAJ/",
-        icon: "x",
         navbar: true,
       },
       DevCommunity: {
@@ -124,12 +116,6 @@ export const DATA = {
         url: "https://www.npmjs.com/~sh20raj",
         icon: "npm",
         navbar: false,
-      },
-      Ideas: {
-        name: "Ideas",
-        url: "https://github.com/SH20RAJ/ideas",
-        icon: "globe",
-        navbar: true,
       },
       email: {
         name: "Send Email",
