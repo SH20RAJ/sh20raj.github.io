@@ -31,15 +31,23 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `${DATA.url}/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
       url: `${DATA.url}/blog/${post.slug}`,
+      siteName: "Shaswat Raj Portfolio",
+      locale: "en_US",
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
         },
       ],
     },
@@ -48,6 +56,7 @@ export async function generateMetadata({
       title,
       description,
       images: [ogImage],
+      creator: "@SH20RAJ",
     },
   };
 }
@@ -81,11 +90,26 @@ export default async function Blog({
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
+              : `${DATA.url}/profile.jpg`,
             url: `${DATA.url}/blog/${post.slug}`,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `${DATA.url}/blog/${post.slug}`,
+            },
             author: {
               "@type": "Person",
               name: DATA.name,
+              url: DATA.url,
+            },
+            publisher: {
+              "@type": "Person",
+              name: DATA.name,
+              url: DATA.url,
+            },
+            isPartOf: {
+              "@type": "Blog",
+              name: "Shaswat Raj's Blog",
+              url: `${DATA.url}/blog`,
             },
           }),
         }}

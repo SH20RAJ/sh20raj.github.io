@@ -66,7 +66,7 @@ export function ProjectCard({
         {image && (
           <img
             src={image}
-            alt={title}
+            alt={`${title} project by Shaswat Raj`}
             width={500}
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"

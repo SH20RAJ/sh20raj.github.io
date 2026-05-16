@@ -52,9 +52,7 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ResumeContext.Provider value={{ data, updateData, resetData }}>
-      <div className={!isMounted ? "invisible" : ""}>
-        {children}
-      </div>
+      {children}
     </ResumeContext.Provider>
   );
 }

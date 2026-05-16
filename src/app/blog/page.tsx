@@ -5,6 +5,23 @@ import Link from "next/link";
 export const metadata = {
   title: "Blog",
   description: "My thoughts on software development, life, and more.",
+  alternates: {
+    canonical: "https://sh20raj.github.io/blog",
+  },
+  openGraph: {
+    title: "Blog | Shaswat Raj",
+    description: "My thoughts on software development, life, and more.",
+    url: "https://sh20raj.github.io/blog",
+    siteName: "Shaswat Raj Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Shaswat Raj",
+    description: "My thoughts on software development, life, and more.",
+    creator: "@SH20RAJ",
+  },
 };
 
 const BLUR_FADE_DELAY = 0.04;

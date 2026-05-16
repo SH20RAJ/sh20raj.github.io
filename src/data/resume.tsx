@@ -28,35 +28,36 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "System Design | Web Dev | DevOps | Open-Source",
+    "Full Stack Developer, AI Product Builder & Open-Source Creator",
   summary:
-    "Coding since class 7, I am a passionate Full Stack Developer with over 45k+ followers on Dev Community and a portfolio of 500+ NON-AI generated projects. I have worked and grown several startups, maintaining a strong focus on System Design, Web Dev, and Open-Source. My journey is defined by scale, innovation, and a commitment to building impactful tools.",
+    "I'm Shaswat Raj, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.\n\nI like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I've built 500+ projects, maintain 50+ open-source packages, and have 45k+ followers on Dev.to.",
   avatarUrl: "/profile.jpg",
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "React",
     "Next.js",
+    "React",
+    "TypeScript",
     "Node.js",
     "Python",
-    "PHP",
-    "Laravel",
-    "TailwindCSS",
+    "Tailwind CSS",
     "PostgreSQL",
     "MongoDB",
+    "AI/ML APIs",
+    "OpenAI",
+    "Claude",
+    "Gemini",
+    "Cloudflare",
+    "Vercel",
     "Docker",
-    "Kubernetes",
-    "Prometheus",
-    "System Design",
-    "DevOps",
-    "Trading Systems",
-    "AWS",
-    "OpenAI Integration",
-    "WebRTC",
+    "GitHub Actions",
+    "REST APIs",
+    "WebSockets",
+    "Prisma",
+    "SEO",
   ],
   navbar: [
     { href: "/", icon: "home", label: "Home" },
     { href: "/blog", icon: "notebook", label: "Blog" },
+    { href: "/startups", icon: "globe", label: "Startups" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -122,18 +123,6 @@ export const DATA = {
         icon: "npm",
         navbar: false,
       },
-      NotionProjects: {
-        name: "My Projects (Notion)",
-        url: "https://www.notion.so/My-Projects-281f46ab158180968fe6e9ca8f1bec3f?source=copy_link",
-        icon: "notion",
-        navbar: false,
-      },
-      Resume: {
-        name: "Resume (Notion)",
-        url: "https://www.notion.so/Resume-277f46ab15818041b9ced7e568400015?source=copy_link",
-        icon: "notion",
-        navbar: false,
-      },
       Ideas: {
         name: "Ideas",
         url: "https://github.com/SH20RAJ/ideas",
@@ -153,81 +142,77 @@ export const DATA = {
   education: [] as Education[],
   projects: [
     {
-      title: "Sopplayer",
-      href: "https://sh20raj.github.io/Sopplayer/players/",
-      dates: "2020 - Present",
+      title: "Debo",
+      href: "https://debo.life",
+      dates: "2025",
       active: true,
       description:
-        "A sleek and feature-rich HTML5 video player integration. Enhances standard video elements with custom skinning, intuitive controls, and cross-browser compatibility. [![](https://data.jsdelivr.net/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.net/package/gh/sh20raj/sopplayer)",
-      technologies: ["HTML5", "CSS3", "JavaScript", "jsDelivr", "Open Source"],
+        "An AI memory product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through AI chat. Designed the product around ingestion, transcripts, embeddings, retrieval, and long-term personal context.",
+      technologies: ["Next.js", "TypeScript", "AI SDK", "Vector Search", "Cloudflare"],
       links: [
         {
           type: "Website",
-          href: "https://sh20raj.github.io/Sopplayer/players/",
+          href: "https://debo.life",
+          icon: "globe",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/debo/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "30tools",
+      href: "https://30tools.com",
+      dates: "2025",
+      active: true,
+      description:
+        "A collection of fast, simple browser tools for developers, creators, and everyday users. Created SEO-focused tool pages with clean UX, fast client-side processing, and simple workflows. Most utility sites are slow, cluttered, and overloaded with ads — 30tools fixes that.",
+      technologies: ["Next.js", "TypeScript", "Browser APIs", "SEO", "Client-side Utilities"],
+      links: [
+        {
+          type: "Website",
+          href: "https://30tools.com",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/Sopplayer",
+          href: "https://github.com/SH20RAJ/30tools",
           icon: "github",
         },
-        {
-          type: "jsDelivr",
-          href: "https://www.jsdelivr.com/package/gh/sh20raj/sopplayer",
-          icon: "globe",
-          badgeImage:
-            "https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge",
-        },
       ],
-      image:
-        "https://1.bp.blogspot.com/-MXdsGGbh59A/X-cM2B2eQ6I/AAAAAAAAAZU/KLEP-6BI85gMXR-7NjBWIdxnCKyIaNzbACLcBGAsYHQ/w640-h361/sopplayer.JPG",
+      image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
-    // {
-    //   title: "Bitotsav 2026",
-    //   href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
-    //   dates: "2026",
-    //   active: true,
-    //   description:
-    //     "Led the complete technical orchestration for a flagship cultural fest (5,000+ participants). Built a high-concurrency QR entry system with Redis, an offline-capable scanning server (mCert), and integrated AI features. Managed everything from architecture to real-time crisis handling.",
-    //   technologies: [
-    //     "Next.js",
-    //     "PostgreSQL",
-    //     "Redis",
-    //     "OpenAI",
-    //     "System Architecture",
-    //     "Offline-First",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Post",
-    //       href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
-    //       icon: "globe",
-    //     },
-    //     {
-    //       type: "LinkedIn",
-    //       href: "https://www.linkedin.com/feed/update/urn:li:activity:7442608760193216512/?originTrackingId=m51JhtRIJR1VjoKxkXoAsg%3D%3D",
-    //       icon: "linkedin",
-    //     },
-    //   ],
-    //   image: "https://i.pinimg.com/1200x/73/b1/d1/73b1d15ca4899050485c4ba3a6359521.jpg",
-    //   video: "",
-    // },
+    {
+      title: "IndexFast",
+      href: "https://indexfast.co",
+      dates: "2025",
+      active: true,
+      description:
+        "A tool for faster search engine discovery using sitemap fetching, feed parsing, IndexNow, and Bing submission. Website owners publish pages but wait too long for search engines to discover them — IndexFast automates that with a dashboard for adding sites, connecting sitemap/RSS/feed URLs, and submitting them automatically.",
+      technologies: ["Next.js", "TypeScript", "IndexNow API", "Bing API", "Cron Jobs"],
+      links: [
+        {
+          type: "Website",
+          href: "https://indexfast.co",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/indexfast",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/indexfast/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
     {
       title: "Kishan AI",
       href: "https://kishanai.strivio.world",
       dates: "2025",
       active: true,
       description:
-        "An AI-powered Telegram/Web/App assistant for farmers. Shortlisted in AICTE Productization Fellowship (APF) 2025 (Top 500). Features crop disease diagnosis, weather insights, mandi prices, and government scheme recommendations.",
-      technologies: [
-        "Python",
-        "AI/ML",
-        "Computer Vision",
-        "Telegram Bot",
-        "React",
-        "Next.js",
-      ],
+        "An AI-powered Telegram/Web assistant for farmers. Shortlisted in AICTE Productization Fellowship (APF) 2025 (Top 500 across India). Features crop disease diagnosis using computer vision, weather insights, mandi prices, and government scheme recommendations.",
+      technologies: ["Python", "AI/ML", "Computer Vision", "Telegram Bot", "React", "Next.js"],
       links: [
         {
           type: "Website",
@@ -239,13 +224,36 @@ export const DATA = {
       video: "",
     },
     {
-      title: "NotesFlow",
-      href: "https://notesflow.pages.dev",
-      dates: "",
+      title: "FormGuard",
+      href: "https://formguard.unstory.app",
+      dates: "2025",
       active: true,
       description:
-        "A privacy-focused note-taking application that lets you create, edit, and manage notes with a beautiful interface. Features include local storage, import/export capabilities, dark mode, and works offline.",
-      technologies: ["Next.js", "React", "LocalStorage", "PWA"],
+        "A lightweight form protection and validation tool for developers. Public forms get spam, abuse, and invalid submissions — FormGuard provides a simple protection layer for validating and securing form submissions without heavy dependencies.",
+      technologies: ["Next.js", "Node.js", "APIs", "Validation", "Security"],
+      links: [
+        {
+          type: "Website",
+          href: "https://formguard.unstory.app",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/formguard",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/formguard/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "NotesFlow",
+      href: "https://notesflow.pages.dev",
+      dates: "2024",
+      active: true,
+      description:
+        "A privacy-focused note-taking application with a beautiful interface. Features local storage, import/export capabilities, dark mode, and offline-first PWA support. No account required — your notes stay on your device.",
+      technologies: ["Next.js", "React", "LocalStorage", "PWA", "TypeScript"],
       links: [
         {
           type: "Website",
@@ -258,14 +266,13 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://i.ibb.co/twghXwLL/Screenshot-2025-05-22-at-9-33-08-AM.png",
+      image: "https://i.ibb.co/twghXwLL/Screenshot-2025-05-22-at-9-33-08-AM.png",
       video: "",
     },
     {
       title: "Reflecto",
       href: "https://reflecto.netlify.app/",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
         "A minimal yet smart daily reflection app designed for busy users. Features AI-curated questions, voice journaling, mood tracking, and personalized insights that evolve with you over time.",
@@ -282,24 +289,40 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://i.ibb.co/1tDkptVS/Screenshot-2025-05-22-at-9-38-58-AM.png",
+      image: "https://i.ibb.co/1tDkptVS/Screenshot-2025-05-22-at-9-38-58-AM.png",
+      video: "",
+    },
+    {
+      title: "Sopplayer",
+      href: "https://sh20raj.github.io/Sopplayer/players/",
+      dates: "2020 - Present",
+      active: true,
+      description:
+        "A sleek and feature-rich HTML5 video player integration. Enhances standard video elements with custom skinning, intuitive controls, and cross-browser compatibility. Distributed via jsDelivr CDN.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "jsDelivr", "Open Source"],
+      links: [
+        {
+          type: "Website",
+          href: "https://sh20raj.github.io/Sopplayer/players/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/Sopplayer",
+          icon: "github",
+        },
+      ],
+      image: "https://1.bp.blogspot.com/-MXdsGGbh59A/X-cM2B2eQ6I/AAAAAAAAAZU/KLEP-6BI85gMXR-7NjBWIdxnCKyIaNzbACLcBGAsYHQ/w640-h361/sopplayer.JPG",
       video: "",
     },
     {
       title: "SketchFlow",
       href: "https://sketchflow.netlify.app",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
-        "A powerful collaborative whiteboard platform designed for real-time brainstorming and visual collaboration. Features include customizable templates, recording capabilities, AI assistance, and integration with productivity tools.",
-      technologies: [
-        "React",
-        "Canvas API",
-        "WebSockets",
-        "Node.js",
-        "MongoDB",
-      ],
+        "A powerful collaborative whiteboard platform designed for real-time brainstorming and visual collaboration. Features customizable templates, recording capabilities, AI assistance, and integration with productivity tools.",
+      technologies: ["React", "Canvas API", "WebSockets", "Node.js", "MongoDB"],
       links: [
         {
           type: "Website",
@@ -312,65 +335,16 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://i.ibb.co/k2qr4gtF/Screenshot-2025-05-22-at-9-40-30-AM.png",
+      image: "https://i.ibb.co/k2qr4gtF/Screenshot-2025-05-22-at-9-40-30-AM.png",
       video: "",
     },
-    {
-      title: "CreoYT",
-      href: "https://creoyt.netlify.app/",
-      dates: "",
-      active: true,
-      description:
-        "An all-in-one platform for YouTube creators with AI-powered tools for channel analysis, content research, thumbnail creation, competitor tracking, and video repurposing to optimize channel growth.",
-      technologies: ["React", "Next.js", "YouTube API", "OpenAI", "MongoDB"],
-      links: [
-        {
-          type: "Website",
-          href: "https://creoyt.netlify.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/creoyt",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://i.ibb.co/KjtyYb44/Screenshot-2025-05-22-at-9-41-59-AM.png",
-      video: "",
-    },
-    // {
-    //   title: "Bitsyll",
-    //   href: "https://bitsyll.pages.dev/",
-    //   dates: "",
-    //   active: true,
-    //   description:
-    //     "A comprehensive platform that provides centralized access to study materials, lecture notes, assignments, and previous year question papers to enhance the learning experience.",
-    //   technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://bitsyll.pages.dev/",
-    //       icon: "globe",
-    //     },
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/SH20RAJ/bitsyll",
-    //       icon: "github",
-    //     },
-    //   ],
-    //   image:
-    //     "https://i.ibb.co/Jj4bmhFB/Screenshot-2025-05-22-at-9-43-32-AM.png",
-    //   video: "",
-    // },
     {
       title: "SocialScribe",
       href: "https://socialscribe.pages.dev",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
-        "An AI-powered tool that helps create tailored social media posts, comments, and direct messages with customizable tone, formality, and platform-specific adjustments for platforms like LinkedIn, Twitter, and Facebook.",
+        "An AI-powered tool that creates tailored social media posts, comments, and direct messages with customizable tone, formality, and platform-specific adjustments for LinkedIn, Twitter, and Facebook.",
       technologies: ["React", "Next.js", "Gemini AI", "JavaScript", "CSS"],
       links: [
         {
@@ -384,24 +358,17 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://i.ibb.co/8ng5N1Yz/Screenshot-2025-05-22-at-9-47-10-AM.png",
+      image: "https://i.ibb.co/8ng5N1Yz/Screenshot-2025-05-22-at-9-47-10-AM.png",
       video: "",
     },
     {
       title: "AayeChup",
       href: "https://aayechup.shade.cool",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
         "An AI voice conversation platform that enables natural voice interactions with multiple AI personalities, creating an experience similar to a phone call with high-quality voice processing and real-time responses.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "OpenAI Whisper",
-        "ElevenLabs",
-        "Tailwind CSS",
-      ],
+      technologies: ["Next.js", "TypeScript", "OpenAI Whisper", "ElevenLabs", "Tailwind CSS"],
       links: [
         {
           type: "Website",
@@ -414,108 +381,17 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/aayechup/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Article",
-      href: "https://article.shade.cool/",
-      dates: "",
-      active: true,
-      description:
-        "A free open-source blogging platform that allows writers to publish articles on various genres while automating classification, SEO, audience management, and outreach to help content creators focus on writing.",
-      technologies: [
-        "Next.js",
-        "Prisma",
-        "PostgreSQL",
-        "JavaScript",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://article.shade.cool/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/article",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/article/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Multiversal",
-      href: "https://multiversal.pages.dev/",
-      dates: "",
-      active: true,
-      description:
-        "A creative platform where poets, writers, musicians, and storytellers can share diverse content including poems, stories, songs, and scripts, complete with user profiles and social interaction features.",
-      technologies: [
-        "Next.js",
-        "Prisma",
-        "MySQL",
-        "Tailwind CSS",
-        "JavaScript",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://multiversal.pages.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/Multiversal",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/Multiversal/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "PlayTube",
-      href: "https://playtube.pages.dev",
-      dates: "",
-      active: true,
-      description:
-        "A full-featured YouTube clone with video upload and playback, user authentication, comments, likes, subscriptions, search, trending videos, and user profiles powered by a PHP/MySQL backend.",
-      technologies: ["PHP", "MySQL", "JavaScript", "FFmpeg", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://playtube.pages.dev",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/playtube",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/playtube/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/aayechup/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
       title: "Scaleboard",
       href: "https://scaleboard.org",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
         "An all-in-one platform for indie hackers and startup founders to showcase projects, track metrics with verified analytics, and build in public with full transparency and customization options.",
-      technologies: [
-        "Next.js",
-        "Tailwind CSS",
-        "Node.js",
-        "PostgreSQL",
-        "Stripe API",
-      ],
+      technologies: ["Next.js", "Tailwind CSS", "Node.js", "PostgreSQL", "Stripe API"],
       links: [
         {
           type: "Website",
@@ -528,14 +404,13 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/scaleboard/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/scaleboard/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
       title: "PeerDrop",
       href: "https://peerdrop.pages.dev/",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
         "A privacy-focused, peer-to-peer file sharing app that enables secure, serverless file transfers. Files are end-to-end encrypted via WebRTC and never touch any third-party server.",
@@ -552,423 +427,13 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/peerdrop/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "GitProxy",
-      href: "https://gitproxy.pages.dev",
-      dates: "",
-      active: true,
-      description:
-        "A service that allows downloading GitHub repositories, releases, and files without revealing the actual repository links, providing an additional layer of security and privacy for distributing code.",
-      technologies: [
-        "JavaScript",
-        "Node.js",
-        "GitHub API",
-        "Encryption",
-        "Cloudflare Pages",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://gitproxy.pages.dev",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/gitproxy",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/gitproxy/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Image BG Remover",
-      href: "https://bg-rem.streamlit.app/",
-      dates: "",
-      active: true,
-      description:
-        "A web application that removes backgrounds from images using OpenCV's segmentation methods, featuring an intuitive interface for uploading, processing, and downloading images with transparent backgrounds.",
-      technologies: [
-        "Python",
-        "OpenCV",
-        "Streamlit",
-        "NumPy",
-        "Image Processing",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://bg-rem.streamlit.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/image-bg-remover",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/image-bg-remover/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "DevArt React",
-      href: "https://devart-react.pages.dev/",
-      dates: "",
-      active: true,
-      description:
-        "A modern blog and content platform built with React that integrates with the Dev.to API to display programming articles and tutorials in a clean, responsive interface.",
-      technologies: ["React", "Vite", "Dev.to API", "JavaScript", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://devart-react.pages.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/devart-react",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/devart-react/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Waitlist.js",
-      href: "https://waitlist-js.vercel.app/",
-      dates: "",
-      active: true,
-      description:
-        "A SaaS platform that transforms traditional waitlists into growth engines by combining AI-powered engagement, viral referral systems, and psychological triggers to help businesses build anticipation and maximize conversions.",
-      technologies: ["TypeScript", "JavaScript", "React", "API", "Analytics"],
-      links: [
-        {
-          type: "Website",
-          href: "https://waitlist-js.vercel.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/waitlist.js",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/waitlist.js/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "TubeSonic",
-      href: "https://github.com/SH20RAJ/TubeSonic/releases",
-      dates: "",
-      active: true,
-      description:
-        "A lightweight, blazing-fast desktop app built with Tauri and React that lets you download YouTube videos and audio in various quality options with a beautiful glass morphism UI design.",
-      technologies: [
-        "Tauri",
-        "React",
-        "Rust",
-        "yt-dlp",
-        "JavaScript",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://github.com/SH20RAJ/TubeSonic/releases",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/TubeSonic",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/TubeSonic/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "NoMouse",
-      href: "https://github.com/SH20RAJ/nomouse",
-      dates: "",
-      active: true,
-      description: "Keyboard-only navigation tool for desktop",
-      technologies: ["Electron", "JavaScript", "Accessibility"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/nomouse",
-          icon: "github",
-        },
-      ],
-      image: "/projects/nomouse.jpg",
-      video: "",
-    },
-    {
-      title: "SopPlayer",
-      href: "https://sh20raj.github.io/Sopplayer/",
-      dates: "",
-      active: true,
-      description:
-        "A sleek and feature-rich HTML5 video player that enhances the visual experience of videos on web pages. Offers compatibility across devices and browsers with intuitive controls and customizable options.",
-      technologies: ["JavaScript", "HTML5 Video", "CSS", "Media API"],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/Sopplayer/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/Sopplayer",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/Sopplayer/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "SoundWave",
-      href: "https://sh20raj.github.io/soundwave/",
-      dates: "",
-      active: true,
-      description:
-        "A modern and customizable HTML5 audio player library with advanced features including waveform visualization, volume/speed controls, loop functionality, and theming support for creating sleek audio experiences.",
-      technologies: ["JavaScript", "Web Audio API", "HTML5", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/soundwave/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/soundwave",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/soundwave/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Vibly",
-      href: "https://sh20raj.github.io/vibly/",
-      dates: "",
-      active: true,
-      description:
-        "A fully customizable video player built on top of Video.js with enhanced features and a modern UI. Features include responsive design, customizable themes, streaming support, accessibility features, and framework compatibility with React, Vue, and Angular.",
-      technologies: [
-        "JavaScript",
-        "SCSS",
-        "Video.js",
-        "Media APIs",
-        "Streaming",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/vibly/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/vibly",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/vibly/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "MarkMind Editor",
-      href: "https://npmjs.com/package/markmind-editor",
-      dates: "",
-      active: true,
-      description:
-        "A Notion-style WYSIWYG editor with AI-powered autocompletion built on Tiptap. Includes rich text editing with Markdown support, slash commands, bubble menus for formatting, image handling, tables support, and a customizable UI with themes.",
-      technologies: [
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Next.js",
-        "AI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://npmjs.com/package/markmind-editor",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/markmind-editor",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/markmind-editor/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "SteamLit",
-      href: "https://sh20raj.github.io/steamlit/",
-      dates: "",
-      active: true,
-      description:
-        "A lightweight Node.js framework for building reactive, data-driven web applications with minimal effort. Features include reactive components, easy API, data visualization tools, and customizable extensions.",
-      technologies: [
-        "JavaScript",
-        "Node.js",
-        "Web Components",
-        "Data Visualization",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/steamlit/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/steamlit",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/steamlit/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "OctoPress",
-      href: "https://octopress.netlify.app",
-      dates: "",
-      active: true,
-      description:
-        "A modern blogging platform that turns GitHub Issues into a CMS for your blog, featuring a beautiful UI with dark mode, SEO optimization, and customizable settings through a simple configuration file.",
-      technologies: ["Next.js", "GitHub API", "React", "JavaScript", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://octopress.netlify.app",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/OctoPress",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/OctoPress/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "YouTube Remote Uploader",
-      href: "https://github.com/SH20RAJ/youtube-remote-uploader/releases",
-      dates: "",
-      active: true,
-      description:
-        "A tool that automates downloading videos from remote URLs and uploading them to YouTube using the Data API. Perfect for batch processing and scheduled uploads using GitHub Actions with comprehensive metadata management.",
-      technologies: [
-        "Python",
-        "YouTube API",
-        "GitHub Actions",
-        "Automation",
-        "Batch Processing",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://github.com/SH20RAJ/youtube-remote-uploader/releases",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/youtube-remote-uploader",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/youtube-remote-uploader/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Sequence Game",
-      href: "https://sequence.pages.dev/",
-      dates: "",
-      active: true,
-      description:
-        "A beautiful online multiplayer Sequence card game designed specifically for couples, featuring a love-themed design with hearts, pink colors, and special animations. Includes real-time gameplay, room creation, and persistence with MongoDB.",
-      technologies: [
-        "TypeScript",
-        "JavaScript",
-        "Next.js",
-        "MongoDB",
-        "Socket.io",
-        "Prisma",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sequence.pages.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/sequence-game",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/sequence-game/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "SopGame",
-      href: "https://sopgame.pages.dev/",
-      dates: "",
-      active: true,
-      description:
-        "A modern HTML5 game development framework built on Next.js that streamlines the creation of browser-based games. Features include a flexible game loop, asset management, physics integration, and responsive design for cross-platform gameplay.",
-      technologies: [
-        "JavaScript",
-        "CSS",
-        "Next.js",
-        "Game Development",
-        "Canvas API",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sopgame.pages.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/sopgame",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/sopgame/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/peerdrop/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
       title: "CodeSeek",
       href: "https://marketplace.visualstudio.com/items?itemName=sh20raj.codeseek-shade",
-      dates: "",
+      dates: "2024",
       active: true,
       description:
         "AI-powered coding assistant for VS Code with DeepSeek integration. Features intelligent code completion, chat assistance, name suggestions, and README generation for a supercharged coding workflow.",
@@ -985,251 +450,86 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/CodeSeek/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/CodeSeek/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "Toggle Search Engine",
-      href: "https://sh20raj.github.io/toggle-search-engine/",
-      dates: "",
+      title: "MarkMind Editor",
+      href: "https://npmjs.com/package/markmind-editor",
+      dates: "2024",
       active: true,
       description:
-        "A powerful Chrome extension that allows you to seamlessly toggle between popular search engines such as Google, Bing, DuckDuckGo, Yahoo, Baidu, and Yandex without leaving your current tab, enhancing browsing efficiency.",
-      technologies: [
-        "JavaScript",
-        "HTML",
-        "Chrome Extension API",
-        "Browser APIs",
-      ],
+        "A Notion-style WYSIWYG editor with AI-powered autocompletion built on Tiptap. Includes rich text editing with Markdown support, slash commands, bubble menus, image handling, tables, and customizable themes. Published on npm.",
+      technologies: ["TypeScript", "React", "Next.js", "Tiptap", "AI"],
       links: [
         {
           type: "Website",
-          href: "https://sh20raj.github.io/toggle-search-engine/",
+          href: "https://npmjs.com/package/markmind-editor",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/toggle-search-engine",
+          href: "https://github.com/SH20RAJ/markmind-editor",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/toggle-search-engine/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/markmind-editor/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "SafeStore",
-      href: "https://www.npmjs.com/package/@sh20raj/safestore",
-      dates: "",
+      title: "Waitlist.js",
+      href: "https://waitlist-js.vercel.app/",
+      dates: "2024",
       active: true,
       description:
-        "An advanced client-side storage library with AES-256 encryption for secure data storage in web applications. Features include automatic encryption/decryption, configurable security options, and support for various storage types.",
-      technologies: [
-        "JavaScript",
-        "Cryptography",
-        "LocalStorage",
-        "Web Security",
-        "IndexedDB",
-      ],
+        "A SaaS platform that transforms traditional waitlists into growth engines by combining AI-powered engagement, viral referral systems, and psychological triggers to help businesses build anticipation and maximize conversions.",
+      technologies: ["TypeScript", "JavaScript", "React", "API", "Analytics"],
       links: [
         {
           type: "Website",
-          href: "https://www.npmjs.com/package/@sh20raj/safestore",
+          href: "https://waitlist-js.vercel.app/",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/SafeStore",
+          href: "https://github.com/SH20RAJ/waitlist.js",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/SafeStore/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/waitlist.js/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "Create TanStack App",
-      href: "https://www.npmjs.com/package/create-tanstack-app",
-      dates: "",
+      title: "TubeSonic",
+      href: "https://github.com/SH20RAJ/TubeSonic/releases",
+      dates: "2024",
       active: true,
       description:
-        "A powerful CLI tool for instantly setting up fully configured TanStack projects with React Query, React Router, and TanStack Table. Features include template selection, TypeScript/JavaScript options, and automatic dependency installation.",
-      technologies: [
-        "JavaScript",
-        "Node.js",
-        "CLI Tools",
-        "TanStack",
-        "React",
-      ],
+        "A lightweight, blazing-fast desktop app built with Tauri and React for downloading YouTube videos and audio in various quality options with a beautiful glass morphism UI design.",
+      technologies: ["Tauri", "React", "Rust", "yt-dlp", "JavaScript"],
       links: [
         {
           type: "Website",
-          href: "https://www.npmjs.com/package/create-tanstack-app",
+          href: "https://github.com/SH20RAJ/TubeSonic/releases",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/create-tanstack-app",
+          href: "https://github.com/SH20RAJ/TubeSonic",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/create-tanstack-app/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Create-GI",
-      href: "https://www.npmjs.com/package/create-gi",
-      dates: "",
-      active: true,
-      description:
-        "An innovative tool for generating beautiful, interactive documentation websites directly from GitHub repositories. Features automatic README parsing, code highlighting, responsive design, and customization options.",
-      technologies: [
-        "JavaScript",
-        "Markdown",
-        "GitHub API",
-        "Documentation",
-        "Static Site Generation",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.npmjs.com/package/create-gi",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/create-gi",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/create-gi/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "BitPlayer",
-      href: "https://sh20raj.github.io/bitplayer/",
-      dates: "",
-      active: true,
-      description:
-        "A lightweight yet feature-rich audio player library for web applications with a customizable UI and advanced features like waveform visualization, playlist management, and audio effects processing.",
-      technologies: ["JavaScript", "Web Audio API", "HTML5", "CSS", "Canvas"],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/bitplayer/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/bitplayer",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/bitplayer/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "SheetFlow",
-      href: "https://www.npmjs.com/package/sheetflow",
-      dates: "",
-      active: true,
-      description:
-        "A powerful JavaScript library for working with spreadsheet data that makes parsing, manipulating, and visualizing spreadsheet data effortless. Features include formula support, cell styling, and data binding.",
-      technologies: [
-        "JavaScript",
-        "Data Manipulation",
-        "Spreadsheets",
-        "Data Visualization",
-        "CSV/Excel",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.npmjs.com/package/sheetflow",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/SheetFlow",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/SheetFlow/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "Sanskrit",
-      href: "https://www.npmjs.com/package/@sh20raj/sanskrit",
-      dates: "",
-      active: true,
-      description:
-        "A comprehensive JavaScript library for Sanskrit text processing and transliteration with support for Devanagari to Latin conversions, grammatical analysis, and sandhi rules. Perfect for Sanskrit educational tools and research.",
-      technologies: [
-        "JavaScript",
-        "NLP",
-        "Linguistics",
-        "Transliteration",
-        "Unicode",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.npmjs.com/package/@sh20raj/sanskrit",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/sanskrit",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/sanskrit/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
-      title: "AuraAI",
-      href: "https://sh20raj.github.io/AuraAI/",
-      dates: "",
-      active: true,
-      description:
-        "A next-generation smart keyboard app built with React Native and Expo, featuring AI-powered text prediction, multiple themes, customization options, and haptic feedback for an enhanced typing experience.",
-      technologies: ["React Native", "Expo", "AI", "TypeScript"],
-      links: [
-        {
-          type: "Website",
-          href: "https://sh20raj.github.io/AuraAI/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/AuraAI",
-          icon: "github",
-        },
-      ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/AuraAI/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/TubeSonic/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
       title: "OpenDictionaryAPI",
       href: "https://api.dictionaryapi.dev/",
-      dates: "",
+      dates: "2022",
       active: true,
       description:
         "A free, open-source dictionary API that aggregates data from multiple reputable sources, providing comprehensive word definitions, examples, etymology, synonyms, and translations in a clean, consistent format.",
-      technologies: [
-        "JavaScript",
-        "Node.js",
-        "Web Scraping",
-        "API Development",
-        "Data Aggregation",
-      ],
+      technologies: ["JavaScript", "Node.js", "Web Scraping", "API Development", "Data Aggregation"],
       links: [
         {
           type: "Website",
@@ -1242,134 +542,157 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/OpenDictionaryAPI/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/OpenDictionaryAPI/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "AISanta",
-      href: "https://aisanta.pages.dev",
-      dates: "",
+      title: "SafeStore",
+      href: "https://www.npmjs.com/package/@sh20raj/safestore",
+      dates: "2023",
       active: true,
       description:
-        "An AI-powered holiday gift recommendation system that uses machine learning to suggest personalized gift ideas based on recipient interests, relationship, budget, and past preferences with curated product links.",
-      technologies: [
-        "Python",
-        "Machine Learning",
-        "NLP",
-        "Web Scraping",
-        "Recommendation Systems",
-      ],
+        "An advanced client-side storage library with AES-256 encryption for secure data storage in web applications. Features automatic encryption/decryption, configurable security options, and support for LocalStorage and IndexedDB.",
+      technologies: ["JavaScript", "Cryptography", "LocalStorage", "Web Security", "IndexedDB"],
       links: [
         {
           type: "Website",
-          href: "https://aisanta.pages.dev",
+          href: "https://www.npmjs.com/package/@sh20raj/safestore",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/aisanta",
+          href: "https://github.com/SH20RAJ/SafeStore",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/aisanta/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/SafeStore/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "Instagram Downloader Web",
-      href: "https://insta-dl.pages.dev",
-      dates: "",
+      title: "Create TanStack App",
+      href: "https://www.npmjs.com/package/create-tanstack-app",
+      dates: "2023",
       active: true,
       description:
-        "A web-based tool for downloading photos, videos, reels, and stories from Instagram. Features a clean interface, batch downloading capabilities, and no login requirements for user privacy.",
-      technologies: [
-        "JavaScript",
-        "Instagram API",
-        "Media Processing",
-        "Browser APIs",
-        "Web APIs",
-      ],
+        "A CLI tool for instantly setting up fully configured TanStack projects with React Query, React Router, and TanStack Table. Features template selection, TypeScript/JavaScript options, and automatic dependency installation.",
+      technologies: ["JavaScript", "Node.js", "CLI Tools", "TanStack", "React"],
       links: [
         {
           type: "Website",
-          href: "https://insta-dl.pages.dev",
+          href: "https://www.npmjs.com/package/create-tanstack-app",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/instagram-downloader-web",
+          href: "https://github.com/SH20RAJ/create-tanstack-app",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/instagram-downloader-web/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/create-tanstack-app/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "PHPGram",
-      href: "https://phpgram.pages.dev",
-      dates: "",
+      title: "YouTube Remote Uploader",
+      href: "https://github.com/SH20RAJ/youtube-remote-uploader/releases",
+      dates: "2024",
       active: true,
       description:
-        "A complete Instagram-like social media platform built with PHP that features user profiles, photo/video uploads, filters, comments, likes, direct messaging, stories, and hashtag functionality with responsive design.",
-      technologies: [
-        "PHP",
-        "MySQL",
-        "JavaScript",
-        "AJAX",
-        "Bootstrap",
-        "Media Processing",
-      ],
+        "A tool that automates downloading videos from remote URLs and uploading them to YouTube using the Data API. Perfect for batch processing and scheduled uploads using GitHub Actions with comprehensive metadata management.",
+      technologies: ["Python", "YouTube API", "GitHub Actions", "Automation", "Batch Processing"],
       links: [
         {
           type: "Website",
-          href: "https://phpgram.pages.dev",
+          href: "https://github.com/SH20RAJ/youtube-remote-uploader/releases",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/phpgram",
+          href: "https://github.com/SH20RAJ/youtube-remote-uploader",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/phpgram/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/youtube-remote-uploader/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
     {
-      title: "AppPages",
-      href: "https://sh20raj.github.io/AppPages/",
-      dates: "",
+      title: "Sequence Game",
+      href: "https://sequence.pages.dev/",
+      dates: "2024",
       active: true,
       description:
-        "A lightweight PHP framework for rapid application development that streamlines web application creation with an intuitive MVC architecture, built-in templating, database abstraction, and security features.",
-      technologies: ["PHP", "MVC", "MySQL", "Templating", "Web Development"],
+        "An online multiplayer Sequence card game with real-time gameplay, room creation, and persistence with MongoDB. Features a love-themed design with special animations for couples.",
+      technologies: ["TypeScript", "Next.js", "MongoDB", "Socket.io", "Prisma"],
       links: [
         {
           type: "Website",
-          href: "https://sh20raj.github.io/AppPages/",
+          href: "https://sequence.pages.dev/",
           icon: "globe",
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/AppPages",
+          href: "https://github.com/SH20RAJ/sequence-game",
           icon: "github",
         },
       ],
-      image:
-        "https://socialify.git.ci/SH20RAJ/AppPages/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      image: "https://socialify.git.ci/SH20RAJ/sequence-game/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "Image BG Remover",
+      href: "https://bg-rem.streamlit.app/",
+      dates: "2023",
+      active: true,
+      description:
+        "A web application that removes backgrounds from images using OpenCV's segmentation methods, featuring an intuitive interface for uploading, processing, and downloading images with transparent backgrounds.",
+      technologies: ["Python", "OpenCV", "Streamlit", "NumPy", "Image Processing"],
+      links: [
+        {
+          type: "Website",
+          href: "https://bg-rem.streamlit.app/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/image-bg-remover",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/image-bg-remover/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "Sanskrit",
+      href: "https://www.npmjs.com/package/@sh20raj/sanskrit",
+      dates: "2023",
+      active: true,
+      description:
+        "A comprehensive JavaScript library for Sanskrit text processing and transliteration with support for Devanagari to Latin conversions, grammatical analysis, and sandhi rules. Published on npm.",
+      technologies: ["JavaScript", "NLP", "Linguistics", "Transliteration", "Unicode"],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.npmjs.com/package/@sh20raj/sanskrit",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/sanskrit",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/sanskrit/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
   ],
-  hackathons: [ {
+  hackathons: [
+    {
       title: "AICTE Productization Fellowship (APF) 2025",
       dates: "May - July 2025",
       location: "Ranchi, Jharkhand",
       description:
-        "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers. #APF2025 #YUKTI2025 #AICTE #Innovation #Agritech #FarmTech #AI #CSE #Productization #IIC #StudentInnovator #KishanAI #MoE #StartupIndia",
-      image:
-        "https://pbs.twimg.com/profile_images/1633400336214302720/0p534a6e_400x400.jpg",
+        "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers with crop disease diagnosis, weather insights, and mandi prices.",
+      image: "https://pbs.twimg.com/profile_images/1633400336214302720/0p534a6e_400x400.jpg",
       links: [],
-    },],
+    },
+  ],
 };

@@ -17,37 +17,54 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: "Shaswat Raj — Full-Stack Developer, AI Product Builder & Open-Source Creator",
     template: `%s | ${DATA.name}`,
   },
-  description: DATA.description,
+  description:
+    "Portfolio of Shaswat Raj, a full-stack developer and AI product builder from India building SaaS apps, developer tools, automation systems, open-source projects, and AI products with Next.js, TypeScript, Node.js, Python, and Cloudflare.",
   keywords: [
     "Shaswat Raj",
     "SH20RAJ",
-    "Software Engineer",
-    "Full Stack Developer",
-    "System Design",
-    "DevOps",
-    "SaaS",
-    "Next.js",
-    "React",
-    "Node.js",
+    "Full Stack Developer India",
+    "AI Product Builder",
+    "Open Source Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "SaaS Builder India",
+    "Developer Tools",
+    "AI Tools Developer",
+    "React Developer Portfolio",
+    "Node.js Developer",
+    "Python Developer",
+    "Cloudflare Developer",
+    "Automation Tools",
+    "Startup Builder",
+    "Freelance Web Developer",
   ],
   authors: [{ name: DATA.name, url: DATA.url }],
   creator: DATA.name,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
-    title: `${DATA.name} | Portfolio`,
-    description: DATA.description,
+    title: "Shaswat Raj — Full-Stack Developer & AI Product Builder",
+    description:
+      "I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, and Cloudflare.",
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
-    type: "website",
+    type: "profile",
+    firstName: "Shaswat",
+    lastName: "Raj",
+    username: "SH20RAJ",
     images: [
       {
-        url: `${DATA.url}/profile.jpg`,
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: DATA.name,
+        alt: "Shaswat Raj — Full-Stack Developer & AI Product Builder",
       },
     ],
   },
@@ -63,13 +80,18 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
     card: "summary_large_image",
-    creator: "@sh20raj",
-    images: [`${DATA.url}/profile.jpg`],
+    title: "Shaswat Raj — Full-Stack Developer & AI Product Builder",
+    description:
+      "I build AI tools, SaaS apps, DevTools, automation systems, and open-source projects.",
+    creator: "@SH20RAJ",
+    images: ["/og.png"],
   },
   verification: {
     google: "",
+  },
+  alternates: {
+    canonical: DATA.url,
   },
 };
 
@@ -78,8 +100,59 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    mainEntity: {
+      "@type": "Person",
+      name: "Shaswat Raj",
+      alternateName: "SH20RAJ",
+      url: "https://sh20raj.github.io/",
+      image: "https://sh20raj.github.io/profile.jpg",
+      jobTitle: "Full Stack Developer",
+      description:
+        "Full-stack developer and AI product builder from India building SaaS apps, developer tools, automation systems, open-source projects, and AI products.",
+      email: "sh20raj@gmail.com",
+      nationality: "Indian",
+      knowsAbout: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "Cloudflare",
+        "AI APIs",
+        "SaaS",
+        "Open Source",
+        "DevTools",
+        "SEO",
+        "Automation",
+        "System Design",
+        "Web Development",
+        "Product Building",
+      ],
+      sameAs: [
+        "https://github.com/SH20RAJ",
+        "https://linkedin.com/in/sh20raj",
+        "https://x.com/SH20RAJ",
+        "https://dev.to/sh20raj",
+        "https://www.npmjs.com/~sh20raj",
+        "https://codepen.io/sh20raj",
+        "https://peerlist.io/sh20raj",
+        "https://codeforces.com/profile/sh20raj",
+        "https://www.upwork.com/freelancers/~01a63e5aa20a7895dd",
+      ],
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",

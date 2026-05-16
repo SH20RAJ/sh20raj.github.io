@@ -49,9 +49,9 @@ export default function StartupsPage() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Entrepreneurial Journey
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Startups & Ventures
-                </h2>
+                </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Building since Class 7th. Some thrived, some failed, all taught me invaluable lessons.
                 </p>

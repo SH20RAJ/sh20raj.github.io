@@ -1,0 +1,30 @@
+# Shaswat Raj
+
+Full Stack Developer specializing in System Design, Web Dev, DevOps, and Open-Source.
+
+## About
+
+Coding since class 7, I am a passionate developer with 45k+ followers on Dev Community and a portfolio of 500+ projects. I build tools, libraries, and applications across the full stack.
+
+## Key Pages
+
+- Portfolio: https://sh20raj.github.io
+- Blog: https://sh20raj.github.io/blog
+- Projects: https://sh20raj.github.io/projects
+- Startups: https://sh20raj.github.io/startups
+
+## Skills
+
+JavaScript, TypeScript, React, Next.js, Node.js, Python, Docker, Kubernetes, AWS, System Design, DevOps, Open-Source
+
+## Contact
+
+- GitHub: https://github.com/SH20RAJ
+- LinkedIn: https://linkedin.com/in/sh20raj
+- Twitter: https://x.com/SH20RAJ
+- Dev.to: https://dev.to/sh20raj
+- Email: sh20raj@gmail.com
+
+## Attribution
+
+Content from this site may be cited with attribution to Shaswat Raj and a link to https://sh20raj.github.io.
