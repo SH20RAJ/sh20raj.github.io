@@ -92,7 +92,7 @@ function ProductCard({ item, id }: { item: any, id: number }) {
 
         <CardFooter className="p-6 pt-0 pb-6">
           <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95 bg-primary text-primary-foreground">
-            <Link href="mailto:sh20raj@gmail.com">
+            <Link href="https://payments.cashfree.com/forms/novira-ai" target="_blank">
               {item.price === "Free" ? <DownloadIcon className="size-5" /> : <ShoppingCartIcon className="size-5" />}
               {item.price === "Free" ? "Get it Free" : `Buy Template`}
             </Link>
