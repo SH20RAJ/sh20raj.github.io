@@ -12,6 +12,15 @@ import { Button } from "@/components/ui/button";
 import { Edit2Icon } from "lucide-react";
 import { servicesHubData } from "@/data/services";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { 
+  LayoutIcon, 
+  CodeIcon, 
+  BotIcon, 
+  TrendingUpIcon, 
+  UsersIcon, 
+  RocketIcon,
+  ArrowRightIcon 
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -257,30 +266,62 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {servicesHubData.services.map((service, id) => (
-              <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
-                <Link href={service.href} className="block h-full">
-                  <Card className="hover:shadow-md transition-all h-full">
-                    <CardHeader>
-                      <CardTitle className="text-base">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{service.description}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </BlurFade>
-            ))}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-[1000px] mx-auto">
+            {servicesHubData.services.map((service, id) => {
+              const Icon = {
+                layout: LayoutIcon,
+                code: CodeIcon,
+                bot: BotIcon,
+                "trending-up": TrendingUpIcon,
+                users: UsersIcon,
+                rocket: RocketIcon,
+              }[service.icon] || CodeIcon;
+
+              return (
+                <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                  <Link href={service.href} className="group block h-full">
+                    <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full border bg-card/50 backdrop-blur-sm group-hover:-translate-y-2 group-hover:border-primary/50">
+                      <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <ArrowRightIcon className="size-4 text-primary" />
+                      </div>
+                      <CardHeader className="pb-2">
+                        <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                          <Icon className="size-5" />
+                        </div>
+                        <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors">
+                          {service.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {service.description}
+                        </p>
+                      </CardContent>
+                      <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500" />
+                    </Card>
+                  </Link>
+                </BlurFade>
+              );
+            })}
           </div>
+          
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <div className="flex justify-center mt-8">
-              <Link
-                href="/services"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
-              >
-                View All Services
-              </Link>
+            <div className="flex flex-col items-center gap-6 mt-12 bg-muted/30 p-8 rounded-2xl border border-dashed">
+              <h3 className="text-xl font-bold">Ready to ship?</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/services"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+                >
+                  View All Services
+                </Link>
+                <Link
+                  href="mailto:sh20raj@gmail.com"
+                  className="inline-flex h-12 items-center justify-center rounded-full border bg-background px-8 text-sm font-semibold shadow-sm hover:bg-accent transition-all hover:scale-105 active:scale-95"
+                >
+                  Book a Consultation
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>

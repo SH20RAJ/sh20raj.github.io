@@ -58,6 +58,7 @@ export const DATA = {
     { href: "/", icon: "home", label: "Home" },
     { href: "/projects", icon: "briefcase", label: "Work" },
     { href: "/services", icon: "wrench", label: "Services" },
+    { href: "/marketplace", icon: "shopping-cart", label: "Marketplace" },
   ],
   contact: {
     email: "sh20raj@gmail.com",

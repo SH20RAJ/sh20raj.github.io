@@ -98,69 +98,83 @@ export default function LandingPagesPage() {
       faq={landingPagesConfig.faq}
       relatedProjects={landingPagesConfig.relatedProjects}
     >
-      {/* Packages Section */}
-      <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-              Packages
-            </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Choose your package
-            </h2>
-          </div>
-        </div>
-      </BlurFade>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-[800px] mx-auto">
-        {packages.map((pkg, id) => (
-          <BlurFade
-            key={pkg.name}
-            delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-          >
-            <div
-              className={`rounded-lg border bg-card p-6 space-y-4 ${
-                pkg.recommended ? "border-primary" : ""
-              }`}
-            >
-              {pkg.recommended && (
-                <Badge variant="default">Recommended</Badge>
-              )}
-              <h3 className="font-bold text-lg">{pkg.name}</h3>
-              <p className="text-3xl font-bold">{pkg.price}</p>
-              <p className="text-sm text-muted-foreground">
-                {pkg.description}
+      {/* Ready-made Templates Section */}
+      <div className="space-y-12 py-12 border-t mt-12">
+        <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm">
+                Shop
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                Ready-made Landing Pages
+              </h2>
+              <p className="text-muted-foreground max-w-[600px]">
+                Don't want to wait? Grab a high-converting template and launch in minutes.
               </p>
-              <ul className="space-y-2">
-                {pkg.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-start gap-2 text-sm"
-                  >
-                    <span className="mt-0.5 text-green-600 dark:text-green-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    </span>
-                    <span className="text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="w-full">
-                <Link href="mailto:sh20raj@gmail.com">Get Started</Link>
-              </Button>
             </div>
-          </BlurFade>
-        ))}
+          </div>
+        </BlurFade>
+        
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto">
+          {[
+            {
+              title: "SaaS Starter Kit",
+              price: "$49",
+              type: "Paid",
+              image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+              link: "/marketplace",
+            },
+            {
+              title: "AI Waitlist Template",
+              price: "Free",
+              type: "Free",
+              image: "https://socialify.git.ci/SH20RAJ/debo/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+              link: "/marketplace",
+            },
+            {
+              title: "Minimal Portfolio Pro",
+              price: "$29",
+              type: "Paid",
+              image: "https://socialify.git.ci/SH20RAJ/index-fast/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+              link: "/marketplace",
+            },
+            {
+              title: "Clean Agency Theme",
+              price: "$39",
+              type: "Paid",
+              image: "https://socialify.git.ci/shade-solutions/mcp-pure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+              link: "/marketplace",
+            },
+          ].map((item, id) => (
+            <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+              <div className="group relative rounded-xl border bg-card overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="p-4 space-y-2">
+                  <div className="flex justify-between items-center">
+                    <h3 className="font-bold text-sm">{item.title}</h3>
+                    <Badge variant={item.type === "Free" ? "secondary" : "default"}>{item.price}</Badge>
+                  </div>
+                  <Button asChild size="sm" variant="outline" className="w-full">
+                    <Link href={item.link}>View Details</Link>
+                  </Button>
+                </div>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+
+        <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <div className="flex justify-center mt-8">
+            <Button asChild variant="ghost" className="gap-2">
+              <Link href="/marketplace">
+                View All Templates <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </Link>
+            </Button>
+          </div>
+        </BlurFade>
       </div>
     </ServicePageLayout>
   );

@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon, HomeIcon, NotebookIcon, BriefcaseIcon, WrenchIcon, LayoutIcon, SendIcon, CodeIcon, BotIcon, TrendingUpIcon, UsersIcon, RocketIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, HomeIcon, NotebookIcon, BriefcaseIcon, WrenchIcon, LayoutIcon, SendIcon, CodeIcon, BotIcon, TrendingUpIcon, UsersIcon, RocketIcon, ShoppingCartIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -16,6 +16,7 @@ export const Icons = {
   "trending-up": (props: IconProps) => <TrendingUpIcon {...props} />,
   users: (props: IconProps) => <UsersIcon {...props} />,
   rocket: (props: IconProps) => <RocketIcon {...props} />,
+  "shopping-cart": (props: IconProps) => <ShoppingCartIcon {...props} />,
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>LinkedIn</title>
