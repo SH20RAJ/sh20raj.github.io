@@ -157,10 +157,12 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased   mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased selection:bg-primary/10",
           fontSans.variable
         )}
       >
+        <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff10_1px,transparent_1px)] opacity-40"></div>
+        <div className="fixed inset-0 -z-10 h-full w-full bg-gradient-to-tr from-primary/5 via-transparent to-blue-500/5"></div>
         <ThemeProvider attribute="class" defaultTheme="light">
           <ResumeProvider>
             <TooltipProvider delayDuration={0}>

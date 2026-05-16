@@ -55,7 +55,7 @@ export function ProjectsClient({ projects }: { projects: any[] }) {
         ))}
       </div>
 
-      <div className="mx-auto max-w-2xl w-full text-center py-20 border-t mt-20">
+      <div className="mx-auto max-w-7xl px-8 w-full text-center py-32 border-t mt-32">
         <h2 className="text-2xl font-bold">Want to see more?</h2>
         <p className="text-muted-foreground mt-2">I have over 500+ repositories on GitHub. Check out my main profile and dumps.</p>
         <div className="flex justify-center gap-4 mt-8">

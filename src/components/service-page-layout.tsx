@@ -45,7 +45,7 @@ export default function ServicePageLayout({
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       {/* Back button */}
       <section id="back">
-        <div className="mx-auto w-full max-w-2xl">
+        <div className="mx-auto w-full max-w-7xl px-8">
           <BlurFade delay={BLUR_FADE_DELAY}>
             <Link
               href="/services"

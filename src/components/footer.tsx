@@ -6,8 +6,8 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t py-12 px-6">
-      <div className="flex flex-col items-center gap-6">
+    <footer className="mt-32 border-t py-20 px-8">
+      <div className="mx-auto max-w-7xl flex flex-col items-center gap-10">
         <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <Link

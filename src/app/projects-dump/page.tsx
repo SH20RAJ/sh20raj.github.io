@@ -14,7 +14,7 @@ export default function ProjectsDumpPage() {
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-10 py-12 px-4 md:px-6">
             <section id="header">
-                <div className="mx-auto w-full max-w-2xl space-y-8">
+                <div className="mx-auto w-full max-w-7xl px-8 space-y-12">
                     <div className="flex flex-col items-start gap-4">
                         <BlurFade delay={BLUR_FADE_DELAY}>
                             <Link
