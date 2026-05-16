@@ -78,123 +78,111 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/* Builder Proof Section */}
-      <section id="proof">
-        <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-          <h2 className="text-xl font-bold mb-4">Builder Proof</h2>
-        </BlurFade>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {[
-            { label: "500+ Projects Shipped", desc: "Full-stack products, tools, APIs, and open-source packages" },
-            { label: "AI Tools & SaaS Apps", desc: "AI products, developer utilities, and content platforms" },
-            { label: "Open-Source Builder", desc: "50+ npm packages, 1M+ annual downloads" },
-            { label: "Fast Product Execution", desc: "Ideas to working demos in days, not months" },
-            { label: "45k+ Dev.to Followers", desc: "Technical writing and developer community" },
-            { label: "AICTE APF 2025", desc: "Top 500 across India for AI product fellowship" },
-          ].map((item, id) => (
-            <BlurFade key={item.label} delay={BLUR_FADE_DELAY * 4 + id * 0.05}>
-              <div className="rounded-lg border bg-card p-4 text-card-foreground shadow-sm h-full">
-                <p className="text-sm font-semibold">{item.label}</p>
-                <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
-              </div>
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-          <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-3">
-            <p>
-              I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
-            </p>
-            <p>
-              I like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages with 1M+ annual npm downloads, and have 45k+ followers on Dev.to.
-            </p>
-          </div>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 5.7}>
-          <div className="mt-6 flex flex-col gap-2">
-            <h3 className="text-sm font-semibold">GitHub Activity</h3>
-            <img
-              src="https://ghchart.rshah.org/SH20RAJ"
-              alt="GitHub contribution chart of Shaswat Raj showing daily coding activity"
-              className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
-              loading="lazy"
-              width={800}
-              height={120}
-            />
-          </div>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 5.8}>
-          <div className="mt-6 flex flex-col gap-2">
-            <h3 className="text-sm font-semibold">Activity & Proof</h3>
-            <div className="flex flex-wrap gap-2">
-              <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Shaswat Raj has 45k+ followers on Dev.to" className="rounded-md" loading="lazy" />
-              </a>
-              <a href="https://github.com/search?q=user%3ASH20RAJ+org%3Ash20raj-dump+org%3ALoveShade+org%3AINDIECDN+org%3Atechshade+org%3Amindos-labs+fork%3Atrue" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Duser%3ASH20RAJ%2Borg%3Ash20raj-dump%2Borg%3ALoveShade%2Borg%3AINDIECDN%2Borg%3Atechshade%2Borg%3Amindos-labs%2Bfork%3Atrue&query=%24.total_count&label=Collective%20Repos&logo=github&color=black&style=flat-square" alt="Total number of GitHub repositories by Shaswat Raj" className="rounded-md" loading="lazy" />
-              </a>
-              <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.shields.io/badge/npm-50%2B%20Packages-cb3837?style=flat-square&logo=npm" alt="Shaswat Raj maintains 50+ npm packages" className="rounded-md" loading="lazy" />
-              </a>
-            </div>
-          </div>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 6}>
-          <div className="mt-4">
-            <Link
-              href="https://sh20raj.github.io/ideas/"
-              className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Explore my Startup & Project Ideas</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </Link>
-          </div>
-        </BlurFade>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="about">
+            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+              About
+            </AccordionTrigger>
+            <AccordionContent>
+              <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
+                <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-3">
+                  <p>
+                    I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
+                  </p>
+                  <p>
+                    I like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages with 1M+ annual npm downloads, and have 45k+ followers on Dev.to.
+                  </p>
+                </div>
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY * 0.2}>
+                <div className="mt-6 flex flex-col gap-2">
+                  <h3 className="text-sm font-semibold">GitHub Activity</h3>
+                  <img
+                    src="https://ghchart.rshah.org/SH20RAJ"
+                    alt="GitHub contribution chart of Shaswat Raj showing daily coding activity"
+                    className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
+                    loading="lazy"
+                    width={800}
+                    height={120}
+                  />
+                </div>
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY * 0.3}>
+                <div className="mt-6 flex flex-col gap-2">
+                  <h3 className="text-sm font-semibold">Activity & Proof</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <a href="https://dev.to/sh20raj" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/dev.to-45k%20Followers-black?style=flat-square&logo=dev.to" alt="Shaswat Raj has 45k+ followers on Dev.to" className="rounded-md" loading="lazy" />
+                    </a>
+                    <a href="https://github.com/search?q=user%3ASH20RAJ+org%3Ash20raj-dump+org%3ALoveShade+org%3AINDIECDN+org%3Atechshade+org%3Amindos-labs+fork%3Atrue" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Duser%3ASH20RAJ%2Borg%3Ash20raj-dump%2Borg%3ALoveShade%2Borg%3AINDIECDN%2Borg%3Atechshade%2Borg%3Amindos-labs%2Bfork%3Atrue&query=%24.total_count&label=Collective%20Repos&logo=github&color=black&style=flat-square" alt="Total number of GitHub repositories by Shaswat Raj" className="rounded-md" loading="lazy" />
+                    </a>
+                    <a href="https://www.npmjs.com/~sh20raj" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/npm-50%2B%20Packages-cb3837?style=flat-square&logo=npm" alt="Shaswat Raj maintains 50+ npm packages" className="rounded-md" loading="lazy" />
+                    </a>
+                  </div>
+                </div>
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY * 0.4}>
+                <div className="mt-4">
+                  <Link
+                    href="https://sh20raj.github.io/ideas/"
+                    className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Explore my Startup & Project Ideas</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </Link>
+                </div>
+              </BlurFade>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </section>
       {/* Technical Depth Section */}
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Technical Depth</h2>
-          </BlurFade>
-          <Accordion type="single" collapsible className="w-full">
-            {[
-              { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
-              { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
-              { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
-              { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
-              { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
-            ].map((group, idx) => (
-              <AccordionItem key={group.category} value={`item-${idx}`}>
-                <AccordionTrigger className="text-sm font-semibold text-muted-foreground uppercase tracking-wider py-2 hover:no-underline">
-                  {group.category}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
-                    <div className="flex flex-wrap gap-1 pt-1 pb-4">
-                      {group.skills.map((skill) => (
-                        <Badge key={skill} variant="secondary">{skill}</Badge>
-                      ))}
-                    </div>
-                  </BlurFade>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="skills">
+            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+              Technical Depth
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="flex min-h-0 flex-col gap-y-6 pt-4">
+                <Accordion type="single" collapsible className="w-full">
+                  {[
+                    { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
+                    { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
+                    { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
+                    { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
+                    { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
+                  ].map((group, idx) => (
+                    <AccordionItem key={group.category} value={`skill-${idx}`}>
+                      <AccordionTrigger className="text-sm font-semibold text-muted-foreground uppercase tracking-wider py-2 hover:no-underline">
+                        {group.category}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
+                          <div className="flex flex-wrap gap-1 pt-1 pb-4">
+                            {group.skills.map((skill) => (
+                              <Badge key={skill} variant="secondary">{skill}</Badge>
+                            ))}
+                          </div>
+                        </BlurFade>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </section>
       {/* Featured Projects Section */}
       <section id="projects">
@@ -320,23 +308,62 @@ export default function Page() {
 
       {/* FAQ Section */}
       <section id="faq">
-        <Accordion type="single" collapsible className="w-full space-y-2">
-          {[
-            { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
-            { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
-            { q: "What technologies does Shaswat Raj use?", a: "Next.js, React, TypeScript, Node.js, Python, Tailwind CSS, PostgreSQL, MongoDB, Cloudflare, Vercel, OpenAI, Claude, Gemini APIs, GitHub Actions, and more." },
-            { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
-            { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
-          ].map((faq, id) => (
-            <AccordionItem key={faq.q} value={`faq-${id}`} className="border rounded-lg px-4 shadow-sm bg-card">
-              <AccordionTrigger className="text-sm font-semibold py-3 hover:no-underline">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground pb-4">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="faq">
+            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+              Frequently Asked Questions
+            </AccordionTrigger>
+            <AccordionContent className="pt-4">
+              <Accordion type="single" collapsible className="w-full space-y-2">
+                {[
+                  { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
+                  { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
+                  { q: "What technologies does Shaswat Raj use?", a: "Next.js, React, TypeScript, Node.js, Python, Tailwind CSS, PostgreSQL, MongoDB, Cloudflare, Vercel, OpenAI, Claude, Gemini APIs, GitHub Actions, and more." },
+                  { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
+                  { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
+                ].map((faq, id) => (
+                  <AccordionItem key={faq.q} value={`faq-${id}`} className="border rounded-lg px-4 shadow-sm bg-card">
+                    <AccordionTrigger className="text-sm font-semibold py-3 hover:no-underline">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-muted-foreground pb-4">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
+
+      {/* Builder Proof Section */}
+      <section id="proof">
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="proof">
+            <AccordionTrigger className="text-xl font-bold py-2 hover:no-underline">
+              Builder Proof
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4">
+                {[
+                  { label: "500+ Projects Shipped", desc: "Full-stack products, tools, APIs, and open-source packages" },
+                  { label: "AI Tools & SaaS Apps", desc: "AI products, developer utilities, and content platforms" },
+                  { label: "Open-Source Builder", desc: "50+ npm packages, 1M+ annual downloads" },
+                  { label: "Fast Product Execution", desc: "Ideas to working demos in days, not months" },
+                  { label: "45k+ Dev.to Followers", desc: "Technical writing and developer community" },
+                  { label: "AICTE APF 2025", desc: "Top 500 across India for AI product fellowship" },
+                ].map((item, id) => (
+                  <BlurFade key={item.label} delay={id * 0.05}>
+                    <div className="rounded-lg border bg-card p-4 text-card-foreground shadow-sm h-full">
+                      <p className="text-sm font-semibold">{item.label}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
+                    </div>
+                  </BlurFade>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </section>
 
