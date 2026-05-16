@@ -130,8 +130,8 @@ export const DATA = {
       active: true,
       description:
         "Your Life's Memory Engine. An AI-powered product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through a seamless AI chat interface.",
-      technologies: ["Next.js", "TypeScript", "AI SDK", "Vector Search", "Cloudflare"],
-      links: [
+      technologies: ["Next.js", "TypeScript", "AI Agents", "AI SDK", "Voice Agent", "Vector Search", "Cloudflare", "Agentic Memory", "OpenAI"],
+      links: [  
         {
           type: "Website",
           href: "https://debo.life",

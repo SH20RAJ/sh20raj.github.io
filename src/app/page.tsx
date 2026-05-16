@@ -73,6 +73,23 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* GitHub Activity Section */}
+      <section id="github-activity">
+        <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
+          <div className="flex flex-col gap-2">
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">GitHub Activity</h3>
+            <img
+              src="https://ghchart.rshah.org/SH20RAJ"
+              alt="GitHub contribution chart of Shaswat Raj showing daily coding activity"
+              className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
+              loading="lazy"
+              width={800}
+              height={120}
+            />
+          </div>
+        </BlurFade>
+      </section>
+
       {/* About Section */}
       <section id="about">
         <Accordion type="single" collapsible className="w-full">
@@ -82,19 +99,6 @@ export default function Page() {
             </AccordionTrigger>
             <AccordionContent>
               <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
-                <div className="mt-2 flex flex-col gap-2">
-                  <h3 className="text-sm font-semibold">GitHub Activity</h3>
-                  <img
-                    src="https://ghchart.rshah.org/SH20RAJ"
-                    alt="GitHub contribution chart of Shaswat Raj showing daily coding activity"
-                    className="w-full rounded-lg border bg-white p-2 dark:invert dark:hue-rotate-180"
-                    loading="lazy"
-                    width={800}
-                    height={120}
-                  />
-                </div>
-              </BlurFade>
-              <BlurFade delay={BLUR_FADE_DELAY * 0.2}>
                 <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert space-y-3 mt-6">
                   <p>
                     I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, Cloudflare, and modern AI APIs.
