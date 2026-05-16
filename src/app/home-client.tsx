@@ -31,7 +31,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export function HomeClient({ DATA }: { DATA: any }) {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-32 pb-20">
+    <main className="flex flex-col min-h-[100dvh] space-y-24 pb-20">
       <div className="fixed bottom-4 right-4 z-50">
         <Link href="/editor">
           <Button variant="outline" size="icon" className="rounded-full shadow-lg bg-background hover:bg-accent transition-all hover:scale-110">
@@ -48,13 +48,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <h1>
                   <BlurFadeText
                     delay={BLUR_FADE_DELAY}
-                    className="text-4xl font-extrabold tracking-tighter sm:text-6xl xl:text-7xl/none"
+                    className="text-4xl font-extrabold tracking-tighter sm:text-5xl xl:text-6xl/none"
                     yOffset={8}
                     text="Shaswat Raj"
                   />
                 </h1>
                 <BlurFadeText
-                  className="max-w-[700px] text-xl md:text-2xl font-bold text-primary/80"
+                  className="max-w-[700px] text-lg md:text-xl font-bold text-primary/80"
                   delay={BLUR_FADE_DELAY * 1.5}
                   text="Full-Stack Developer & Open Source Builder"
                 />
@@ -75,7 +75,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <BlurFade delay={BLUR_FADE_DELAY}>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                <Avatar className="size-48 md:size-64 border-8 border-background relative shadow-2xl">
+                <Avatar className="size-40 md:size-56 border-8 border-background relative shadow-2xl">
                   <AvatarImage alt="Shaswat Raj" src={DATA.avatarUrl} className="object-cover" />
                   <AvatarFallback className="text-4xl">{DATA.initials}</AvatarFallback>
                 </Avatar>
@@ -251,10 +251,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <div className="flex justify-center mt-12">
               <Link
                 href="/projects"
-                className="group inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base font-bold text-primary-foreground shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 gap-2"
+                className="group inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-bold text-primary-foreground shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 gap-2"
               >
                 Explore All 500+ Projects
-                <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </BlurFade>
@@ -346,20 +346,19 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Bottom Interactive Sections */}
-      <section id="details" className="mx-auto w-full max-w-5xl px-8 space-y-12">
+      <section id="details" className="mx-auto w-full max-w-5xl px-8 space-y-8">
         {/* Recognition Section */}
         <div id="hackathons">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="recognition" className="border-0 bg-secondary/20 rounded-[2rem] px-8 mb-4">
-              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
-                <div className="flex flex-col items-start gap-1">
-                  <h2 className="text-2xl font-black">Fellowships & Achievements</h2>
-                  <p className="text-sm font-medium text-muted-foreground/60 italic">Competitive impact and industry recognition.</p>
+            <AccordionItem value="recognition" className="border-0 bg-secondary/15 rounded-3xl px-6 mb-4">
+              <AccordionTrigger className="text-xl font-bold py-5 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-0.5">
+                  <h2 className="text-xl font-bold">Fellowships & Achievements</h2>
+                  <p className="text-xs font-medium text-muted-foreground/60 italic">Competitive impact and industry recognition.</p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pt-4 pb-10">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-dashed">
+              <AccordionContent className="pt-2 pb-8">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-dashed">
                   {DATA.hackathons.map((project: any, id: number) => (
                     <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 0.1 + id * 0.05}>
                       <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
@@ -374,15 +373,15 @@ export function HomeClient({ DATA }: { DATA: any }) {
         {/* FAQ Section */}
         <div id="faq">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="faq" className="border-0 bg-secondary/20 rounded-[2rem] px-8 mb-4">
-              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
-                <div className="flex flex-col items-start gap-1">
-                  <h2 className="text-2xl font-black">Frequently Asked Questions</h2>
-                  <p className="text-sm font-medium text-muted-foreground/60 italic">Everything you might want to know.</p>
+            <AccordionItem value="faq" className="border-0 bg-secondary/15 rounded-3xl px-6 mb-4">
+              <AccordionTrigger className="text-xl font-bold py-5 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-0.5">
+                  <h2 className="text-xl font-bold">Frequently Asked Questions</h2>
+                  <p className="text-xs font-medium text-muted-foreground/60 italic">Everything you might want to know.</p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pt-4 pb-10">
-                <Accordion type="single" collapsible className="w-full space-y-4 pt-6 border-t border-dashed">
+              <AccordionContent className="pt-2 pb-8">
+                <Accordion type="single" collapsible className="w-full space-y-3 pt-4 border-t border-dashed">
                   {[
                     { q: "Who is Shaswat Raj?", a: "Shaswat Raj (SH20RAJ) is a full-stack developer and AI product builder from India. He builds SaaS apps, developer tools, AI products, and open-source packages. He has 500+ projects, 50+ npm packages, and 45k+ Dev.to followers." },
                     { q: "What does Shaswat Raj build?", a: "AI tools (Kishan AI, Debo, AayeChup), SaaS apps (Scaleboard, Waitlist.js), developer utilities (30tools, IndexFast, FormGuard), content platforms, automation systems, and open-source npm packages." },
@@ -390,11 +389,11 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     { q: "Is Shaswat Raj available for internships, freelance, or startup work?", a: "Yes. Shaswat is open to internships, startup work, freelance projects, AI product builds, open-source collaborations, and founder-led teams. Contact him at sh20raj@gmail.com." },
                     { q: "Where can I see Shaswat Raj's projects?", a: "Visit the projects page on this portfolio, browse his GitHub at github.com/SH20RAJ, check his npm packages at npmjs.com/~sh20raj, or read his articles at dev.to/sh20raj." },
                   ].map((faq, id) => (
-                    <AccordionItem key={faq.q} value={`faq-${id}`} className="border-0 rounded-2xl px-6 bg-background/50">
-                      <AccordionTrigger className="text-base font-bold py-4 hover:no-underline">
+                    <AccordionItem key={faq.q} value={`faq-${id}`} className="border-0 rounded-xl px-5 bg-background/50">
+                      <AccordionTrigger className="text-sm font-bold py-3 hover:no-underline">
                         {faq.q}
                       </AccordionTrigger>
-                      <AccordionContent className="text-base text-muted-foreground/80 pb-6">
+                      <AccordionContent className="text-sm text-muted-foreground/80 pb-4">
                         {faq.a}
                       </AccordionContent>
                     </AccordionItem>
@@ -408,15 +407,15 @@ export function HomeClient({ DATA }: { DATA: any }) {
         {/* Builder Proof Section */}
         <div id="proof">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="proof" className="border-0 bg-secondary/20 rounded-[2rem] px-8">
-              <AccordionTrigger className="text-xl font-bold py-6 hover:no-underline hover:text-primary transition-all">
-                <div className="flex flex-col items-start gap-1">
-                  <h2 className="text-2xl font-black">Builder Proof</h2>
-                  <p className="text-sm font-medium text-muted-foreground/60 italic">Quantified impact and track record.</p>
+            <AccordionItem value="proof" className="border-0 bg-secondary/15 rounded-3xl px-6">
+              <AccordionTrigger className="text-xl font-bold py-5 hover:no-underline hover:text-primary transition-all">
+                <div className="flex flex-col items-start gap-0.5">
+                  <h2 className="text-xl font-bold">Builder Proof</h2>
+                  <p className="text-xs font-medium text-muted-foreground/60 italic">Quantified impact and track record.</p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pt-4 pb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 border-t border-dashed">
+              <AccordionContent className="pt-2 pb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 border-t border-dashed">
                   {[
                     { label: "500+ Projects Shipped", desc: "Full-stack products, tools, APIs, and open-source packages" },
                     { label: "AI Tools & SaaS Apps", desc: "AI products, developer utilities, and content platforms" },
@@ -426,9 +425,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     { label: "AICTE APF 2025", desc: "Top 500 across India for AI product fellowship" },
                   ].map((item, id) => (
                     <BlurFade key={item.label} delay={id * 0.05}>
-                      <div className="rounded-2xl border bg-background/50 p-6 shadow-sm h-full">
-                        <p className="text-lg font-black">{item.label}</p>
-                        <p className="text-sm text-muted-foreground mt-2">{item.desc}</p>
+                      <div className="rounded-xl border bg-background/50 p-5 shadow-sm h-full">
+                        <p className="text-base font-bold">{item.label}</p>
+                        <p className="text-xs text-muted-foreground mt-1.5">{item.desc}</p>
                       </div>
                     </BlurFade>
                   ))}
@@ -451,17 +450,17 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <div className="inline-block rounded-full bg-background/10 text-background px-4 py-1.5 text-xs font-bold uppercase tracking-widest border border-background/20">
                   Let&apos;s Work Together
                 </div>
-                <h2 className="text-4xl font-black tracking-tighter sm:text-7xl leading-tight">
+                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl leading-tight">
                   Want to build <span className="text-primary">something fast?</span>
                 </h2>
-                <p className="mx-auto max-w-[700px] text-background/60 text-lg md:text-2xl leading-relaxed">
+                <p className="mx-auto max-w-[700px] text-background/60 text-base md:text-xl leading-relaxed">
                   I&apos;m open to internships, startup work, freelance projects, AI product builds, and founder-led teams.
                 </p>
-                <div className="flex flex-wrap justify-center gap-6 pt-8">
-                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-12 text-lg font-black text-primary-foreground shadow-2xl transition-all hover:scale-105 active:scale-95">
+                <div className="flex flex-wrap justify-center gap-4 pt-8">
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base font-bold text-primary-foreground shadow-2xl transition-all hover:scale-105 active:scale-95">
                     Email Me
                   </Link>
-                  <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-16 items-center justify-center rounded-full border-2 border-background/20 bg-transparent px-12 text-lg font-black text-background transition-all hover:bg-background/10 hover:scale-105 active:scale-95">
+                  <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-14 items-center justify-center rounded-full border-2 border-background/20 bg-transparent px-10 text-base font-bold text-background transition-all hover:bg-background/10 hover:scale-105 active:scale-95">
                     View GitHub
                   </Link>
                 </div>

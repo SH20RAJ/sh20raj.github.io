@@ -71,23 +71,23 @@ export function ProjectCard({
           />
         )}
       </Link>
-      <CardHeader className="px-10 pt-10 pb-4">
-        <div className="space-y-6">
-          <div className="flex items-center justify-between gap-6">
-            <CardTitle className="text-2xl font-black leading-tight group-hover:text-primary transition-colors">{title}</CardTitle>
-            <time className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/50 px-3 py-1.5 rounded-full">{dates}</time>
+      <CardHeader className="px-6 pt-6 pb-2">
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-4">
+            <CardTitle className="text-lg font-bold leading-tight group-hover:text-primary transition-colors">{title}</CardTitle>
+            <time className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/30 px-2 py-1 rounded-full">{dates}</time>
           </div>
-          <p className="text-lg text-muted-foreground/80 line-clamp-3 leading-relaxed">
+          <p className="text-sm text-muted-foreground/80 line-clamp-2 leading-relaxed">
             {description}
           </p>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-10 py-6">
+      <CardContent className="mt-auto flex flex-col px-6 py-3">
         {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {tags?.map((tag) => (
               <Badge
-                className="px-4 py-1.5 text-[10px] font-black uppercase tracking-widest bg-primary/5 text-primary border-0 rounded-full hover:bg-primary/10 transition-colors"
+                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-primary/5 text-primary border-0 rounded-full hover:bg-primary/10 transition-colors"
                 variant="secondary"
                 key={tag}
               >
@@ -97,15 +97,15 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-10 pb-10 pt-4">
+      <CardFooter className="px-6 pb-6 pt-2">
         {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-center gap-4">
+          <div className="flex flex-row flex-wrap items-center gap-2">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
                 <Badge
                   key={idx}
                   className={cn(
-                    "flex items-center gap-3 px-6 py-3 text-sm font-black transition-all rounded-full border-0 bg-background hover:bg-primary hover:text-primary-foreground shadow-sm",
+                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-background hover:bg-primary hover:text-primary-foreground shadow-sm",
                     link.badgeImage ? "p-0 overflow-hidden" : ""
                   )}
                 >
@@ -113,11 +113,11 @@ export function ProjectCard({
                     <img
                       src={link.badgeImage}
                       alt={link.type}
-                      className="h-8 w-auto"
+                      className="h-6 w-auto"
                     />
                   ) : (
                     <>
-                      <IconRenderer icon={link.icon} className="size-5" />
+                      <IconRenderer icon={link.icon} className="size-3.5" />
                       {link.type}
                     </>
                   )}

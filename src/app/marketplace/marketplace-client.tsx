@@ -69,14 +69,14 @@ function ProductCard({ item, id }: { item: any, id: number }) {
           </div>
         </div>
         
-        <CardHeader className="p-10 pt-4 pb-4">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-black tracking-tight leading-tight group-hover:text-primary transition-colors">
+        <CardHeader className="p-6 pt-4 pb-2">
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold tracking-tight leading-tight group-hover:text-primary transition-colors">
               {item.title}
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {item.tags.map((tag: string) => (
-                <span key={tag} className="text-[10px] uppercase tracking-[0.15em] font-black text-muted-foreground/50 bg-muted/30 px-3 py-1.5 rounded-full">
+                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground/50 bg-muted/20 px-2 py-1 rounded-full">
                   {tag}
                 </span>
               ))}
@@ -84,16 +84,16 @@ function ProductCard({ item, id }: { item: any, id: number }) {
           </div>
         </CardHeader>
 
-        <CardContent className="p-10 pt-0 pb-6">
-          <p className="text-lg text-muted-foreground/70 leading-relaxed line-clamp-2">
+        <CardContent className="p-6 pt-0 pb-4">
+          <p className="text-sm text-muted-foreground/70 leading-relaxed line-clamp-2">
             {item.description}
           </p>
         </CardContent>
 
-        <CardFooter className="p-10 pt-4 pb-10">
-          <Button asChild className="w-full h-16 rounded-[1.5rem] gap-4 text-lg font-black shadow-2xl shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95 bg-primary text-primary-foreground">
+        <CardFooter className="p-6 pt-0 pb-6">
+          <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95 bg-primary text-primary-foreground">
             <Link href="mailto:sh20raj@gmail.com">
-              {item.price === "Free" ? <DownloadIcon className="size-6" /> : <ShoppingCartIcon className="size-6" />}
+              {item.price === "Free" ? <DownloadIcon className="size-5" /> : <ShoppingCartIcon className="size-5" />}
               {item.price === "Free" ? "Get it Free" : `Buy Template`}
             </Link>
           </Button>
