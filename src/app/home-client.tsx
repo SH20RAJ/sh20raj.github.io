@@ -96,14 +96,17 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <div className="space-y-4">
                <div className="flex flex-col gap-2">
                 <h4 className="text-sm font-semibold">GitHub Activity</h4>
-                <img
-                  src="https://ghchart.rshah.org/SH20RAJ"
-                  alt="GitHub contribution chart"
-                  className="w-full rounded-2xl border bg-white p-4 dark:invert dark:hue-rotate-180 shadow-sm"
-                  loading="lazy"
-                  width={800}
-                  height={120}
-                />
+                <div className="w-full rounded-2xl border bg-card p-8 shadow-sm overflow-hidden flex justify-center">
+                  <picture className="w-full">
+                    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
+                    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
+                    <img 
+                      alt="github-snake" 
+                      src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" 
+                      className="w-full h-auto"
+                    />
+                  </picture>
+                </div>
               </div>
 
               <div className="flex flex-col gap-2 pt-2">
