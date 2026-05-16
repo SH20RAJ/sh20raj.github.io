@@ -148,29 +148,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "30tools",
-      href: "https://30tools.com",
-      dates: "2025",
-      active: true,
-      description:
-        "A collection of fast, simple browser tools for developers, creators, and everyday users. Created SEO-focused tool pages with clean UX, fast client-side processing, and simple workflows. Most utility sites are slow, cluttered, and overloaded with ads — 30tools fixes that.",
-      technologies: ["Next.js", "TypeScript", "Browser APIs", "SEO", "Client-side Utilities"],
-      links: [
-        {
-          type: "Website",
-          href: "https://30tools.com",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/30tools",
-          icon: "github",
-        },
-      ],
-      image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-      video: "",
-    },
-    {
       title: "IndexFast",
       href: "https://indexfast.co",
       dates: "2025",
@@ -193,6 +170,100 @@ export const DATA = {
       image: "https://socialify.git.ci/SH20RAJ/indexfast/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
       video: "",
     },
+    {
+      title: "MCPPure",
+      href: "https://mcppure.shraj.workers.dev/",
+      dates: "2025",
+      active: true,
+      description:
+        "High-performance Model Context Protocol (MCP) servers for AI agents. Provides essential context and tools for LLMs to interact with the real world through specialized servers.",
+      technologies: ["TypeScript", "Node.js", "AI", "MCP", "Cloudflare Workers"],
+      links: [
+        {
+          type: "Website",
+          href: "https://mcppure.shraj.workers.dev/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/mcppure",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/mcppure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "Wify",
+      href: "https://wify.my",
+      dates: "2025",
+      active: true,
+      description:
+        "A modern WiFi utility and management platform designed for speed and simplicity. Build and manage high-speed network utilities and tools.",
+      technologies: ["Next.js", "TypeScript", "Cloudflare", "APIs"],
+      links: [
+        {
+          type: "Website",
+          href: "https://wify.my",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/wify",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/wify/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "Unstory",
+      href: "https://unstory.app",
+      dates: "2024",
+      active: true,
+      description:
+        "A premium SaaS factory and collection of specialized intelligence tools. Building the next generation of digital products and high-authority publications.",
+      technologies: ["Next.js", "Tailwind CSS", "AI", "PostgreSQL", "SEO"],
+      links: [
+        {
+          type: "Website",
+          href: "https://unstory.app",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/unstory-app",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/unstory-app/unstory/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
+      title: "30tools",
+      href: "https://30tools.com",
+      dates: "2025",
+      active: true,
+      description:
+        "A collection of fast, simple browser tools for developers, creators, and everyday users. Created SEO-focused tool pages with clean UX and fast client-side processing.",
+      technologies: ["Next.js", "TypeScript", "Browser APIs", "SEO", "Client-side Utilities"],
+      links: [
+        {
+          type: "Website",
+          href: "https://30tools.com",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/30tools",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+  ],
+  projectsDump: [
     {
       title: "Kishan AI",
       href: "https://kishanai.strivio.world",

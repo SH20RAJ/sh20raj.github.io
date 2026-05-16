@@ -42,7 +42,7 @@ export default function ProjectsDumpPage() {
 
             <section id="projects">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto w-full">
-                    {data.projects.map((project, id) => (
+                    {data.projectsDump.map((project, id) => (
                         <BlurFade
                             key={`${project.title}-${id}`}
                             delay={BLUR_FADE_DELAY * 4 + id * 0.05}

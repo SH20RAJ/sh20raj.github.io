@@ -10,7 +10,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsPage() {
     const { data } = useResume();
-    const bestProjects = data.projects.slice(0, 4);
+    const bestProjects = data.projects;
 
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-10 py-12 px-4 md:px-6">

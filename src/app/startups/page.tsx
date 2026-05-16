@@ -13,28 +13,46 @@ const BLUR_FADE_DELAY = 0.04;
 
 const startups = [
   {
+    name: "Debo",
+    status: "Running",
+    description: "An AI memory product that captures useful context from notes, links, videos, and audio.",
+    link: "https://debo.life",
+  },
+  {
+    name: "IndexFast",
+    status: "Running",
+    description: "Faster search engine discovery tool with sitemap fetching and IndexNow integration.",
+    link: "https://indexfast.co",
+  },
+  {
+    name: "MCPPure",
+    status: "Running",
+    description: "High-performance Model Context Protocol (MCP) servers for AI agents.",
+    link: "https://mcppure.shraj.workers.dev/",
+  },
+  {
+    name: "Wify",
+    status: "Running",
+    description: "A modern WiFi utility and management platform for network tools.",
+    link: "https://wify.my",
+  },
+  {
+    name: "Unstory",
+    status: "Running",
+    description: "A premium SaaS factory and collection of specialized intelligence tools.",
+    link: "https://unstory.app",
+  },
+  {
+    name: "30tools",
+    status: "Running",
+    description: "A collection of fast, simple browser tools for developers and creators.",
+    link: "https://30tools.com",
+  },
+  {
     name: "Draftly AI",
     status: "Running",
     description: "AI-driven content generation for technical writers.",
     link: "https://draftly.ai",
-  },
-  {
-    name: "CloudOps Tools",
-    status: "Running",
-    description: "Suite of tools for AWS infrastructure management.",
-    link: "https://github.com/SH20RAJ/cloudops",
-  },
-  {
-    name: "CryptoBot v1",
-    status: "Failed",
-    description: "Automated trading bot for early-stage crypto assets.",
-    link: "https://github.com/sh20raj-dump",
-  },
-  {
-    name: "ShopEase",
-    status: "Failed",
-    description: "Hyper-local grocery delivery platform.",
-    link: "https://github.com/sh20raj-dump",
   },
 ];
 
