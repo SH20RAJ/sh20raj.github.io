@@ -1,14 +1,16 @@
-"use client";
-
 import BlurFade from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { ShoppingCartIcon, ExternalLinkIcon, DownloadIcon } from "lucide-react";
+import { MarketplaceClient } from "./marketplace-client";
+import type { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+  title: "Marketplace — Premium Landing Pages & UI Assets by Shaswat Raj",
+  description: "Curated landing pages, UI kits, and code templates to help you ship your next big idea faster.",
+};
 
 const assets = {
   templates: [
@@ -74,34 +76,7 @@ export default function MarketplacePage() {
         </BlurFade>
       </section>
 
-      <section id="products" className="mx-auto w-full max-w-6xl">
-        <Tabs defaultValue="templates" className="w-full">
-          <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex justify-center mb-8">
-              <TabsList className="grid w-full max-w-[400px] grid-cols-2">
-                <TabsTrigger value="templates">Landing Pages</TabsTrigger>
-                <TabsTrigger value="uiux">UI/UX Assets</TabsTrigger>
-              </TabsList>
-            </div>
-          </BlurFade>
-
-          <TabsContent value="templates" className="space-y-8">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {assets.templates.map((item, id) => (
-                <ProductCard key={item.title} item={item} id={id} />
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="uiux" className="space-y-8">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {assets.uiux.map((item, id) => (
-                <ProductCard key={item.title} item={item} id={id} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-      </section>
+      <MarketplaceClient assets={assets} />
 
       <section id="cta" className="mx-auto w-full max-w-4xl py-20">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
@@ -122,50 +97,5 @@ export default function MarketplacePage() {
         </BlurFade>
       </section>
     </main>
-  );
-}
-
-function ProductCard({ item, id }: { item: any, id: number }) {
-  return (
-    <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05}>
-      <Card className="group overflow-hidden border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div className="aspect-video overflow-hidden">
-          <img 
-            src={item.image} 
-            alt={item.title} 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
-        </div>
-        <CardHeader className="p-4 pb-2">
-          <div className="flex justify-between items-start">
-            <div className="space-y-1">
-              <CardTitle className="text-lg font-bold">{item.title}</CardTitle>
-              <div className="flex flex-wrap gap-1">
-                {item.tags.map((tag: string) => (
-                  <Badge key={tag} variant="secondary" className="text-[10px] px-1 py-0">{tag}</Badge>
-                ))}
-              </div>
-            </div>
-            <span className="font-bold text-primary">{item.price}</span>
-          </div>
-        </CardHeader>
-        <CardContent className="p-4 pt-0">
-          <p className="text-sm text-muted-foreground line-clamp-2 mt-2">
-            {item.description}
-          </p>
-        </CardContent>
-        <CardFooter className="p-4 pt-0 flex gap-2">
-          <Button asChild className="flex-1 gap-2">
-            <Link href="mailto:sh20raj@gmail.com">
-              {item.price === "Free" ? <DownloadIcon className="size-4" /> : <ShoppingCartIcon className="size-4" />}
-              {item.price === "Free" ? "Download" : "Buy Now"}
-            </Link>
-          </Button>
-          <Button variant="outline" size="icon">
-            <ExternalLinkIcon className="size-4" />
-          </Button>
-        </CardFooter>
-      </Card>
-    </BlurFade>
   );
 }
