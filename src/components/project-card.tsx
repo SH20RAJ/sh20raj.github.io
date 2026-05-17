@@ -87,7 +87,7 @@ export function ProjectCard({
           <div className="flex flex-wrap gap-2">
             {tags?.map((tag) => (
               <Badge
-                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-primary/5 text-primary border-0 rounded-full hover:bg-primary/10 transition-colors"
+                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-primary/10 text-primary border-0 rounded-full hover:bg-primary/20 transition-colors"
                 variant="secondary"
                 key={tag}
               >
@@ -105,7 +105,7 @@ export function ProjectCard({
                 <Badge
                   key={idx}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-background hover:bg-primary hover:text-primary-foreground shadow-sm",
+                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground shadow-sm",
                     link.badgeImage ? "p-0 overflow-hidden" : ""
                   )}
                 >

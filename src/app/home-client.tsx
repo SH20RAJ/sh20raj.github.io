@@ -442,25 +442,25 @@ export function HomeClient({ DATA }: { DATA: any }) {
       <section id="contact" className="w-full pb-32">
         <div className="mx-auto max-w-7xl px-8">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <div className="relative overflow-hidden rounded-[3rem] bg-foreground text-background p-12 md:p-24 text-center space-y-8">
-              <div className="absolute top-0 right-0 -mr-24 -mt-24 size-96 rounded-full bg-primary/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[3rem] bg-zinc-950 text-zinc-50 p-12 md:p-24 text-center space-y-8 dark:bg-zinc-900/50 dark:border dark:border-white/10">
+              <div className="absolute top-0 right-0 -mr-24 -mt-24 size-96 rounded-full bg-white/10 blur-3xl" />
               <div className="absolute bottom-0 left-0 -ml-24 -mb-24 size-96 rounded-full bg-blue-500/20 blur-3xl" />
               
               <div className="relative z-10 space-y-6">
-                <div className="inline-block rounded-full bg-background/10 text-background px-4 py-1.5 text-xs font-bold uppercase tracking-widest border border-background/20">
+                <div className="inline-block rounded-full bg-white/10 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest border border-white/20">
                   Let&apos;s Work Together
                 </div>
-                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl leading-tight">
-                  Want to build <span className="text-primary">something fast?</span>
+                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl leading-tight text-white">
+                  Want to build <span className="text-blue-400">something fast?</span>
                 </h2>
-                <p className="mx-auto max-w-[700px] text-background/60 text-base md:text-xl leading-relaxed">
+                <p className="mx-auto max-w-[700px] text-zinc-400 text-base md:text-xl leading-relaxed">
                   I&apos;m open to internships, startup work, freelance projects, AI product builds, and founder-led teams.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 pt-8">
-                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base font-bold text-primary-foreground shadow-2xl transition-all hover:scale-105 active:scale-95">
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-14 items-center justify-center rounded-full bg-white px-10 text-base font-bold text-black shadow-2xl transition-all hover:scale-105 active:scale-95">
                     Email Me
                   </Link>
-                  <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-14 items-center justify-center rounded-full border-2 border-background/20 bg-transparent px-10 text-base font-bold text-background transition-all hover:bg-background/10 hover:scale-105 active:scale-95">
+                  <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-14 items-center justify-center rounded-full border-2 border-white/20 bg-transparent px-10 text-base font-bold text-white transition-all hover:bg-white/10 hover:scale-105 active:scale-95">
                     View GitHub
                   </Link>
                 </div>

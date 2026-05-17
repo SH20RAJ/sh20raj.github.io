@@ -76,7 +76,7 @@ function ProductCard({ item, id }: { item: any, id: number }) {
             </h3>
             <div className="flex flex-wrap gap-2">
               {item.tags.map((tag: string) => (
-                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground/50 bg-muted/20 px-2 py-1 rounded-full">
+                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/10">
                   {tag}
                 </span>
               ))}
