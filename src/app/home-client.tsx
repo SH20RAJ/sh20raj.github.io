@@ -98,8 +98,8 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <h4 className="text-sm font-semibold">GitHub Activity</h4>
                 <div className="w-full rounded-2xl border bg-card p-8 shadow-sm overflow-hidden flex justify-center">
                   <picture className="w-full">
-                    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
-                    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
+                    <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
+                    <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
                     <img 
                       alt="github-snake" 
                       src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" 
