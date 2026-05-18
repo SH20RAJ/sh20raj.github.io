@@ -261,27 +261,22 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </BlurFade>
       </section>
 
+      {/* Fellowships & Achievements */}
+      <section id="hackathons" className="mx-auto w-full max-w-5xl px-6 space-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 10}>
+          <h2 className="text-2xl font-extrabold tracking-tight">Fellowships & Achievements</h2>
+        </BlurFade>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {DATA.hackathons.map((project: any, id: number) => (
+            <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 10.1 + id * 0.05}>
+              <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
+            </BlurFade>
+          ))}
+        </ul>
+      </section>
+
       {/* Details — Accordion sections */}
       <section id="details" className="mx-auto w-full max-w-5xl px-6 space-y-4">
-        <div id="hackathons">
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="recognition" className="border-0 bg-[var(--duo-polar)]/60 rounded-xl px-5 mb-3">
-              <AccordionTrigger className="text-base font-bold py-4 hover:no-underline hover:text-[var(--duo-feather)] transition-colors">
-                Fellowships & Achievements
-              </AccordionTrigger>
-              <AccordionContent className="pt-2 pb-6">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3 border-t border-[var(--duo-swan)]">
-                  {DATA.hackathons.map((project: any, id: number) => (
-                    <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 0.1 + id * 0.05}>
-                      <HackathonCard title={project.title} description={project.description} location={project.location} dates={project.dates} image={project.image} links={project.links} />
-                    </BlurFade>
-                  ))}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-
         <div id="faq">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="faq" className="border-0 bg-[var(--duo-polar)]/60 rounded-xl px-5 mb-3">

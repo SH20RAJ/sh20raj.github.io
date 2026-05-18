@@ -280,4 +280,20 @@ export const Icons = {
       />
     </svg>
   ),
+  producthunt: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="currentColor"
+        d="M13.604 8.4h-3.405V12h3.405c1.002 0 1.801-.799 1.801-1.8 0-1.001-.799-1.8-1.801-1.8zM12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm1.604 14.4h-3.405V18H7.801V6h5.804c2.319 0 4.2 1.881 4.2 4.2 0 2.319-1.881 4.2-4.201 4.2z"
+      />
+    </svg>
+  ),
+  apify: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="currentColor"
+        d="M21.178 0L24 7.26l-9.14 7.544L24 22.348l-2.822 1.652-9.178-16.084L2.822 24 0 16.74l9.14-7.544L0 1.652 2.822 0l9.178 16.084z"
+      />
+    </svg>
+  ),
 };
