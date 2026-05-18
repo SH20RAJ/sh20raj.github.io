@@ -151,11 +151,12 @@ export default function MarketplacePage() {
               <h3 className="font-bold text-sm">International? Pay via PayPal</h3>
             </div>
             <p className="text-xs text-muted-foreground max-w-md mx-auto">
-              If Gumroad doesn&apos;t work in your country, you can pay via PayPal (<strong>shaswatraj3@gmail.com</strong>) or Razorpay. Email a screenshot to the same address — I&apos;ll send you access personally.
+              If Gumroad doesn&apos;t work in your country, you can pay via PayPal or Razorpay. Email a screenshot to sh20raj@gmail.com — I&apos;ll send you access personally.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               <Link
-                href="mailto:shaswatraj3@gmail.com"
+                href="https://paypal.me/sh20raj"
+                target="_blank"
                 className="inline-flex h-9 items-center justify-center rounded-full border-2 border-[var(--duo-macaw)] bg-[var(--duo-macaw)] px-5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-1.5"
               >
                 <CreditCardIcon className="size-3.5" /> PayPal
