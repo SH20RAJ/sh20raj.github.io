@@ -153,8 +153,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
           {[
             { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
             { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
-            { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
-            { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
+            { category: "AI & Automation", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows", "Email Automation", "Voice Bots", "Chatbots"] },
+            { category: "Cloud & DevOps", skills: ["AWS", "Azure", "Cloudflare", "Docker", "Kubernetes", "GitHub Actions", "CI/CD Pipelines", "Terraform", "Serverless", "Linux"] },
+            { category: "Infrastructure", skills: ["Vercel", "Cloudflare Workers", "Edge Functions", "CDN", "DNS Management", "SSL", "Load Balancing", "Monitoring", "Logging"] },
             { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
           ].map((group, idx) => (
             <BlurFade key={group.category} delay={BLUR_FADE_DELAY * 5 + idx * 0.05}>
