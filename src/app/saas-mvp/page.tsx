@@ -93,6 +93,7 @@ export default function SaasMvpPage() {
       process={saasMvpConfig.process}
       faq={saasMvpConfig.faq}
       relatedProjects={saasMvpConfig.relatedProjects}
+      testimonials={saasMvpConfig.testimonials}
     >
       {/* MVP Capabilities Section */}
       <BlurFade delay={BLUR_FADE_DELAY * 4}>

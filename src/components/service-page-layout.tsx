@@ -23,6 +23,7 @@ interface ServicePageLayoutProps {
   process: { step: string; title: string; description: string }[];
   faq: { question: string; answer: string }[];
   relatedProjects: string[];
+  testimonials?: { quote: string; name: string; role: string }[];
   children?: React.ReactNode;
 }
 
@@ -35,6 +36,7 @@ export default function ServicePageLayout({
   process,
   faq,
   relatedProjects,
+  testimonials,
   children,
 }: ServicePageLayoutProps) {
   const allProjects = [...DATA.projects, ...(DATA.projectsDump || [])];
@@ -237,6 +239,49 @@ export default function ServicePageLayout({
                     video={project.video}
                     links={project.links}
                   />
+                </BlurFade>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Social Proof */}
+      {testimonials && testimonials.length > 0 && (
+        <section id="testimonials">
+          <div className="space-y-12 w-full py-12">
+            <BlurFade delay={BLUR_FADE_DELAY * 10}>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                  <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
+                    Results
+                  </div>
+                  <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
+                    What clients say
+                  </h2>
+                </div>
+              </div>
+            </BlurFade>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-[900px] mx-auto">
+              {testimonials.map((t, id) => (
+                <BlurFade
+                  key={id}
+                  delay={BLUR_FADE_DELAY * 10.1 + id * 0.05}
+                >
+                  <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-white p-5 space-y-3 dark:bg-[var(--duo-eel)]/10">
+                    <p className="text-sm text-[var(--duo-eel)] leading-relaxed italic">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <div className="size-8 rounded-full bg-[var(--duo-feather)]/10 flex items-center justify-center text-xs font-bold text-[var(--duo-feather)]">
+                        {t.name[0]}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold">{t.name}</p>
+                        <p className="text-xs text-[var(--duo-wolf)]">{t.role}</p>
+                      </div>
+                    </div>
+                  </div>
                 </BlurFade>
               ))}
             </div>

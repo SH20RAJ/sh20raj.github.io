@@ -40,6 +40,7 @@ export default function FoundingEngineerPage() {
       process={foundingEngineerConfig.process}
       faq={foundingEngineerConfig.faq}
       relatedProjects={foundingEngineerConfig.relatedProjects}
+      testimonials={foundingEngineerConfig.testimonials}
     >
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

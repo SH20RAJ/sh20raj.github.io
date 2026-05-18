@@ -97,6 +97,7 @@ export default function LandingPagesPage() {
       process={landingPagesConfig.process}
       faq={landingPagesConfig.faq}
       relatedProjects={landingPagesConfig.relatedProjects}
+      testimonials={landingPagesConfig.testimonials}
     >
       {/* Ready-made Templates Section */}
       <div className="space-y-8 py-12 border-t mt-12">

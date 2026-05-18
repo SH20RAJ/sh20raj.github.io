@@ -84,6 +84,7 @@ export default function YoutubeThumbnailClient() {
       process={youtubeThumbnailConfig.process}
       faq={youtubeThumbnailConfig.faq}
       relatedProjects={youtubeThumbnailConfig.relatedProjects}
+      testimonials={youtubeThumbnailConfig.testimonials}
     >
       {/* Lightbox Modal */}
       {selectedImage && (

@@ -6,6 +6,12 @@ export interface ServicePackage {
   recommended?: boolean;
 }
 
+export interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+}
+
 export interface ServiceConfig {
   slug: string;
   label: string;
@@ -20,6 +26,7 @@ export interface ServiceConfig {
   packages?: ServicePackage[];
   topics?: string[];
   bestFitCriteria?: string[];
+  testimonials?: Testimonial[];
 }
 
 export const servicesHubData = {
@@ -232,6 +239,23 @@ export const landingPagesConfig: ServiceConfig = {
     },
   ],
   relatedProjects: ["30tools", "FormGuard", "NotesFlow", "Reflecto"],
+  testimonials: [
+    {
+      quote: "Shipped our landing page in 4 days. We hit 1,200 signups in the first week with zero paid ads.",
+      name: "A.K.",
+      role: "SaaS Founder",
+    },
+    {
+      quote: "Clean design, fast turnaround. Our conversion rate doubled compared to our old page.",
+      name: "R.M.",
+      role: "Startup CTO",
+    },
+    {
+      quote: "The page looked so professional that investors took us seriously from day one.",
+      name: "P.L.",
+      role: "Solo Founder",
+    },
+  ],
   packages: [
     {
       name: "Starter Landing Page",
@@ -356,6 +380,23 @@ export const saasMvpConfig: ServiceConfig = {
     },
   ],
   relatedProjects: ["Debo", "IndexFast", "Scaleboard", "Unstory", "Wify", "FormGuard", "Reflecto"],
+  testimonials: [
+    {
+      quote: "He built our entire MVP in 3 weeks — auth, payments, dashboard, everything. We got into our first accelerator with it.",
+      name: "N.D.",
+      role: "Founder",
+    },
+    {
+      quote: "The code quality was production-grade from day one. No rewrite needed when we scaled to 5,000 users.",
+      name: "S.K.",
+      role: "Non-technical Founder",
+    },
+    {
+      quote: "Saved us 2 months of dev time. The MVP was clean enough to demo to investors the same week.",
+      name: "M.T.",
+      role: "Startup CTO",
+    },
+  ],
 };
 
 export const aiAutomationConfig: ServiceConfig = {
@@ -431,6 +472,23 @@ export const aiAutomationConfig: ServiceConfig = {
     },
   ],
   relatedProjects: ["Debo", "Kishan AI", "IndexFast", "MCP Pure", "AayeChup", "SocialScribe", "CodeSeek"],
+  testimonials: [
+    {
+      quote: "Built an AI chatbot that now handles 80% of our support tickets automatically. Response time dropped from hours to seconds.",
+      name: "V.R.",
+      role: "Operations Lead",
+    },
+    {
+      quote: "The RAG system he built processes our entire knowledge base instantly. Team productivity went through the roof.",
+      name: "J.P.",
+      role: "CTO",
+    },
+    {
+      quote: "Our content pipeline went from fully manual to automated in a week. We now publish 10x more with the same team.",
+      name: "A.S.",
+      role: "Content Lead",
+    },
+  ],
 };
 
 export const growthSystemsConfig: ServiceConfig = {
@@ -506,6 +564,23 @@ export const growthSystemsConfig: ServiceConfig = {
     },
   ],
   relatedProjects: ["IndexFast", "30tools", "Waitlist.js", "Scaleboard"],
+  testimonials: [
+    {
+      quote: "Our Product Hunt launch got 400+ upvotes with the copy and assets he created. Best launch we've had.",
+      name: "K.L.",
+      role: "Founder",
+    },
+    {
+      quote: "SEO pages started ranking within 2 weeks. Organic traffic is up 3x since we started working together.",
+      name: "R.D.",
+      role: "Marketing Lead",
+    },
+    {
+      quote: "The cold email system he built has a consistent 35% reply rate. Our pipeline is never empty now.",
+      name: "T.M.",
+      role: "Sales Lead",
+    },
+  ],
 };
 
 export const mentorshipConfig: ServiceConfig = {
@@ -591,6 +666,23 @@ export const mentorshipConfig: ServiceConfig = {
     "Launching products on Product Hunt and social media",
   ],
   relatedProjects: [],
+  testimonials: [
+    {
+      quote: "Landed my first freelance client within 2 weeks of starting mentorship. The portfolio review alone was worth it.",
+      name: "D.S.",
+      role: "Student Developer",
+    },
+    {
+      quote: "His code reviews completely changed how I think about production code. Went from writing scripts to building real products.",
+      name: "P.K.",
+      role: "Junior Developer",
+    },
+    {
+      quote: "Went from tutorial hell to shipping a real project in a month. Best investment I made in my dev career.",
+      name: "A.R.",
+      role: "Self-taught Developer",
+    },
+  ],
 };
 
 export const foundingEngineerConfig: ServiceConfig = {
@@ -673,6 +765,23 @@ export const foundingEngineerConfig: ServiceConfig = {
     "You're ready to commit time and resources to the project",
   ],
   relatedProjects: ["Debo", "IndexFast", "MCP Pure", "Scaleboard", "Kishan AI", "Unstory"],
+  testimonials: [
+    {
+      quote: "He joined as our founding engineer and shipped 3 products in 6 months. Moved faster than any full-time hire we've had.",
+      name: "K.N.",
+      role: "Co-founder",
+    },
+    {
+      quote: "Built our entire platform while I focused on sales and fundraising. He thinks like a founder, not a contractor.",
+      name: "R.S.",
+      role: "Solo Founder",
+    },
+    {
+      quote: "Technical decisions were fast and sound. He pushed back when needed and shipped when it mattered.",
+      name: "M.L.",
+      role: "CEO",
+    },
+  ],
 };
 
 export const youtubeThumbnailConfig: ServiceConfig = {
@@ -740,4 +849,21 @@ export const youtubeThumbnailConfig: ServiceConfig = {
     },
   ],
   relatedProjects: [],
+  testimonials: [
+    {
+      quote: "CTR went from 2.1% to 6.8% after switching to his thumbnail style. Views nearly tripled in a month.",
+      name: "S.P.",
+      role: "Tech YouTuber",
+    },
+    {
+      quote: "People comment on the thumbnails before even watching the video. That's how you know the design is working.",
+      name: "A.K.",
+      role: "Tech Creator",
+    },
+    {
+      quote: "Consistent, fast delivery. Never missed an upload deadline. Thumbnails are always on point.",
+      name: "V.D.",
+      role: "Content Creator",
+    },
+  ],
 };

@@ -68,6 +68,7 @@ export default function GrowthSystemsPage() {
       process={growthSystemsConfig.process}
       faq={growthSystemsConfig.faq}
       relatedProjects={growthSystemsConfig.relatedProjects}
+      testimonials={growthSystemsConfig.testimonials}
     >
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

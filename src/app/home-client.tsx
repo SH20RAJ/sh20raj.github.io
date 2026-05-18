@@ -87,6 +87,8 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 { value: "500+", label: "Projects" },
                 { value: "50+", label: "NPM Packages" },
                 { value: "45k+", label: "Followers" },
+                { value: "4+", label: "Startups as Tech Lead" },
+                { value: "20+", label: "Projects with Traction" },
               ].map((stat) => (
                 <div key={stat.label} className="flex items-center gap-2">
                   <span className="text-lg font-extrabold text-foreground">{stat.value}</span>
@@ -128,7 +130,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
               I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
             </p>
             <p>
-              Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages, and have 45k+ followers on Dev.to.
+              Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages, have 45k+ followers on Dev.to, joined 4+ startups as Tech Lead, and actively run 20+ small projects with real user traction.
             </p>
           </div>
         </BlurFade>
@@ -312,6 +314,8 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3 border-t border-[var(--duo-swan)]">
                   {[
                     { label: "500+ Projects", desc: "Full-stack products & tools" },
+                    { label: "4+ Startups", desc: "Joined as Tech Lead" },
+                    { label: "20+ Active Projects", desc: "Real user traction & growth" },
                     { label: "AI & SaaS", desc: "AI products, dev utilities" },
                     { label: "50+ NPM Packages", desc: "1M+ annual downloads" },
                     { label: "Fast Execution", desc: "Ideas to demos in days" },

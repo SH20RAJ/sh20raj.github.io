@@ -76,6 +76,7 @@ export default function AiAutomationPage() {
       process={aiAutomationConfig.process}
       faq={aiAutomationConfig.faq}
       relatedProjects={aiAutomationConfig.relatedProjects}
+      testimonials={aiAutomationConfig.testimonials}
     >
       {/* AI Capabilities */}
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>

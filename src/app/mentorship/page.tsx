@@ -40,6 +40,7 @@ export default function MentorshipPage() {
       process={mentorshipConfig.process}
       faq={mentorshipConfig.faq}
       relatedProjects={mentorshipConfig.relatedProjects}
+      testimonials={mentorshipConfig.testimonials}
     >
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
