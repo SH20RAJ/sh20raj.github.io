@@ -4,24 +4,6 @@ export const marketplaceData = {
   assets: {
     templates: [
       {
-        title: "Growth Agency Landing Page",
-        price: "$39",
-        description: "State-of-the-art Next.js landing page for growth agencies and startups. Turns visitors into paying clients. Plug in and launch in 2 minutes.",
-        image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-        tags: ["Next.js", "Agency", "Landing Page"],
-        demo: "https://growth-agency-landing.vercel.app",
-        purchase: "https://gumroad.com/l/growth-agency",
-      },
-      {
-        title: "Aero UI - Landing Page Template",
-        price: "$29",
-        description: "Premium landing page template for developers who value speed, aesthetics, and clean code. Deploy in under 5 minutes.",
-        image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-        tags: ["Next.js", "Template", "Premium"],
-        demo: "https://aero-ui.vercel.app",
-        purchase: "https://gumroad.com/l/aero-ui",
-      },
-      {
         title: "SaaS Starter Kit",
         price: "$49",
         description: "A complete Next.js starter with auth, database, and stripe integration.",

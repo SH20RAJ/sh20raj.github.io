@@ -92,27 +92,12 @@ function ProductCard({ item, id }: { item: any, id: number }) {
         </CardContent>
 
         <CardFooter className="p-6 pt-0 pb-6">
-          {item.demo && item.purchase ? (
-            <div className="flex gap-2 w-full">
-              <Button asChild variant="outline" className="flex-1 h-11 rounded-xl gap-2 text-xs font-bold">
-                <Link href={item.demo} target="_blank">
-                  <ExternalLinkIcon className="size-4" /> Demo
-                </Link>
-              </Button>
-              <Button asChild className="flex-1 h-11 rounded-xl gap-2 text-xs font-bold shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all active:translate-y-[4px] active:shadow-none bg-[var(--duo-feather)] text-white">
-                <Link href={item.purchase} target="_blank">
-                  <ShoppingCartIcon className="size-4" /> Buy
-                </Link>
-              </Button>
-            </div>
-          ) : (
-            <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all active:translate-y-[5px] active:shadow-none bg-[var(--duo-feather)] text-white">
-              <Link href="https://payments.cashfree.com/forms/novira-ai" target="_blank">
-                {item.price === "Free" ? <DownloadIcon className="size-5" /> : <ShoppingCartIcon className="size-5" />}
-                {item.price === "Free" ? "Get it Free" : `Buy Template`}
-              </Link>
-            </Button>
-          )}
+          <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all active:translate-y-[5px] active:shadow-none bg-[var(--duo-feather)] text-white">
+            <Link href="https://payments.cashfree.com/forms/novira-ai" target="_blank">
+              {item.price === "Free" ? <DownloadIcon className="size-5" /> : <ShoppingCartIcon className="size-5" />}
+              {item.price === "Free" ? "Get it Free" : `Buy Template`}
+            </Link>
+          </Button>
         </CardFooter>
       </Card>
     </BlurFade>

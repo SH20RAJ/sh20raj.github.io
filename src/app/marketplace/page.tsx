@@ -2,6 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Script from "next/script";
 import { MarketplaceClient } from "./marketplace-client";
 import { marketplaceData } from "@/data/marketplace";
 import type { Metadata } from "next";
@@ -31,6 +32,29 @@ export default function MarketplacePage() {
       </section>
 
       <MarketplaceClient assets={marketplaceData.assets} />
+
+      {/* Landing Page Templates — Tweet Embeds */}
+      <section id="templates" className="mx-auto w-full max-w-3xl px-6 space-y-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <h2 className="text-2xl font-extrabold tracking-tight text-center">Landing Page Templates</h2>
+        </BlurFade>
+        <div className="space-y-4">
+          {[
+            "2056211450071490862",
+            "2056232623673074108",
+            "2056280867430142035",
+          ].map((tweetId) => (
+            <BlurFade key={tweetId} delay={BLUR_FADE_DELAY * 3.5}>
+              <div className="flex justify-center">
+                <blockquote className="twitter-tweet" data-theme="light" data-dnt="true">
+                  <a href={`https://twitter.com/ShaswatBuilds/status/${tweetId}`}>Loading tweet...</a>
+                </blockquote>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" charSet="utf-8" />
 
       <section id="cta" className="mx-auto w-full max-w-7xl px-6 py-20">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
