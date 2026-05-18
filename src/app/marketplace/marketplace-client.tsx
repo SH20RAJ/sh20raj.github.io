@@ -50,9 +50,9 @@ export function MarketplaceClient({ assets }: MarketplaceClientProps) {
 function ProductCard({ item, id }: { item: any, id: number }) {
   return (
     <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05}>
-      <Card className="group relative overflow-hidden border-0 bg-secondary/20 hover:bg-secondary/40 transition-all duration-700 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-2">
+      <Card className="group relative overflow-hidden border-2 border-[var(--duo-swan)] bg-[var(--duo-polar)]/30 hover:border-[var(--duo-feather)]/30 transition-all duration-700 rounded-3xl shadow-[0_2px_0_var(--duo-swan)] hover:shadow-2xl hover:-translate-y-2">
         <div className="p-4">
-          <div className="aspect-[16/10] overflow-hidden relative rounded-[1.8rem]">
+          <div className="aspect-[16/10] overflow-hidden relative rounded-2xl">
             <img 
               src={item.image} 
               alt={item.title} 
@@ -72,12 +72,12 @@ function ProductCard({ item, id }: { item: any, id: number }) {
         
         <CardHeader className="p-6 pt-4 pb-2">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold tracking-tight leading-tight group-hover:text-primary transition-colors">
+            <h3 className="text-lg font-bold tracking-tight leading-tight group-hover:text-[var(--duo-feather)] transition-colors">
               {item.title}
             </h3>
             <div className="flex flex-wrap gap-2">
               {item.tags.map((tag: string) => (
-                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/10">
+                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-[var(--duo-feather)] bg-[var(--duo-feather)]/10 px-2 py-1 rounded-full border border-[var(--duo-feather)]/10">
                   {tag}
                 </span>
               ))}
@@ -92,7 +92,7 @@ function ProductCard({ item, id }: { item: any, id: number }) {
         </CardContent>
 
         <CardFooter className="p-6 pt-0 pb-6">
-          <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95 bg-primary text-primary-foreground">
+          <Button asChild className="w-full h-12 rounded-xl gap-3 text-sm font-bold shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all active:translate-y-[5px] active:shadow-none bg-[var(--duo-feather)] text-white">
             <Link href="https://payments.cashfree.com/forms/novira-ai" target="_blank">
               {item.price === "Free" ? <DownloadIcon className="size-5" /> : <ShoppingCartIcon className="size-5" />}
               {item.price === "Free" ? "Get it Free" : `Buy Template`}

@@ -96,7 +96,7 @@ export default function GrowthSystemsPage() {
                     key={i}
                     className="flex items-start gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="mt-0.5 text-green-600 dark:text-green-400 shrink-0">
+                    <span className="mt-0.5 text-[var(--duo-feather)] shrink-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"

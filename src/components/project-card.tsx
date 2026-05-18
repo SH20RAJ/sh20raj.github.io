@@ -72,18 +72,18 @@ export function ProjectCard({
           />
         )}
       </Link>
-      <CardHeader className="px-6 pt-6 pb-2">
-        <div className="space-y-3">
-          <div className="flex items-center justify-between gap-4">
-            <CardTitle className="text-lg font-bold leading-tight group-hover:text-primary transition-colors">{title}</CardTitle>
-            <time className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/30 px-2 py-1 rounded-full">{dates}</time>
+      <CardHeader className="px-4 pt-4 pb-1">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between gap-3">
+            <CardTitle className="text-sm font-bold leading-tight group-hover:text-[var(--duo-feather)] transition-colors">{title}</CardTitle>
+            <time className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/30 px-1.5 py-0.5 rounded-full">{dates}</time>
           </div>
-          <p className="text-sm text-muted-foreground/80 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 line-clamp-2 leading-relaxed">
             {description}
           </p>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-6 py-3">
+      <CardContent className="mt-auto flex flex-col px-4 py-2">
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {tags?.map((tag) => (
@@ -98,7 +98,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-6 pb-6 pt-2">
+      <CardFooter className="px-4 pb-4 pt-1">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-center gap-2">
             {links?.map((link, idx) => (

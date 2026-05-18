@@ -11,7 +11,7 @@ export function ProjectsClient({ projects }: { projects: any[] }) {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-32 py-12 px-6">
       <div className="mx-auto w-full max-w-7xl px-6 space-y-12">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors group">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-[var(--duo-feather)] transition-colors group">
           <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
           Back to Home
         </Link>
@@ -59,8 +59,8 @@ export function ProjectsClient({ projects }: { projects: any[] }) {
         <h2 className="text-2xl font-bold">Want to see more?</h2>
         <p className="text-muted-foreground mt-2">I have over 500+ repositories on GitHub. Check out my main profile and dumps.</p>
         <div className="flex justify-center gap-4 mt-8">
-          <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 active:scale-95">Main GitHub</Link>
-          <Link href="https://github.com/sh20raj-dump" target="_blank" className="inline-flex h-12 items-center justify-center rounded-full border bg-background px-8 text-sm font-semibold shadow-sm hover:bg-accent transition-all hover:scale-105 active:scale-95">GitHub Dump</Link>
+          <Link href="https://github.com/SH20RAJ" target="_blank" className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-sm font-semibold text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">Main GitHub</Link>
+          <Link href="https://github.com/sh20raj-dump" target="_blank" className="inline-flex h-12 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-8 text-sm font-semibold text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">GitHub Dump</Link>
         </div>
       </div>
     </main>

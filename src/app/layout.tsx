@@ -174,9 +174,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <ResumeProvider>
             <TooltipProvider delayDuration={0}>
-              {children}
-              <Footer />
               <Navbar />
+              <main className="pt-14">
+                {children}
+              </main>
+              <Footer />
             </TooltipProvider>
           </ResumeProvider>
         </ThemeProvider>

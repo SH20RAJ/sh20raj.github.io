@@ -37,12 +37,12 @@ export default function EditorPage() {
 
       <Tabs defaultValue="general" className="w-full">
         <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-8 h-auto gap-2 bg-transparent p-0">
-          <TabsTrigger value="general" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">General</TabsTrigger>
-          <TabsTrigger value="skills" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">Skills</TabsTrigger>
-          <TabsTrigger value="work" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">Work</TabsTrigger>
-          <TabsTrigger value="education" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">Education</TabsTrigger>
-          <TabsTrigger value="projects" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">Projects</TabsTrigger>
-          <TabsTrigger value="hackathons" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border">Hackathons</TabsTrigger>
+          <TabsTrigger value="general" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">General</TabsTrigger>
+          <TabsTrigger value="skills" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">Skills</TabsTrigger>
+          <TabsTrigger value="work" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">Work</TabsTrigger>
+          <TabsTrigger value="education" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">Education</TabsTrigger>
+          <TabsTrigger value="projects" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">Projects</TabsTrigger>
+          <TabsTrigger value="hackathons" className="data-[state=active]:bg-[var(--duo-feather)] data-[state=active]:text-white border">Hackathons</TabsTrigger>
         </TabsList>
 
         <TabsContent value="general">

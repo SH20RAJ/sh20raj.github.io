@@ -103,7 +103,7 @@ export default function LandingPagesPage() {
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm">
+              <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                 Shop
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -148,7 +148,7 @@ export default function LandingPagesPage() {
             },
           ].map((item, id) => (
             <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
-              <div className="group relative rounded-xl border bg-card overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="group relative rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden hover:shadow-xl transition-all duration-300 shadow-[0_2px_0_var(--duo-swan)]">
                 <div className="aspect-video overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 </div>
