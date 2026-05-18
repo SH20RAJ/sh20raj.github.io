@@ -15,7 +15,7 @@ const BLUR_FADE_DELAY = 0.04;
 const designedVideos = [
   {
     title: "How I Built a Memory Engine with Next.js & AI Agents",
-    thumbnail: "/thumbnails/memory_engine.png",
+    thumbnail: "https://i.pinimg.com/1200x/8b/43/9c/8b439c347249481509a699d8d55a7adf.jpg",
     duration: "14:20",
     channelName: "Shaswat Raj",
     channelAvatar: "/profile.jpg",
@@ -24,7 +24,7 @@ const designedVideos = [
   },
   {
     title: "Building SaaS MVPs in 48 Hours: A Complete Guide",
-    thumbnail: "/thumbnails/saas_mvp.png",
+    thumbnail: "https://i.pinimg.com/1200x/57/15/f7/5715f74d79f2e3184f3d0c8408e363e4.jpg",
     duration: "22:15",
     channelName: "Shaswat Raj",
     channelAvatar: "/profile.jpg",
@@ -33,7 +33,7 @@ const designedVideos = [
   },
   {
     title: "MCP Servers: Connect Your AI Directly to Local Files",
-    thumbnail: "/thumbnails/mcp_servers.png",
+    thumbnail: "https://i.pinimg.com/1200x/73/c6/63/73c663c24dcb2548a3bde94395686664.jpg",
     duration: "12:45",
     channelName: "Shaswat Raj",
     channelAvatar: "/profile.jpg",
@@ -42,7 +42,7 @@ const designedVideos = [
   },
   {
     title: "The Ultimate Next.js 15 Starter Kit (Auth, Payments, DB)",
-    thumbnail: "/thumbnails/nextjs_starter.png",
+    thumbnail: "https://i.pinimg.com/1200x/34/21/6e/34216e78038a0498a973b6a919b7b24d.jpg",
     duration: "18:30",
     channelName: "Shaswat Raj",
     channelAvatar: "/profile.jpg",
