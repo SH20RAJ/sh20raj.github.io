@@ -147,17 +147,16 @@ export default function YoutubeThumbnailClient() {
           </div>
         </BlurFade>
         
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {designedVideos.map((item, id) => (
             <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-              <div 
+              <div
                 onClick={() => {
                   setSelectedImage(item.thumbnail);
                   setSelectedTitle(item.title);
                 }}
-                className="group flex flex-col gap-3 cursor-pointer"
+                className="group cursor-pointer"
               >
-                {/* Thumbnail Card */}
                 <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[var(--duo-polar)] border-2 border-[var(--duo-swan)] shadow-sm group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-300">
                   <img
                     src={item.thumbnail}
@@ -165,35 +164,9 @@ export default function YoutubeThumbnailClient() {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <Badge className="absolute bottom-2 right-2 bg-black/80 text-white border-0 text-[10px] px-1.5 py-0 rounded font-mono">
-                    {item.duration}
-                  </Badge>
-                  
-                  {/* Custom Click Hover Overlays */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 gap-2">
-                    <ZoomInIcon className="size-10 text-white stroke-[2.5]" />
+                    <ZoomInIcon className="size-8 text-white stroke-[2.5]" />
                     <span className="text-[10px] text-white uppercase tracking-widest font-bold">Click to Preview</span>
-                  </div>
-                </div>
-
-                {/* Video Info Panel */}
-                <div className="flex gap-3">
-                  <Avatar className="size-9 mt-0.5 border">
-                    <AvatarImage src={item.channelAvatar} alt={item.channelName} />
-                    <AvatarFallback>{item.channelName[0]}</AvatarFallback>
-                  </Avatar>
-                  <div className="flex flex-col flex-1 gap-1">
-                    <h3 className="font-semibold text-sm leading-snug line-clamp-2 group-hover:text-[var(--duo-feather)] transition-colors">
-                      {item.title}
-                    </h3>
-                    <div className="flex flex-col">
-                      <span className="text-xs text-[var(--duo-wolf)]">
-                        {item.channelName}
-                      </span>
-                      <span className="text-[10px] text-[var(--duo-wolf)]/60 font-mono mt-0.5">
-                        {item.views} views • {item.postedAt}
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
