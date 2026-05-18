@@ -46,7 +46,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border-0 bg-secondary/20 hover:bg-secondary/40 transition-all duration-500 ease-in-out h-full group rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-2"
+        "flex flex-col overflow-hidden border-2 border-[var(--duo-swan)] bg-[var(--duo-polar)]/30 hover:border-[var(--duo-feather)]/30 transition-all duration-500 ease-in-out h-full group rounded-2xl shadow-[0_2px_0_var(--duo-swan)] hover:shadow-2xl hover:-translate-y-2"
       }
     >
       <Link
@@ -88,7 +88,7 @@ export function ProjectCard({
           <div className="flex flex-wrap gap-2">
             {tags?.map((tag) => (
               <Badge
-                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-primary/10 text-primary border-0 rounded-full hover:bg-primary/20 transition-colors"
+                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 rounded-full hover:bg-[var(--duo-feather)]/20 transition-colors"
                 variant="secondary"
                 key={tag}
               >
@@ -106,7 +106,7 @@ export function ProjectCard({
                 <Badge
                   key={idx}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground shadow-sm",
+                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] hover:bg-[var(--duo-feather)] hover:text-white shadow-sm",
                     link.badgeImage ? "p-0 overflow-hidden" : ""
                   )}
                 >

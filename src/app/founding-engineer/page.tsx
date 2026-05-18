@@ -44,7 +44,7 @@ export default function FoundingEngineerPage() {
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-full bg-[var(--duo-beetle)]/10 text-[var(--duo-beetle)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
               Best Fit
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -60,8 +60,8 @@ export default function FoundingEngineerPage() {
       <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto">
         {foundingEngineerConfig.bestFitCriteria?.map((criteria, id) => (
           <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-            <div className="flex items-start gap-3 rounded-lg border bg-card p-4">
-              <span className="inline-flex items-center justify-center size-8 rounded-full bg-foreground text-background text-sm font-bold shrink-0">
+            <div className="flex items-start gap-3 rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)]">
+              <span className="inline-flex items-center justify-center size-8 rounded-full bg-[var(--duo-beetle)] text-white text-sm font-bold shrink-0">
                 {id + 1}
               </span>
               <p className="text-muted-foreground">{criteria}</p>
@@ -70,7 +70,7 @@ export default function FoundingEngineerPage() {
         ))}
       </div>
       <BlurFade delay={BLUR_FADE_DELAY * 7}>
-        <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed max-w-[800px] mx-auto">
+        <div className="rounded-2xl bg-[var(--duo-beetle)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-beetle)]/20 max-w-[800px] mx-auto">
           <h3 className="text-xl font-bold">Have a startup idea?</h3>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Tell me about your idea, market, and what you need. I&apos;ll get

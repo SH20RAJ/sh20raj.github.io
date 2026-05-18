@@ -45,7 +45,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Services
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -66,7 +66,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   What I Offer
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -82,14 +82,14 @@ export default function ServicesPage() {
                 delay={BLUR_FADE_DELAY * 3 + id * 0.05}
               >
                 <Link href={service.href} className="block h-full">
-                  <div className="rounded-lg border bg-card p-6 hover:shadow-md transition-all h-full flex flex-col">
+                  <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col shadow-[0_2px_0_var(--duo-swan)]">
                     <h3 className="font-semibold text-lg mb-2">
                       {service.title}
                     </h3>
                     <p className="text-sm text-muted-foreground flex-1">
                       {service.description}
                     </p>
-                    <span className="text-sm text-primary font-medium mt-4 hover:underline">
+                    <span className="text-sm text-[var(--duo-feather)] font-bold mt-4">
                       Learn more →
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Who I Help
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                 key={id}
                 delay={BLUR_FADE_DELAY * 5 + id * 0.05}
               >
-                <div className="rounded-lg border bg-card p-4 space-y-1">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-1 shadow-[0_2px_0_var(--duo-swan)]">
                   <h3 className="font-semibold text-sm">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">
                     {item.description}
@@ -139,7 +139,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Process
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -154,9 +154,9 @@ export default function ServicesPage() {
                 key={id}
                 delay={BLUR_FADE_DELAY * 7 + id * 0.05}
               >
-                <div className="rounded-lg border bg-card p-4 space-y-2">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-2 shadow-[0_2px_0_var(--duo-swan)]">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center size-8 rounded-full bg-foreground text-background text-sm font-bold">
+                    <span className="inline-flex items-center justify-center size-8 rounded-full bg-[var(--duo-feather)] text-white text-sm font-bold">
                       {item.step}
                     </span>
                     <h3 className="font-semibold">{item.title}</h3>
@@ -177,7 +177,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Recent Work
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -212,7 +212,7 @@ export default function ServicesPage() {
             <div className="flex justify-center mt-8">
               <Link
                 href="/projects"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-sm font-bold text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
               >
                 View All Projects
               </Link>
@@ -227,7 +227,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Pricing
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -252,12 +252,12 @@ export default function ServicesPage() {
                 key={id}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-                <div className="rounded-lg border bg-card p-4 flex justify-between items-start">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 flex justify-between items-start shadow-[0_2px_0_var(--duo-swan)]">
                   <div>
                     <h3 className="font-semibold text-sm">{item.service}</h3>
                     <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </div>
-                  <span className="text-sm font-medium text-primary whitespace-nowrap ml-4">
+                  <span className="text-sm font-bold text-[var(--duo-feather)] whitespace-nowrap ml-4">
                     {item.price}
                   </span>
                 </div>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   FAQ
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -308,7 +308,7 @@ export default function ServicesPage() {
       <section id="cta">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 15}>
-            <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed max-w-[800px] mx-auto">
+            <div className="rounded-2xl bg-[var(--duo-feather)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-feather)]/20 max-w-[800px] mx-auto">
               <h3 className="text-xl font-bold">Let&apos;s build something</h3>
               <p className="text-sm text-muted-foreground max-w-md mx-auto">
                 Send me a message with your idea, goals, and timeline.

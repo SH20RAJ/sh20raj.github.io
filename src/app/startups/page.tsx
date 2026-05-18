@@ -58,7 +58,7 @@ export default function StartupsPage() {
           <BlurFade delay={BLUR_FADE_DELAY}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-fox)]/10 text-[var(--duo-fox)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Entrepreneurial Journey
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -77,7 +77,7 @@ export default function StartupsPage() {
                 key={startup.name}
                 delay={BLUR_FADE_DELAY * 2 + id * 0.05}
               >
-                <div className="rounded-xl border bg-card p-4 hover:shadow-md transition-all">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-[0_2px_0_var(--duo-swan)]">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-semibold text-lg">{startup.name}</h3>
                     <Badge variant={startup.status === "Running" ? "default" : "secondary"}>
@@ -96,7 +96,7 @@ export default function StartupsPage() {
           </div>
 
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed">
+            <div className="rounded-2xl bg-[var(--duo-fox)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-fox)]/20">
               <h3 className="text-xl font-bold">Interested in investing or collaborating?</h3>
               <p className="text-sm text-muted-foreground max-w-md mx-auto">
                 I'm always working on the next big idea. Check out my ideas repository or connect with me to discuss future ventures.

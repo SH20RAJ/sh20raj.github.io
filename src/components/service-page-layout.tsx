@@ -64,13 +64,13 @@ export default function ServicePageLayout({
           <BlurFade delay={BLUR_FADE_DELAY}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                   {label}
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h1 className="text-3xl font-extrabold tracking-tighter sm:text-5xl font-display">
                   {title}
                 </h1>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
+                <p className="text-[var(--duo-wolf)] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
                   {subtitle}
                 </p>
               </div>
@@ -85,10 +85,10 @@ export default function ServicePageLayout({
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                   Who This Is For
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
                   Is this for you?
                 </h2>
               </div>
@@ -100,7 +100,7 @@ export default function ServicePageLayout({
                 key={id}
                 delay={BLUR_FADE_DELAY * 3 + id * 0.05}
               >
-                <div className="rounded-lg border bg-card p-4 text-sm text-muted-foreground">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-white p-4 text-sm text-[var(--duo-eel)] dark:bg-[var(--duo-eel)]/10">
                   {item}
                 </div>
               </BlurFade>
@@ -115,10 +115,10 @@ export default function ServicePageLayout({
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                   What You Get
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
                   Everything you need
                 </h2>
               </div>
@@ -132,7 +132,7 @@ export default function ServicePageLayout({
                   delay={BLUR_FADE_DELAY * 5 + id * 0.03}
                 >
                   <div className="flex items-start gap-2 text-sm">
-                    <span className="mt-0.5 text-green-600 dark:text-green-400">
+                    <span className="mt-0.5 text-[var(--duo-feather)]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -147,7 +147,7 @@ export default function ServicePageLayout({
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </span>
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-[var(--duo-eel)]">{item}</span>
                   </div>
                 </BlurFade>
               ))}
@@ -169,10 +169,10 @@ export default function ServicePageLayout({
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                   Process
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
                   How we work together
                 </h2>
               </div>
@@ -184,14 +184,14 @@ export default function ServicePageLayout({
                 key={id}
                 delay={BLUR_FADE_DELAY * 7 + id * 0.05}
               >
-                <div className="rounded-lg border bg-card p-4 space-y-2">
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-white p-4 space-y-2 dark:bg-[var(--duo-eel)]/10">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center size-8 rounded-full bg-foreground text-background text-sm font-bold">
+                    <span className="inline-flex items-center justify-center size-8 rounded-full bg-[var(--duo-feather)] text-white text-sm font-bold">
                       {item.step}
                     </span>
                     <h3 className="font-semibold">{item.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-[var(--duo-wolf)]">
                     {item.description}
                   </p>
                 </div>
@@ -208,13 +208,13 @@ export default function ServicePageLayout({
             <BlurFade delay={BLUR_FADE_DELAY * 8}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                     Recent Work
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
                     Relevant projects
                   </h2>
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="text-[var(--duo-wolf)] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Projects that demonstrate this type of work.
                   </p>
                 </div>
@@ -249,10 +249,10 @@ export default function ServicePageLayout({
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)] text-white px-4 py-1.5 text-sm font-bold">
                   FAQ
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tighter sm:text-4xl font-display">
                   Common questions
                 </h2>
               </div>
@@ -269,7 +269,7 @@ export default function ServicePageLayout({
                     <AccordionTrigger className="text-left">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
+                    <AccordionContent className="text-[var(--duo-wolf)]">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -284,17 +284,17 @@ export default function ServicePageLayout({
       <section id="cta">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed max-w-[800px] mx-auto">
-              <h3 className="text-xl font-bold">Ready to get started?</h3>
-              <p className="text-sm text-muted-foreground max-w-md mx-auto">
+            <div className="rounded-2xl bg-[var(--duo-polar)]/50 p-8 text-center space-y-4 border-2 border-dashed border-[var(--duo-swan)] max-w-[800px] mx-auto">
+              <h3 className="text-xl font-extrabold font-display">Ready to get started?</h3>
+              <p className="text-sm text-[var(--duo-wolf)] max-w-md mx-auto">
                 Send me a message with your idea, goals, and timeline.
                 I&apos;ll get back to you within 24 hours.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild>
-                  <Link href="mailto:sh20raj@gmail.com">Get in Touch</Link>
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[var(--duo-feather)] text-white font-extrabold shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-[5px] active:shadow-none">Get in Touch</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" asChild className="rounded-xl border-2 border-[var(--duo-swan)] shadow-[0_5px_0_var(--duo-swan)] font-extrabold transition-all hover:brightness-105 active:translate-y-[5px] active:shadow-none">
                   <Link href="/services">View All Services</Link>
                 </Button>
               </div>

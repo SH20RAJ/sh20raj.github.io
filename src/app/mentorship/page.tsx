@@ -44,7 +44,7 @@ export default function MentorshipPage() {
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-full bg-[var(--duo-bee)]/10 text-[var(--duo-fox)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
               Topics I Cover
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -60,8 +60,8 @@ export default function MentorshipPage() {
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 max-w-[800px] mx-auto">
         {mentorshipConfig.topics?.map((topic, id) => (
           <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-            <div className="flex items-start gap-2 text-sm rounded-lg border bg-card p-3">
-              <span className="mt-0.5 text-green-600 dark:text-green-400 shrink-0">
+            <div className="flex items-start gap-2 text-sm rounded-xl border-2 border-[var(--duo-swan)] bg-card p-3 shadow-[0_2px_0_var(--duo-swan)]">
+              <span className="mt-0.5 text-[var(--duo-feather)] shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -82,7 +82,7 @@ export default function MentorshipPage() {
         ))}
       </div>
       <BlurFade delay={BLUR_FADE_DELAY * 7}>
-        <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed max-w-[800px] mx-auto">
+        <div className="rounded-2xl bg-[var(--duo-feather)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-feather)]/20 max-w-[800px] mx-auto">
           <h3 className="text-xl font-bold">Ready to start learning?</h3>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Send me a message with your goals and current skill level. I&apos;ll

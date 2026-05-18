@@ -44,9 +44,9 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex rounded-xl border-2 border-[var(--duo-swan)] shadow-[0_2px_0_var(--duo-swan)]">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-12 m-auto bg-[var(--duo-polar)]">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -80,7 +80,7 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-xs sm:text-sm tabular-nums text-[var(--duo-wolf)] text-right">
                 {period}
               </div>
             </div>

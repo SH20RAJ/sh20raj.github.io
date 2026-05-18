@@ -72,7 +72,7 @@ export default function GrowthSystemsPage() {
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-full bg-[var(--duo-fox)]/10 text-[var(--duo-fox)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
               Growth Toolkit
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -88,8 +88,8 @@ export default function GrowthSystemsPage() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-[800px] mx-auto">
         {growthDeliverables.map((group, id) => (
           <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-            <div className="rounded-lg border bg-card p-4 space-y-3">
-              <h3 className="font-semibold">{group.title}</h3>
+            <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-3 shadow-[0_2px_0_var(--duo-swan)]">
+              <h3 className="font-bold">{group.title}</h3>
               <ul className="space-y-1.5">
                 {group.items.map((item, i) => (
                   <li

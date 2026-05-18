@@ -2,143 +2,212 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap'); */
+
 @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
+  :root {
+    /* === CORE BRAND === */
+    --duo-feather: #58CC02;
+    --duo-mask: #89E219;
 
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
+    /* === SECONDARY === */
+    --duo-macaw: #1CB0F6;
+    --duo-cardinal: #FF4B4B;
+    --duo-bee: #FFC800;
+    --duo-fox: #FF9600;
+    --duo-beetle: #CE82FF;
+    --duo-humpback: #2B70C9;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
+    /* === NEUTRALS === */
+    --duo-eel: #4B4B4B;
+    --duo-wolf: #777777;
+    --duo-hare: #AFAFAF;
+    --duo-swan: #E5E5E5;
+    --duo-polar: #F7F7F7;
+    --duo-snow: #FFFFFF;
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+    /* === SHADOW COLORS === */
+    --duo-feather-shadow: #46A302;
+    --duo-macaw-shadow: #1899D6;
+    --duo-cardinal-shadow: #E53535;
+    --duo-bee-shadow: #E6B400;
+    --duo-fox-shadow: #E68600;
+    --duo-beetle-shadow: #B86CE6;
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+    /* === TYPOGRAPHY === */
+    --font-display: 'Nunito', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+    /* === SPACING === */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
 
-      --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    /* === BORDER RADIUS === */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 999px;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    /* === SHADOWS === */
+    --shadow-btn: 0 5px 0;
+    --shadow-card: 0 2px 0;
+    --shadow-subtle: 0 1px 3px rgba(0,0,0,0.1);
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+    /* === TRANSITIONS === */
+    --ease-btn: transform 0.1s ease, box-shadow 0.1s ease;
+    --ease-fast: all 0.15s ease;
+    --ease-med: all 0.3s ease-in-out;
+    --ease-slow: all 0.6s ease;
 
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
-
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-    }
+    /* === shadcn mapped tokens (HSL) === */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 29%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 29%;
+    --primary: 88 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 29%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 47%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 29%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 88 100% 40%;
+    --radius: 0.5rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 88 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 88 100% 40%;
   }
-
-  h3 code {
-    @apply !text-lg md:!text-xl;
-  }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
-  }
-   
-  pre [data-line] {
-    @apply px-4
-  }
-
-  code {
-    @apply text-sm md:text-base !leading-loose;
-  }
-  
-  pre > code {
-    counter-reset: line;
-  }
-  
-  code[data-theme*=" "],
-  code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
-  }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
-  }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
-  }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
-  }
- 
-  code {
-    counter-reset: line;
-  }
- 
-  code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
- 
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 2rem;
-  text-align: right;
-  color: gray;
 }
- 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
-  width: 2rem;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 800;
+  }
 }
- 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
-  width: 3rem;
+
+@layer components {
+  .duo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--ease-btn);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .duo-btn--primary { background: var(--duo-feather); color: #fff; box-shadow: var(--shadow-btn) var(--duo-feather-shadow); }
+  .duo-btn--danger { background: var(--duo-cardinal); color: #fff; box-shadow: var(--shadow-btn) var(--duo-cardinal-shadow); }
+  .duo-btn--info { background: var(--duo-macaw); color: #fff; box-shadow: var(--shadow-btn) var(--duo-macaw-shadow); }
+  .duo-btn--premium { background: var(--duo-beetle); color: #fff; box-shadow: var(--shadow-btn) var(--duo-beetle-shadow); }
+  .duo-btn--secondary { background: var(--duo-snow); color: var(--duo-eel); border: 2px solid var(--duo-swan); box-shadow: var(--shadow-btn) var(--duo-swan); }
+  .duo-btn--ghost { background: transparent; color: var(--duo-macaw); border: 2px solid var(--duo-macaw); box-shadow: none; }
+  .duo-btn:hover { filter: brightness(1.05); }
+  .duo-btn:active { transform: translateY(5px); box-shadow: none !important; }
+  .duo-btn:focus-visible { outline: 3px solid var(--duo-macaw); outline-offset: 2px; }
+  .duo-btn:disabled { background: var(--duo-swan); color: var(--duo-hare); box-shadow: none; cursor: not-allowed; transform: none; filter: none; }
+
+  .duo-card {
+    background: var(--duo-snow);
+    border: 2px solid var(--duo-swan);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-card) var(--duo-swan);
+    transition: var(--ease-med);
+  }
+  .dark .duo-card {
+    background: hsl(0 0% 10%);
+    border-color: hsl(0 0% 18%);
+    box-shadow: var(--shadow-card) hsl(0 0% 12%);
+  }
+
+  .duo-input {
+    padding: 14px 16px;
+    border: 2px solid var(--duo-swan);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--duo-eel);
+    background: var(--duo-snow);
+    transition: border-color 0.2s;
+  }
+  .duo-input:focus { border-color: var(--duo-macaw); outline: none; box-shadow: 0 0 0 3px rgba(28,176,246,0.2); }
+  .duo-input::placeholder { color: var(--duo-hare); }
+
+  .duo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: 800;
+    background: var(--duo-bee);
+    color: var(--duo-eel);
+  }
+
+  .duo-progress-track { background: var(--duo-swan); border-radius: var(--radius-pill); height: 16px; overflow: hidden; }
+  .duo-progress-fill { background: linear-gradient(to right, var(--duo-feather), var(--duo-mask)); height: 100%; border-radius: var(--radius-pill); transition: width 0.6s ease; }
+  .duo-streak { display: flex; align-items: center; gap: 6px; color: var(--duo-fox); font-weight: 800; font-size: 17px; }
 }
+
+h3 code { @apply !text-lg md:!text-xl; }
+pre { @apply !px-0 rounded-lg overflow-x-auto py-4; }
+pre [data-line] { @apply px-4; }
+code { @apply text-sm md:text-base !leading-loose; }
+pre > code { counter-reset: line; }
+code[data-theme*=" "], code[data-theme*=" "] span { color: var(--shiki-light); background-color: var(--shiki-light-bg); }
+@media (prefers-color-scheme: dark) { code[data-theme*=" "], code[data-theme*=" "] span { color: var(--shiki-dark); background-color: var(--shiki-dark-bg); } }
+code[data-line-numbers] { counter-reset: line; }
+code[data-line-numbers] > [data-line]::before { counter-increment: line; content: counter(line); @apply inline-block w-4 mr-4 text-right text-gray-500; }
+code { counter-reset: line; }
+code > [data-line]::before { counter-increment: line; content: counter(line); display: inline-block; width: 1rem; margin-right: 2rem; text-align: right; color: gray; }
+code[data-line-numbers-max-digits="2"] > [data-line]::before { width: 2rem; }
+code[data-line-numbers-max-digits="3"] > [data-line]::before { width: 3rem; }

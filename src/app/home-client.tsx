@@ -67,10 +67,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
-                  <Link href="/services" className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-bold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">View Services</Link>
-                  <Link href="/projects" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">View Projects</Link>
-                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">Contact Me</Link>
-                  <a href="/resume.pdf" download className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95 gap-2">
+                  <Link href="/services" className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-sm font-bold text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">View Services</Link>
+                  <Link href="/projects" className="inline-flex h-12 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-8 text-sm font-bold text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">View Projects</Link>
+                  <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-12 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-8 text-sm font-bold text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">Contact Me</Link>
+                  <a href="/resume.pdf" download className="inline-flex h-12 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-8 text-sm font-bold text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2">
                     <FileDown className="h-4 w-4" /> Resume
                   </a>
                 </div>
@@ -78,7 +78,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-[var(--duo-feather)] to-[var(--duo-macaw)] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                 <Avatar className="size-40 md:size-56 border-8 border-background relative shadow-2xl">
                   <AvatarImage alt="Shaswat Raj" src={DATA.avatarUrl} className="object-cover" />
                   <AvatarFallback className="text-4xl">{DATA.initials}</AvatarFallback>
@@ -93,9 +93,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <div className="h-px flex-1 bg-border" />
-              <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-[0.2em]">Live Activity</h3>
-              <div className="h-px flex-1 bg-border" />
+              <div className="h-px flex-1 bg-[var(--duo-swan)]" />
+              <h3 className="text-xs font-bold text-[var(--duo-wolf)] uppercase tracking-[0.2em]">Live Activity</h3>
+              <div className="h-px flex-1 bg-[var(--duo-swan)]" />
             </div>
             <div className="space-y-4">
                <div className="flex flex-col gap-2">
@@ -200,7 +200,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                         <BlurFade delay={BLUR_FADE_DELAY * 0.1}>
                           <div className="flex flex-wrap gap-2 pt-1 pb-4">
                             {group.skills.map((skill) => (
-                              <Badge key={skill} variant="secondary" className="px-3 py-1 rounded-full">{skill}</Badge>
+                              <Badge key={skill} variant="secondary" className="px-3 py-1 rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 hover:bg-[var(--duo-feather)]/20">{skill}</Badge>
                             ))}
                           </div>
                         </BlurFade>
@@ -220,7 +220,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-4">
-                <div className="inline-block rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Portfolio
                 </div>
                 <h2 className="text-4xl font-extrabold tracking-tighter sm:text-6xl">
@@ -256,7 +256,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <div className="flex justify-center mt-12">
               <Link
                 href="/projects"
-                className="group inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-bold text-primary-foreground shadow-2xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 gap-2"
+                className="group inline-flex h-12 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-sm font-bold text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
               >
                 Explore All 500+ Projects
                 <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-1" />
@@ -272,7 +272,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
           <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-4">
-                <div className="inline-block rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
+                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                   Services
                 </div>
                 <h2 className="text-4xl font-extrabold tracking-tighter sm:text-6xl">
@@ -298,12 +298,12 @@ export function HomeClient({ DATA }: { DATA: any }) {
               return (
                 <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
                   <Link href={service.href} className="group block h-full">
-                    <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full border-0 bg-secondary/30 backdrop-blur-sm group-hover:-translate-y-2 group-hover:bg-secondary/50 rounded-3xl p-4">
+                    <Card className="relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full border-0 bg-secondary/30 backdrop-blur-sm group-hover:-translate-y-2 group-hover:bg-secondary/50 rounded-3xl p-4 border-[var(--duo-swan)]/50">
                       <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <ArrowRightIcon className="size-5 text-primary" />
                       </div>
                       <CardHeader className="pb-4">
-                        <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                        <div className="size-14 rounded-2xl bg-[var(--duo-feather)]/10 flex items-center justify-center mb-4 group-hover:bg-[var(--duo-feather)] group-hover:text-white transition-all duration-300">
                           <Icon className="size-7" />
                         </div>
                         <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">
@@ -323,24 +323,24 @@ export function HomeClient({ DATA }: { DATA: any }) {
           </div>
           
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <div className="relative overflow-hidden rounded-[3rem] bg-primary p-12 text-center text-primary-foreground">
+            <div className="relative overflow-hidden rounded-3xl bg-[var(--duo-feather)] p-12 text-center text-white">
               <div className="absolute top-0 right-0 -mr-16 -mt-16 size-64 rounded-full bg-white/10 blur-3xl" />
               <div className="absolute bottom-0 left-0 -ml-16 -mb-16 size-64 rounded-full bg-black/10 blur-3xl" />
               <div className="relative z-10 space-y-6">
-                <h3 className="text-3xl font-bold sm:text-5xl">Ready to ship?</h3>
-                <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-xl">
+                <h3 className="text-3xl font-bold sm:text-5xl text-white">Ready to ship?</h3>
+                <p className="mx-auto max-w-[600px] text-white/80 md:text-xl">
                   Let&apos;s turn your vision into a production-ready product in record time.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 pt-4">
                   <Link
                     href="/services"
-                    className="inline-flex h-14 items-center justify-center rounded-full bg-white px-10 text-base font-bold text-black shadow-xl transition-all hover:scale-105 active:scale-95"
+                    className="inline-flex h-14 items-center justify-center rounded-full bg-white px-10 text-base font-bold text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
                   >
                     Explore Services
                   </Link>
                   <Link
                     href="mailto:sh20raj@gmail.com"
-                    className="inline-flex h-14 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 px-10 text-base font-bold text-white shadow-xl backdrop-blur-md transition-all hover:bg-white/20 hover:scale-105 active:scale-95"
+                    className="inline-flex h-14 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 px-10 text-base font-bold text-white shadow-xl backdrop-blur-md transition-all hover:bg-white/20 hover:brightness-105 active:translate-y-1"
                   >
                     Start a Project
                   </Link>
@@ -447,7 +447,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
       <section id="contact" className="w-full pb-32">
         <div className="mx-auto max-w-7xl px-8">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <div className="relative overflow-hidden rounded-[3rem] bg-zinc-950 text-zinc-50 p-12 md:p-24 text-center space-y-8 dark:bg-zinc-900/50 dark:border dark:border-white/10">
+            <div className="relative overflow-hidden rounded-3xl bg-[var(--duo-eel)] text-white p-12 md:p-24 text-center space-y-8 dark:bg-[var(--duo-eel)]/90 dark:border dark:border-white/10">
               <div className="absolute top-0 right-0 -mr-24 -mt-24 size-96 rounded-full bg-white/10 blur-3xl" />
               <div className="absolute bottom-0 left-0 -ml-24 -mb-24 size-96 rounded-full bg-blue-500/20 blur-3xl" />
               

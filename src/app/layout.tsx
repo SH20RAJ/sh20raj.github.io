@@ -6,11 +6,18 @@ import { ResumeProvider } from "@/lib/resume-context";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
+const fontDisplay = Nunito({
   subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-display",
+});
+
+const fontSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-sans",
 });
 
@@ -157,12 +164,13 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased selection:bg-primary/10",
+          "min-h-screen bg-background font-body antialiased selection:bg-primary/10",
+          fontDisplay.variable,
           fontSans.variable
         )}
       >
-        <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff10_1px,transparent_1px)] opacity-40"></div>
-        <div className="fixed inset-0 -z-10 h-full w-full bg-gradient-to-tr from-primary/5 via-transparent to-blue-500/5"></div>
+        <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(var(--duo-swan)_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff10_1px,transparent_1px)] opacity-40"></div>
+        <div className="fixed inset-0 -z-10 h-full w-full bg-gradient-to-tr from-[var(--duo-feather)]/5 via-transparent to-[var(--duo-macaw)]/5"></div>
         <ThemeProvider attribute="class" defaultTheme="light">
           <ResumeProvider>
             <TooltipProvider delayDuration={0}>

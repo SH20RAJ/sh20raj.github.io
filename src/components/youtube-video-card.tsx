@@ -30,7 +30,7 @@ export function YoutubeVideoCard({
     <BlurFade delay={delay}>
       <a href={link} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-3">
         {/* Thumbnail Container */}
-        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted">
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[var(--duo-polar)]">
           <img
             src={thumbnail}
             alt={title}
@@ -52,14 +52,14 @@ export function YoutubeVideoCard({
             <AvatarFallback>{channelName[0]}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col flex-1 gap-1">
-            <h3 className="font-semibold text-sm leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+            <h3 className="font-semibold text-sm leading-snug line-clamp-2 group-hover:text-[var(--duo-feather)] transition-colors">
               {title}
             </h3>
             <div className="flex flex-col">
-              <span className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <span className="text-xs text-[var(--duo-wolf)] hover:text-[var(--duo-eel)] transition-colors">
                 {channelName}
               </span>
-              <div className="flex items-center text-[11px] text-muted-foreground">
+              <div className="flex items-center text-[11px] text-[var(--duo-wolf)]">
                 <span>{views} views</span>
                 <span className="mx-1">•</span>
                 <span>{postedAt}</span>
@@ -67,7 +67,7 @@ export function YoutubeVideoCard({
             </div>
           </div>
           <button className="h-fit p-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            <MoreVerticalIcon className="size-4 text-muted-foreground" />
+            <MoreVerticalIcon className="size-4 text-[var(--duo-wolf)]" />
           </button>
         </div>
       </a>

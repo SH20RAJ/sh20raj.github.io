@@ -81,7 +81,7 @@ export default function AiAutomationPage() {
       <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-full bg-[var(--duo-macaw)]/10 text-[var(--duo-macaw)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
               AI Capabilities
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -96,8 +96,8 @@ export default function AiAutomationPage() {
             key={id}
             delay={BLUR_FADE_DELAY * 6 + id * 0.05}
           >
-            <div className="rounded-lg border bg-card p-4 space-y-1">
-              <h3 className="font-semibold">{item.title}</h3>
+            <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-1 shadow-[0_2px_0_var(--duo-swan)]">
+              <h3 className="font-bold">{item.title}</h3>
               <p className="text-sm text-muted-foreground">
                 {item.description}
               </p>
@@ -108,7 +108,7 @@ export default function AiAutomationPage() {
 
       {/* CTA */}
       <BlurFade delay={BLUR_FADE_DELAY * 7}>
-        <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed max-w-[800px] mx-auto">
+        <div className="rounded-2xl bg-[var(--duo-macaw)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-macaw)]/20 max-w-[800px] mx-auto">
           <h3 className="text-xl font-bold">Have an AI idea?</h3>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Tell me about your use case and I&apos;ll help you figure out the

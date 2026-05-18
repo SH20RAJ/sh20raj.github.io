@@ -6,7 +6,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 border-t py-20 px-8">
+    <footer className="mt-32 border-t border-[var(--duo-swan)] py-20 px-8 font-body">
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-10">
         <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(DATA.contact.social).map(([name, social]) => (
@@ -15,7 +15,7 @@ export default function Footer() {
               href={social.url}
               className={cn(
                 buttonVariants({ variant: "ghost", size: "sm" }),
-                "flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                "flex items-center gap-2 text-[var(--duo-wolf)] hover:text-[var(--duo-feather)]"
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Footer() {
           </a>
         </div>
         
-        <p className="text-center text-xs text-muted-foreground">
+        <p className="text-center text-xs text-[var(--duo-wolf)]">
           © {new Date().getFullYear()} {DATA.name}. Built with Passion & Tech.
         </p>
       </div>

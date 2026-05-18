@@ -98,7 +98,7 @@ export default function SaasMvpPage() {
       <BlurFade delay={BLUR_FADE_DELAY * 4}>
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
               What&apos;s Included
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -113,7 +113,7 @@ export default function SaasMvpPage() {
             key={id}
             delay={BLUR_FADE_DELAY * 5 + id * 0.05}
           >
-            <div className="rounded-lg border bg-card p-4">
+            <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)]">
               <div className="text-2xl mb-2">{item.emoji}</div>
               <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
               <p className="text-sm text-muted-foreground">
@@ -125,7 +125,7 @@ export default function SaasMvpPage() {
       </div>
       <div className="max-w-[800px] mx-auto mt-6">
         <BlurFade delay={BLUR_FADE_DELAY * 6}>
-          <div className="rounded-2xl bg-muted/50 p-8 text-center space-y-4 border border-dashed">
+          <div className="rounded-2xl bg-[var(--duo-feather)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-feather)]/20">
             <h3 className="text-xl font-bold">
               Every MVP is different. Let&apos;s discuss your idea.
             </h3>
