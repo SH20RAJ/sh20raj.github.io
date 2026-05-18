@@ -88,9 +88,14 @@ export default function MentorshipPage() {
             Send me a message with your goals and current skill level. I&apos;ll
             suggest a personalized plan.
           </p>
-          <Button asChild>
-            <Link href="mailto:sh20raj@gmail.com">Book Mentorship</Link>
-          </Button>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild>
+              <Link href="mailto:sh20raj@gmail.com">Book Mentorship</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="https://linkedin.com/in/sh20raj" target="_blank">Contact on LinkedIn</Link>
+            </Button>
+          </div>
         </div>
       </BlurFade>
     </ServicePageLayout>
