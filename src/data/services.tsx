@@ -355,7 +355,7 @@ export const saasMvpConfig: ServiceConfig = {
         "Yes. I've built AI chatbots, RAG systems, content generators, voice interfaces, and agent workflows using OpenAI, Claude, and Gemini APIs.",
     },
   ],
-  relatedProjects: ["Debo", "Scaleboard", "Waitlist.js", "SketchFlow"],
+  relatedProjects: ["Debo", "IndexFast", "Scaleboard", "Unstory", "Wify", "FormGuard", "Reflecto"],
 };
 
 export const aiAutomationConfig: ServiceConfig = {
@@ -430,7 +430,7 @@ export const aiAutomationConfig: ServiceConfig = {
         "Yes. I can connect to your existing tools (Slack, email, CMS, databases) and build automation pipelines around them.",
     },
   ],
-  relatedProjects: ["Debo", "Kishan AI", "AayeChup", "SocialScribe", "CodeSeek"],
+  relatedProjects: ["Debo", "Kishan AI", "IndexFast", "MCP Pure", "AayeChup", "SocialScribe", "CodeSeek"],
 };
 
 export const growthSystemsConfig: ServiceConfig = {
@@ -672,7 +672,7 @@ export const foundingEngineerConfig: ServiceConfig = {
     "You want to launch, test, and learn quickly",
     "You're ready to commit time and resources to the project",
   ],
-  relatedProjects: ["Debo", "Kishan AI", "Scaleboard"],
+  relatedProjects: ["Debo", "IndexFast", "MCP Pure", "Scaleboard", "Kishan AI", "Unstory"],
 };
 
 export const youtubeThumbnailConfig: ServiceConfig = {

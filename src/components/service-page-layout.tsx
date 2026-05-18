@@ -37,8 +37,9 @@ export default function ServicePageLayout({
   relatedProjects,
   children,
 }: ServicePageLayoutProps) {
+  const allProjects = [...DATA.projects, ...(DATA.projectsDump || [])];
   const related = relatedProjects.length > 0
-    ? DATA.projects.filter((p) => relatedProjects.includes(p.title))
+    ? allProjects.filter((p) => relatedProjects.includes(p.title))
     : [];
 
   return (
