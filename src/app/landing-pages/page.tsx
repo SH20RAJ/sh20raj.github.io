@@ -99,67 +99,93 @@ export default function LandingPagesPage() {
       relatedProjects={landingPagesConfig.relatedProjects}
     >
       {/* Ready-made Templates Section */}
-      <div className="space-y-12 py-12 border-t mt-12">
+      <div className="space-y-8 py-12 border-t mt-12">
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                Shop
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Ready-made Landing Pages
-              </h2>
-              <p className="text-muted-foreground max-w-[600px]">
-                Don't want to wait? Grab a high-converting template and launch in minutes.
-              </p>
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
+            <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
+              Templates
             </div>
+            <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+              Ready-made Landing Pages
+            </h2>
+            <p className="text-muted-foreground max-w-[500px] text-sm">
+              Don&apos;t want to wait? Grab a template and launch in minutes.
+            </p>
           </div>
         </BlurFade>
-        
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             {
-              title: "SaaS Starter Kit",
-              price: "$49",
-              type: "Paid",
-              image: "https://socialify.git.ci/SH20RAJ/30tools/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-              link: "/marketplace",
+              id: "2056211450071490862",
+              title: "Growth Agency Landing Page",
+              description: "State-of-the-art Next.js landing page for growth agencies and startups. Turns visitors into paying clients.",
+              demo: "https://growth-agency.vercel.app",
+              purchase: "https://sh20raj.gumroad.com/",
+              image: "https://public-files.gumroad.com/usds0aocmk7gfjyymbkl9rq2dr5l",
             },
             {
-              title: "AI Waitlist Template",
-              price: "Free",
-              type: "Free",
-              image: "https://socialify.git.ci/SH20RAJ/debo/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-              link: "/marketplace",
+              id: "2056232623673074108",
+              title: "Aero UI – Landing Page Template",
+              description: "Premium landing page template for developers who value speed, aesthetics, and clean code.",
+              demo: "https://aero-ui.vercel.app",
+              purchase: "https://sh20raj.gumroad.com/",
+              image: "https://public-files.gumroad.com/h8nwwscdx5wh7tpv0og4zq3agl84",
             },
             {
-              title: "Minimal Portfolio Pro",
-              price: "$29",
-              type: "Paid",
-              image: "https://socialify.git.ci/SH20RAJ/index-fast/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-              link: "/marketplace",
+              id: "2056280867430142035",
+              title: "Nova Landing Page Template",
+              description: "Modern, conversion-focused landing page template. Deploy in minutes.",
+              demo: "#",
+              purchase: "https://sh20raj.gumroad.com/",
+              image: "https://public-files.gumroad.com/eh8t8cxvdibqy083kz628vt5wax0",
             },
-            {
-              title: "Clean Agency Theme",
-              price: "$39",
-              type: "Paid",
-              image: "https://socialify.git.ci/shade-solutions/mcp-pure/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
-              link: "/marketplace",
-            },
-          ].map((item, id) => (
-            <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
-              <div className="group relative rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden hover:shadow-xl transition-all duration-300 shadow-[0_2px_0_var(--duo-swan)]">
-                <div className="aspect-video overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-4 space-y-2">
-                  <div className="flex justify-between items-center">
-                    <h3 className="font-bold text-sm">{item.title}</h3>
-                    <Badge variant={item.type === "Free" ? "secondary" : "default"}>{item.price}</Badge>
+          ].map((template, id) => (
+            <BlurFade key={template.id} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+              <div className="group rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                <div className="aspect-video overflow-hidden relative">
+                  <img
+                    src={template.image}
+                    alt={template.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <a
+                      href={`https://twitter.com/ShaswatBuilds/status/${template.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full p-3 shadow-lg"
+                    >
+                      <svg className="size-5 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
                   </div>
-                  <Button asChild size="sm" variant="outline" className="w-full">
-                    <Link href={item.link}>View Details</Link>
-                  </Button>
+                </div>
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="font-bold text-sm mb-1 group-hover:text-[var(--duo-feather)] transition-colors">
+                    {template.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1">
+                    {template.description}
+                  </p>
+                  <div className="flex gap-2">
+                    <a
+                      href={template.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex h-8 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white text-xs font-bold text-[var(--duo-eel)] transition-all hover:brightness-105 active:translate-y-1"
+                    >
+                      Demo
+                    </a>
+                    <a
+                      href={template.purchase}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex h-8 items-center justify-center rounded-full bg-[var(--duo-feather)] text-xs font-bold text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                    >
+                      Buy
+                    </a>
+                  </div>
                 </div>
               </div>
             </BlurFade>
@@ -167,12 +193,10 @@ export default function LandingPagesPage() {
         </div>
 
         <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <div className="flex justify-center mt-8">
-            <Button asChild variant="ghost" className="gap-2">
-              <Link href="/marketplace">
-                View All Templates <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </Link>
-            </Button>
+          <div className="text-center">
+            <Link href="/marketplace" className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--duo-feather)] hover:underline">
+              View all templates <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
           </div>
         </BlurFade>
       </div>

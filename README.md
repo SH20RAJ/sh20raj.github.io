@@ -1,129 +1,74 @@
-# Shaswat Raj - Full Stack Developer Portfolio
+# Shaswat Raj — Portfolio
 
-*Full Stack Developer | Open Source Enthusiast | AI & Web Innovation Specialist*
+Full-stack developer & AI product builder from India. I turn rough ideas into launch-ready products.
 
----
-
-## 📫 Contact Information
-
-- **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
-- **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
-- **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
-- **Portfolio**: [sh20raj.github.io](https://sh20raj.github.io)
-- **Location**: India
+**[sh20raj.github.io](https://sh20raj.github.io)**
 
 ---
 
-## 🎯 Professional Summary
+## What I Build
 
-Passionate Full Stack Developer with 5+ years of experience building scalable web applications and innovative digital solutions. Proven expertise in modern JavaScript frameworks, AI integration, and leading cross-functional teams. Creator of 40+ open-source projects with combined 100K+ GitHub stars, demonstrating strong technical leadership and community contribution.
+- AI tools, chatbots, agent workflows, and RAG systems
+- SaaS apps with auth, payments, dashboards, and APIs
+- Landing pages, programmatic SEO, and content systems
+- Developer utilities, browser tools, and npm packages
+- Automation pipelines, MCP integrations, and launch systems
 
-**Key Strengths:**
+## Tech Stack
 
-- **Full-Stack Mastery**: Expert in Next.js, React, Node.js, and modern web technologies
-- **AI Integration**: Advanced experience with OpenAI, DeepSeek, and AI-powered applications
-- **Open Source Leadership**: Maintained 40+ repositories with significant community impact
-- **Scalable Architecture**: Proven ability to design and implement enterprise-level solutions
-- **Team Leadership**: Experience leading development teams and mentoring junior developers
+| Layer | Tools |
+|-------|-------|
+| Frontend | Next.js, React, TypeScript, Tailwind CSS, Framer Motion |
+| Backend | Node.js, Express, Prisma, REST APIs, tRPC |
+| AI | OpenAI, Claude, Gemini, RAG, embeddings, agent workflows |
+| Database | PostgreSQL, MongoDB, Firebase, Redis |
+| Infra | Cloudflare, Vercel, Docker, GitHub Actions |
+| Design | Duolingo Design System, shadcn/ui, Magic UI |
 
----
+## Projects
 
-## 🛠 Technical Skills
+500+ projects built. 50+ npm packages. 45k+ Dev.to followers.
 
-### Programming Languages
+**Live:** [sh20raj.github.io/projects](https://sh20raj.github.io/projects)
 
-- **JavaScript** (95%) - Expert level with ES6+, async/await, modern features
-- **TypeScript** (90%) - Strong typing, interfaces, generics, advanced patterns
-- **Python** (80%) - Web development, data processing, automation scripts
-- **PHP** (85%) - Laravel, custom frameworks, legacy system maintenance
-- **HTML5** (98%) - Semantic markup, accessibility, modern standards
-- **CSS3** (95%) - Flexbox, Grid, animations, responsive design
-- **C/C++** (70%) - Algorithm implementation, system programming
+## Services
 
-### Frontend Technologies
+| Service | Starting Price |
+|---------|---------------|
+| Landing Pages | From $199 |
+| SaaS MVPs | Custom |
+| AI Tools & Automation | Custom |
+| Growth Systems | From $299 |
+| Mentorship | Per session |
+| Founding Engineer | Flexible |
 
-- **React** (95%) - Hooks, Context API, performance optimization, testing
-- **Next.js** (95%) - SSR, SSG, API routes, middleware, deployment
-- **Vue.js** (85%) - Composition API, Vuex, Nuxt.js
-- **Angular** (75%) - Services, RxJS, TypeScript integration
-- **TailwindCSS** (95%) - Utility-first approach, custom configurations
-- **Framer Motion** (90%) - Complex animations, page transitions
-- **SCSS/Sass** (90%) - Advanced features, mixins, functions
+**Details:** [sh20raj.github.io/services](https://sh20raj.github.io/services)
 
-### Backend Technologies
+## Marketplace
 
-- **Node.js** (90%) - Express, API development, microservices
-- **Laravel** (85%) - Eloquent ORM, authentication, API development
-- **Express.js** (90%) - Middleware, routing, RESTful APIs
-- **RESTful APIs** (95%) - Design, implementation, documentation
-- **GraphQL** (75%) - Schema design, resolvers, Apollo
+Premium templates, guides, and tools on **[Gumroad](https://sh20raj.gumroad.com/)**.
 
-### Databases
+International? Pay via **PayPal** (shaswatraj3@gmail.com) or **[Razorpay](https://razorpay.me/@iamsh)** and email screenshot for access.
 
-- **MySQL** (90%) - Complex queries, optimization, indexing
-- **MongoDB** (85%) - Aggregation pipelines, indexing, replication
-- **PostgreSQL** (85%) - Advanced features, performance tuning
-- **Firebase** (90%) - Realtime database, authentication, hosting
-- **Redis** (70%) - Caching, session management
+## Contact
 
-### DevOps & Tools
+- **Email:** [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
+- **GitHub:** [github.com/SH20RAJ](https://github.com/SH20RAJ)
+- **LinkedIn:** [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
+- **Dev.to:** [dev.to/sh20raj](https://dev.to/sh20raj)
+- **Twitter:** [@SH20RAJ](https://twitter.com/SH20RAJ)
 
-- **Git/GitHub** (95%) - Advanced workflows, branching strategies
-- **Docker** (80%) - Containerization, multi-stage builds
-- **AWS** (75%) - EC2, S3, Lambda, CloudFront
-- **Cloudflare** (80%) - CDN, security, edge computing
-- **VS Code** (98%) - Extensions development, productivity optimization
-- **GitHub Actions** (85%) - CI/CD pipelines, automation
+## Local Development
 
-### AI & Modern Technologies
+```bash
+git clone https://github.com/SH20RAJ/sh20raj.git
+cd sh20raj
+npm install
+npm run dev
+```
 
-- **OpenAI Integration** (90%) - GPT models, embeddings, fine-tuning
-- **WebRTC** (85%) - Peer-to-peer communication, video/audio
-- **WebSockets** (85%) - Real-time applications, Socket.io
-- **PWA Development** (90%) - Service workers, offline functionality
-- **Web Scraping** (90%) - Data extraction, automation
-- **Browser Extensions** (85%) - Chrome/Firefox extension development
+Open [http://localhost:3000](http://localhost:3000)
 
----
+## License
 
-## 🚀 Featured Projects
-
-Check out my [Portfolio Website](https://sh20raj.github.io) for a full list of projects.
-
----
-
-## 🏆 Key Achievements
-
-### Open Source Impact
-
-- **400+ Active Repositories**: Maintained and developed diverse range of projects
-- **1K+ Combined GitHub Stars**: Demonstrating community value and adoption
-- **50+ NPM Packages**: Published libraries used by developers worldwide
-- **Community Contributions**: Regular contributor to major open-source projects
-
-### Technical Accomplishments
-
-- **Performance Optimization**: Achieved 90+ Lighthouse scores across all projects
-- **Scalability**: Built applications handling 10K+ concurrent users
-- **Security**: Implemented enterprise-grade security measures and encryption
-- **Innovation**: First to implement several cutting-edge features in local ecosystem
-
-### Professional Recognition
-
-- **GitHub Arctic Code Vault Contributor**: Code preserved for future generations
-- **Top Developer**: Ranked in top 1% of developers in region
-- **Mentor & Speaker**: Regular tech talks and mentoring sessions
-- **Client Satisfaction**: 100% client retention rate with 5-star reviews
-
----
-
-## 🤝 Let's Connect
-
-I'm always excited to discuss new opportunities, collaborate on interesting projects, or share knowledge about web development and emerging technologies.
-
-**Best ways to reach me:**
-
-- **Email**: [sh20raj@gmail.com](mailto:sh20raj@gmail.com)
-- **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
-- **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)
-- **Portfolio**: [sh20raj.github.io](https://sh20raj.github.io)
+MIT
