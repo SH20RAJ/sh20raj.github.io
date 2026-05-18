@@ -60,10 +60,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <Link href="/services" className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">
                     View Services
                   </Link>
-                  <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">
+                  <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">
                     View Projects
                   </Link>
-                  <a href="/resume.pdf" download className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-1.5">
+                  <a href="/resume.pdf" download className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-1.5">
                     <FileDown className="h-3.5 w-3.5" /> Resume
                   </a>
                 </div>
@@ -98,17 +98,79 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Skills — flat, no accordion */}
-      <section id="skills" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex flex-wrap gap-2">
-            {["Next.js", "React", "TypeScript", "Node.js", "Python", "Tailwind", "AI/ML APIs", "Cloudflare", "PostgreSQL", "Vercel", "OpenAI", "Claude", "SEO", "Automation"].map((skill) => (
-              <Badge key={skill} className="px-3 py-1 rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 text-xs font-bold hover:bg-[var(--duo-feather)]/20 transition-colors">
-                {skill}
-              </Badge>
-            ))}
+      {/* GitHub Snake — right after hero */}
+      <section id="activity" className="mx-auto w-full max-w-5xl px-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 3.8}>
+          <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)] overflow-hidden">
+            <picture className="w-full">
+              <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
+              <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
+              <img alt="github-snake" src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" className="w-full h-auto" loading="lazy" />
+            </picture>
           </div>
         </BlurFade>
+      </section>
+
+      {/* About & Vision */}
+      <section id="about" className="mx-auto w-full max-w-5xl px-6 space-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <h2 className="text-2xl font-extrabold tracking-tight">About & Vision</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.1}>
+          <div className="prose max-w-full text-pretty font-sans text-sm md:text-base text-muted-foreground dark:prose-invert space-y-3">
+            <p>
+              I build AI tools, SaaS apps, developer utilities, automation systems, and open-source projects using Next.js, TypeScript, Node.js, Python, Cloudflare, and modern AI APIs.
+            </p>
+            <p>
+              I move fast from vague ideas to working products — landing pages, dashboards, APIs, AI workflows, browser tools, MCP integrations, and public launches.
+            </p>
+            <p>
+              I&apos;m <strong>Shaswat Raj</strong>, a full-stack developer and product builder from India. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.
+            </p>
+            <p>
+              Coding since class 7, I&apos;ve built 500+ projects, maintain 50+ open-source packages, and have 45k+ followers on Dev.to.
+            </p>
+          </div>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.4}>
+          <Link
+            href="https://sh20raj.github.io/ideas/"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[var(--duo-feather)] bg-[var(--duo-feather)]/10 px-4 py-2 rounded-full hover:bg-[var(--duo-feather)]/20 transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Startup Ideas <ArrowRightIcon className="size-4" />
+          </Link>
+        </BlurFade>
+      </section>
+
+      {/* Technical Depth */}
+      <section id="skills" className="mx-auto w-full max-w-5xl px-6 space-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+          <h2 className="text-2xl font-extrabold tracking-tight">Technical Depth</h2>
+        </BlurFade>
+        <div className="space-y-4">
+          {[
+            { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
+            { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
+            { category: "AI", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows"] },
+            { category: "Infrastructure", skills: ["Cloudflare Workers", "Vercel", "GitHub Actions", "Serverless", "Environment Management"] },
+            { category: "Product", skills: ["MVP Building", "Landing Pages", "Onboarding Flows", "SEO Pages", "Analytics", "Waitlists", "Launch Copy"] },
+          ].map((group, idx) => (
+            <BlurFade key={group.category} delay={BLUR_FADE_DELAY * 5 + idx * 0.05}>
+              <div className="space-y-2">
+                <h3 className="text-xs font-bold text-[var(--duo-wolf)] uppercase tracking-wider">{group.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <Badge key={skill} className="px-3 py-1 rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 text-xs font-bold hover:bg-[var(--duo-feather)]/20 transition-colors">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
       </section>
 
       {/* Featured Projects */}
@@ -270,19 +332,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
-
-      {/* GitHub Activity — minimal */}
-      <section id="activity" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)] overflow-hidden">
-            <picture className="w-full">
-              <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake-dark.svg" />
-              <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" />
-              <img alt="github-snake" src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" className="w-full h-auto" loading="lazy" />
-            </picture>
-          </div>
-        </BlurFade>
       </section>
 
       {/* Contact */}

@@ -14,10 +14,10 @@ const buttonVariants = cva(
         destructive:
           "bg-[var(--duo-cardinal)] text-white shadow-[0_5px_0_var(--duo-cardinal-shadow)] hover:brightness-105 active:translate-y-[5px] active:shadow-none",
         outline:
-          "border-2 border-[var(--duo-swan)] bg-[var(--duo-snow)] text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] hover:bg-[var(--duo-polar)] active:translate-y-[5px] active:shadow-none",
+          "border-2 border-[var(--duo-swan)] bg-[var(--duo-snow)] text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] hover:bg-[var(--duo-polar)] hover:text-[var(--duo-eel)] active:translate-y-[5px] active:shadow-none dark:bg-transparent dark:text-foreground dark:hover:bg-[var(--duo-swan)]/20",
         secondary:
-          "bg-[var(--duo-polar)] text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] hover:brightness-[0.97] active:translate-y-[5px] active:shadow-none",
-        ghost: "hover:bg-[var(--duo-polar)] hover:text-[var(--duo-eel)]",
+          "bg-[var(--duo-polar)] text-[var(--duo-eel)] shadow-[0_5px_0_var(--duo-swan)] hover:brightness-[0.97] active:translate-y-[5px] active:shadow-none dark:bg-[var(--duo-swan)]/20 dark:text-foreground",
+        ghost: "hover:bg-[var(--duo-polar)] hover:text-[var(--duo-eel)] dark:hover:bg-[var(--duo-swan)]/20 dark:text-foreground",
         link: "text-[var(--duo-macaw)] underline-offset-4 hover:underline",
       },
       size: {

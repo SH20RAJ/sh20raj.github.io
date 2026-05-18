@@ -9,7 +9,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import {
+  LayoutIcon,
+  CodeIcon,
+  BotIcon,
+  TrendingUpIcon,
+  UsersIcon,
+  RocketIcon,
+  ArrowRightIcon,
+  CheckCircle2,
+} from "lucide-react";
 
 export const metadata = {
   title: "Services",
@@ -36,134 +45,95 @@ export const metadata = {
 
 const BLUR_FADE_DELAY = 0.04;
 
+const iconMap: Record<string, any> = {
+  layout: LayoutIcon,
+  code: CodeIcon,
+  bot: BotIcon,
+  "trending-up": TrendingUpIcon,
+  users: UsersIcon,
+  rocket: RocketIcon,
+};
+
+const accentColors = [
+  { bg: "bg-[var(--duo-feather)]/10", text: "text-[var(--duo-feather)]", hoverBg: "group-hover:bg-[var(--duo-feather)]", hoverText: "group-hover:text-white" },
+  { bg: "bg-[var(--duo-macaw)]/10", text: "text-[var(--duo-macaw)]", hoverBg: "group-hover:bg-[var(--duo-macaw)]", hoverText: "group-hover:text-white" },
+  { bg: "bg-[var(--duo-beetle)]/10", text: "text-[var(--duo-beetle)]", hoverBg: "group-hover:bg-[var(--duo-beetle)]", hoverText: "group-hover:text-white" },
+  { bg: "bg-[var(--duo-fox)]/10", text: "text-[var(--duo-fox)]", hoverBg: "group-hover:bg-[var(--duo-fox)]", hoverText: "group-hover:text-white" },
+  { bg: "bg-[var(--duo-bee)]/10", text: "text-[var(--duo-bee)]", hoverBg: "group-hover:bg-[var(--duo-bee)]", hoverText: "group-hover:text-white" },
+  { bg: "bg-[var(--duo-cardinal)]/10", text: "text-[var(--duo-cardinal)]", hoverBg: "group-hover:bg-[var(--duo-cardinal)]", hoverText: "group-hover:text-white" },
+];
+
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      {/* Hero */}
-      <section id="hero">
-        <div className="space-y-12 w-full py-12">
+    <main className="flex flex-col min-h-[100dvh]">
+      {/* Hero — bold, compact */}
+      <section id="hero" className="pt-16 pb-12">
+        <div className="mx-auto w-full max-w-5xl px-6">
           <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Services
-                </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {servicesHubData.title}
-                </h1>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
-                  {servicesHubData.subtitle}
-                </p>
+            <div className="flex flex-col items-center text-center space-y-5">
+              <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
+                Services
               </div>
+              <h1 className="text-3xl font-extrabold tracking-tighter sm:text-5xl max-w-[600px]">
+                {servicesHubData.title}
+              </h1>
+              <p className="text-muted-foreground max-w-[500px] text-sm md:text-base leading-relaxed">
+                {servicesHubData.subtitle}
+              </p>
+              <Link
+                href="mailto:sh20raj@gmail.com"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-xs font-bold uppercase tracking-wider text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
+              >
+                Start a Project <ArrowRightIcon className="size-4" />
+              </Link>
             </div>
           </BlurFade>
         </div>
       </section>
 
-      {/* Services grid */}
-      <section id="services">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  What I Offer
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Choose what you need
-                </h2>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {servicesHubData.services.map((service, id) => (
-              <BlurFade
-                key={service.title}
-                delay={BLUR_FADE_DELAY * 3 + id * 0.05}
-              >
-                <Link href={service.href} className="block h-full">
-                  <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col shadow-[0_2px_0_var(--duo-swan)]">
-                    <h3 className="font-semibold text-lg mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground flex-1">
-                      {service.description}
-                    </p>
-                    <span className="text-sm text-[var(--duo-feather)] font-bold mt-4">
-                      Learn more →
-                    </span>
-                  </div>
-                </Link>
-              </BlurFade>
-            ))}
+      {/* Services grid — colorful cards with icons */}
+      <section id="services" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {servicesHubData.services.map((service, id) => {
+              const Icon = iconMap[service.icon] || CodeIcon;
+              const accent = accentColors[id % accentColors.length];
+              return (
+                <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 2 + id * 0.05}>
+                  <Link href={service.href} className="group block h-full">
+                    <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
+                      <div className={`size-11 rounded-xl ${accent.bg} flex items-center justify-center mb-3 ${accent.hoverBg} ${accent.hoverText} transition-all duration-300`}>
+                        <Icon className={`size-5 ${accent.text} ${accent.hoverText} transition-colors`} />
+                      </div>
+                      <h3 className="font-bold text-sm mb-1 group-hover:text-[var(--duo-feather)] transition-colors">{service.title}</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{service.description}</p>
+                      <span className={`inline-flex items-center gap-1 text-xs font-bold mt-3 ${accent.text}`}>
+                        Learn more <ArrowRightIcon className="size-3 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </Link>
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Who I help */}
-      <section id="who">
-        <div className="space-y-12 w-full py-12">
+      {/* Who I help — compact grid */}
+      <section id="who" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Who I Help
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Built for builders
-                </h2>
-              </div>
-            </div>
+            <h2 className="text-xl font-extrabold tracking-tight text-center">Who I Help</h2>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {servicesHubData.whoIHelp.map((item, id) => (
-              <BlurFade
-                key={id}
-                delay={BLUR_FADE_DELAY * 5 + id * 0.05}
-              >
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-1 shadow-[0_2px_0_var(--duo-swan)]">
-                  <h3 className="font-semibold text-sm">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section id="process">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Process
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  How we work together
-                </h2>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {servicesHubData.process.map((item, id) => (
-              <BlurFade
-                key={id}
-                delay={BLUR_FADE_DELAY * 7 + id * 0.05}
-              >
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 space-y-2 shadow-[0_2px_0_var(--duo-swan)]">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center size-8 rounded-full bg-[var(--duo-feather)] text-white text-sm font-bold">
-                      {item.step}
-                    </span>
-                    <h3 className="font-semibold">{item.title}</h3>
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
+                <div className="flex items-start gap-3 rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)]">
+                  <CheckCircle2 className="size-4 text-[var(--duo-feather)] mt-0.5 shrink-0" />
+                  <div>
+                    <h3 className="font-bold text-sm">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground mt-0.5">{item.description}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
                 </div>
               </BlurFade>
             ))}
@@ -171,30 +141,42 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Featured projects */}
-      <section id="work">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 8}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Recent Work
+      {/* Process — horizontal steps */}
+      <section id="process" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+            <h2 className="text-xl font-extrabold tracking-tight text-center">How It Works</h2>
+          </BlurFade>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {servicesHubData.process.map((item, id) => (
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 7 + id * 0.05}>
+                <div className="relative rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] text-center space-y-2">
+                  <span className="inline-flex items-center justify-center size-10 rounded-full bg-[var(--duo-feather)] text-white text-sm font-extrabold mx-auto">
+                    {item.step}
+                  </span>
+                  <h3 className="font-bold text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Projects I&apos;ve built
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  A selection of products, tools, and platforms I&apos;ve shipped.
-                </p>
-              </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recent work */}
+      <section id="work" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-extrabold tracking-tight">Recent Work</h2>
+              <Link href="/projects" className="group inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline">
+                View all <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {DATA.projects.slice(0, 4).map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 9 + id * 0.05}
-              >
+              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 9 + id * 0.05}>
                 <ProjectCard
                   href={project.href}
                   title={project.title}
@@ -208,38 +190,21 @@ export default function ServicesPage() {
               </BlurFade>
             ))}
           </div>
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <div className="flex justify-center mt-8">
-              <Link
-                href="/projects"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--duo-feather)] px-8 text-sm font-bold text-white shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-              >
-                View All Projects
-              </Link>
-            </div>
-          </BlurFade>
         </div>
       </section>
 
-      {/* Pricing starting points */}
-      <section id="pricing">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Pricing
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Starting points
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
-                  Every project is different. These are starting points — I&apos;ll give you a custom quote after we discuss your needs.
-                </p>
-              </div>
+      {/* Pricing — clean list */}
+      <section id="pricing" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <div className="text-center space-y-2">
+              <h2 className="text-xl font-extrabold tracking-tight">Starting Points</h2>
+              <p className="text-xs text-muted-foreground max-w-[400px] mx-auto">
+                Every project is different. These are starting points — I&apos;ll give you a custom quote after we talk.
+              </p>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-[900px] mx-auto">
             {[
               { service: "Landing Pages", price: "From $199", desc: "Single-page to premium launch pages" },
               { service: "SaaS MVPs", price: "Custom", desc: "Scoped after discussing your product" },
@@ -248,16 +213,13 @@ export default function ServicesPage() {
               { service: "Mentorship", price: "Per session", desc: "1:1 calls and code reviews" },
               { service: "Founding Engineer", price: "Flexible", desc: "Equity, retainer, or project-based" },
             ].map((item, id) => (
-              <BlurFade
-                key={id}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 flex justify-between items-start shadow-[0_2px_0_var(--duo-swan)]">
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 flex justify-between items-center shadow-[0_2px_0_var(--duo-swan)]">
                   <div>
-                    <h3 className="font-semibold text-sm">{item.service}</h3>
+                    <h3 className="font-bold text-sm">{item.service}</h3>
                     <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </div>
-                  <span className="text-sm font-bold text-[var(--duo-feather)] whitespace-nowrap ml-4">
+                  <span className="text-sm font-extrabold text-[var(--duo-feather)] whitespace-nowrap ml-3">
                     {item.price}
                   </span>
                 </div>
@@ -267,57 +229,46 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  FAQ
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Common questions
-                </h2>
-              </div>
-            </div>
+      {/* FAQ — compact accordion */}
+      <section id="faq" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <h2 className="text-xl font-extrabold tracking-tight text-center">FAQ</h2>
           </BlurFade>
-          <div className="max-w-[800px] mx-auto">
+          <div className="max-w-[700px] mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {servicesHubData.faq.map((item, id) => (
-                <BlurFade
-                  key={id}
-                  delay={BLUR_FADE_DELAY * 14 + id * 0.05}
-                >
-                  <AccordionItem value={`item-${id}`}>
-                    <AccordionTrigger className="text-left">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                </BlurFade>
+                <AccordionItem key={id} value={`item-${id}`} className="border-b border-[var(--duo-swan)]">
+                  <AccordionTrigger className="text-sm font-bold text-left hover:no-underline hover:text-[var(--duo-feather)] transition-colors py-3">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-xs text-muted-foreground pb-3">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
               ))}
             </Accordion>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="cta">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 15}>
-            <div className="rounded-2xl bg-[var(--duo-feather)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-feather)]/20 max-w-[800px] mx-auto">
-              <h3 className="text-xl font-bold">Let&apos;s build something</h3>
-              <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                Send me a message with your idea, goals, and timeline.
-                I&apos;ll get back to you within 24 hours.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild>
-                  <Link href="mailto:sh20raj@gmail.com">Get in Touch</Link>
-                </Button>
+      {/* CTA — green banner */}
+      <section id="cta" className="pb-20">
+        <div className="mx-auto w-full max-w-5xl px-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <div className="relative overflow-hidden rounded-2xl bg-[var(--duo-feather)] p-10 text-center text-white">
+              <div className="absolute top-0 right-0 -mr-16 -mt-16 size-48 rounded-full bg-white/10 blur-2xl" />
+              <div className="relative z-10 space-y-4">
+                <h3 className="text-2xl font-extrabold text-white">Let&apos;s build something</h3>
+                <p className="text-white/80 text-sm max-w-md mx-auto">
+                  Send me a message with your idea, goals, and timeline. I&apos;ll get back to you within 24 hours.
+                </p>
+                <Link
+                  href="mailto:sh20raj@gmail.com"
+                  className="inline-flex h-11 items-center justify-center rounded-full bg-white px-8 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                >
+                  Get in Touch
+                </Link>
               </div>
             </div>
           </BlurFade>
