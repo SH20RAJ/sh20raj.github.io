@@ -132,7 +132,7 @@ export const DATA = {
       description:
         "Your Life's Memory Engine. An AI-powered product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through a seamless AI chat interface.",
       technologies: ["Next.js", "TypeScript", "AI Agents", "AI SDK", "Voice Agent", "Vector Search", "Cloudflare", "Agentic Memory", "OpenAI"],
-      links: [  
+      links: [
         {
           type: "Website",
           href: "https://debo.life",
@@ -172,7 +172,7 @@ export const DATA = {
     },
     {
       title: "MCP Pure",
-      href: "https://mcppure.shraj.workers.dev/",
+      href: "https://mcppure.30tools.com/",
       dates: "2025",
       active: true,
       description:
@@ -181,7 +181,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://mcppure.shraj.workers.dev/",
+          href: "https://mcppure.30tools.com/",
           icon: "globe",
         },
         {
@@ -190,7 +190,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://mcppure.shraj.workers.dev/og-image.png",
+      image: "https://mcppure.30tools.com/og-image.png",
       video: "",
     },
     {
