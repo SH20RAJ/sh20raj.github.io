@@ -118,6 +118,18 @@ export const DATA = {
         icon: "email",
         navbar: false,
       },
+      ProductHunt: {
+        name: "Product Hunt",
+        url: "https://www.producthunt.com/@sh20raj",
+        icon: "producthunt",
+        navbar: false,
+      },
+      Apify: {
+        name: "Apify",
+        url: "https://apify.com/express_kingfisher",
+        icon: "apify",
+        navbar: false,
+      },
     },
   },
 
@@ -144,7 +156,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://debo.life/og-image.png",
+      image: "https://ph-files.imgix.net/cfa307d8-4afb-4bc7-934a-7ab7cf316aa7.png",
       video: "",
     },
     {
@@ -747,6 +759,21 @@ export const DATA = {
         "Shortlisted in Round 1 (Top 500 across India). Developed Kishan AI, an AI-powered Telegram Assistant for farmers with crop disease diagnosis, weather insights, and mandi prices.",
       image: "https://pbs.twimg.com/profile_images/1633400336214302720/0p534a6e_400x400.jpg",
       links: [],
+    },
+    {
+      title: "Apify $100 Hackathon Winner",
+      dates: "2025",
+      location: "Online",
+      description:
+        "Won $100 in the Apify web scraping hackathon. Built a production-ready scraping actor using Apify SDK for automated data extraction from web platforms.",
+      image: "https://avatars.githubusercontent.com/u/24586296?s=200&v=4",
+      links: [
+        {
+          type: "Profile",
+          href: "https://apify.com/express_kingfisher",
+          icon: "globe",
+        },
+      ],
     },
   ],
 };
