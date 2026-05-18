@@ -290,7 +290,11 @@ export default function ServicePageLayout({
                 Send me a message with your idea, goals, and timeline.
                 I&apos;ll get back to you within 24 hours.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-xs text-[var(--duo-wolf)] max-w-lg mx-auto space-y-1.5 pt-4 border-t border-[var(--duo-swan)]">
+                <p>📱 WhatsApp: <span className="font-bold text-[var(--duo-eel)] dark:text-zinc-300">+91 8986829193</span> (WhatsApp messages only; cell calls are inactive as the number is expired).</p>
+                <p>💬 Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">Peerlist</a>.</p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 pt-2">
                 <Button asChild>
                   <Link href="mailto:sh20raj@gmail.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[var(--duo-feather)] text-white font-extrabold shadow-[0_5px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-[5px] active:shadow-none">Get in Touch</Link>
                 </Button>

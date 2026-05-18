@@ -56,6 +56,13 @@ export const servicesHubData = {
       icon: "trending-up",
     },
     {
+      title: "YouTube Thumbnail Designing",
+      description:
+        "High-conversion, click-worthy, premium custom YouTube thumbnails that increase CTR and views.",
+      href: "/youtube-thumbnail",
+      icon: "youtube",
+    },
+    {
       title: "Mentorship",
       description:
         "1:1 guidance for web development, AI tools, freelancing, GitHub, and shipping real projects.",
@@ -666,4 +673,71 @@ export const foundingEngineerConfig: ServiceConfig = {
     "You're ready to commit time and resources to the project",
   ],
   relatedProjects: ["Debo", "Kishan AI", "Scaleboard"],
+};
+
+export const youtubeThumbnailConfig: ServiceConfig = {
+  slug: "youtube-thumbnail",
+  label: "YouTube Thumbnails",
+  title: "High-CTR YouTube Thumbnail Designing",
+  subtitle:
+    "Get custom, premium, and psychology-backed YouTube thumbnails that grab attention, drive clicks, and skyrocket your views.",
+  metaDescription:
+    "Work with Shaswat Raj to design premium, high-CTR YouTube thumbnails with proof of works and visual layouts.",
+  whoIsThisFor: [
+    "Tech YouTubers and developers making tutorial videos",
+    "SaaS founders launching products with video demos",
+    "Edu-tech channels, designers, and educators",
+    "Any creator wanting to increase click-through rate (CTR)",
+  ],
+  deliverables: [
+    "High-resolution 1280x720 (or 1920x1080) PNG/JPG thumbnails",
+    "Psychology-driven visual layouts and contrast optimization",
+    "Color grading and face editing / cutout styling",
+    "Editable PSD/Figma source file access",
+    "A/B test variations to optimize CTR",
+  ],
+  process: [
+    {
+      step: "01",
+      title: "Concept",
+      description:
+        "You share your video title, script, target audience, and style inspiration.",
+    },
+    {
+      step: "02",
+      title: "Drafting",
+      description:
+        "I create initial design concepts and draft variations highlighting different visual hooks.",
+    },
+    {
+      step: "03",
+      title: "Refinement",
+      description:
+        "We select the best variation, refine colors, enhance text readability, and maximize emotional contrast.",
+    },
+    {
+      step: "04",
+      title: "Delivery",
+      description:
+        "I deliver the final optimized thumbnails and provide source files if requested.",
+    },
+  ],
+  faq: [
+    {
+      question: "What is your typical turnaround time?",
+      answer:
+        "Usually 24 to 48 hours per thumbnail. For ongoing creators or regular uploads, we establish a fixed calendar sync.",
+    },
+    {
+      question: "Can you design for complex educational/tech content?",
+      answer:
+        "Yes, I specialize in developer, tech, SaaS, productivity, and education content. I understand the industry context deeply.",
+    },
+    {
+      question: "How do you optimize for CTR?",
+      answer:
+        "We focus on three pillars: psychological clarity, visual hierarchy (text vs face), and high contrast (ensuring it stands out on mobile screens with dark mode enabled).",
+    },
+  ],
+  relatedProjects: [],
 };

@@ -18,6 +18,7 @@ import {
   RocketIcon,
   ArrowRightIcon,
   CheckCircle2,
+  Youtube
 } from "lucide-react";
 
 export const metadata = {
@@ -52,6 +53,7 @@ const iconMap: Record<string, any> = {
   "trending-up": TrendingUpIcon,
   users: UsersIcon,
   rocket: RocketIcon,
+  youtube: Youtube,
 };
 
 const accentColors = [
@@ -260,15 +262,21 @@ export default function ServicesPage() {
               <div className="absolute top-0 right-0 -mr-16 -mt-16 size-48 rounded-full bg-white/10 blur-2xl" />
               <div className="relative z-10 space-y-4">
                 <h3 className="text-2xl font-extrabold text-white">Let&apos;s build something</h3>
-                <p className="text-white/80 text-sm max-w-md mx-auto">
-                  Send me a message with your idea, goals, and timeline. I&apos;ll get back to you within 24 hours.
-                </p>
-                <Link
-                  href="mailto:sh20raj@gmail.com"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-white px-8 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-                >
-                  Get in Touch
-                </Link>
+                <div className="text-white/95 text-xs max-w-lg mx-auto space-y-2 leading-relaxed">
+                  <p>Send me a message with your idea, goals, and timeline. I&apos;ll get back to you within 24 hours.</p>
+                  <div className="pt-2 border-t border-white/20 text-[11px] space-y-1">
+                    <p>📱 WhatsApp: <span className="font-bold text-white">+91 8986829193</span> (WhatsApp messages only; cell calls are inactive due to expired number).</p>
+                    <p>💬 Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">Peerlist</a>.</p>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="mailto:sh20raj@gmail.com"
+                    className="inline-flex h-11 items-center justify-center rounded-full bg-white px-8 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                  >
+                    Get in Touch
+                  </Link>
+                </div>
               </div>
             </div>
           </BlurFade>
