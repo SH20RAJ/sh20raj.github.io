@@ -35,6 +35,7 @@ export function YoutubeVideoCard({
             src={thumbnail}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
           />
           <Badge className="absolute bottom-2 right-2 bg-black/80 text-white border-0 text-[10px] px-1.5 py-0 rounded">
             {duration}

@@ -150,7 +150,7 @@ export default function LandingPagesPage() {
             <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <div className="group relative rounded-xl border bg-card overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="aspect-video overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-4 space-y-2">
                   <div className="flex justify-between items-center">

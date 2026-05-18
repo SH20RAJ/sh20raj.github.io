@@ -18,7 +18,8 @@ import {
   TrendingUpIcon, 
   UsersIcon, 
   RocketIcon,
-  ArrowRightIcon 
+  ArrowRightIcon,
+  FileDown
 } from "lucide-react";
 import {
   Accordion,
@@ -69,6 +70,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <Link href="/services" className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-bold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">View Services</Link>
                   <Link href="/projects" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">View Projects</Link>
                   <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95">Contact Me</Link>
+                  <a href="/resume.pdf" download className="inline-flex h-12 items-center justify-center rounded-full border-2 bg-background px-8 text-sm font-bold shadow-sm transition-all hover:bg-accent hover:scale-105 active:scale-95 gap-2">
+                    <FileDown className="h-4 w-4" /> Resume
+                  </a>
                 </div>
               </BlurFade>
             </div>
@@ -104,6 +108,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                       alt="github-snake" 
                       src="https://raw.githubusercontent.com/sh20raj/sh20raj/output/github-snake.svg" 
                       className="w-full h-auto"
+                      loading="lazy"
                     />
                   </picture>
                 </div>

@@ -68,6 +68,7 @@ export function ProjectCard({
             src={image}
             alt={`${title} project`}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           />
         )}
       </Link>
@@ -114,6 +115,7 @@ export function ProjectCard({
                       src={link.badgeImage}
                       alt={link.type}
                       className="h-6 w-auto"
+                      loading="lazy"
                     />
                   ) : (
                     <>
