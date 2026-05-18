@@ -86,7 +86,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
               {[
                 { value: "500+", label: "Projects" },
                 { value: "50+", label: "NPM Packages" },
-                { value: "1M+", label: "Downloads/yr" },
                 { value: "45k+", label: "Followers" },
               ].map((stat) => (
                 <div key={stat.label} className="flex items-center gap-2">
