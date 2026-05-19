@@ -18,7 +18,8 @@ import {
   RocketIcon,
   ArrowRightIcon,
   CheckCircle2,
-  Youtube
+  Youtube,
+  Palette,
 } from "lucide-react";
 
 export const metadata = {
@@ -54,6 +55,7 @@ const iconMap: Record<string, any> = {
   users: UsersIcon,
   rocket: RocketIcon,
   youtube: Youtube,
+  palette: Palette,
 };
 
 const accentColors = [
@@ -211,6 +213,7 @@ export default function ServicesPage() {
               { service: "Landing Pages", price: "From $199", desc: "Single-page to premium launch pages" },
               { service: "SaaS MVPs", price: "Custom", desc: "Scoped after discussing your product" },
               { service: "AI Tools", price: "Custom", desc: "Depends on complexity and integrations" },
+              { service: "AI Design Studio", price: "From ₹499", desc: "Posters, brand kits, product ads & more" },
               { service: "Growth Systems", price: "From $299", desc: "Content, SEO, and launch systems" },
               { service: "Mentorship", price: "Per session", desc: "1:1 calls and code reviews" },
               { service: "Founding Engineer", price: "Flexible", desc: "Equity, retainer, or project-based" },

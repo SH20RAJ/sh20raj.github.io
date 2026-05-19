@@ -79,6 +79,72 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://sh20raj.github.io/design-studio",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/restaurant-posters",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/beauty-product-designs",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/brand-kits",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/social-media-posts",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/product-ads",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/youtube-thumbnails",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/event-posters",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/menu-designs",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/packaging-mockups",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://sh20raj.github.io/design-studio/startup-launch-kits",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     ...blogEntries,
   ];
 }

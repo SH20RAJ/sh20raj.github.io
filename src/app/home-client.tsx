@@ -17,6 +17,7 @@ import {
   RocketIcon,
   ArrowRightIcon,
   FileDown,
+  Palette,
 } from "lucide-react";
 import {
   Accordion,
@@ -204,6 +205,41 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
+      {/* Design Studio */}
+      <section id="design-studio" className="mx-auto w-full max-w-5xl px-6 space-y-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 7.5}>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-extrabold tracking-tight">Design services for brands that need to look premium fast.</h2>
+            <Link href="/design-studio" className="group inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline">
+              View all <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
+        </BlurFade>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: "Restaurant Posters", description: "Premium posters, food promos, and offer creatives for restaurants and cafes.", href: "/design-studio/restaurant-posters", icon: "utensils" },
+            { title: "Beauty Product Creatives", description: "Clean, premium creatives for skincare, cosmetics, and D2C product launches.", href: "/design-studio/beauty-product-designs", icon: "sparkles" },
+            { title: "Startup Launch Kits", description: "Product Hunt covers, launch banners, social posts, and founder launch assets.", href: "/design-studio/startup-launch-kits", icon: "rocket" },
+            { title: "Social Media Packs", description: "Ready-to-post Instagram, LinkedIn, Facebook, and WhatsApp creatives.", href: "/design-studio/social-media-posts", icon: "megaphone" },
+          ].map((service, id) => {
+            const Icon = Palette;
+            return (
+              <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+                <Link href={service.href} className="group block h-full">
+                  <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
+                    <div className="size-10 rounded-xl bg-[var(--duo-feather)]/10 flex items-center justify-center mb-3 group-hover:bg-[var(--duo-feather)] group-hover:text-white transition-all duration-300">
+                      <Icon className="size-5" />
+                    </div>
+                    <h3 className="font-bold text-sm mb-1 group-hover:text-[var(--duo-feather)] transition-colors">{service.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">{service.description}</p>
+                  </div>
+                </Link>
+              </BlurFade>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Services */}
       <section id="services" className="mx-auto w-full max-w-5xl px-6 space-y-8">
         <BlurFade delay={BLUR_FADE_DELAY * 8}>
@@ -223,6 +259,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
               "trending-up": TrendingUpIcon,
               users: UsersIcon,
               rocket: RocketIcon,
+              palette: Palette,
             }[service.icon] || CodeIcon;
 
             return (

@@ -63,6 +63,13 @@ export const servicesHubData = {
       icon: "trending-up",
     },
     {
+      title: "AI Design Studio",
+      description:
+        "Posters, product ads, brand kits, social media creatives, menus, thumbnails, and launch graphics for businesses.",
+      href: "/design-studio",
+      icon: "palette",
+    },
+    {
       title: "YouTube Thumbnail Designing",
       description:
         "High-conversion, click-worthy, premium custom YouTube thumbnails that increase CTR and views.",
