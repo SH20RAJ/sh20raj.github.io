@@ -118,6 +118,14 @@ export default function LandingPagesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             {
+              id: "2056624911373021437",
+              title: "Premium 3D Product Landing Page",
+              description: "Premium 3D product website template with smooth scroll animations, interactive product showcase, responsive design, pricing, FAQ, and CTA sections.",
+              demo: "https://premium-3d-product-template.surge.sh",
+              purchase: "https://rzp.io/rzp/premium-3d-product-template",
+              image: "/images/3d-product.png",
+            },
+            {
               id: "2056211450071490862",
               title: "Growth Agency Landing Page",
               description: "State-of-the-art Next.js landing page for growth agencies and startups. Turns visitors into paying clients.",
