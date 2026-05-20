@@ -147,7 +147,7 @@ export default function YoutubeThumbnailClient() {
           </div>
         </BlurFade>
         
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {designedVideos.map((item, id) => (
             <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <div
@@ -155,18 +155,38 @@ export default function YoutubeThumbnailClient() {
                   setSelectedImage(item.thumbnail);
                   setSelectedTitle(item.title);
                 }}
-                className="group cursor-pointer"
+                className="group rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col cursor-pointer"
               >
-                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[var(--duo-polar)] border-2 border-[var(--duo-swan)] shadow-sm group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video overflow-hidden relative">
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 gap-2">
                     <ZoomInIcon className="size-8 text-white stroke-[2.5]" />
                     <span className="text-[10px] text-white uppercase tracking-widest font-bold">Click to Preview</span>
+                  </div>
+                  <div className="absolute bottom-2 right-2 rounded bg-black/80 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                    {item.duration}
+                  </div>
+                </div>
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="font-bold text-sm leading-tight group-hover:text-[var(--duo-feather)] transition-colors line-clamp-2 mb-3">
+                    {item.title}
+                  </h3>
+                  <div className="flex items-center gap-2 mt-auto">
+                    <Avatar className="size-7 border border-[var(--duo-swan)]">
+                      <AvatarImage src={item.channelAvatar} />
+                      <AvatarFallback>CH</AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold leading-none">{item.channelName}</span>
+                      <span className="text-[10px] text-muted-foreground leading-none mt-1">
+                        {item.views} views • {item.postedAt}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
