@@ -363,8 +363,7 @@ export default async function DesignCategoryPage({
                 I&apos;ll get back to you within 24 hours with a custom quote.
               </p>
               <div className="text-xs text-[var(--duo-wolf)] max-w-lg mx-auto space-y-1.5 pt-4 border-t border-[var(--duo-swan)]">
-                <p>📱 WhatsApp: <span className="font-bold text-[var(--duo-eel)] dark:text-zinc-300">+91 8986829193</span> (WhatsApp messages only; cell calls are inactive as the number is expired).</p>
-                <p>💬 Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">Peerlist</a>.</p>
+                <p> Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-[var(--duo-feather)] hover:underline">Peerlist</a>.</p>
               </div>
               <div className="flex flex-wrap justify-center gap-4 pt-2">
                 <Link

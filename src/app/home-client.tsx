@@ -384,8 +384,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 Open to internships, startup work, freelance projects, and founder-led teams.
               </p>
               <div className="text-zinc-400 text-xs max-w-xl mx-auto space-y-1.5 pt-2 border-t border-white/10">
-                <p>📱 WhatsApp: <span className="font-bold text-white">+91 8986829193</span> (WhatsApp messages only; cell calls are inactive as the number is expired).</p>
-                <p>💬 Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-[var(--duo-macaw)] hover:underline">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-[var(--duo-macaw)] hover:underline">Peerlist</a>.</p>
+                <p> Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-[var(--duo-macaw)] hover:underline">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-[var(--duo-macaw)] hover:underline">Peerlist</a>.</p>
               </div>
               <div className="flex flex-wrap justify-center gap-3 pt-4">
                 <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-10 items-center justify-center rounded-full bg-white px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">

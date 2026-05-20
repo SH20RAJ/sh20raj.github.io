@@ -268,8 +268,7 @@ export default function ServicesPage() {
                 <div className="text-white/95 text-xs max-w-lg mx-auto space-y-2 leading-relaxed">
                   <p>Send me a message with your idea, goals, and timeline. I&apos;ll get back to you within 24 hours.</p>
                   <div className="pt-2 border-t border-white/20 text-[11px] space-y-1">
-                    <p>📱 WhatsApp: <span className="font-bold text-white">+91 8986829193</span> (WhatsApp messages only; cell calls are inactive due to expired number).</p>
-                    <p>💬 Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">Peerlist</a>.</p>
+                    <p> Preferred fallback: Connect on <a href="https://linkedin.com/in/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">LinkedIn</a>, with fallback to <a href="https://peerlist.io/sh20raj" target="_blank" className="font-bold text-white underline hover:text-zinc-200">Peerlist</a>.</p>
                   </div>
                 </div>
                 <div className="pt-2">
