@@ -179,90 +179,20 @@ export default function MarketplacePage() {
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <h2 className="text-xl font-extrabold tracking-tight text-center">Landing Page Templates</h2>
         </BlurFade>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            {
-              id: "2056624911373021437",
-              title: "Premium 3D Product Landing Page",
-              description: "Premium 3D product website template with smooth scroll animations, interactive product showcase, responsive design, pricing, FAQ, and CTA sections.",
-              demo: "https://premium-3d-product-template.surge.sh",
-              purchase: "https://rzp.io/rzp/premium-3d-product-template",
-              image: "/images/3d-product.png",
-            },
-            {
-              id: "2056211450071490862",
-              title: "Growth Agency Landing Page",
-              description: "State-of-the-art Next.js landing page for growth agencies and startups. Turns visitors into paying clients.",
-              demo: "https://growth-agency.vercel.app",
-              purchase: "https://sh20raj.gumroad.com/",
-              image: "https://public-files.gumroad.com/usds0aocmk7gfjyymbkl9rq2dr5l",
-            },
-            {
-              id: "2056232623673074108",
-              title: "Aero UI – Landing Page Template",
-              description: "Premium landing page template for developers who value speed, aesthetics, and clean code.",
-              demo: "https://aero-ui.vercel.app",
-              purchase: "https://sh20raj.gumroad.com/",
-              image: "https://public-files.gumroad.com/h8nwwscdx5wh7tpv0og4zq3agl84",
-            },
-            {
-              id: "2056280867430142035",
-              title: "Nova Landing Page Template",
-              description: "Modern, conversion-focused landing page template. Deploy in minutes.",
-              demo: "#",
-              purchase: "https://sh20raj.gumroad.com/",
-              image: "https://public-files.gumroad.com/eh8t8cxvdibqy083kz628vt5wax0",
-            },
-          ].map((template, id) => (
-            <BlurFade key={template.id} delay={BLUR_FADE_DELAY * 4.5 + id * 0.05}>
-              <div className="group rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                <div className="aspect-video overflow-hidden relative">
-                  <img
-                    src={template.image}
-                    alt={template.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                    <a
-                      href={`https://twitter.com/ShaswatBuilds/status/${template.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full p-3 shadow-lg"
-                    >
-                      <svg className="size-5 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <h3 className="font-bold text-sm mb-1 group-hover:text-[var(--duo-feather)] transition-colors">
-                    {template.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1">
-                    {template.description}
-                  </p>
-                  <div className="flex gap-2">
-                    <a
-                      href={template.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex h-8 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent text-xs font-bold text-[var(--duo-eel)] dark:text-foreground transition-all hover:brightness-105 active:translate-y-1"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href={template.purchase}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex h-8 items-center justify-center rounded-full bg-[var(--duo-feather)] text-xs font-bold text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-                    >
-                      Buy
-                    </a>
-                  </div>
-                </div>
-              </div>
+            "2056211450071490862",
+            "2056232623673074108",
+            "2056624911373021437",
+            "2056280867430142035"
+          ].map((id, index) => (
+            <BlurFade key={id} delay={BLUR_FADE_DELAY * 4.5 + index * 0.05} className="flex flex-col w-full justify-start items-center">
+              <blockquote className="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
+                <a href={`https://twitter.com/ShaswatBuilds/status/${id}`}></a>
+              </blockquote>
             </BlurFade>
           ))}
+          <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
         </div>
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <div className="text-center">
