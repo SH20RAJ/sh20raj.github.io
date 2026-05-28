@@ -28,7 +28,7 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "Full Stack Developer, AI Product Builder & Open-Source Creator",
+    "Next.js & AI Product Developer for Startups, Agencies, and Founders",
   summary:
     "I'm Shaswat Raj, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.\n\nI like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I've built 500+ projects, maintain 50+ open-source packages, have 45k+ followers on Dev.to, joined 4+ startups as Tech Lead, and actively run 20+ small projects with real user traction.",
   avatarUrl: "/profile.jpg",
@@ -58,6 +58,7 @@ export const DATA = {
     { href: "/", icon: "home", label: "Home" },
     { href: "/projects", icon: "briefcase", label: "Work" },
     { href: "/services", icon: "wrench", label: "Services" },
+    { href: "/#agencies", icon: "users", label: "For Agencies" },
     { href: "/marketplace", icon: "shopping-cart", label: "Marketplace" },
   ],
   contact: {

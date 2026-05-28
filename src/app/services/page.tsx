@@ -23,14 +23,14 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Services",
+  title: "Services — Sprint Pricing for Next.js & AI Product Work",
   description:
-    "Services for founders, startups, and creators — landing pages, SaaS MVPs, AI automation, growth systems, mentorship, and founding engineer engagements.",
+    "Landing page sprints from $199, SaaS frontend sprints from $500, AI tool prototypes from $300, and ongoing agency overflow support — for founders, agencies, and YC-track startups.",
   alternates: { canonical: "https://sh20raj.github.io/services" },
   openGraph: {
-    title: "Services — Shaswat Raj | Landing Pages, SaaS MVPs & AI Automation",
+    title: "Services — Shaswat Raj | Next.js & AI Sprint Packages",
     description:
-      "Hire Shaswat Raj for landing pages, SaaS MVPs, AI automation, growth systems, mentorship, and founding engineer work.",
+      "Hire Shaswat Raj for Next.js landing pages, SaaS dashboards, AI tools, and agency overflow work. Fixed-scope sprints with clear timelines.",
     url: "https://sh20raj.github.io/services",
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
@@ -38,9 +38,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Services — Shaswat Raj | Landing Pages, SaaS MVPs & AI Automation",
+    title: "Services — Shaswat Raj | Next.js & AI Sprint Packages",
     description:
-      "Hire Shaswat Raj for landing pages, SaaS MVPs, AI automation, growth systems, mentorship, and founding engineer work.",
+      "Hire Shaswat Raj for Next.js landing pages, SaaS dashboards, AI tools, and agency overflow work.",
     creator: "@SH20RAJ",
   },
 };
@@ -197,40 +197,69 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Pricing — clean list */}
+      {/* Pricing — premium package cards */}
       <section id="pricing" className="pb-16">
         <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="text-center space-y-2">
-              <h2 className="text-xl font-extrabold tracking-tight">Starting Points</h2>
-              <p className="text-xs text-muted-foreground max-w-[400px] mx-auto">
-                Every project is different. These are starting points — I&apos;ll give you a custom quote after we talk.
+              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
+                Packages
+              </span>
+              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Sprint pricing</h2>
+              <p className="text-sm text-muted-foreground max-w-[500px] mx-auto">
+                Fixed-scope sprints with clear deliverables and timelines. Custom quotes available after a quick brief.
               </p>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-[900px] mx-auto">
-            {[
-              { service: "Landing Pages", price: "From $199", desc: "Single-page to premium launch pages" },
-              { service: "SaaS MVPs", price: "Custom", desc: "Scoped after discussing your product" },
-              { service: "AI Tools", price: "Custom", desc: "Depends on complexity and integrations" },
-              { service: "AI Design Studio", price: "From ₹499", desc: "Posters, brand kits, product ads & more" },
-              { service: "Growth Systems", price: "From $299", desc: "Content, SEO, and launch systems" },
-              { service: "Mentorship", price: "Per session", desc: "1:1 calls and code reviews" },
-              { service: "Founding Engineer", price: "Flexible", desc: "Equity, retainer, or project-based" },
-            ].map((item, id) => (
-              <BlurFade key={id} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 flex justify-between items-center shadow-[0_2px_0_var(--duo-swan)]">
-                  <div>
-                    <h3 className="font-bold text-sm">{item.service}</h3>
-                    <p className="text-xs text-muted-foreground">{item.desc}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {(servicesHubData as any).packages?.map((pkg: any, id: number) => (
+              <BlurFade key={pkg.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all h-full flex flex-col">
+                  <h3 className="font-extrabold text-base mb-1">{pkg.name}</h3>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-xl font-extrabold text-[var(--duo-feather)]">{pkg.price}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{pkg.timeline}</span>
                   </div>
-                  <span className="text-sm font-extrabold text-[var(--duo-feather)] whitespace-nowrap ml-3">
-                    {item.price}
-                  </span>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-3">{pkg.description}</p>
+                  <ul className="space-y-1.5 text-xs text-foreground flex-1">
+                    {pkg.includes.map((inc: string) => (
+                      <li key={inc} className="flex items-start gap-2">
+                        <CheckCircle2 className="size-3.5 text-[var(--duo-feather)] mt-0.5 shrink-0" />
+                        <span>{inc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 pt-3 border-t border-[var(--duo-swan)] text-[11px] text-muted-foreground">
+                    <span className="font-bold text-foreground">Best for:</span> {pkg.bestFor}
+                  </div>
+                  <Link
+                    href={`mailto:sh20raj@gmail.com?subject=${encodeURIComponent(pkg.name)}`}
+                    className="mt-4 inline-flex h-9 items-center justify-center rounded-full bg-[var(--duo-feather)] px-5 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none"
+                  >
+                    Book this sprint
+                  </Link>
                 </div>
               </BlurFade>
             ))}
           </div>
+
+          {/* Small task CTA */}
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="rounded-2xl border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/5 p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-4">
+              <div className="flex-1 space-y-1.5">
+                <h3 className="text-base font-extrabold">Not ready for a full project?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Send me one small task — a landing page section, dashboard screen, responsive fix, AI API integration, or frontend bug. I&apos;ll deliver fast and you can decide if we continue.
+                </p>
+              </div>
+              <Link
+                href="mailto:sh20raj@gmail.com?subject=Small%20task"
+                className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none whitespace-nowrap"
+              >
+                Send a Small Task
+              </Link>
+            </div>
+          </BlurFade>
         </div>
       </section>
 

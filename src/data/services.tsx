@@ -30,58 +30,128 @@ export interface ServiceConfig {
 }
 
 export const servicesHubData = {
-  title: "Services for Founders, Startups, Creators & Builders",
+  title: "Next.js & AI Product Developer for Startups, Agencies, and Founders",
   subtitle:
-    "I help you launch faster with landing pages, SaaS MVPs, AI tools, automation systems, growth content, and product-focused development.",
+    "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation work for founders and agencies who need to ship fast.",
+  packages: [
+    {
+      name: "Landing Page Sprint",
+      price: "from $199",
+      timeline: "2–5 days",
+      description:
+        "Responsive Next.js landing page with conversion-focused copy structure, ready for traffic.",
+      includes: [
+        "Responsive Next.js landing page",
+        "Tailwind / shadcn UI",
+        "CTA sections",
+        "SEO basics + Open Graph",
+        "Deployment on Vercel or Cloudflare",
+      ],
+      bestFor: "SaaS, AI tools, launches, waitlists, agency clients",
+      icon: "layout",
+      href: "/landing-pages",
+    },
+    {
+      name: "SaaS Frontend Sprint",
+      price: "from $500",
+      timeline: "1–3 weeks",
+      description:
+        "Production-ready dashboard UI for founders who need a real product, not a demo.",
+      includes: [
+        "Dashboard UI",
+        "Auth screens",
+        "Onboarding flows",
+        "Settings + billing UI",
+        "API connection",
+      ],
+      bestFor: "Founders needing product UI fast",
+      icon: "code",
+      href: "/saas-mvp",
+    },
+    {
+      name: "AI Tool Prototype",
+      price: "from $300",
+      timeline: "3–10 days",
+      description:
+        "AI tool prototype with chat UI and real workflow automation, deployed and usable.",
+      includes: [
+        "AI API integration (OpenAI/Claude/Gemini)",
+        "Chat UI",
+        "Workflow automation",
+        "RAG / MCP / API prototype",
+        "Deploy + handoff",
+      ],
+      bestFor: "AI apps, internal tools, agents, chatbots, workflows",
+      icon: "bot",
+      href: "/ai-automation",
+    },
+    {
+      name: "Agency Overflow Support",
+      price: "custom / monthly",
+      timeline: "Ongoing",
+      description:
+        "Async overflow capacity for agencies and founders with too much frontend/product work.",
+      includes: [
+        "Landing pages",
+        "UI sections",
+        "Responsive fixes",
+        "Frontend tasks",
+        "Client work support",
+      ],
+      bestFor: "Agencies and early startups with too much frontend/product work",
+      icon: "users",
+      href: "#contact",
+    },
+  ],
   services: [
     {
-      title: "Landing Pages",
+      title: "Next.js Landing Pages",
       description:
-        "High-converting landing pages for startups, SaaS products, AI tools, agencies, and creators.",
+        "High-converting landing pages for SaaS, AI tools, agencies, and founders. 2–5 day turnaround.",
       href: "/landing-pages",
       icon: "layout",
     },
     {
-      title: "SaaS MVPs",
+      title: "SaaS MVPs & Dashboards",
       description:
-        "Launch-ready MVPs with dashboards, auth, databases, APIs, payments, and deployment.",
+        "Dashboard UI, auth screens, settings, billing UI, and API integration for founders shipping fast.",
       href: "/saas-mvp",
       icon: "code",
     },
     {
       title: "AI Tools & Automation",
       description:
-        "AI chatbots, agents, RAG workflows, transcription systems, MCP tools, and API automations.",
+        "AI API integrations, chat UI, RAG, MCP tools, agent workflows, and automation pipelines.",
       href: "/ai-automation",
       icon: "bot",
     },
     {
+      title: "Agency / Founder Overflow",
+      description:
+        "Figma to Next.js, UI sections, responsive fixes, frontend bugs, and client landing page support.",
+      href: "#contact",
+      icon: "users",
+    },
+    {
       title: "Growth Systems",
       description:
-        "SEO pages, launch copy, YouTube scripts, cold outreach, content systems, and marketing funnels.",
+        "SEO pages, launch copy, programmatic pages, content systems, and outreach workflows.",
       href: "/growth-systems",
       icon: "trending-up",
     },
     {
       title: "AI Design Studio",
       description:
-        "Posters, product ads, brand kits, social media creatives, menus, thumbnails, and launch graphics for businesses.",
+        "Posters, product ads, brand kits, social media creatives, menus, thumbnails, and launch graphics.",
       href: "/design-studio",
       icon: "palette",
     },
     {
-      title: "YouTube Thumbnail Designing",
+      title: "YouTube Thumbnails",
       description:
         "High-conversion, click-worthy, premium custom YouTube thumbnails that increase CTR and views.",
       href: "/youtube-thumbnail",
       icon: "youtube",
-    },
-    {
-      title: "Mentorship",
-      description:
-        "1:1 guidance for web development, AI tools, freelancing, GitHub, and shipping real projects.",
-      href: "/mentorship",
-      icon: "users",
     },
     {
       title: "Founding Engineer",
@@ -93,82 +163,82 @@ export const servicesHubData = {
   ],
   whoIHelp: [
     {
-      title: "Founders & Startups",
+      title: "YC & Startup Founders",
       description:
-        "You have an idea and need someone to build the first version fast — landing page, MVP, or AI tool.",
+        "You have a validated idea or YC-track product and need someone to ship the first version fast.",
     },
     {
-      title: "SaaS Builders",
+      title: "SaaS & AI Startups",
       description:
-        "You need a dashboards, auth, payments, databases, and deployment without hiring a full team.",
+        "You need dashboards, auth, payments, API integrations, and AI features without hiring full-time.",
     },
     {
-      title: "Creators & Agencies",
+      title: "Agencies & Product Studios",
       description:
-        "You need a clean landing page, content system, or automation to scale your work.",
+        "You need white-label, NDA-friendly, async overflow capacity for client landing pages and frontend work.",
     },
     {
-      title: "Students & Beginners",
+      title: "Solo Founders",
       description:
-        "You want mentorship, code reviews, portfolio help, or guidance on building real projects.",
-    },
-    {
-      title: "Small Businesses",
-      description:
-        "You need a website, SEO setup, or automation to save time and look professional online.",
+        "You need a small task done fast — a landing page section, dashboard screen, or AI integration.",
     },
   ],
   process: [
     {
       step: "01",
-      title: "Discuss",
+      title: "Brief",
       description:
-        "We talk about your idea, goals, timeline, and what success looks like.",
+        "Send the goal, scope, timeline, and references — async-friendly. I respond within 24 hours.",
     },
     {
       step: "02",
-      title: "Plan",
+      title: "Quote",
       description:
-        "I scope the work, define deliverables, and share a clear quote.",
+        "I scope the sprint, define deliverables, and share a fixed price.",
     },
     {
       step: "03",
       title: "Build",
       description:
-        "I design and develop the product with regular updates and feedback loops.",
+        "I ship daily updates with previews. You review and redirect anytime.",
     },
     {
       step: "04",
       title: "Launch",
       description:
-        "I deploy, test, and hand off everything ready for your users.",
+        "I deploy, hand off the repo, and stay available for follow-ups.",
     },
   ],
   faq: [
     {
-      question: "How fast can you deliver?",
-      answer:
-        "Landing pages take 3-7 days. MVPs take 2-4 weeks depending on scope. AI tools and automations vary by complexity. I move fast and ship daily.",
-    },
-    {
       question: "Do you work with international clients?",
       answer:
-        "Yes. I work with founders and startups globally. Communication is async-friendly with fast turnaround.",
+        "Yes. I work remotely with founders, agencies, and startups worldwide. I can communicate through LinkedIn, email, Discord, Slack, GitHub, or WhatsApp.",
     },
     {
-      question: "What tech stack do you use?",
+      question: "Can I start with a small task?",
       answer:
-        "Next.js, React, TypeScript, Tailwind CSS, Node.js, Python, PostgreSQL, MongoDB, Cloudflare, Vercel, OpenAI, Claude, and Gemini APIs.",
+        "Yes. The best way to work with me is to start with a small paid task like a landing page section, dashboard screen, bug fix, AI API integration, or responsive UI fix.",
     },
     {
-      question: "Can you work on existing projects?",
+      question: "What stack do you use?",
       answer:
-        "Yes. I can improve, fix, or extend existing codebases. I'm comfortable jumping into any modern web stack.",
+        "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Node.js, APIs, PostgreSQL/Supabase where needed, Cloudflare, Vercel, AI SDK, OpenAI/Claude/Gemini APIs, RAG, MCP tools, and automation workflows.",
     },
     {
-      question: "How do payments work?",
+      question: "What kind of clients are the best fit?",
       answer:
-        "I typically require 50% upfront and 50% on delivery for fixed-scope projects. For ongoing work, we can set up a monthly retainer.",
+        "YC/startup founders, SaaS teams, AI startups, agencies, product studios, and builders who need fast product execution.",
+    },
+    {
+      question: "Can you work on an existing codebase?",
+      answer:
+        "Yes. I can work inside existing Next.js/React codebases, fix UI issues, build new pages, improve performance, integrate APIs, and ship features.",
+    },
+    {
+      question: "Are you available for contract or freelance?",
+      answer:
+        "Yes. I'm available for remote freelance, contract, internship, agency overflow, and founder-led product work.",
     },
   ],
 };

@@ -3,16 +3,18 @@ import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `${DATA.name} — ${DATA.description}`,
-  description: DATA.summary,
+  title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+  description:
+    "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
   openGraph: {
-    title: DATA.name,
-    description: DATA.description,
+    title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+    description:
+      "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
     url: DATA.url,
     siteName: DATA.name,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
       },
@@ -22,8 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: DATA.name,
-    description: DATA.description,
+    title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+    description:
+      "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
     creator: "@SH20RAJ",
   },
 };
