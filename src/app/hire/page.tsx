@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import { monetization } from "@/data/monetization";
-import { CheckCircle2, ArrowRightIcon, Loader2, AlertCircle } from "lucide-react";
+import { CheckCircle2, ArrowRightIcon, Loader2, AlertCircle, Linkedin } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -69,13 +69,20 @@ export default function HirePage() {
           <CheckCircle2 className="size-12 text-[var(--duo-feather)] mx-auto" />
           <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">Brief received</h1>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-md mx-auto">
-            I&apos;ll review and reply within 24 hours with a fixed quote and timeline. If you want
-            to skip the wait, book a call now.
+            I&apos;ll review and reply within 24 hours. To speed things up, message me on LinkedIn now.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">
+            <a
+              href="https://linkedin.com/in/sh20raj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
+            >
+              <Linkedin className="size-4" /> Talk on LinkedIn
+            </a>
             <Link
               href="/book"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
+              className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
             >
               Book a Call <ArrowRightIcon className="size-4" />
             </Link>
@@ -107,12 +114,36 @@ export default function HirePage() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Async-friendly. I respond within 24 hours with a fixed quote and timeline. Prefer to
-              talk?{" "}
+              Async-friendly. I respond within 24 hours with a fixed quote and timeline.
+            </p>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
+            <div className="rounded-xl border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/5 p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+              <div className="flex-1">
+                <p className="text-xs font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-1">
+                  Preferred channel
+                </p>
+                <p className="text-sm text-foreground">
+                  Reach me on LinkedIn first — it&apos;s the fastest way to start a conversation.
+                </p>
+              </div>
+              <a
+                href="https://linkedin.com/in/sh20raj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
+              >
+                <Linkedin className="size-3.5" /> Talk on LinkedIn
+              </a>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 4}>
+            <p className="text-xs text-muted-foreground">
+              Prefer a call?{" "}
               <Link href="/book" className="font-bold text-[var(--duo-feather)] hover:underline">
-                Book a 15-min call instead
-              </Link>
-              .
+                Book a 15-min slot
+              </Link>{" "}
+              — or send the brief below.
             </p>
           </BlurFade>
         </div>

@@ -5,7 +5,7 @@
 export const monetization = {
   // Cal.com username + event slug. Example: "sh20raj/intro-15min"
   // Leave empty to hide all "Book a Call" CTAs.
-  calcom: "",
+  calcom: "sh20raj/intro-15min",
 
   // Web3Forms access key from https://web3forms.com (free).
   // Leave empty to hide the /hire form and home lead strip.
