@@ -753,6 +753,21 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "10+ Hackathon Wins in First 2 Years of College",
+      dates: "2023 – 2025",
+      location: "India",
+      description:
+        "Won 10+ hackathons across web, AI, and product tracks during the first two years of college. Built and shipped working prototypes under tight time constraints alongside studies.",
+      image: "https://avatars.githubusercontent.com/u/53382877?v=4",
+      links: [
+        {
+          type: "Profile",
+          href: "https://linkedin.com/in/sh20raj",
+          icon: "linkedin",
+        },
+      ],
+    },
+    {
       title: "AICTE Productization Fellowship (APF) 2025",
       dates: "May - July 2025",
       location: "Ranchi, Jharkhand",
