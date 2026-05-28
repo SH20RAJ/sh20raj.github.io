@@ -4,6 +4,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
+import { GitHubStats } from "@/components/github-stats";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -420,6 +421,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </BlurFade>
           ))}
         </div>
+      </section>
+
+      {/* Open source at scale — live GitHub stats */}
+      <section id="open-source" className="mx-auto w-full max-w-5xl px-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <GitHubStats />
+        </BlurFade>
       </section>
 
       {/* Featured Case Studies */}
