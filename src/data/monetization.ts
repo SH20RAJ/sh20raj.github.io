@@ -9,7 +9,7 @@ export const monetization = {
 
   // Web3Forms access key from https://web3forms.com (free).
   // Leave empty to hide the /hire form and home lead strip.
-  web3formsAccessKey: "",
+  web3formsAccessKey: "12ce3c25-1b14-404d-9f16-976d98a8e509",
 
   // Gumroad product page URLs for each sprint.
   // Leave individual values empty to hide just that "Buy Now" button.
