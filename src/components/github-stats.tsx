@@ -171,62 +171,43 @@ export function GitHubStats() {
       label: "All-time contributions",
       value: formatCount(stats.totalContributionsAllTime),
       icon: Activity,
-      tone: "feather",
     },
     {
       label: "Public repos",
       value: formatCount(stats.publicRepos),
       icon: Boxes,
-      tone: "macaw",
     },
     {
       label: "PRs merged",
       value: formatCount(stats.prsMerged),
       icon: GitPullRequest,
-      tone: "beetle",
     },
     {
       label: "Stars earned",
       value: formatCount(stats.totalStars),
       icon: Star,
-      tone: "bee",
     },
     {
       label: "Followers",
       value: formatCount(stats.followers),
       icon: Users,
-      tone: "fox",
     },
     {
-      label: "Last 12 mo. contributions",
+      label: "Last 12 mo.",
       value: formatCount(stats.totalContributionsLastYear),
       icon: Activity,
-      tone: "feather",
     },
   ];
-
-  const toneClass: Record<string, { bg: string; text: string }> = {
-    feather: { bg: "bg-[var(--duo-feather)]/10", text: "text-[var(--duo-feather)]" },
-    macaw: { bg: "bg-[var(--duo-macaw)]/10", text: "text-[var(--duo-macaw)]" },
-    beetle: { bg: "bg-[var(--duo-beetle)]/10", text: "text-[var(--duo-beetle)]" },
-    bee: { bg: "bg-[var(--duo-bee)]/10", text: "text-[var(--duo-bee)]" },
-    fox: { bg: "bg-[var(--duo-fox)]/10", text: "text-[var(--duo-fox)]" },
-  };
 
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
         <div>
-          <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-2">
-            Open source at scale
-          </span>
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-            Live numbers from my GitHub
+            Open source, at real scale
           </h2>
           <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-            Every number below comes straight from the GitHub API and a public contribution
-            tracker — refresh and watch them update. Hand-built repos, real PRs, and 5+ years of
-            consistent shipping. No vibe-coded fluff.
+            Live from the GitHub API — hand-built repos, real PRs, real history.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2">
@@ -236,15 +217,15 @@ export function GitHubStats() {
             rel="noopener noreferrer"
             className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
           >
-            See OSS contributions <ArrowRightIcon className="size-3.5" />
+            OSS contributions <ArrowRightIcon className="size-3.5" />
           </a>
           <a
             href={`https://github.com/${GH_USER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_3px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
+            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] whitespace-nowrap"
           >
-            <Github className="size-3.5" /> GitHub profile
+            <Github className="size-3.5" /> GitHub
           </a>
         </div>
       </div>
@@ -252,15 +233,12 @@ export function GitHubStats() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         {tiles.map((t) => {
           const Icon = t.icon;
-          const tone = toneClass[t.tone];
           return (
             <div
               key={t.label}
-              className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)]"
+              className="rounded-xl border border-[var(--duo-swan)] bg-card p-4"
             >
-              <div className={`size-8 rounded-lg ${tone.bg} flex items-center justify-center mb-2`}>
-                <Icon className={`size-4 ${tone.text}`} />
-              </div>
+              <Icon className="size-4 text-muted-foreground mb-2" />
               <p className="text-2xl font-extrabold tracking-tight">{t.value}</p>
               <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-1 leading-tight">
                 {t.label}
@@ -272,8 +250,8 @@ export function GitHubStats() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Top languages */}
-        <div className="md:col-span-2 rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)]">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--duo-wolf)] mb-3">
+        <div className="md:col-span-2 rounded-xl border border-[var(--duo-swan)] bg-card p-5">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">
             Most used languages
           </p>
           <div className="flex flex-wrap gap-2">
@@ -290,14 +268,11 @@ export function GitHubStats() {
               </span>
             ))}
           </div>
-          <p className="text-[11px] text-muted-foreground mt-3">
-            Computed live from primary language of each public repo.
-          </p>
         </div>
 
         {/* Organizations */}
-        <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)]">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--duo-wolf)] mb-3">
+        <div className="rounded-xl border border-[var(--duo-swan)] bg-card p-5">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">
             Organizations
           </p>
           {stats.orgs.length > 0 ? (
@@ -315,14 +290,14 @@ export function GitHubStats() {
                   <img
                     src={o.avatar_url}
                     alt={o.login}
-                    className="size-9 rounded-lg border-2 border-[var(--duo-swan)] group-hover:border-[var(--duo-feather)] transition-colors"
+                    className="size-9 rounded-lg border border-[var(--duo-swan)] group-hover:border-[var(--duo-feather)] transition-colors"
                     loading="lazy"
                   />
                 </a>
               ))}
             </div>
           ) : (
-            <p className="text-xs text-muted-foreground">Loading from GitHub…</p>
+            <p className="text-xs text-muted-foreground">Loading…</p>
           )}
         </div>
       </div>

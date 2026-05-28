@@ -211,9 +211,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
           <div className="gap-10 flex flex-col lg:flex-row justify-between items-center lg:items-start">
             <div className="flex-col flex flex-1 space-y-5 text-center md:text-left">
               <BlurFade delay={BLUR_FADE_DELAY * 0.5}>
-                <span className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
-                  <span className="size-2 rounded-full bg-[var(--duo-feather)] animate-pulse" />
-                  Available for remote freelance / contract / agency overflow
+                <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
+                  <span className="size-1.5 rounded-full bg-[var(--duo-feather)]" />
+                  Available — remote, contract, agency overflow
                 </span>
               </BlurFade>
               <div className="space-y-2">
@@ -228,12 +228,12 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <BlurFadeText
                   className="max-w-[560px] text-lg md:text-xl font-extrabold tracking-tight text-[var(--duo-feather)]"
                   delay={BLUR_FADE_DELAY * 1.3}
-                  text="for Startups, Agencies, and Founders"
+                  text="for startups, agencies, and founders"
                 />
               </div>
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <p className="max-w-[560px] text-sm md:text-base text-muted-foreground leading-relaxed mx-auto md:mx-0">
-                  I help founders and agencies ship landing pages, SaaS dashboards, AI tools, MVPs, and automation systems fast — using Next.js, TypeScript, Tailwind, Node.js, Cloudflare, and modern AI APIs.
+                <p className="max-w-[540px] text-sm md:text-base text-muted-foreground leading-relaxed mx-auto md:mx-0">
+                  I ship landing pages, SaaS dashboards, AI tools, and MVPs for founders who need a working product, not a deck. Next.js, TypeScript, Cloudflare, and the AI SDKs.
                 </p>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -242,42 +242,27 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     href="/book"
                     className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
                   >
-                    Book a Call
+                    Book a 15-min call
                   </Link>
                   <Link
-                    href="/hire"
-                    className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-eel)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                    href="#projects"
+                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)]"
                   >
-                    Send a Brief
+                    See work
                   </Link>
-                  <Link
-                    href="#proof"
-                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                  <a
+                    href="/resume.pdf"
+                    download
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-[var(--duo-feather)] transition-colors self-center"
                   >
-                    View Proof
-                  </Link>
-                  <Link
-                    href="#case-studies"
-                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-                  >
-                    Case Studies
-                  </Link>
+                    <FileDown className="h-3.5 w-3.5" /> Resume
+                  </a>
                 </div>
-              </BlurFade>
-              <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-[var(--duo-feather)] transition-colors"
-                >
-                  <FileDown className="h-3.5 w-3.5" /> Download resume
-                </a>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[var(--duo-feather)] to-[var(--duo-macaw)] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <Avatar className="size-32 md:size-44 border-4 border-background relative shadow-xl">
+              <div className="relative">
+                <Avatar className="size-32 md:size-44 border-4 border-background shadow-xl">
                   <AvatarImage alt="Shaswat Raj" src={DATA.avatarUrl} className="object-cover" />
                   <AvatarFallback className="text-3xl">{DATA.initials}</AvatarFallback>
                 </Avatar>
@@ -285,10 +270,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </BlurFade>
           </div>
 
-          {/* Trusted-by stack strip */}
+          {/* Stack strip */}
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-4 border-t border-[var(--duo-swan)]/60 text-[11px] text-muted-foreground font-bold uppercase tracking-widest">
-              <span className="text-[var(--duo-eel)]">Stack:</span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-5 border-t border-[var(--duo-swan)]/60 text-[11px] text-muted-foreground font-bold uppercase tracking-widest">
+              <span className="text-[var(--duo-eel)]">Stack</span>
               {["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Node.js", "Cloudflare", "Vercel", "OpenAI", "Claude", "Gemini", "RAG", "MCP"].map((s) => (
                 <span key={s} className="text-muted-foreground/80">{s}</span>
               ))}
@@ -300,18 +285,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Hire Me For */}
       <section id="hire-me-for" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-            <div>
-              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-2">
-                Hire Me For
-              </span>
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Four ways founders work with me
-              </h2>
-            </div>
+          <div className="flex items-end justify-between gap-3">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              How I work with founders
+            </h2>
             <Link
               href="/services"
-              className="group inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline"
+              className="group hidden sm:inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline"
             >
               See full service list <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
@@ -324,18 +304,20 @@ export function HomeClient({ DATA }: { DATA: any }) {
             return (
               <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
                 <Link href={service.href} className="group block h-full">
-                  <div className={`rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col`}>
-                    <div className={`size-11 rounded-xl ${accent.bg} flex items-center justify-center mb-3 transition-all`}>
+                  <div className="rounded-xl border border-[var(--duo-swan)] bg-card p-5 hover:border-[var(--duo-feather)] hover:shadow-md transition-all duration-200 h-full flex flex-col">
+                    <div className={`size-10 rounded-lg ${accent.bg} flex items-center justify-center mb-4`}>
                       <Icon className={`size-5 ${accent.text}`} />
                     </div>
-                    <h3 className="font-extrabold text-base mb-2 group-hover:text-[var(--duo-feather)] transition-colors">
+                    <h3 className="font-extrabold text-base mb-1.5 group-hover:text-[var(--duo-feather)] transition-colors">
                       {service.title}
                     </h3>
-                    <div className="space-y-2 text-xs text-muted-foreground leading-relaxed flex-1">
-                      <p><span className="font-bold text-foreground">Best for:</span> {service.bestFor}</p>
-                      <p><span className="font-bold text-foreground">Deliverables:</span> {service.deliverables}</p>
-                    </div>
-                    <div className={`mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider ${accent.text}`}>
+                    <p className="text-xs text-muted-foreground leading-relaxed flex-1">
+                      {service.bestFor}
+                    </p>
+                    <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed">
+                      {service.deliverables}
+                    </p>
+                    <div className={`mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider ${accent.text}`}>
                       <Zap className="size-3" /> {service.timeline}
                     </div>
                   </div>
@@ -344,41 +326,18 @@ export function HomeClient({ DATA }: { DATA: any }) {
             );
           })}
         </div>
-
-        {/* Small-task CTA */}
-        <BlurFade delay={BLUR_FADE_DELAY * 7}>
-          <div className="rounded-2xl border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/5 p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-            <div className="flex-1 space-y-1.5">
-              <h3 className="text-base md:text-lg font-extrabold">Not ready for a full project?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
-                Send me one small task — a landing page section, dashboard screen, responsive fix, AI API integration, or frontend bug. I&apos;ll deliver fast and you can decide if we continue.
-              </p>
-            </div>
-            <Link
-              href="/hire"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none whitespace-nowrap"
-            >
-              Send a Small Task
-            </Link>
-          </div>
-        </BlurFade>
       </section>
 
       {/* Proof from real shipped work */}
       <section id="proof" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-            <div>
-              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-2">
-                Proof
-              </span>
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Proof from real shipped work
-              </h2>
-              <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-                Public LinkedIn posts documenting real launches, real users, and real outcomes. No fake metrics — every claim links to the source.
-              </p>
-            </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              Proof, not promises
+            </h2>
+            <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
+              Every claim links to the LinkedIn post where I documented the launch. No fake screenshots, no made-up metrics.
+            </p>
           </div>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -433,14 +392,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Featured Case Studies */}
       <section id="case-studies" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div>
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-2">
-              Case Studies
-            </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              Featured case studies
-            </h2>
-          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+            Case studies
+          </h2>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {caseStudies.map((cs, id) => (
@@ -494,32 +448,21 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Social proof strip — links to public endorsements (no fake quotes) */}
       <section id="social-proof" className="mx-auto w-full max-w-5xl px-6">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-7 shadow-[0_2px_0_var(--duo-swan)] space-y-4">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-              <div>
-                <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-1.5">
-                  Working with me
-                </span>
-                <h3 className="text-lg md:text-xl font-extrabold tracking-tight">
-                  Verify on independent platforms
-                </h3>
-                <p className="text-xs md:text-sm text-muted-foreground mt-1 max-w-xl">
-                  Endorsements, repos, launches, and recommendations from people who actually shipped with me.
-                </p>
-              </div>
-              <Link
-                href="/hire"
-                className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
-              >
-                Send a Brief
-              </Link>
+          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-5 md:p-6 space-y-4">
+            <div>
+              <h3 className="text-base md:text-lg font-extrabold tracking-tight">
+                Verify the rest yourself
+              </h3>
+              <p className="text-xs md:text-sm text-muted-foreground mt-1 max-w-xl">
+                Endorsements, repos, and launches on independent platforms.
+              </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               <a
                 href="https://www.linkedin.com/in/sh20raj/details/recommendations/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 rounded-xl border-2 border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
               >
                 <Linkedin className="size-4 text-[var(--duo-feather)] shrink-0" />
                 <div className="min-w-0">
@@ -531,19 +474,19 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 href="https://github.com/SH20RAJ"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 rounded-xl border-2 border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
               >
                 <Github className="size-4 text-[var(--duo-eel)] dark:text-foreground shrink-0" />
                 <div className="min-w-0">
                   <p className="text-xs font-bold truncate">GitHub</p>
-                  <p className="text-[10px] text-muted-foreground">50+ npm packages</p>
+                  <p className="text-[10px] text-muted-foreground">Code & packages</p>
                 </div>
               </a>
               <a
                 href="https://peerlist.io/sh20raj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 rounded-xl border-2 border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
               >
                 <Award className="size-4 text-[var(--duo-macaw)] shrink-0" />
                 <div className="min-w-0">
@@ -555,7 +498,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 href="https://www.producthunt.com/@sh20raj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 rounded-xl border-2 border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
               >
                 <RocketIcon className="size-4 text-[var(--duo-fox)] shrink-0" />
                 <div className="min-w-0">
@@ -572,12 +515,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
       <section id="projects" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <div className="flex items-center justify-between">
-            <div>
-              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-2">
-                Recent Work
-              </span>
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Projects</h2>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              Selected projects
+            </h2>
             <Link href="/projects" className="group inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline">
               View all <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
@@ -602,20 +542,18 @@ export function HomeClient({ DATA }: { DATA: any }) {
       </section>
 
       {/* For Agencies & Founders */}
-      <section id="agencies" className="mx-auto w-full max-w-5xl px-6">        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-10 shadow-[0_2px_0_var(--duo-swan)] space-y-6">
+      <section id="agencies" className="mx-auto w-full max-w-5xl px-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-10 space-y-6">
             <div className="space-y-2">
-              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-macaw)]">
-                For Agencies & Founders
-              </span>
               <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Ship client and product work faster — without hiring full-time
+                For agencies and founder-led teams
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
-                I help agencies and founder-led startups ship client/product work faster without hiring full-time.
+                Plug me in for the work piling up: Figma → Next.js, dashboard screens, AI integrations, the page that needs to go out tomorrow.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2">
               {[
                 "Figma to Next.js",
                 "Landing pages",
@@ -623,42 +561,35 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 "Tailwind / shadcn UI sections",
                 "SaaS dashboard screens",
                 "API integrations",
-                "AI chatbot/demo integrations",
-                "SEO/programmatic pages",
+                "AI chatbot / demo integrations",
+                "SEO / programmatic pages",
                 "Bug fixes and deployment",
                 "MVP sprint execution",
               ].map((s) => (
                 <div key={s} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="size-4 text-[var(--duo-feather)] shrink-0" />
+                  <CheckCircle2 className="size-3.5 text-[var(--duo-feather)] shrink-0" />
                   <span className="text-foreground">{s}</span>
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap items-center gap-2">
-              {["White-label friendly", "NDA friendly", "Async friendly", "Remote friendly"].map((b) => (
-                <span
-                  key={b}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)]"
-                >
-                  <CheckCircle2 className="size-3" /> {b}
-                </span>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-3 pt-2">
+            <p className="text-xs text-muted-foreground">
+              White-label · NDA-friendly · Async · Remote-first
+            </p>
+            <div className="flex flex-wrap gap-3">
               <Link
                 href="/hire"
                 className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
               >
-                Send me one small task
+                Send a small task
               </Link>
-              <Link
+              <a
                 href="https://linkedin.com/in/sh20raj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)]"
               >
-                Reach me on LinkedIn
-              </Link>
+                Talk on LinkedIn
+              </a>
             </div>
           </div>
         </BlurFade>
@@ -667,16 +598,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Marketplace cross-sell — lower-ticket digital products */}
       <section id="marketplace-strip" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <div className="flex items-end justify-between gap-3">
             <div>
-              <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-macaw)] mb-2">
-                Lower-ticket
-              </span>
               <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Or grab a template instead
+                Or buy a template instead
               </h2>
               <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-                Not ready for a sprint? Ship today with a battle-tested template, playbook, or workflow pack — instant download, no scoping calls.
+                Templates, playbooks, and workflow packs I&apos;ve battle-tested in real projects.
               </p>
             </div>
             <Link
@@ -719,14 +647,14 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Inline lead-capture strip */}
       <section id="quick-brief" className="mx-auto w-full max-w-5xl px-6">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="rounded-2xl border-2 border-[var(--duo-feather)]/30 bg-gradient-to-br from-[var(--duo-feather)]/10 via-card to-[var(--duo-macaw)]/5 p-6 md:p-8">
+          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-8">
             <div className="flex flex-col md:flex-row md:items-center gap-5">
-              <div className="flex-1 space-y-2">
-                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
-                  Got a project in mind?
+              <div className="flex-1 space-y-1">
+                <h3 className="text-lg md:text-xl font-extrabold tracking-tight">
+                  Have a project in mind?
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-                  Drop your email and a one-line note. I&apos;ll reply within 24 hours with a fixed quote — or send the full brief if you&apos;re ready.
+                  Drop your email. I&apos;ll reply within a day with a fixed quote.
                 </p>
               </div>
               {monetization.web3formsAccessKey ? (
@@ -749,7 +677,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     type="submit"
                     className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
                   >
-                    <Send className="size-3.5" /> Get a Quote
+                    <Send className="size-3.5" /> Get a quote
                   </button>
                 </form>
               ) : (
@@ -758,13 +686,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     href="/hire"
                     className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
                   >
-                    <Send className="size-3.5" /> Send a Brief
+                    <Send className="size-3.5" /> Send a brief
                   </Link>
                   <Link
                     href="/book"
-                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_3px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
+                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] whitespace-nowrap"
                   >
-                    Book a Call
+                    Book a call
                   </Link>
                 </div>
               )}
@@ -867,44 +795,34 @@ export function HomeClient({ DATA }: { DATA: any }) {
       {/* Contact */}
       <section id="contact" className="mx-auto w-full max-w-5xl px-6">
         <BlurFade delay={BLUR_FADE_DELAY * 6}>
-          <div className="relative overflow-hidden rounded-2xl bg-[var(--duo-eel)] text-white p-10 md:p-14 text-center space-y-5">
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 size-64 rounded-full bg-[var(--duo-feather)]/20 blur-3xl" />
-            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 size-64 rounded-full bg-[var(--duo-macaw)]/15 blur-3xl" />
-            <div className="relative z-10 space-y-5">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
-                <span className="size-2 rounded-full bg-[var(--duo-feather)]" /> Available now
-              </span>
-              <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl text-white max-w-2xl mx-auto">
-                Let&apos;s ship your <span className="text-[var(--duo-macaw)]">next sprint</span>.
-              </h2>
-              <p className="mx-auto max-w-[520px] text-zinc-300 text-sm leading-relaxed">
-                Book a 15-min call or send a brief. I respond within 24 hours.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 pt-2">
-                <Link
-                  href="/book"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--duo-feather)] px-7 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-                >
-                  Book a Call
-                </Link>
-                <Link
-                  href="/hire"
-                  className="inline-flex h-11 items-center justify-center rounded-full border-2 border-white/30 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 active:translate-y-1"
-                >
-                  Send a Brief
-                </Link>
-                <a
-                  href="mailto:sh20raj@gmail.com"
-                  className="inline-flex h-11 items-center justify-center rounded-full border-2 border-white/30 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 active:translate-y-1"
-                >
-                  Email
-                </a>
-              </div>
-              <p className="text-[11px] text-zinc-400 pt-2">
-                Preferred fallback: connect on{" "}
-                <a href="https://linkedin.com/in/sh20raj" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--duo-macaw)] hover:underline">LinkedIn</a>{" "}or{" "}
-                <a href="https://peerlist.io/sh20raj" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--duo-macaw)] hover:underline">Peerlist</a>.
-              </p>
+          <div className="rounded-2xl bg-[var(--duo-eel)] text-white p-10 md:p-14 text-center space-y-5">
+            <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl text-white max-w-xl mx-auto">
+              Want me to build something?
+            </h2>
+            <p className="mx-auto max-w-[460px] text-zinc-400 text-sm leading-relaxed">
+              Book a 15-minute call, or send a brief. I reply within a day.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 pt-1">
+              <Link
+                href="/book"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--duo-feather)] px-7 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+              >
+                Book a call
+              </Link>
+              <Link
+                href="/hire"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+              >
+                Send a brief
+              </Link>
+              <a
+                href="https://linkedin.com/in/sh20raj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </BlurFade>
