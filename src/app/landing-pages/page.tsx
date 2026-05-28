@@ -10,17 +10,17 @@ const BLUR_FADE_DELAY = 0.04;
 
 export const metadata: Metadata = {
   title:
-    "Landing Page Developer for Startups, SaaS & AI Tools — Shaswat Raj",
+    "Hire a Next.js Landing Page Developer | Shaswat Raj",
   description:
-    "Get a fast, clean, conversion-focused landing page for your startup, SaaS product, AI tool, agency, or creator brand.",
+    "Hire a remote Next.js + Tailwind landing page developer for SaaS, AI tools, and startup launches. Conversion-focused, 2–5 day turnaround, fixed price from $199.",
   alternates: {
     canonical: "https://sh20raj.github.io/landing-pages",
   },
   openGraph: {
     title:
-      "Landing Page Developer for Startups, SaaS & AI Tools — Shaswat Raj",
+      "Hire a Next.js Landing Page Developer | Shaswat Raj",
     description:
-      "Get a fast, clean, conversion-focused landing page for your startup, SaaS product, AI tool, agency, or creator brand.",
+      "Hire a remote Next.js + Tailwind landing page developer for SaaS, AI tools, and startup launches. 2–5 day turnaround, fixed price from $199.",
     url: "https://sh20raj.github.io/landing-pages",
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image" as const,
     title:
-      "Landing Page Developer for Startups, SaaS & AI Tools — Shaswat Raj",
+      "Hire a Next.js Landing Page Developer | Shaswat Raj",
     description:
-      "Get a fast, clean, conversion-focused landing page for your startup, SaaS product, AI tool, agency, or creator brand.",
+      "Hire a remote Next.js + Tailwind landing page developer for SaaS, AI tools, and startup launches. From $199.",
     creator: "@SH20RAJ",
   },
 };

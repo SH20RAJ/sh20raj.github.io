@@ -50,6 +50,7 @@ export const servicesHubData = {
       bestFor: "SaaS, AI tools, launches, waitlists, agency clients",
       icon: "layout",
       href: "/landing-pages",
+      gumroadKey: "landingPage" as const,
     },
     {
       name: "SaaS Frontend Sprint",
@@ -67,6 +68,7 @@ export const servicesHubData = {
       bestFor: "Founders needing product UI fast",
       icon: "code",
       href: "/saas-mvp",
+      gumroadKey: "saasFrontend" as const,
     },
     {
       name: "AI Tool Prototype",
@@ -84,6 +86,7 @@ export const servicesHubData = {
       bestFor: "AI apps, internal tools, agents, chatbots, workflows",
       icon: "bot",
       href: "/ai-automation",
+      gumroadKey: "aiTool" as const,
     },
     {
       name: "Agency Overflow Support",
@@ -100,7 +103,8 @@ export const servicesHubData = {
       ],
       bestFor: "Agencies and early startups with too much frontend/product work",
       icon: "users",
-      href: "#contact",
+      href: "#agencies",
+      gumroadKey: "agencyOverflow" as const,
     },
   ],
   services: [

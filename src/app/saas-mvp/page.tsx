@@ -7,26 +7,26 @@ import { Button } from "@/components/ui/button";
 const BLUR_FADE_DELAY = 0.04;
 
 export const metadata = {
-  title: "SaaS MVP Developer for Founders — Shaswat Raj",
+  title: "Hire a SaaS MVP Developer (Next.js + AI) | Shaswat Raj",
   description:
-    "Build your SaaS MVP with dashboards, auth, payments, APIs, databases, AI features, and deployment.",
+    "Hire a remote Next.js + TypeScript developer to ship your SaaS MVP — dashboards, auth, billing UI, API integrations, AI features. 1–3 week sprint, fixed price from $500.",
   alternates: {
     canonical: "https://sh20raj.github.io/saas-mvp",
   },
   openGraph: {
     type: "website",
-    title: "SaaS MVP Developer for Founders — Shaswat Raj",
+    title: "Hire a SaaS MVP Developer (Next.js + AI) | Shaswat Raj",
     description:
-      "Build your SaaS MVP with dashboards, auth, payments, APIs, databases, AI features, and deployment.",
+      "Hire a remote Next.js + TypeScript developer to ship your SaaS MVP — dashboards, auth, billing UI, API integrations, AI features. 1–3 week sprint, from $500.",
     url: "https://sh20raj.github.io/saas-mvp",
     siteName: "Shaswat Raj",
     creator: "Shaswat Raj",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaS MVP Developer for Founders — Shaswat Raj",
+    title: "Hire a SaaS MVP Developer (Next.js + AI) | Shaswat Raj",
     description:
-      "Build your SaaS MVP with dashboards, auth, payments, APIs, databases, AI features, and deployment.",
+      "Hire a remote Next.js + TypeScript developer to ship your SaaS MVP. From $500.",
     creator: "@SH20RAJ",
   },
 };

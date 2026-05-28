@@ -2,6 +2,8 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
 import { servicesHubData } from "@/data/services";
+import { monetization } from "@/data/monetization";
+import { featuredMarketplaceProducts } from "@/data/marketplace";
 import {
   Accordion,
   AccordionContent,
@@ -20,6 +22,8 @@ import {
   CheckCircle2,
   Youtube,
   Palette,
+  ShoppingBag,
+  Calendar,
 } from "lucide-react";
 
 export const metadata = {
@@ -212,7 +216,9 @@ export default function ServicesPage() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {(servicesHubData as any).packages?.map((pkg: any, id: number) => (
+            {(servicesHubData as any).packages?.map((pkg: any, id: number) => {
+              const gumroadUrl = pkg.gumroadKey ? monetization.gumroad[pkg.gumroadKey as keyof typeof monetization.gumroad] : "";
+              return (
               <BlurFade key={pkg.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
                 <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all h-full flex flex-col">
                   <h3 className="font-extrabold text-base mb-1">{pkg.name}</h3>
@@ -232,15 +238,27 @@ export default function ServicesPage() {
                   <div className="mt-4 pt-3 border-t border-[var(--duo-swan)] text-[11px] text-muted-foreground">
                     <span className="font-bold text-foreground">Best for:</span> {pkg.bestFor}
                   </div>
-                  <Link
-                    href={`mailto:sh20raj@gmail.com?subject=${encodeURIComponent(pkg.name)}`}
-                    className="mt-4 inline-flex h-9 items-center justify-center rounded-full bg-[var(--duo-feather)] px-5 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none"
-                  >
-                    Book this sprint
-                  </Link>
+                  <div className="mt-4 flex flex-col gap-2">
+                    {gumroadUrl ? (
+                      <a
+                        href={gumroadUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none"
+                      >
+                        <ShoppingBag className="size-3.5" /> Buy Now
+                      </a>
+                    ) : null}
+                    <Link
+                      href={monetization.calcom ? "/book" : `mailto:sh20raj@gmail.com?subject=${encodeURIComponent(pkg.name)}`}
+                      className={`inline-flex h-9 items-center justify-center gap-1.5 rounded-full ${gumroadUrl ? "border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground text-[var(--duo-eel)] shadow-[0_3px_0_var(--duo-swan)]" : "bg-[var(--duo-feather)] text-white shadow-[0_3px_0_var(--duo-feather-shadow)]"} px-5 text-[11px] font-bold uppercase tracking-wider transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none`}
+                    >
+                      <Calendar className="size-3.5" /> {monetization.calcom ? "Book a Call" : "Book this sprint"}
+                    </Link>
+                  </div>
                 </div>
               </BlurFade>
-            ))}
+            );})}
           </div>
 
           {/* Small task CTA */}
@@ -260,6 +278,57 @@ export default function ServicesPage() {
               </Link>
             </div>
           </BlurFade>
+        </div>
+      </section>
+
+      {/* Marketplace cross-sell */}
+      <section id="marketplace-strip" className="pb-16">
+        <div className="mx-auto w-full max-w-5xl px-6 space-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex items-end justify-between">
+              <div>
+                <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[var(--duo-macaw)] mb-2">
+                  Lower-ticket
+                </span>
+                <h2 className="text-xl md:text-2xl font-extrabold tracking-tight">
+                  Not ready for a full sprint?
+                </h2>
+                <p className="text-sm text-muted-foreground mt-1 max-w-xl">
+                  Grab a ready-made template, playbook, or workflow pack instead — instant download.
+                </p>
+              </div>
+              <Link
+                href="/marketplace"
+                className="hidden md:inline-flex group items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline"
+              >
+                See all <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredMarketplaceProducts().map((p, id) => (
+              <BlurFade key={p.name} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block h-full rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.image} alt={p.name} className="w-full h-40 object-cover" loading="lazy" />
+                  <div className="p-4 space-y-2">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-bold text-sm group-hover:text-[var(--duo-feather)] transition-colors line-clamp-1">
+                        {p.name}
+                      </h3>
+                      <span className="text-sm font-extrabold text-[var(--duo-feather)] whitespace-nowrap">{p.price}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">{p.description}</p>
+                  </div>
+                </a>
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
 

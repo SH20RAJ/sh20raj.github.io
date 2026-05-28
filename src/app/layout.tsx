@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { StickyCTA } from "@/components/sticky-cta";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ResumeProvider } from "@/lib/resume-context";
@@ -182,6 +183,7 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
+              <StickyCTA />
             </TooltipProvider>
           </ResumeProvider>
         </ThemeProvider>

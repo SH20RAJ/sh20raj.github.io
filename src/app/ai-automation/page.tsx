@@ -8,26 +8,26 @@ import type { Metadata } from "next";
 const BLUR_FADE_DELAY = 0.04;
 
 export const metadata: Metadata = {
-  title: "AI Automation Developer — Chatbots, Agents & Workflows",
+  title: "Hire an AI Tools & Automation Developer | Shaswat Raj",
   description:
-    "Build AI chatbots, agents, RAG systems, transcript workflows, MCP tools, and custom automation dashboards.",
+    "Hire a remote AI developer to ship chatbots, agents, RAG systems, MCP tools, and automation workflows. OpenAI, Claude, Gemini. 3–10 day prototype sprints from $300.",
   alternates: {
     canonical: "https://sh20raj.github.io/ai-automation",
   },
   openGraph: {
     type: "website",
-    title: "AI Automation Developer — Chatbots, Agents & Workflows",
+    title: "Hire an AI Tools & Automation Developer | Shaswat Raj",
     description:
-      "Build AI chatbots, agents, RAG systems, transcript workflows, MCP tools, and custom automation dashboards.",
+      "Hire a remote AI developer to ship chatbots, agents, RAG systems, MCP tools, and automation workflows. From $300.",
     url: "https://sh20raj.github.io/ai-automation",
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Developer — Chatbots, Agents & Workflows",
+    title: "Hire an AI Tools & Automation Developer | Shaswat Raj",
     description:
-      "Build AI chatbots, agents, RAG systems, transcript workflows, MCP tools, and custom automation dashboards.",
+      "Hire a remote AI developer to ship chatbots, agents, RAG systems, MCP tools, and automation workflows. From $300.",
     creator: "@SH20RAJ",
   },
 };
