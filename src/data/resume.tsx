@@ -202,7 +202,7 @@ export const DATA = {
           icon: "globe",
         },
       ],
-      image: "https://dhwani.shraj.workers.dev/og-home.jpg",
+      image: "/images/dhwani-poster.jpg",
       video: "",
     },
     {
