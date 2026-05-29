@@ -708,7 +708,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </BlurFade>
         <div className="space-y-4">
           {[
-            { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Responsive UI", "Landing Pages", "Dashboards", "SEO", "Performance"] },
+            { category: "Frontend", skills: ["UI/UX Design", "Landing Pages", "Animations", "Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Framer Motion", "Responsive UI", "Dashboards", "SEO", "Performance"] },
             { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Cron Jobs", "Webhooks", "Database Modeling", "Automation"] },
             { category: "AI & Automation", skills: ["OpenAI", "Claude", "Gemini APIs", "AI SDK", "RAG", "Embeddings", "Transcription", "MCP Tools", "Agent Workflows", "Email Automation", "Voice Bots", "Chatbots"] },
             { category: "Cloud & DevOps", skills: ["Cloudflare", "Vercel", "AWS", "Docker", "GitHub Actions", "CI/CD Pipelines", "Edge Functions", "Serverless", "Linux"] },

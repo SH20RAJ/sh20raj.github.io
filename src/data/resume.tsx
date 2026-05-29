@@ -33,12 +33,16 @@ export const DATA = {
     "I'm Shaswat Raj, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.\n\nI like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I've built 500+ projects, maintain 50+ open-source packages, have 45k+ followers on Dev.to, joined 4+ startups as Tech Lead, and actively run 20+ small projects with real user traction.",
   avatarUrl: "/profile.jpg",
   skills: [
+    "UI/UX Design",
+    "Landing Pages",
+    "Animations",
     "Next.js",
     "React",
     "TypeScript",
     "Node.js",
     "Python",
     "Tailwind CSS",
+    "Framer Motion",
     "PostgreSQL",
     "MongoDB",
     "AI/ML APIs",
@@ -181,6 +185,24 @@ export const DATA = {
         },
       ],
       image: "https://www.indexfast.co/opengraph-image.png",
+      video: "",
+    },
+    {
+      title: "Dhwani — BIT Mesra Music Society",
+      href: "https://dhwanibitmesra.in",
+      dates: "2026",
+      active: true,
+      description:
+        "Full-stack landing page for Dhwani, the music society of BIT Mesra. Built end to end with a studio/broadcast aesthetic, motion-rich hero carousel, scroll animations, marquees, and recording-console UI language for NAAD'26. Designed and engineered the frontend and backend with a heavy focus on UI/UX and micro-interactions.",
+      technologies: ["Next.js", "TypeScript", "UI/UX", "Framer Motion", "Animations", "Landing Page", "Tailwind CSS", "Cloudflare"],
+      links: [
+        {
+          type: "Website",
+          href: "https://dhwanibitmesra.in",
+          icon: "globe",
+        },
+      ],
+      image: "https://dhwani.shraj.workers.dev/og-home.jpg",
       video: "",
     },
     {
