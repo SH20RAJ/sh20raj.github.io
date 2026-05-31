@@ -87,6 +87,12 @@ export const DATA = {
         icon: "linkedin",
         navbar: true,
       },
+      YouTube: {
+        name: "YouTube",
+        url: "https://www.youtube.com/@StackShade",
+        icon: "youtube",
+        navbar: false,
+      },
       DevCommunity: {
         name: "Dev Community",
         url: "https://dev.to/sh20raj",

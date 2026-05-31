@@ -146,6 +146,7 @@ export default function RootLayout({
         "https://github.com/SH20RAJ",
         "https://linkedin.com/in/sh20raj",
         "https://x.com/SH20RAJ",
+        "https://www.youtube.com/@StackShade",
         "https://dev.to/sh20raj",
         "https://www.npmjs.com/~sh20raj",
         "https://codepen.io/sh20raj",
