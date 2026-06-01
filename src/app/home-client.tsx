@@ -31,6 +31,7 @@ import {
   Github,
   Linkedin,
   Award,
+  Youtube,
 } from "lucide-react";
 import {
   Accordion,
@@ -212,7 +213,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <div className="flex-col flex flex-1 space-y-5 text-center md:text-left">
               <BlurFade delay={BLUR_FADE_DELAY * 0.5}>
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
-                  <span className="size-1.5 rounded-full bg-[var(--duo-feather)]" />
+                  <span className="relative flex size-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--duo-feather)] opacity-75" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-[var(--duo-feather)]" />
+                  </span>
                   Available — remote, contract, agency overflow
                 </span>
               </BlurFade>
@@ -457,7 +461,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 Endorsements, repos, and launches on independent platforms.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
               <a
                 href="https://www.linkedin.com/in/sh20raj/details/recommendations/"
                 target="_blank"
@@ -504,6 +508,18 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 <div className="min-w-0">
                   <p className="text-xs font-bold truncate">Product Hunt</p>
                   <p className="text-[10px] text-muted-foreground">Maker profile</p>
+                </div>
+              </a>
+              <a
+                href="https://www.youtube.com/@StackShade"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+              >
+                <Youtube className="size-4 text-[var(--duo-cardinal)] shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-xs font-bold truncate">YouTube</p>
+                  <p className="text-[10px] text-muted-foreground">Build logs &amp; demos</p>
                 </div>
               </a>
             </div>
