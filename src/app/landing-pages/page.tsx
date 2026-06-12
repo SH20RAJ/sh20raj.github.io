@@ -9,14 +9,14 @@ const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
   title: "Landing Pages by Shaswat Raj | Live Demos",
   description:
-    "Animated, conversion-focused Next.js + Tailwind landing pages built by Shaswat Raj. Watch live demo videos of real landing pages including Dhwani, the BIT Mesra Music Society site.",
+    "Animated, conversion-focused Next.js + Tailwind landing pages built by Shaswat Raj. Watch live demo videos of real landing pages including Dhwani, the college Music Society site.",
   alternates: {
     canonical: "https://sh20raj.github.io/landing-pages",
   },
   openGraph: {
     title: "Landing Pages by Shaswat Raj | Live Demos",
     description:
-      "Animated, conversion-focused Next.js landing pages. Watch live demo videos including Dhwani, the BIT Mesra Music Society site.",
+      "Animated, conversion-focused Next.js landing pages. Watch live demo videos including Dhwani, the college Music Society site.",
     url: "https://sh20raj.github.io/landing-pages",
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const demoTweets = [
   {
     id: "2060421891182186557",
-    title: "Dhwani — BIT Mesra Music Society",
+    title: "Dhwani — college Music Society",
     note: "Full-stack landing page with a studio/broadcast aesthetic, motion-rich hero, scroll animations, and recording-console UI for NAAD'26.",
   },
   {
@@ -106,7 +106,7 @@ export default function LandingPagesPage() {
               <div className="aspect-square md:aspect-auto overflow-hidden bg-black">
                 <img
                   src="/images/dhwani-poster.jpg"
-                  alt="Dhwani — BIT Mesra Music Society landing page poster"
+                  alt="Dhwani — college Music Society landing page poster"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -117,7 +117,7 @@ export default function LandingPagesPage() {
                   Featured Build
                 </div>
                 <h2 className="text-2xl font-extrabold tracking-tight">
-                  Dhwani — BIT Mesra Music Society
+                  Dhwani — college Music Society
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Designed and engineered the full frontend and backend with a

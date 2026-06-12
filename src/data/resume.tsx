@@ -194,12 +194,12 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Dhwani — BIT Mesra Music Society",
+      title: "Dhwani — college Music Society",
       href: "https://dhwanibitmesra.in",
       dates: "2026",
       active: true,
       description:
-        "Full-stack landing page for Dhwani, the music society of BIT Mesra. Built end to end with a studio/broadcast aesthetic, motion-rich hero carousel, scroll animations, marquees, and recording-console UI language for NAAD'26. Designed and engineered the frontend and backend with a heavy focus on UI/UX and micro-interactions.",
+        "Full-stack landing page for Dhwani, the music society of college. Built end to end with a studio/broadcast aesthetic, motion-rich hero carousel, scroll animations, marquees, and recording-console UI language for NAAD'26. Designed and engineered the frontend and backend with a heavy focus on UI/UX and micro-interactions.",
       technologies: ["Next.js", "TypeScript", "UI/UX", "Framer Motion", "Animations", "Landing Page", "Tailwind CSS", "Cloudflare"],
       links: [
         {

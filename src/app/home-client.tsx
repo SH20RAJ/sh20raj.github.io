@@ -113,7 +113,7 @@ const proofPosts = [
   {
     title: "BitSyll",
     label: "Student utility + open source",
-    text: "Built BitSyll, an academic resource platform for BIT Mesra students with syllabus, notes, PYQs, academic calendar, routines, transport schedule, club contacts, recommended books, YouTube channels, and planned AI chatbot features.",
+    text: "Built BitSyll, an academic resource platform for college students with syllabus, notes, PYQs, academic calendar, routines, transport schedule, club contacts, recommended books, YouTube channels, and planned AI chatbot features.",
     tech: ["Next.js 15", "ShadCN", "Framer Motion", "Cloudflare"],
     href: "https://www.linkedin.com/posts/sh20raj_engineerlife-bitsyll-opensource-activity-7278949308203171840-JyF_",
   },

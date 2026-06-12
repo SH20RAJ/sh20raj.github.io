@@ -319,7 +319,7 @@ export const landingPagesConfig: ServiceConfig = {
         "Starter gets 1 round, Startup gets 3 rounds, and Premium gets unlimited revisions during the project.",
     },
   ],
-  relatedProjects: ["Dhwani — BIT Mesra Music Society", "30tools", "FormGuard", "NotesFlow", "Reflecto"],
+  relatedProjects: ["Dhwani — college Music Society", "30tools", "FormGuard", "NotesFlow", "Reflecto"],
   testimonials: [
     {
       quote: "Shipped our landing page in 4 days. We hit 1,200 signups in the first week with zero paid ads.",
