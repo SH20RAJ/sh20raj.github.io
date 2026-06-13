@@ -25,6 +25,7 @@ import {
   ShoppingBag,
   Calendar,
 } from "lucide-react";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 
 export const metadata = {
   title: "Services — Sprint Pricing for Next.js & AI Product Work",
