@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 import { monetization } from "@/data/monetization";
 import { CheckCircle2, ArrowRightIcon, Loader2, AlertCircle, Linkedin } from "lucide-react";
 
@@ -292,11 +293,6 @@ function RadioGroup({
             {opt}
           </label>
         ))}
-      </div>
-    </fieldset>
-  );
-}
- ))}
       </div>
     </fieldset>
   );

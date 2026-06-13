@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -328,11 +329,6 @@ export default function DesignStudioPage() {
             </div>
           </BlurFade>
         </div>
-      </section>
-    </main>
-  );
-}
-div>
       </section>
     </main>
   );

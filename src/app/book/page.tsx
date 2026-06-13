@@ -6,6 +6,8 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { monetization } from "@/data/monetization";
 import { ArrowRightIcon, Mail, Clock, Globe } from "lucide-react";
 
+import { MarketplaceBanner } from "@/components/marketplace-banner";
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function BookPage() {
@@ -128,11 +130,6 @@ export default function BookPage() {
             )}
           </BlurFade>
         </div>
-      </section>
-    </main>
-  );
-}
-div>
       </section>
     </main>
   );

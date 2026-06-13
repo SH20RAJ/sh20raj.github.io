@@ -1,4 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Script from "next/script";
@@ -189,11 +190,6 @@ export default function MarketplacePage() {
             </div>
           </div>
         </BlurFade>
-      </section>
-    </main>
-  );
-}
-ade>
       </section>
     </main>
   );

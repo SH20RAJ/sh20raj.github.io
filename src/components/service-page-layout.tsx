@@ -1,4 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
 import { Badge } from "@/components/ui/badge";
@@ -351,11 +352,6 @@ export default function ServicePageLayout({
             </div>
           </BlurFade>
         </div>
-      </section>
-    </main>
-  );
-}
-div>
       </section>
     </main>
   );
