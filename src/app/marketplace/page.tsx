@@ -27,6 +27,7 @@ const tweetIds = [
 export default function MarketplacePage() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-16 py-12">
+      <MarketplaceBanner />
       {/* Header */}
       <section id="header" className="mx-auto w-full max-w-5xl px-6 text-center space-y-4">
         <BlurFade delay={BLUR_FADE_DELAY}>
@@ -188,6 +189,11 @@ export default function MarketplacePage() {
             </div>
           </div>
         </BlurFade>
+      </section>
+    </main>
+  );
+}
+ade>
       </section>
     </main>
   );

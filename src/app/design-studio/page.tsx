@@ -87,6 +87,7 @@ const accentColors = [
 export default function DesignStudioPage() {
   return (
     <main className="flex flex-col min-h-[100dvh]">
+      <MarketplaceBanner />
       {/* Hero */}
       <section id="hero" className="pt-16 pb-12">
         <div className="mx-auto w-full max-w-5xl px-6">
@@ -327,6 +328,11 @@ export default function DesignStudioPage() {
             </div>
           </BlurFade>
         </div>
+      </section>
+    </main>
+  );
+}
+div>
       </section>
     </main>
   );

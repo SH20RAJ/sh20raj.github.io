@@ -46,6 +46,7 @@ export default function ServicePageLayout({
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <MarketplaceBanner />
       {/* Back button */}
       <section id="back">
         <div className="mx-auto w-full max-w-7xl px-8">
@@ -350,6 +351,11 @@ export default function ServicePageLayout({
             </div>
           </BlurFade>
         </div>
+      </section>
+    </main>
+  );
+}
+div>
       </section>
     </main>
   );

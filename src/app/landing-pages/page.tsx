@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { TweetEmbed } from "@/components/tweet-embed";
+import { MarketplaceBanner } from "@/components/marketplace-banner";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
