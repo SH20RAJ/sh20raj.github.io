@@ -251,12 +251,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     Marketplace
                   </Link>
                   <Link
-                    href="/book"
-                    className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-                  >
-                    Book a 15-min call
-                  </Link>
-                  <Link
                     href="#projects"
                     className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)]"
                   >
