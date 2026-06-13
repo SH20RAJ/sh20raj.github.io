@@ -100,6 +100,7 @@ export default function HirePage() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] pb-16">
+      <MarketplaceBanner />
       <section className="pt-12 pb-8">
         <div className="mx-auto w-full max-w-3xl px-6 space-y-4">
           <BlurFade delay={BLUR_FADE_DELAY}>
@@ -291,6 +292,11 @@ function RadioGroup({
             {opt}
           </label>
         ))}
+      </div>
+    </fieldset>
+  );
+}
+ ))}
       </div>
     </fieldset>
   );

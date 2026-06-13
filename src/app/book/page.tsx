@@ -63,6 +63,7 @@ export default function BookPage() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] pb-16">
+      <MarketplaceBanner />
       <section className="pt-12 pb-8">
         <div className="mx-auto w-full max-w-4xl px-6 space-y-5">
           <BlurFade delay={BLUR_FADE_DELAY}>
@@ -127,6 +128,11 @@ export default function BookPage() {
             )}
           </BlurFade>
         </div>
+      </section>
+    </main>
+  );
+}
+div>
       </section>
     </main>
   );
