@@ -11,7 +11,7 @@ export function MarketplaceBanner() {
           <span className="sm:hidden">Everything I&apos;ve built is now on ScriptlyHQ!</span>
         </p>
         <Link 
-          href="https://scriptlyhq.strivio.world/" 
+          href="https://scriptly.store/" 
           target="_blank"
           className="inline-flex items-center gap-1.5 bg-white text-[var(--duo-feather)] px-4 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all"
         >

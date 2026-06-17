@@ -243,7 +243,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
                 <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-1">
                   <Link
-                    href="https://scriptlyhq.strivio.world/"
+                    href="https://scriptly.store/"
                     target="_blank"
                     className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-macaw)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-macaw-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
                   >
