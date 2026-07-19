@@ -194,6 +194,29 @@ export const DATA = {
       video: "",
     },
     {
+      title: "AlgoForge",
+      href: "https://algoforge.shraj.workers.dev/",
+      dates: "2026",
+      active: true,
+      description:
+        "A free, SEO-first coding interview preparation platform. Features pattern-based learning paths, curated collections (Blind 75, Grind 169), multi-language solutions, and original explanations optimized for search engines and study.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Cloudflare Workers"],
+      links: [
+        {
+          type: "Website",
+          href: "https://algoforge.shraj.workers.dev/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/algoforge",
+          icon: "github",
+        },
+      ],
+      image: "https://algoforge.shraj.workers.dev/og-image.png",
+      video: "",
+    },
+    {
       title: "Dhwani — college Music Society",
       href: "https://dhwanibitmesra.in",
       dates: "2026",
