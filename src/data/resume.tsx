@@ -213,7 +213,7 @@ export const DATA = {
     },
     {
       title: "MCP Pure",
-      href: "https://mcppure.30tools.com/",
+      href: "https://mcppure.shraj.workers.dev/",
       dates: "2025",
       active: true,
       description:
@@ -222,7 +222,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://mcppure.30tools.com/",
+          href: "https://mcppure.shraj.workers.dev/",
           icon: "globe",
         },
         {
@@ -231,7 +231,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://mcppure.30tools.com/og-image.png",
+      image: "https://mcppure.shraj.workers.dev/og-image.png",
       video: "",
     },
     {
@@ -277,7 +277,7 @@ export const DATA = {
     },
     {
       title: "30tools",
-      href: "https://30tools.com",
+      href: "https://sopkit.github.io",
       dates: "2025",
       active: true,
       description:
@@ -286,7 +286,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://30tools.com",
+          href: "https://sopkit.github.io",
           icon: "globe",
         },
         {
@@ -295,7 +295,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://30tools.com/og-image.jpg",
+      image: "https://sopkit.github.io/og-image.jpg",
       video: "",
     },
   ],

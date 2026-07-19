@@ -28,7 +28,7 @@ const startups = [
     name: "MCP Pure",
     status: "Running",
     description: "A central hub for high-performance Model Context Protocol (MCP) servers on Cloudflare Workers.",
-    link: "https://mcppure.30tools.com/",
+    link: "https://mcppure.shraj.workers.dev/",
   },
   {
     name: "Wify",
@@ -46,7 +46,7 @@ const startups = [
     name: "30tools",
     status: "Running",
     description: "A collection of fast, simple browser tools for developers and creators.",
-    link: "https://30tools.com",
+    link: "https://sopkit.github.io",
   },
 ];
 
