@@ -245,21 +245,21 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <Link
                     href="https://scriptly.store/"
                     target="_blank"
-                    className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-macaw)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-macaw-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] px-4.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-95 active:scale-[0.98]"
                   >
                     <ShoppingBag className="size-3.5 mr-2" />
                     Marketplace
                   </Link>
                   <Link
                     href="#projects"
-                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)]"
+                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background dark:text-foreground px-4.5 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
                   >
                     See work
                   </Link>
                   <a
                     href="/resume.pdf"
                     download
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-[var(--duo-feather)] transition-colors self-center"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-[var(--duo-feather)] transition-colors self-center"
                   >
                     <FileDown className="h-3.5 w-3.5" /> Resume
                   </a>

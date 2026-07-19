@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 export const metadata = {
   title: "Startups | SH20RAJ",
   description: "Showcasing my entrepreneurial journey, from failed experiments to running startups.",
+  alternates: {
+    canonical: `${DATA.url}/startups`,
+  },
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -23,6 +26,12 @@ const startups = [
     status: "Running",
     description: "The first MCP-native indexing platform. Index URLs to Google and Bing instantly from your IDE.",
     link: "https://indexfast.co",
+  },
+  {
+    name: "AlgoForge",
+    status: "Running",
+    description: "A free, SEO-first coding interview platform with pattern-based learning paths, roadmaps, and multi-language solutions.",
+    link: "https://algoforge.shraj.workers.dev/",
   },
   {
     name: "MCP Pure",
@@ -43,7 +52,7 @@ const startups = [
     link: "https://unstory.app",
   },
   {
-    name: "30tools",
+    name: "SopKit",
     status: "Running",
     description: "A collection of fast, simple browser tools for developers and creators.",
     link: "https://sopkit.github.io",

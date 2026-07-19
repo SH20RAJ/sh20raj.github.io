@@ -46,7 +46,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border-2 border-[var(--duo-swan)] bg-[var(--duo-polar)]/30 hover:border-[var(--duo-feather)]/30 transition-all duration-500 ease-in-out h-full group rounded-2xl shadow-[0_2px_0_var(--duo-swan)] hover:shadow-2xl hover:-translate-y-2"
+        "flex flex-col overflow-hidden border border-border bg-card/60 dark:bg-card/30 hover:border-[var(--duo-feather)]/50 transition-all duration-300 ease-in-out h-full group rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1"
       }
     >
       <Link
@@ -60,14 +60,14 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="pointer-events-none mx-auto h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         )}
         {image && (
           <img
             src={image}
             alt={`${title} project`}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
           />
         )}
@@ -75,8 +75,8 @@ export function ProjectCard({
       <CardHeader className="px-4 pt-4 pb-1">
         <div className="space-y-2">
           <div className="flex items-center justify-between gap-3">
-            <CardTitle className="text-sm font-bold leading-tight group-hover:text-[var(--duo-feather)] transition-colors">{title}</CardTitle>
-            <time className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/30 px-1.5 py-0.5 rounded-full">{dates}</time>
+            <CardTitle className="text-sm font-semibold leading-tight group-hover:text-[var(--duo-feather)] transition-colors">{title}</CardTitle>
+            <time className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60 whitespace-nowrap bg-muted/40 px-1.5 py-0.5 rounded-full">{dates}</time>
           </div>
           <p className="text-xs text-muted-foreground/80 line-clamp-2 leading-relaxed">
             {description}
@@ -85,10 +85,10 @@ export function ProjectCard({
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-4 py-2">
         {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5">
             {tags?.map((tag) => (
               <Badge
-                className="px-3 py-1 text-[10px] font-medium uppercase tracking-wider bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 rounded-full hover:bg-[var(--duo-feather)]/20 transition-colors"
+                className="px-2 py-0.5 text-[9px] font-medium tracking-wide bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] border-0 rounded-md hover:bg-[var(--duo-feather)]/15 transition-colors"
                 variant="secondary"
                 key={tag}
               >
@@ -100,13 +100,13 @@ export function ProjectCard({
       </CardContent>
       <CardFooter className="px-4 pb-4 pt-1">
         {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-center gap-2">
+          <div className="flex flex-row flex-wrap items-center gap-1.5">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
                 <Badge
                   key={idx}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-1.5 text-xs font-semibold transition-all rounded-full border-0 bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] hover:bg-[var(--duo-feather)] hover:text-white shadow-sm",
+                    "flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium transition-all rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground shadow-none",
                     link.badgeImage ? "p-0 overflow-hidden" : ""
                   )}
                 >
@@ -114,12 +114,12 @@ export function ProjectCard({
                     <img
                       src={link.badgeImage}
                       alt={link.type}
-                      className="h-6 w-auto"
+                      className="h-5 w-auto"
                       loading="lazy"
                     />
                   ) : (
                     <>
-                      <IconRenderer icon={link.icon} className="size-3.5" />
+                      <IconRenderer icon={link.icon} className="size-3" />
                       {link.type}
                     </>
                   )}
