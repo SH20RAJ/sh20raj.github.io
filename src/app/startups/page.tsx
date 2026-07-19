@@ -31,10 +31,10 @@ const startups = [
     link: "https://mcppure.shraj.workers.dev/",
   },
   {
-    name: "Wify",
+    name: "Storix",
     status: "Running",
     description: "A modern, mobile-first, swipe-based text story platform with TikTok-style UX.",
-    link: "https://wify.my",
+    link: "https://storix.linespedia.com/",
   },
   {
     name: "Unstory",

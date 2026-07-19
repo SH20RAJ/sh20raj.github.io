@@ -253,9 +253,9 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Wify",
-      href: "https://wify.my",
-      dates: "2025",
+      title: "Storix",
+      href: "https://storix.linespedia.com",
+      dates: "2026",
       active: true,
       description:
         "A modern, mobile-first, swipe-based text story platform. It brings the addictive vertical swipe UX of TikTok and Shorts into the world of text-based storytelling and immersive experiences.",
@@ -263,7 +263,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://wify.my",
+          href: "https://storix.linespedia.com",
           icon: "globe",
         },
         {
@@ -272,11 +272,11 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://wify.my/og-image.png",
+      image: "https://storix.linespedia.com/og-image.png",
       video: "",
     },
     {
-      title: "30tools",
+      title: "SopKit",
       href: "https://sopkit.github.io",
       dates: "2025",
       active: true,
@@ -291,7 +291,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/SH20RAJ/30tools",
+          href: "https://github.com/sopkit",
           icon: "github",
         },
       ],
