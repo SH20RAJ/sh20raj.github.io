@@ -245,6 +245,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <Link
                     href="https://scriptly.store/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] px-4.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-95 active:scale-[0.98]"
                   >
                     <ShoppingBag className="size-3.5 mr-2" />
@@ -264,6 +265,27 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     <FileDown className="h-3.5 w-3.5" /> Resume
                   </a>
                 </div>
+                <BlurFade delay={BLUR_FADE_DELAY * 3.2}>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-1">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mr-1">Ventures</span>
+                    <a
+                      href="https://app.notion.com/p/The-Venture-Vault-393cd0ed0c25801eb0daf8cbf1862c94"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
+                    >
+                      The Venture Vault <ExternalLink className="size-3" />
+                    </a>
+                    <a
+                      href="https://stack-shade.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
+                    >
+                      StackShade <ExternalLink className="size-3" />
+                    </a>
+                  </div>
+                </BlurFade>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
