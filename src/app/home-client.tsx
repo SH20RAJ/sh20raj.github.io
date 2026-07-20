@@ -246,14 +246,14 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     href="https://scriptly.store/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] px-4.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-95 active:scale-[0.98]"
+                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] p-4.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-95 active:scale-[0.98]"
                   >
                     <ShoppingBag className="size-3.5 mr-2" />
                     Marketplace
                   </Link>
                   <Link
                     href="#projects"
-                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background dark:text-foreground px-4.5 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
+                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background dark:text-foreground p-4.5 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
                   >
                     See work
                   </Link>
@@ -266,7 +266,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   </a>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 3.2}>
-                  <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-1">
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-4 mt-2">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mr-1">Ventures</span>
                     <a
                       href="https://app.notion.com/p/The-Venture-Vault-393cd0ed0c25801eb0daf8cbf1862c94"
