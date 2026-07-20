@@ -266,23 +266,25 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   </a>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 3.2}>
-                  <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-4 mt-2">
+                  <div className="flex flex-wrap items-center gap-2 pt-5 border-t border-[var(--duo-swan)]/60">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mr-1">Ventures</span>
                     <a
                       href="https://app.notion.com/p/The-Venture-Vault-393cd0ed0c25801eb0daf8cbf1862c94"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border-2 border-[var(--duo-swan)] bg-background text-[var(--duo-eel)] hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] transition-all"
                     >
-                      The Venture Vault <ExternalLink className="size-3" />
+                      The Venture Vault
+                      <ExternalLink className="size-3" />
                     </a>
                     <a
                       href="https://stack-shade.github.io/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border-2 border-[var(--duo-swan)] bg-background text-[var(--duo-eel)] hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] transition-all"
                     >
-                      StackShade <ExternalLink className="size-3" />
+                      StackShade
+                      <ExternalLink className="size-3" />
                     </a>
                   </div>
                 </BlurFade>
