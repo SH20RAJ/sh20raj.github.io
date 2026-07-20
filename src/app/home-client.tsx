@@ -214,7 +214,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
               <BlurFade delay={BLUR_FADE_DELAY * 0.5}>
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
                   <span className="relative flex size-1.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--duo-feather)] opacity-75" />
                     <span className="relative inline-flex size-1.5 rounded-full bg-[var(--duo-feather)]" />
                   </span>
                   Available — remote, contract, agency overflow
@@ -246,14 +245,14 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     href="https://scriptly.store/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] p-4.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-95 active:scale-[0.98]"
+                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] px-4 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-[0.98]"
                   >
                     <ShoppingBag className="size-3.5 mr-2" />
                     Marketplace
                   </Link>
                   <Link
                     href="#projects"
-                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background dark:text-foreground p-4.5 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
+                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background px-4 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
                   >
                     See work
                   </Link>
@@ -266,25 +265,24 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   </a>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 3.2}>
-                  <div className="flex flex-wrap items-center gap-2 pt-5 border-t border-[var(--duo-swan)]/60">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mr-1">Ventures</span>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Ventures</span>
                     <a
                       href="https://app.notion.com/p/The-Venture-Vault-393cd0ed0c25801eb0daf8cbf1862c94"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border-2 border-[var(--duo-swan)] bg-background text-[var(--duo-eel)] hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] transition-all"
+                      className="text-xs font-semibold text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
                     >
-                      The Venture Vault
-                      <ExternalLink className="size-3" />
+                      The Venture Vault <ExternalLink className="size-3 inline ml-0.5" />
                     </a>
+                    <span className="text-[var(--duo-swan)]" aria-hidden="true">·</span>
                     <a
                       href="https://stack-shade.github.io/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border-2 border-[var(--duo-swan)] bg-background text-[var(--duo-eel)] hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] transition-all"
+                      className="text-xs font-semibold text-[var(--duo-eel)] hover:text-[var(--duo-feather)] transition-colors"
                     >
-                      StackShade
-                      <ExternalLink className="size-3" />
+                      StackShade <ExternalLink className="size-3 inline ml-0.5" />
                     </a>
                   </div>
                 </BlurFade>
@@ -302,10 +300,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
 
           {/* Stack strip */}
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-5 border-t border-[var(--duo-swan)]/60 text-[11px] text-muted-foreground font-bold uppercase tracking-widest">
-              <span className="text-[var(--duo-eel)]">Stack</span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 pt-4 border-t border-[var(--duo-swan)]/60 text-[11px] text-muted-foreground/80 font-medium uppercase tracking-widest">
+              <span className="text-[var(--duo-eel)] font-bold">Stack</span>
               {["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Node.js", "Cloudflare", "Vercel", "OpenAI", "Claude", "Gemini", "RAG", "MCP"].map((s) => (
-                <span key={s} className="text-muted-foreground/80">{s}</span>
+                <span key={s}>{s}</span>
               ))}
             </div>
           </BlurFade>
