@@ -280,13 +280,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Open source at scale — live GitHub stats */}
-      <section id="open-source" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <GitHubStats />
-        </BlurFade>
-      </section>
-
       {/* Featured Case Studies */}
       <section id="case-studies" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -433,6 +426,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </BlurFade>
       </section>
 
+      {/* Open source at scale — live GitHub stats */}
+      <section id="open-source" className="mx-auto w-full max-w-5xl px-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <GitHubStats />
+        </BlurFade>
+      </section>
+
       {/* Featured Projects */}
       <section id="projects" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -461,13 +461,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
             </BlurFade>
           ))}
         </div>
-      </section>
-
-      {/* Open source at scale — live GitHub stats */}
-      <section id="open-source" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <GitHubStats />
-        </BlurFade>
       </section>
 
       {/* Technical Depth */}
