@@ -63,6 +63,7 @@ export const DATA = {
     { href: "/projects", icon: "briefcase", label: "Projects" },
     { href: "https://github.com/SH20RAJ", icon: "github", label: "Open Source" },
     { href: "/resume.pdf", icon: "notebook", label: "Resume" },
+    { href: "https://github.com/SH20RAJ", icon: "github", label: "GitHub" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -193,12 +194,48 @@ export const DATA = {
       video: "",
     },
     {
+      title: "CodeVisualizer",
+      href: "https://github.com/SH20RAJ/codevisualizer",
+      dates: "2025",
+      active: true,
+      description:
+        "An open-source tool that turns LeetCode-style problems into animated, step-by-step visualizations. Built with a three-file contributor pattern so others can add new problems without touching the core engine.",
+      technologies: ["Next.js", "TypeScript", "Data Structures", "Open Source"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/codevisualizer",
+          icon: "github",
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Solus",
+      href: "https://solus.shraj.workers.dev",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "A privacy-first personal social network with no followers, no likes, and no algorithmic feed. Built on Hono, Cloudflare Workers, Neon, Drizzle, and R2 for a clean, end-to-end encrypted, single-user experience.",
+      technologies: ["Hono", "Cloudflare Workers", "Neon", "Drizzle", "R2", "TypeScript"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/solus",
+          icon: "github",
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "AlgoForge",
       href: "https://algoforge.shraj.workers.dev/",
       dates: "2026",
       active: true,
       description:
-        "A free, SEO-first coding interview preparation platform. Features pattern-based learning paths, curated collections (Blind 75, Grind 169), multi-language solutions, and original explanations optimized for search engines and study.",
+        "A self-hosted coding interview preparation platform built to make DSA practice searchable and structured at scale. Pattern-based learning paths, curated collections (Blind 75, Grind 169), multi-language solutions, and SEO-optimized content for organic discovery.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Cloudflare Workers"],
       links: [
         {
@@ -221,7 +258,7 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "Full-stack landing page for Dhwani, the music society of college. Built end to end with a studio/broadcast aesthetic, motion-rich hero carousel, scroll animations, marquees, and recording-console UI language for NAAD'26. Designed and engineered the frontend and backend with a heavy focus on UI/UX and micro-interactions.",
+        "Full-stack landing page for Dhwani, the music society of college. Built end to end with a studio/broadcast aesthetic, motion-rich hero carousel, scroll animations, marquees, and recording-console UI language for NAAD'26. Engineered the frontend and backend with a heavy focus on UI/UX and micro-interactions.",
       technologies: ["Next.js", "TypeScript", "UI/UX", "Framer Motion", "Animations", "Landing Page", "Tailwind CSS", "Cloudflare"],
       links: [
         {
@@ -239,7 +276,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "A central, open-source hub for high-performance Model Context Protocol (MCP) servers. Built with Hono and Bun, and deployed on Cloudflare Workers for maximum speed and reliability.",
+        "An open-source hub for high-performance Model Context Protocol (MCP) servers. Built with Hono and Bun, deployed on Cloudflare Workers, and designed to serve as a lightweight registry for MCP infrastructure.",
       technologies: ["TypeScript", "Hono", "Bun", "MCP", "Cloudflare Workers"],
       links: [
         {
@@ -262,7 +299,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Strategic intelligence platform tracking AI, markets, and power shifts. Deciphering complex trends for high-agency professionals, founders, and operators through deep analysis and tracking.",
+        "Strategic intelligence platform tracking AI, markets, and power shifts. Deciphers complex trends for high-agency professionals, founders, and operators through deep analysis and structured tracking.",
       technologies: ["Next.js", "Tailwind CSS", "AI", "PostgreSQL", "SEO"],
       links: [
         {
@@ -840,6 +877,14 @@ export const DATA = {
           icon: "globe",
         },
       ],
+    },
+    {
+      title: "BIT Mesra — B.Tech, Computer Science",
+      dates: "2022 – 2026",
+      location: "Ranchi, India",
+      description:
+        "Bachelor of Technology in Computer Science. Active in hackathons, open source, and product building.",
+      links: [],
     },
   ],
 };

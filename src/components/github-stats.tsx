@@ -360,9 +360,9 @@ export function GitHubStats() {
       icon: GitPullRequest,
     },
     {
-      label: "Stars earned",
-      value: formatCount(stats.totalStars),
-      icon: Star,
+      label: "External repos",
+      value: formatCount(stats.externalReposContributed),
+      icon: ExternalLink,
     },
     {
       label: "Followers",
@@ -495,6 +495,9 @@ export function GitHubStats() {
           <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
             Accepted pull requests in repos outside my own GitHub accounts, across{" "}
             <span className="font-bold text-foreground">{formatCount(stats.externalReposContributed)}</span> public repositories.
+          </p>
+          <p className="mt-2 text-[11px] font-bold text-[var(--duo-macaw)]">
+            Including a merged pull request into Google&apos;s own gemini-cli.
           </p>
           <div className="mt-4 max-h-80 space-y-2 overflow-y-auto pr-1">
             {stats.topExternalRepos.map((repo) => (

@@ -8,78 +8,19 @@ import { GitHubStats } from "@/components/github-stats";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { servicesHubData } from "@/data/services";
-import { monetization } from "@/data/monetization";
-import { featuredMarketplaceProducts } from "@/data/marketplace";
 import {
-  LayoutIcon,
-  CodeIcon,
-  BotIcon,
-  TrendingUpIcon,
-  UsersIcon,
-  RocketIcon,
   ArrowRightIcon,
   FileDown,
-  Palette,
   ExternalLink,
-  CheckCircle2,
-  Zap,
-  LayoutDashboard,
-  Briefcase,
-  ShoppingBag,
-  Send,
+  RocketIcon,
   Github,
   Linkedin,
   Award,
   Youtube,
+  Mail,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const BLUR_FADE_DELAY = 0.04;
-
-const hireMeServices = [
-  {
-    title: "Next.js Landing Pages",
-    icon: LayoutIcon,
-    bestFor: "SaaS, AI tools, launches, waitlists, agency clients",
-    deliverables: "Responsive page, CTA, copy structure, SEO basics, deployment",
-    timeline: "2–5 days",
-    accent: "feather",
-    href: "/landing-pages",
-  },
-  {
-    title: "SaaS MVPs & Dashboards",
-    icon: LayoutDashboard,
-    bestFor: "Founders needing product UI fast",
-    deliverables: "Dashboard UI, auth screens, settings, billing UI, API integration",
-    timeline: "1–3 weeks",
-    accent: "macaw",
-    href: "/saas-mvp",
-  },
-  {
-    title: "AI Tools & Automation",
-    icon: BotIcon,
-    bestFor: "AI apps, internal tools, agents, chatbots, workflows",
-    deliverables: "AI API integration, chat UI, RAG/MCP/API workflows, automation",
-    timeline: "3–10 days",
-    accent: "beetle",
-    href: "/ai-automation",
-  },
-  {
-    title: "Agency / Founder Overflow",
-    icon: Briefcase,
-    bestFor: "Agencies and early startups with too much frontend/product work",
-    deliverables: "Figma to Next.js, UI sections, responsive fixes, frontend bugs, client landing pages",
-    timeline: "Ongoing / sprint-based",
-    accent: "fox",
-    href: "#agencies",
-  },
-];
 
 const proofPosts = [
   {
@@ -143,19 +84,20 @@ const proofPosts = [
 const caseStudies = [
   {
     title: "Bitotsav 2026",
-    problem: "Large cultural fest needed reliable tech for registration, entry, teams, admin operations, and real-world crowd pressure.",
-    built: "Website, QR scanning, admin tools, teams, points/participation system, AI features, internal management, communication flow.",
-    constraint: "Internet-less zones, bad data, access issues, last-minute changes, security constraints, real-time crowd pressure.",
-    result: "Successfully supported ~5,000 participants and delivered the system under pressure.",
+    problem: "Bitotsav 2026 needed registration, QR-based entry, team formation, and live admin tooling for ~5,000 participants, much of it in zones with unreliable connectivity.",
+    built: "A Next.js/PostgreSQL/Redis stack — QR entry/validation designed to work despite patchy internet, a real-time admin panel, a points/leaderboard system, and OpenAI-powered participant features — plus running technical operations live during the event.",
+    constraint: "Low-connectivity scanning, last-minute scope changes, staying stable under real crowd load rather than demo conditions.",
+    result: "Held up for all ~5,000 participants with no major incident.",
     cta: "View LinkedIn Proof",
     href: "https://www.linkedin.com/posts/sh20raj_bitotsav-2026-what-a-journey-what-a-responsibility-activity-7442608760193216512-Y_nn",
     stack: ["Next.js", "PostgreSQL", "Redis", "OpenAI", "QR"],
   },
   {
     title: "30tools",
-    problem: "Users need fast no-login browser tools.",
+    problem: "Users need fast no-login browser tools without installing anything.",
     built: "A growing ecosystem of 140+ free browser/developer/creator tools with SEO-focused pages.",
-    result: "Reported millions of requests, hundreds of thousands of visits/page views, thousands of users, and strong Bing performance.",
+    constraint: "The service needed to stay fast and reliable as traffic climbed — millions of requests, hundreds of thousands of visits/page views, thousands of users, and strong Bing performance.",
+    result: "Reported 4.3M+ requests in 30 days, 213,790 visits, 329,860 page views, 2,134 registered users, 55,800+ Bing clicks, 500,000+ impressions, and 45,000 active users.",
     cta: "View Growth Proof",
     href: "https://www.linkedin.com/posts/sh20raj_indiedev-seo-growthhacking-activity-7392263918737498112-Adp_",
     stack: ["Next.js", "TypeScript", "SEO", "Browser APIs"],
@@ -163,7 +105,8 @@ const caseStudies = [
   {
     title: "Kishan AI",
     problem: "Farmers need accessible AI help without installing complex apps.",
-    built: "Telegram/Web/App AI assistant for crop disease diagnosis, weather, mandi prices, schemes, and regional voice.",
+    built: "A Telegram/Web/App AI assistant for crop disease diagnosis, weather, mandi prices, schemes, and regional voice — built to work reliably in low-bandwidth rural conditions.",
+    constraint: "Low-bandwidth access, regional language UX, unreliable mobile data in rural areas, and the need for zero-app-friction onboarding.",
     result: "AICTE Productization Fellowship 2025 Round 1 Top 500 shortlisted.",
     cta: "View APF Proof",
     href: "https://www.linkedin.com/posts/sh20raj_apf2025-yukti2025-aicte-activity-7396536427284447233-9KYM",
@@ -171,37 +114,15 @@ const caseStudies = [
   },
   {
     title: "IndexFast / Debo / MCP Pure",
-    problem: "Founders and indie builders need faster indexing, AI memory, and MCP infrastructure that just works.",
+    problem: "Founders and indie builders need faster indexing, AI memory, and MCP infrastructure that fits inside their existing workflows instead of adding another dashboard.",
     built: "IndexFast — MCP-native indexing for Google/Bing/IndexNow. Debo — AI memory engine over notes, links, audio. MCP Pure — open-source MCP servers on Cloudflare Workers.",
+    constraint: "Each product had to integrate cleanly with existing developer and creator workflows without requiring heavy onboarding or separate infrastructure.",
     result: "Three live AI/dev products shipped solo, used in real workflows.",
     cta: "View Projects",
     href: "/projects",
     stack: ["Next.js", "TypeScript", "MCP", "AI SDK", "Cloudflare"],
   },
 ];
-
-const accentClass: Record<string, { bg: string; text: string; ring: string }> = {
-  feather: {
-    bg: "bg-[var(--duo-feather)]/10",
-    text: "text-[var(--duo-feather)]",
-    ring: "border-[var(--duo-feather)]/30",
-  },
-  macaw: {
-    bg: "bg-[var(--duo-macaw)]/10",
-    text: "text-[var(--duo-macaw)]",
-    ring: "border-[var(--duo-macaw)]/30",
-  },
-  beetle: {
-    bg: "bg-[var(--duo-beetle)]/10",
-    text: "text-[var(--duo-beetle)]",
-    ring: "border-[var(--duo-beetle)]/30",
-  },
-  fox: {
-    bg: "bg-[var(--duo-fox)]/10",
-    text: "text-[var(--duo-fox)]",
-    ring: "border-[var(--duo-fox)]/30",
-  },
-};
 
 export function HomeClient({ DATA }: { DATA: any }) {
   return (
@@ -216,7 +137,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <span className="relative flex size-1.5">
                     <span className="relative inline-flex size-1.5 rounded-full bg-[var(--duo-feather)]" />
                   </span>
-                  Available — remote, contract, agency overflow
+                  CS @ BIT Mesra · Open-source contributor
                 </span>
               </BlurFade>
               <div className="space-y-2">
@@ -225,37 +146,17 @@ export function HomeClient({ DATA }: { DATA: any }) {
                     delay={BLUR_FADE_DELAY}
                     className="text-3xl font-extrabold tracking-tighter sm:text-4xl xl:text-5xl"
                     yOffset={8}
-                    text="Next.js & AI Product Developer"
+                    text="Shaswat Raj — Software Engineer & Open-Source Builder"
                   />
                 </h1>
-                <BlurFadeText
-                  className="max-w-[560px] text-lg md:text-xl font-extrabold tracking-tight text-[var(--duo-feather)]"
-                  delay={BLUR_FADE_DELAY * 1.3}
-                  text="for startups, agencies, and founders"
-                />
               </div>
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <p className="max-w-[540px] text-sm md:text-base text-muted-foreground leading-relaxed mx-auto md:mx-0">
-                  I ship landing pages, SaaS dashboards, AI tools, and MVPs for founders who need a working product, not a deck. Next.js, TypeScript, Cloudflare, and the AI SDKs.
+                  CS student at BIT Mesra with 500+ public repos and 300+ merged pull requests — including one into Google's own gemini-cli. I like building things end-to-end: AI agents, dev tools, MCP servers, and the occasional national fellowship shortlist.
                 </p>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 3}>
                 <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-1">
-                  <Link
-                    href="https://scriptly.store/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex h-9 items-center justify-center rounded-lg bg-[var(--duo-macaw)] px-4 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-[0.98]"
-                  >
-                    <ShoppingBag className="size-3.5 mr-2" />
-                    Marketplace
-                  </Link>
-                  <Link
-                    href="#projects"
-                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background px-4 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
-                  >
-                    See work
-                  </Link>
                   <a
                     href="/resume.pdf"
                     download
@@ -263,6 +164,21 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   >
                     <FileDown className="h-3.5 w-3.5" /> Resume
                   </a>
+                  <Link
+                    href="https://github.com/SH20RAJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background px-4 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
+                  >
+                    <Github className="size-3.5 mr-2" />
+                    GitHub
+                  </Link>
+                  <Link
+                    href="#projects"
+                    className="inline-flex h-9 items-center justify-center rounded-lg border border-[var(--duo-swan)] bg-background px-4 text-xs font-semibold uppercase tracking-wider text-[var(--duo-eel)] transition-all hover:bg-accent active:scale-[0.98]"
+                  >
+                    View projects
+                  </Link>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 3.2}>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
@@ -310,52 +226,6 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Hire Me For */}
-      <section id="hire-me-for" className="mx-auto w-full max-w-5xl px-6 space-y-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex items-end justify-between gap-3">
-            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              How I work with founders
-            </h2>
-            <Link
-              href="/services"
-              className="group hidden sm:inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline"
-            >
-              See full service list <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        </BlurFade>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {hireMeServices.map((service, id) => {
-            const Icon = service.icon;
-            const accent = accentClass[service.accent];
-            return (
-              <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
-                <Link href={service.href} className="group block h-full">
-                  <div className="rounded-xl border border-[var(--duo-swan)] bg-card p-5 hover:border-[var(--duo-feather)] hover:shadow-md transition-all duration-200 h-full flex flex-col">
-                    <div className={`size-10 rounded-lg ${accent.bg} flex items-center justify-center mb-4`}>
-                      <Icon className={`size-5 ${accent.text}`} />
-                    </div>
-                    <h3 className="font-extrabold text-base mb-1.5 group-hover:text-[var(--duo-feather)] transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed flex-1">
-                      {service.bestFor}
-                    </p>
-                    <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed">
-                      {service.deliverables}
-                    </p>
-                    <div className={`mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider ${accent.text}`}>
-                      <Zap className="size-3" /> {service.timeline}
-                    </div>
-                  </div>
-                </Link>
-              </BlurFade>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Proof from real shipped work */}
       <section id="proof" className="mx-auto w-full max-w-5xl px-6 space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -364,7 +234,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
               Proof, not promises
             </h2>
             <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-              Every claim links to the LinkedIn post where I documented the launch. No fake screenshots, no made-up metrics.
+              Real systems, used by real people — linked so you can check for yourself.
             </p>
           </div>
         </BlurFade>
@@ -511,6 +381,18 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 </div>
               </a>
               <a
+                href="https://codeforces.com/profile/sh20raj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 rounded-xl border border-[var(--duo-swan)] bg-background p-3 hover:border-[var(--duo-feather)] transition-colors"
+              >
+                <Github className="size-4 text-[var(--duo-eel)] dark:text-foreground shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-xs font-bold truncate">Codeforces</p>
+                  <p className="text-[10px] text-muted-foreground">Competitive programming</p>
+                </div>
+              </a>
+              <a
                 href="https://peerlist.io/sh20raj"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -564,7 +446,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
           </div>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {DATA.projects.slice(0, 6).map((project: any, id: number) => (
+          {DATA.projects.slice(0, 8).map((project: any, id: number) => (
             <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ProjectCard
                 href={project.href}
@@ -581,163 +463,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* For Agencies & Founders */}
-      <section id="agencies" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-10 space-y-6">
-            <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                For agencies and founder-led teams
-              </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
-                Plug me in for the work piling up: Figma → Next.js, dashboard screens, AI integrations, the page that needs to go out tomorrow.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2">
-              {[
-                "Figma to Next.js",
-                "Landing pages",
-                "Responsive fixes",
-                "Tailwind / shadcn UI sections",
-                "SaaS dashboard screens",
-                "API integrations",
-                "AI chatbot / demo integrations",
-                "SEO / programmatic pages",
-                "Bug fixes and deployment",
-                "MVP sprint execution",
-              ].map((s) => (
-                <div key={s} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="size-3.5 text-[var(--duo-feather)] shrink-0" />
-                  <span className="text-foreground">{s}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              White-label · NDA-friendly · Async · Remote-first
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/hire"
-                className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-              >
-                Send a small task
-              </Link>
-              <a
-                href="https://linkedin.com/in/sh20raj"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)]"
-              >
-                Talk on LinkedIn
-              </a>
-            </div>
-          </div>
-        </BlurFade>
-      </section>
-
-      {/* Marketplace cross-sell — lower-ticket digital products */}
-      <section id="marketplace-strip" className="mx-auto w-full max-w-5xl px-6 space-y-6">
+      {/* Open source at scale — live GitHub stats */}
+      <section id="open-source" className="mx-auto w-full max-w-5xl px-6">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="flex items-end justify-between gap-3">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Or buy a template instead
-              </h2>
-              <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-                Templates, playbooks, and workflow packs I&apos;ve battle-tested in real projects.
-              </p>
-            </div>
-            <Link
-              href="/marketplace"
-              className="group hidden md:inline-flex items-center gap-1 text-sm font-bold text-[var(--duo-feather)] hover:underline"
-            >
-              See all <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        </BlurFade>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featuredMarketplaceProducts().map((p, id) => (
-            <BlurFade key={p.name} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block h-full rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt={p.name} className="w-full h-40 object-cover" loading="lazy" />
-                <div className="p-4 space-y-2">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="font-bold text-sm group-hover:text-[var(--duo-feather)] transition-colors line-clamp-1">
-                      {p.name}
-                    </h3>
-                    <span className="text-sm font-extrabold text-[var(--duo-feather)] whitespace-nowrap">{p.price}</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">{p.description}</p>
-                  <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-[var(--duo-feather)]">
-                    <ShoppingBag className="size-3" /> Buy on Gumroad
-                  </div>
-                </div>
-              </a>
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-
-      {/* Inline lead-capture strip */}
-      <section id="quick-brief" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-8">
-            <div className="flex flex-col md:flex-row md:items-center gap-5">
-              <div className="flex-1 space-y-1">
-                <h3 className="text-lg md:text-xl font-extrabold tracking-tight">
-                  Have a project in mind?
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-                  Drop your email. I&apos;ll reply within a day with a fixed quote.
-                </p>
-              </div>
-              {monetization.web3formsAccessKey ? (
-                <form
-                  action="https://api.web3forms.com/submit"
-                  method="POST"
-                  className="flex flex-col sm:flex-row gap-2 w-full md:w-auto md:min-w-[360px]"
-                >
-                  <input type="hidden" name="access_key" value={monetization.web3formsAccessKey} />
-                  <input type="hidden" name="subject" value="Quick brief from sh20raj.github.io home" />
-                  <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="you@company.com"
-                    className="flex-1 h-10 rounded-full border-2 border-[var(--duo-swan)] bg-background px-4 text-sm focus:outline-none focus:border-[var(--duo-feather)] transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
-                  >
-                    <Send className="size-3.5" /> Get a quote
-                  </button>
-                </form>
-              ) : (
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <Link
-                    href="/hire"
-                    className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
-                  >
-                    <Send className="size-3.5" /> Send a brief
-                  </Link>
-                  <Link
-                    href="/book"
-                    className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] whitespace-nowrap"
-                  >
-                    Book a call
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
+          <GitHubStats />
         </BlurFade>
       </section>
 
@@ -784,52 +513,29 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </ul>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="mx-auto w-full max-w-5xl px-6 space-y-4">
+      {/* About */}
+      <section id="about" className="mx-auto w-full max-w-5xl px-6 space-y-4">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-2xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight">About</h2>
         </BlurFade>
-        <Accordion type="single" collapsible className="w-full space-y-2">
-          {[
-            {
-              q: "Do you work with international clients?",
-              a: "Yes. I work remotely with founders, agencies, and startups worldwide. I can communicate through LinkedIn, email, Discord, Slack, GitHub, or WhatsApp.",
-            },
-            {
-              q: "Can I start with a small task?",
-              a: "Yes. The best way to work with me is to start with a small paid task like a landing page section, dashboard screen, bug fix, AI API integration, or responsive UI fix.",
-            },
-            {
-              q: "What stack do you use?",
-              a: "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Node.js, APIs, PostgreSQL/Supabase where needed, Cloudflare, Vercel, AI SDK, OpenAI/Claude/Gemini APIs, RAG, MCP tools, and automation workflows.",
-            },
-            {
-              q: "What kind of clients are the best fit?",
-              a: "YC/startup founders, SaaS teams, AI startups, agencies, product studios, and builders who need fast product execution.",
-            },
-            {
-              q: "Can you work on an existing codebase?",
-              a: "Yes. I can work inside existing Next.js/React codebases, fix UI issues, build new pages, improve performance, integrate APIs, and ship features.",
-            },
-            {
-              q: "Are you available for contract or freelance?",
-              a: "Yes. I'm available for remote freelance, contract, internship, agency overflow, and founder-led product work.",
-            },
-          ].map((faq, id) => (
-            <AccordionItem
-              key={faq.q}
-              value={`faq-${id}`}
-              className="border-2 border-[var(--duo-swan)] rounded-xl px-4 bg-card shadow-[0_2px_0_var(--duo-swan)]"
-            >
-              <AccordionTrigger className="text-sm font-bold py-3 hover:no-underline hover:text-[var(--duo-feather)] transition-colors text-left">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground pb-4 leading-relaxed">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <BlurFade delay={BLUR_FADE_DELAY * 5.2}>
+          <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-8 shadow-[0_2px_0_var(--duo-swan)]">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
+              I'm a CS student at BIT Mesra. Most of what I build ends up open source or live in production — currently working on Solus, a privacy-first personal social network, and contributing to projects like Google's gemini-cli along the way. Always up for interesting problems, whether that's an internship, GSoC, or a hard bug.
+            </p>
+            <div className="mt-4">
+              <Link
+                href="https://codeforces.com/profile/sh20raj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--duo-feather)] hover:underline"
+              >
+                <Github className="size-3.5" />
+                Codeforces profile
+              </Link>
+            </div>
+          </div>
+        </BlurFade>
       </section>
 
       {/* Contact */}
@@ -837,31 +543,36 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <BlurFade delay={BLUR_FADE_DELAY * 6}>
           <div className="rounded-2xl bg-[var(--duo-eel)] text-white p-10 md:p-14 text-center space-y-5">
             <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl text-white max-w-xl mx-auto">
-              Want me to build something?
+              Want to see more, or just say hi?
             </h2>
             <p className="mx-auto max-w-[460px] text-zinc-400 text-sm leading-relaxed">
-              Book a 15-minute call, or send a brief. I reply within a day.
+              Looking to hire me for a project instead?{" "}
+              <Link href="/hire" className="font-semibold text-white underline hover:text-zinc-200">
+                Reach out
+              </Link>
+              .
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-1">
-              <Link
-                href="/book"
-                className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--duo-feather)] px-7 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
-              >
-                Book a call
-              </Link>
-              <Link
-                href="/hire"
-                className="inline-flex h-11 items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
-              >
-                Send a brief
-              </Link>
               <a
-                href="https://linkedin.com/in/sh20raj"
+                href="/resume.pdf"
+                download
+                className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-7 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+              >
+                <FileDown className="size-3.5" /> Resume
+              </a>
+              <Link
+                href="https://github.com/SH20RAJ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
               >
-                LinkedIn
+                <Github className="size-3.5" /> GitHub
+              </Link>
+              <a
+                href="mailto:sh20raj@gmail.com"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+              >
+                <Mail className="size-3.5" /> Email
               </a>
             </div>
           </div>
