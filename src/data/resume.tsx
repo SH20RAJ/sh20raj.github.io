@@ -28,9 +28,9 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "Next.js & AI Product Developer for Startups, Agencies, and Founders",
+    "CS student at BIT Mesra. Open-source contributor and solo builder.",
   summary:
-    "I'm Shaswat Raj, a full-stack developer and product builder from India. I build AI products, SaaS tools, developer utilities, indexing tools, content platforms, and automation systems. My strength is taking rough product ideas and turning them into working demos, MVPs, dashboards, APIs, and launch-ready websites quickly.\n\nI like working close to founders, solving unclear problems, experimenting fast, and shipping useful products in public. Coding since class 7, I've built 500+ projects, maintain 50+ open-source packages, have 45k+ followers on Dev.to, joined 4+ startups as Tech Lead, and actively run 20+ small projects with real user traction.",
+    "I'm Shaswat Raj, a CS student at BIT Mesra and open-source contributor. I build full products end-to-end: AI agents, dev tools, MCP servers, and large-scale web systems. My strength is taking a rough idea to a working system quickly — backend, frontend, deployment, and iteration.\n\n500+ public repositories, 300+ merged pull requests (including one into Google's own gemini-cli), and 50+ npm packages. I've shipped systems that handled real load at scale, from 5,000-participant cultural fests to million-request browser tool platforms. Coding since class 7, with 4+ years as a technical lead across startups and open-source projects.",
   avatarUrl: "/profile.jpg",
   skills: [
     "UI/UX Design",
@@ -60,10 +60,9 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: "home", label: "Home" },
-    { href: "/projects", icon: "briefcase", label: "Work" },
-    { href: "/services", icon: "wrench", label: "Services" },
-    { href: "/book", icon: "calendar", label: "Book Call" },
-    { href: "/marketplace", icon: "shopping-cart", label: "Marketplace" },
+    { href: "/projects", icon: "briefcase", label: "Projects" },
+    { href: "https://github.com/SH20RAJ", icon: "github", label: "Open Source" },
+    { href: "/resume.pdf", icon: "notebook", label: "Resume" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -73,7 +72,7 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/SH20RAJ",
         icon: "github",
-        navbar: true,
+        navbar: false,
       },
       GitHubDump: {
         name: "GitHub Dump",
@@ -153,7 +152,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Your Life's Memory Engine. An AI-powered product that captures useful context from notes, links, videos, audio, and conversations, then makes it searchable and reusable through a seamless AI chat interface.",
+        "An AI memory system that ingests notes, links, audio, and conversations, embeds them for retrieval, and surfaces relevant context through a chat interface — a personal RAG pipeline over everything you capture day to day. Built solo end-to-end: ingestion, vector search, and the agent layer on top.",
       technologies: ["Next.js", "TypeScript", "AI Agents", "AI SDK", "Voice Agent", "Vector Search", "Cloudflare", "Agentic Memory", "OpenAI"],
       links: [
         {
@@ -176,7 +175,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "The first MCP-native indexing platform. Stop waiting for Google to crawl your site. Index your URLs to Google, Bing, and IndexNow instantly from your AI IDE (Cursor or VS Code).",
+        "An MCP server that pushes URLs directly to Google, Bing, and IndexNow from inside your IDE instead of waiting on crawl schedules — built to explore what MCP-native tooling looks like for a real developer workflow.",
       technologies: ["Next.js", "TypeScript", "IndexNow API", "Bing API", "MCP"],
       links: [
         {

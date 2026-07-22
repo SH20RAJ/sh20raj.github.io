@@ -3,13 +3,13 @@ import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+  title: "Shaswat Raj — Software Engineer & Open-Source Builder",
   description:
-    "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
+    "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
   openGraph: {
-    title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+    title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
+      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
     url: DATA.url,
     siteName: DATA.name,
     images: [
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shaswat Raj — Next.js & AI Product Developer for Startups",
+    title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "Remote Next.js, TypeScript, AI, SaaS MVP, landing page, dashboard, and automation developer helping founders and agencies ship fast.",
+      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
     creator: "@SH20RAJ",
   },
 };
