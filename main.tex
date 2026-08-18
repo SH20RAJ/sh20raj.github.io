@@ -54,12 +54,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins to ensure strict 1-page fit
+% Adjust margins - balanced standard 1-page layout
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.6in}
-\addtolength{\textheight}{1.2in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -69,13 +69,13 @@
 
 % Sections formatting
 \titleformat{\section}{
-    \bfseries \vspace{-4pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+    \bfseries \vspace{-2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[1.5pt]} \vspace{-4pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-1.5pt}}
+    {#1 \vspace{-1pt}}
   }
 }
 
@@ -84,24 +84,24 @@
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
       \textit{\small #3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       #1 & {\color{dark-grey}\small #2}\vspace{1pt}\\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, topsep=1pt, itemsep=1.5pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
 
 \color{text-grey}
 
@@ -112,12 +112,15 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Shaswat Raj} \\ \vspace{4pt}
+    \textbf{\Huge Shaswat Raj} \\ \vspace{3pt}
     \small 
-    \faPhone* \hspace{2pt} \href{tel:+919508846600}{\myuline{+91 9508846600}} \hspace{3pt} $|$ \hspace{3pt}
-    \faEnvelope \hspace{2pt} \href{mailto:sh20raj@gmail.com}{\myuline{sh20raj@gmail.com}} \hspace{3pt} $|$ \hspace{3pt}
-    \faGlobe \hspace{2pt} \href{https://sh20raj.github.io}{\myuline{sh20raj.github.io}} \hspace{3pt} $|$ \hspace{3pt}
-    \faGithub \hspace{2pt} \href{https://github.com/sh20raj}{\myuline{github.com/sh20raj}} \hspace{3pt} $|$ \hspace{3pt}
+    \faPhone* \hspace{2pt} \href{tel:+919508846600}{\myuline{+91 9508846600}} \hspace{4pt} $|$ \hspace{4pt}
+    \faEnvelope \hspace{2pt} \href{mailto:sh20raj@gmail.com}{\myuline{sh20raj@gmail.com}} \hspace{4pt} $|$ \hspace{4pt}
+    \faMapMarker* \hspace{2pt} Ranchi, India
+    \\ \vspace{2pt}
+    \small
+    \faGlobe \hspace{2pt} \href{https://sh20raj.github.io}{\myuline{sh20raj.github.io}} \hspace{4pt} $|$ \hspace{4pt}
+    \faGithub \hspace{2pt} \href{https://github.com/sh20raj}{\myuline{github.com/sh20raj}} \hspace{4pt} $|$ \hspace{4pt}
     \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/sh20raj}{\myuline{linkedin.com/in/sh20raj}}
     \\ \vspace{-4pt}
 \end{center}
@@ -135,7 +138,7 @@
 
 %-----------SKILLS-----------
 \section{TECHNICAL SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
+ \begin{itemize}[leftmargin=0in, label={}, topsep=0pt, itemsep=0pt, parsep=0pt]
     \small{\item{
      \textbf{Languages} {: C++, Python, JavaScript (ES6+), TypeScript, SQL (PostgreSQL, MySQL), HTML5/CSS3} \vspace{1.5pt} \\
      \textbf{Frameworks \& Web} {: React, Next.js, Node.js, Express.js, Hono, Tailwind CSS, REST APIs, WebSockets} \vspace{1.5pt} \\
@@ -205,7 +208,7 @@
 
 %-----------ACHIEVEMENTS-----------
 \section{HONORS \& ACHIEVEMENTS}
- \begin{itemize}[leftmargin=0.15in]
+ \begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt, parsep=0pt, partopsep=0pt]
     \resumeItem{\textbf{10+ Hackathon Wins}: Placed 1st / Top Tier across 10+ national and regional hackathons for rapid software execution.}
     \resumeItem{\textbf{AICTE APF 2025 Top 500}: Selected in Top 500 teams across India for building AI agricultural solutions.}
     \resumeItem{\textbf{1M+ Monthly npm Downloads}: Authored open-source libraries actively adopted by thousands of developers globally.}
