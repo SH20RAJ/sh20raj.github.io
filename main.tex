@@ -54,12 +54,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Adjust margins to ensure strict 1-page fit
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.55in}
-\addtolength{\textheight}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -69,7 +69,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-    \bfseries \vspace{-3pt} \raggedright \large % header section
+    \bfseries \vspace{-4pt} \raggedright \large % header section
 }{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
 
 % Custom commands
@@ -99,7 +99,7 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
@@ -114,11 +114,11 @@
 \begin{center}
     \textbf{\Huge Shaswat Raj} \\ \vspace{4pt}
     \small 
+    \faPhone* \hspace{2pt} \href{tel:+919508846600}{\myuline{+91 9508846600}} \hspace{3pt} $|$ \hspace{3pt}
     \faEnvelope \hspace{2pt} \href{mailto:sh20raj@gmail.com}{\myuline{sh20raj@gmail.com}} \hspace{3pt} $|$ \hspace{3pt}
     \faGlobe \hspace{2pt} \href{https://sh20raj.github.io}{\myuline{sh20raj.github.io}} \hspace{3pt} $|$ \hspace{3pt}
     \faGithub \hspace{2pt} \href{https://github.com/sh20raj}{\myuline{github.com/sh20raj}} \hspace{3pt} $|$ \hspace{3pt}
-    \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/sh20raj}{\myuline{linkedin.com/in/sh20raj}} \hspace{3pt} $|$ \hspace{3pt}
-    \faMapMarker* \hspace{2pt} India
+    \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/sh20raj}{\myuline{linkedin.com/in/sh20raj}}
     \\ \vspace{-4pt}
 \end{center}
 
@@ -129,7 +129,7 @@
       {Birla Institute of Technology, Mesra}{Ranchi, India}
       {Bachelor of Technology (B.Tech) in Computer Science \& Engineering}{Expected Grad: May 2028}
       \resumeItemListStart
-        \resumeItem{\textbf{Coursework}: Data Structures \& Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, System Design, Computer Networks, Software Engineering.}
+        \resumeItem{\textbf{Coursework}: Data Structures \& Algorithms, Operating Systems, Database Management Systems, System Design, Computer Networks, Object-Oriented Programming, Software Engineering.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -140,7 +140,7 @@
      \textbf{Languages} {: C++, Python, JavaScript (ES6+), TypeScript, SQL (PostgreSQL, MySQL), HTML5/CSS3} \vspace{1.5pt} \\
      \textbf{Frameworks \& Web} {: React, Next.js, Node.js, Express.js, Hono, Tailwind CSS, REST APIs, WebSockets} \vspace{1.5pt} \\
      \textbf{Databases \& Cloud} {: PostgreSQL, MySQL, Redis, Cloudflare Workers, Docker, Git, GitHub Actions, GCP} \vspace{1.5pt} \\
-     \textbf{Core Competencies} {: Data Structures \& Algorithms, System Design, RAG \& Vector Search, Microservices, Web Performance}
+     \textbf{Core CS \& AI} {: Data Structures \& Algorithms, System Design, RAG \& Vector Search, Microservices, Web Performance}
     }}
  \end{itemize}
  \vspace{-6pt}
@@ -153,17 +153,17 @@
       {Bitotsav '26 (College Cultural Fest)}{Nov. 2025 -- Present}
       {Engineering Lead \& Core Architect}{Ranchi, India}
       \resumeItemListStart
-        \resumeItem{Architected and shipped the complete festival platform serving \textbf{5,000+ participants} with zero downtime under peak concurrent traffic.}
-        \resumeItem{Engineered \textbf{encrypted dynamic QR code validation}, anti-forgery entry verification, volunteer access controls, and real-time score tracking workflows.}
-        \resumeItem{Designed backend microservices and deployment strategy; presented technical architecture to college administration and professors.}
+        \resumeItem{Architected and shipped full-stack event platform serving \textbf{5,000+ participants} with zero downtime under peak load.}
+        \resumeItem{Engineered \textbf{encrypted dynamic QR code validation}, anti-forgery entry verification, admin panel, and real-time score tracking.}
+        \resumeItem{Designed high-concurrency backend architecture and presented technical specs to college leadership and professors.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Open Source Ecosystem}{2022 -- Present}
+      {Open Source Ecosystem \& Developer Tools}{2022 -- Present}
       {Maintainer \& Core Contributor}{Global}
       \resumeItemListStart
         \resumeItem{Authored and published \textbf{50+ npm packages} accumulating over \textbf{1M+ combined monthly downloads}.}
-        \resumeItem{Contributed merged pull requests to major repositories including \textbf{Google Gemini CLI} (\texttt{gemini-cli}) and AI infrastructure tools.}
+        \resumeItem{Contributed merged pull requests directly to \textbf{Google Gemini CLI} (\texttt{google-gemini/gemini-cli}) repository.}
         \resumeItem{Maintained 40+ high-impact open-source repositories with \textbf{15,000+ total GitHub contributions} and \textbf{300+ merged PRs}.}
       \resumeItemListEnd
 
@@ -174,13 +174,6 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{SopKit (30tools)} $|$ \emph{Next.js, TypeScript, Cloudflare Workers, Redis, SEO}}{2025}
-          \resumeItemListStart
-            \resumeItem{Built a suite of 460+ browser-based developer and utility tools; scaled platform to \textbf{4.3M+ monthly requests} and \textbf{45K+ active users}.}
-            \resumeItem{Optimized edge caching, bundle loading, and Core Web Vitals, maintaining sub-100ms request latency under heavy organic search traffic.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
           {\textbf{Debo -- AI Memory OS \& RAG Engine} $|$ \emph{Next.js, TypeScript, Vector Search, OpenAI, Cloudflare}}{2025}
           \resumeItemListStart
             \resumeItem{Developed a personal AI memory operating system transforming notes, voice, and documents into a searchable knowledge graph.}
@@ -188,9 +181,16 @@
           \resumeItemListEnd
 
       \resumeProjectHeading
+          {\textbf{SopKit (30tools)} $|$ \emph{Next.js, TypeScript, Cloudflare Workers, Redis, SEO}}{2025}
+          \resumeItemListStart
+            \resumeItem{Engineered 460+ browser-based developer utility tools; scaled platform to \textbf{4.3M+ monthly requests} and \textbf{45K+ active users}.}
+            \resumeItem{Optimized edge caching, asset delivery, and Core Web Vitals, maintaining sub-100ms request latency under high organic traffic.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
           {\textbf{Telegram Bot Automation Platform} $|$ \emph{Node.js, Telegram API, Cloudflare Workers, Redis}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Built high-performance backend microservices and automated Telegram bots serving \textbf{21K+ monthly active users}.}
+            \resumeItem{Built automated backend microservices and Telegram bot infrastructure serving \textbf{21K+ monthly active users}.}
             \resumeItem{Implemented media processing pipelines, AI assistant integrations, and low-latency API handlers for automated workflows.}
           \resumeItemListEnd
 
@@ -206,10 +206,10 @@
 %-----------ACHIEVEMENTS-----------
 \section{HONORS \& ACHIEVEMENTS}
  \begin{itemize}[leftmargin=0.15in]
-    \resumeItem{\textbf{10+ Hackathon Wins}: Placed 1st / Top Tier in 10+ national and regional hackathons for rapid product prototyping and execution.}
+    \resumeItem{\textbf{10+ Hackathon Wins}: Placed 1st / Top Tier across 10+ national and regional hackathons for rapid software execution.}
     \resumeItem{\textbf{AICTE APF 2025 Top 500}: Selected in Top 500 teams across India for building AI agricultural solutions.}
-    \resumeItem{\textbf{1M+ Monthly npm Downloads}: Created and maintained open-source packages widely adopted by web developers globally.}
-    \resumeItem{\textbf{45K+ Dev.to Followers}: Technical blogger sharing insights on full-stack architecture, web performance, and open source.}
+    \resumeItem{\textbf{1M+ Monthly npm Downloads}: Authored open-source libraries actively adopted by thousands of developers globally.}
+    \resumeItem{\textbf{45K+ Dev.to Followers}: Technical blogger publishing deep dives on web performance, open source, and system design.}
  \end{itemize}
 
 %-------------------------------------------
