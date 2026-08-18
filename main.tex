@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author : Shaswat Raj (@sh20raj)
+% Target : Software Engineering Internships (Google, Microsoft, Top Tech)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.55in}
+\addtolength{\textheight}{1.1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \bfseries \vspace{-3pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1.5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{\small #3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2}\vspace{1pt}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Shaswat Raj} \\ \vspace{4pt}
+    \small 
+    \faEnvelope \hspace{2pt} \href{mailto:sh20raj@gmail.com}{\myuline{sh20raj@gmail.com}} \hspace{3pt} $|$ \hspace{3pt}
+    \faGlobe \hspace{2pt} \href{https://sh20raj.github.io}{\myuline{sh20raj.github.io}} \hspace{3pt} $|$ \hspace{3pt}
+    \faGithub \hspace{2pt} \href{https://github.com/sh20raj}{\myuline{github.com/sh20raj}} \hspace{3pt} $|$ \hspace{3pt}
+    \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/sh20raj}{\myuline{linkedin.com/in/sh20raj}} \hspace{3pt} $|$ \hspace{3pt}
+    \faMapMarker* \hspace{2pt} India
+    \\ \vspace{-4pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Birla Institute of Technology, Mesra}{Ranchi, India}
+      {Bachelor of Technology (B.Tech) in Computer Science \& Engineering}{Expected Grad: May 2028}
+      \resumeItemListStart
+        \resumeItem{\textbf{Coursework}: Data Structures \& Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, System Design, Computer Networks, Software Engineering.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: C++, Python, JavaScript (ES6+), TypeScript, SQL (PostgreSQL, MySQL), HTML5/CSS3} \vspace{1.5pt} \\
+     \textbf{Frameworks \& Web} {: React, Next.js, Node.js, Express.js, Hono, Tailwind CSS, REST APIs, WebSockets} \vspace{1.5pt} \\
+     \textbf{Databases \& Cloud} {: PostgreSQL, MySQL, Redis, Cloudflare Workers, Docker, Git, GitHub Actions, GCP} \vspace{1.5pt} \\
+     \textbf{Core Competencies} {: Data Structures \& Algorithms, System Design, RAG \& Vector Search, Microservices, Web Performance}
+    }}
+ \end{itemize}
+ \vspace{-6pt}
+
+%-----------EXPERIENCE & LEADERSHIP-----------
+\section{EXPERIENCE \& TECHNICAL LEADERSHIP}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bitotsav '26 (College Cultural Fest)}{Nov. 2025 -- Present}
+      {Engineering Lead \& Core Architect}{Ranchi, India}
+      \resumeItemListStart
+        \resumeItem{Architected and shipped the complete festival platform serving \textbf{5,000+ participants} with zero downtime under peak concurrent traffic.}
+        \resumeItem{Engineered \textbf{encrypted dynamic QR code validation}, anti-forgery entry verification, volunteer access controls, and real-time score tracking workflows.}
+        \resumeItem{Designed backend microservices and deployment strategy; presented technical architecture to college administration and professors.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Open Source Ecosystem}{2022 -- Present}
+      {Maintainer \& Core Contributor}{Global}
+      \resumeItemListStart
+        \resumeItem{Authored and published \textbf{50+ npm packages} accumulating over \textbf{1M+ combined monthly downloads}.}
+        \resumeItem{Contributed merged pull requests to major repositories including \textbf{Google Gemini CLI} (\texttt{gemini-cli}) and AI infrastructure tools.}
+        \resumeItem{Maintained 40+ high-impact open-source repositories with \textbf{15,000+ total GitHub contributions} and \textbf{300+ merged PRs}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{FEATURED PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{SopKit (30tools)} $|$ \emph{Next.js, TypeScript, Cloudflare Workers, Redis, SEO}}{2025}
+          \resumeItemListStart
+            \resumeItem{Built a suite of 460+ browser-based developer and utility tools; scaled platform to \textbf{4.3M+ monthly requests} and \textbf{45K+ active users}.}
+            \resumeItem{Optimized edge caching, bundle loading, and Core Web Vitals, maintaining sub-100ms request latency under heavy organic search traffic.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Debo -- AI Memory OS \& RAG Engine} $|$ \emph{Next.js, TypeScript, Vector Search, OpenAI, Cloudflare}}{2025}
+          \resumeItemListStart
+            \resumeItem{Developed a personal AI memory operating system transforming notes, voice, and documents into a searchable knowledge graph.}
+            \resumeItem{Engineered Retrieval-Augmented Generation (RAG), vector similarity search, and real-time voice agent context retrieval.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Telegram Bot Automation Platform} $|$ \emph{Node.js, Telegram API, Cloudflare Workers, Redis}}{2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built high-performance backend microservices and automated Telegram bots serving \textbf{21K+ monthly active users}.}
+            \resumeItem{Implemented media processing pipelines, AI assistant integrations, and low-latency API handlers for automated workflows.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Kishan AI (AI Agricultural Assistant)} $|$ \emph{Python, OpenAI, Computer Vision, Telegram API}}{2025}
+          \resumeItemListStart
+            \resumeItem{Created an AI assistant offering computer-vision crop disease diagnosis, weather telemetry, and multilingual voice support.}
+            \resumeItem{Shortlisted among the \textbf{Top 500 teams nationwide} in the prestigious AICTE Atal Puraskar Fellowship (APF) 2025.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{HONORS \& ACHIEVEMENTS}
+ \begin{itemize}[leftmargin=0.15in]
+    \resumeItem{\textbf{10+ Hackathon Wins}: Placed 1st / Top Tier in 10+ national and regional hackathons for rapid product prototyping and execution.}
+    \resumeItem{\textbf{AICTE APF 2025 Top 500}: Selected in Top 500 teams across India for building AI agricultural solutions.}
+    \resumeItem{\textbf{1M+ Monthly npm Downloads}: Created and maintained open-source packages widely adopted by web developers globally.}
+    \resumeItem{\textbf{45K+ Dev.to Followers}: Technical blogger sharing insights on full-stack architecture, web performance, and open source.}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
