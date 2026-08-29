@@ -11,32 +11,39 @@ import {
   ExternalLink,
   Github,
   Mail,
+  Linkedin,
 } from "lucide-react";
 
 const proofPosts = [
   {
-    title: "Bitotsav 2026",
-    text: "Built the complete tech ecosystem for ~5,000 participants — QR entry, admin panel, points system, AI features.",
-    tech: ["Next.js", "PostgreSQL", "Redis", "OpenAI"],
+    title: "Google Gemini CLI — Core Contributor",
+    text: "Merged PR into Google's official repository (#20778). Threaded AbortSignal propagation across multi-turn chat compression requests, eliminating memory leaks and cancellation race conditions.",
+    tech: ["TypeScript", "Node.js", "Gemini API", "Open Source"],
+    href: "https://github.com/google-gemini/gemini-cli/pull/20778",
+  },
+  {
+    title: "Bitotsav 2026 — Tech Lead & Cloud Infrastructure",
+    text: "Architected high-concurrency event infrastructure serving ~5,000 live participants. Built offline-resilient QR access verification, low-latency Redis state caches, real-time leaderboard telemetry, and AI participant services.",
+    tech: ["Next.js", "PostgreSQL", "Redis", "OpenAI", "Cloudflare"],
     href: "https://www.linkedin.com/posts/sh20raj_bitotsav-2026-what-a-journey-what-a-responsibility-activity-7442608760193216512-Y_nn",
   },
   {
-    title: "Kishan AI — AICTE Top 500",
-    text: "AI assistant for farmers — crop diagnosis, weather, mandi prices. AICTE Productization Fellowship 2025 shortlisted.",
-    tech: ["AI", "Telegram", "Voice", "Computer Vision"],
-    href: "https://www.linkedin.com/posts/sh20raj_apf2025-yukti2025-aicte-activity-7396536427284447233-9KYM",
-  },
-  {
-    title: "30tools — 4.3M+ Requests",
-    text: "140+ free browser tools. 213K visits, 45K active users, 55K+ Bing clicks — grown through solo SEO.",
-    tech: ["Next.js", "TypeScript", "SEO"],
+    title: "30tools — Scaled to 4.3M+ Requests",
+    text: "High-performance developer utility platform engineered for sub-millisecond client-side execution. Scaled to 4.3M+ requests, 213K+ monthly active users, and 500K+ search impressions via programmatic SEO architecture.",
+    tech: ["Next.js", "TypeScript", "Web APIs", "Programmatic SEO"],
     href: "https://www.linkedin.com/posts/sh20raj_indiedev-seo-growthhacking-activity-7392263918737498112-Adp_",
   },
   {
-    title: "Sopplayer",
-    text: "Open-source HTML5 video player. 1.18M requests, 38GB bandwidth on jsDelivr.",
-    tech: ["JavaScript", "HTML5", "Open-source"],
-    href: "https://www.linkedin.com/posts/sh20raj_sopplayer-html5videoplayer-opensourcelove-activity-7279897143249715201-4gO6",
+    title: "Kishan AI — AICTE Productization Fellowship (Top 500)",
+    text: "Selected in Round 1 Top 500 nationally across India. Engineered multimodal AI for rural agriculture: offline-tolerant crop pathology vision models, regional voice synthesis, and real-time mandi pricing analytics.",
+    tech: ["AI / Computer Vision", "Voice Synthesis", "Telegram Bot API", "Python"],
+    href: "https://www.linkedin.com/posts/sh20raj_apf2025-yukti2025-aicte-activity-7396536427284447233-9KYM",
+  },
+  {
+    title: "IndexFast & MCP Pure — Agent Infrastructure",
+    text: "Engineered Model Context Protocol (MCP) servers on Cloudflare Workers and a multi-engine indexing pipeline for Google, Bing, and IndexNow protocols with sub-second propagation.",
+    tech: ["TypeScript", "Cloudflare Workers", "MCP Protocol", "API Design"],
+    href: "https://indexfast.co",
   },
 ];
 
@@ -54,10 +61,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
             <div className="flex-1 min-w-0">
               <h1 className="text-xl font-bold tracking-tight">Shaswat Raj</h1>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Software Engineer · CS @ BIT Mesra
+                Software Engineer · CS @ BIT Mesra · Open-Source Contributor
               </p>
               <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                500+ public repos, 300+ merged PRs — including one into Google&apos;s gemini-cli. I build AI agents, dev tools, and MCP servers.
+                500+ public repositories, 300+ merged PRs across the open-source ecosystem — including core contributions to <strong className="text-foreground font-semibold">Google&apos;s gemini-cli</strong>. Specializing in high-performance web systems, distributed tools, Model Context Protocol (MCP) infrastructure, and scalable AI agent architectures.
               </p>
               <div className="flex flex-wrap items-center gap-3 mt-4">
                 <a
@@ -75,6 +82,14 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 >
                   <Github className="size-4" /> GitHub
                 </Link>
+                <Link
+                  href="https://linkedin.com/in/sh20raj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
+                >
+                  <Linkedin className="size-4" /> LinkedIn
+                </Link>
                 <a
                   href="mailto:sh20raj@gmail.com"
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
@@ -87,10 +102,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Proof */}
+      {/* Proof / Key Engineering Highlights */}
       <section id="proof" className="py-10 border-b border-border">
         <div className="mx-auto w-full max-w-2xl px-6">
-          <h2 className="text-lg font-bold tracking-tight mb-5">Shipped work</h2>
+          <h2 className="text-lg font-bold tracking-tight mb-5">Engineering Highlights</h2>
           <div className="space-y-4">
             {proofPosts.map((post) => (
               <a
@@ -106,10 +121,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   </h3>
                   <ExternalLink className="size-3.5 text-muted-foreground shrink-0 mt-0.5" />
                 </div>
-                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
                   {post.text}
                 </p>
-                <div className="flex flex-wrap gap-1.5 mt-2.5">
+                <div className="flex flex-wrap gap-1.5 mt-3">
                   {post.tech.map((t) => (
                     <span
                       key={t}
@@ -132,11 +147,11 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Featured Projects */}
       <section id="projects" className="py-10 border-b border-border">
         <div className="mx-auto w-full max-w-2xl px-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold tracking-tight">Projects</h2>
+            <h2 className="text-lg font-bold tracking-tight">Featured Projects</h2>
             <Link
               href="/projects"
               className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -162,16 +177,32 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Skills */}
+      {/* Technical Depth / Skills */}
       <section id="skills" className="py-10 border-b border-border">
         <div className="mx-auto w-full max-w-2xl px-6">
-          <h2 className="text-lg font-bold tracking-tight mb-5">Skills</h2>
+          <h2 className="text-lg font-bold tracking-tight mb-5">Technical Depth</h2>
           <div className="space-y-4">
             {[
-              { category: "Frontend", skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-              { category: "Backend", skills: ["Node.js", "Express", "API Design", "Auth", "Database Modeling"] },
-              { category: "AI", skills: ["OpenAI", "Claude", "Gemini", "RAG", "MCP Tools", "AI SDK"] },
-              { category: "Infrastructure", skills: ["Cloudflare", "Vercel", "Docker", "GitHub Actions", "Edge Functions"] },
+              {
+                category: "Systems & Languages",
+                skills: ["TypeScript", "JavaScript", "Python", "C++", "Go", "SQL", "Bash / Shell"],
+              },
+              {
+                category: "Backend & Distributed Systems",
+                skills: ["Node.js", "Express", "PostgreSQL", "Redis", "Prisma", "Database Optimization", "WebSockets", "REST / GraphQL"],
+              },
+              {
+                category: "AI & Agentic Architectures",
+                skills: ["Model Context Protocol (MCP)", "Gemini API", "Claude API", "OpenAI", "RAG Pipelines", "Vector Search", "Multimodal Agents"],
+              },
+              {
+                category: "Cloud, Edge & Infrastructure",
+                skills: ["Cloudflare Workers / Edge", "Docker", "Vercel", "AWS", "GitHub Actions CI/CD", "Linux Server Admin"],
+              },
+              {
+                category: "Frontend & Performance",
+                skills: ["Next.js (App Router)", "React", "Tailwind CSS", "State Machines", "Web Vitals & Performance", "Programmatic SEO"],
+              },
             ].map((group) => (
               <div key={group.category}>
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
@@ -194,10 +225,10 @@ export function HomeClient({ DATA }: { DATA: any }) {
         </div>
       </section>
 
-      {/* Achievements */}
+      {/* Fellowships & Achievements */}
       <section id="hackathons" className="py-10 border-b border-border">
         <div className="mx-auto w-full max-w-2xl px-6">
-          <h2 className="text-lg font-bold tracking-tight mb-5">Achievements</h2>
+          <h2 className="text-lg font-bold tracking-tight mb-5">Honors &amp; Fellowships</h2>
           <div className="space-y-3">
             {DATA.hackathons.map((project: any) => (
               <div
@@ -215,7 +246,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                   <p className="text-sm font-medium">{project.title}</p>
                   <p className="text-xs text-muted-foreground">{project.dates}</p>
                   {project.description && (
-                    <p className="text-xs text-muted-foreground mt-0.5">{project.description}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{project.description}</p>
                   )}
                 </div>
               </div>
@@ -229,7 +260,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <div className="mx-auto w-full max-w-2xl px-6">
           <h2 className="text-lg font-bold tracking-tight mb-3">About</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            CS student at BIT Mesra. Most of what I build ends up open source or live in production. Currently working on Solus and contributing to projects like Google&apos;s gemini-cli.
+            I am a software engineer focused on building robust, scalable systems and developer tooling. With 500+ repositories and 300+ merged PRs across the global open-source ecosystem, I take pride in end-to-end craftsmanship — from low-level API design and fault-tolerant cloud backends to razor-sharp, accessible frontends. Whether optimizing edge latency, orchestrating AI agents, or shipping production software under live event pressure, I thrive on engineering excellence.
           </p>
         </div>
       </section>
@@ -239,9 +270,9 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <div className="mx-auto w-full max-w-2xl px-6 text-center">
           <h2 className="text-lg font-bold tracking-tight">Get in touch</h2>
           <p className="text-sm text-muted-foreground mt-2">
-            Open to internships, GSoC, or interesting problems.{" "}
+            Open to Software Engineering roles, internships, and high-impact distributed / AI systems engineering.{" "}
             <Link href="/hire" className="text-foreground underline underline-offset-4 hover:text-muted-foreground">
-              Hire me
+              Contact me
             </Link>
           </p>
           <div className="flex justify-center gap-4 mt-4">

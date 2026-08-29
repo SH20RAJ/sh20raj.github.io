@@ -1,125 +1,112 @@
-import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Startups | SH20RAJ",
-  description: "Showcasing my entrepreneurial journey, from failed experiments to running startups.",
+export const metadata: Metadata = {
+  title: "Startups & Ventures | Shaswat Raj",
+  description:
+    "Ventures and products built and launched by Shaswat Raj — from AI memory engines to MCP developer infrastructure.",
   alternates: {
     canonical: `${DATA.url}/startups`,
   },
+  openGraph: {
+    title: "Startups & Ventures | Shaswat Raj",
+    description:
+      "Ventures and products built and launched by Shaswat Raj — from AI memory engines to MCP developer infrastructure.",
+    url: `${DATA.url}/startups`,
+    siteName: "Shaswat Raj Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Startups & Ventures | Shaswat Raj",
+    description:
+      "Ventures and products built and launched by Shaswat Raj.",
+    creator: "@SH20RAJ",
+    images: ["/og.png"],
+  },
 };
-
-const BLUR_FADE_DELAY = 0.04;
 
 const startups = [
   {
     name: "Debo",
-    status: "Running",
-    description: "Your Life's Memory Engine. AI-powered product that captures context and makes it searchable.",
+    status: "Active",
+    description: "Personal AI memory engine. Captures multi-source context and provides instant semantic retrieval over life workflows.",
     link: "https://debo.life",
   },
   {
     name: "IndexFast",
-    status: "Running",
-    description: "The first MCP-native indexing platform. Index URLs to Google and Bing instantly from your IDE.",
+    status: "Active",
+    description: "MCP-native indexing engine. Indexes URLs to Google and Bing with real-time API integrations and IDE support.",
     link: "https://indexfast.co",
   },
   {
     name: "AlgoForge",
-    status: "Running",
-    description: "A free, SEO-first coding interview platform with pattern-based learning paths, roadmaps, and multi-language solutions.",
+    status: "Active",
+    description: "SEO-first algorithms and interview preparation platform featuring structured learning paths and multi-language solutions.",
     link: "https://algoforge.shraj.workers.dev/",
   },
   {
     name: "MCP Pure",
-    status: "Running",
-    description: "A central hub for high-performance Model Context Protocol (MCP) servers on Cloudflare Workers.",
+    status: "Active",
+    description: "High-performance Model Context Protocol (MCP) server ecosystem running on Cloudflare Workers edge runtime.",
     link: "https://mcppure.shraj.workers.dev/",
   },
   {
-    name: "Storix",
-    status: "Running",
-    description: "A modern, mobile-first, swipe-based text story platform with TikTok-style UX.",
-    link: "https://storix.linespedia.com/",
-  },
-  {
-    name: "Unstory",
-    status: "Running",
-    description: "Strategic intelligence platform tracking AI, markets, and power shifts for high-agency professionals.",
-    link: "https://unstory.app",
-  },
-  {
-    name: "SopKit",
-    status: "Running",
-    description: "A collection of fast, simple browser tools for developers and creators.",
+    name: "30tools",
+    status: "Active",
+    description: "Suite of 140+ client-side developer and creator utilities processing millions of operations with zero server telemetry.",
     link: "https://sopkit.github.io",
   },
 ];
 
 export default function StartupsPage() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <section id="startups">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-full bg-[var(--duo-fox)]/10 text-[var(--duo-fox)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                  Entrepreneurial Journey
+    <main className="flex flex-col min-h-[100dvh] pb-16">
+      <section className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+          >
+            <ArrowLeft className="size-3.5" /> Home
+          </Link>
+          <h1 className="text-xl font-bold tracking-tight">Startups &amp; Products</h1>
+          <p className="text-sm text-muted-foreground mt-1">
+            Independent software products engineered and shipped end-to-end.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="mx-auto w-full max-w-2xl px-6 space-y-4">
+          {startups.map((startup) => (
+            <a
+              key={startup.name}
+              href={startup.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-lg border border-border p-4 hover:bg-accent/50 transition-colors"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <h2 className="text-sm font-semibold group-hover:text-primary transition-colors">
+                    {startup.name}
+                  </h2>
+                  <span className="text-[10px] text-muted-foreground bg-accent px-1.5 py-0.5 rounded font-mono">
+                    {startup.status}
+                  </span>
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Startups & Ventures
-                </h1>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Building since Class 7th. Some thrived, some failed, all taught me invaluable lessons.
-                </p>
+                <ExternalLink className="size-3.5 text-muted-foreground shrink-0" />
               </div>
-            </div>
-          </BlurFade>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {startups.map((startup, id) => (
-              <BlurFade
-                key={startup.name}
-                delay={BLUR_FADE_DELAY * 2 + id * 0.05}
-              >
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-[0_2px_0_var(--duo-swan)]">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-semibold text-lg">{startup.name}</h3>
-                    <Badge variant={startup.status === "Running" ? "default" : "secondary"}>
-                      {startup.status}
-                    </Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {startup.description}
-                  </p>
-                  <Link href={startup.link} target="_blank" className="text-xs text-primary underline">
-                    View Project
-                  </Link>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <div className="rounded-2xl bg-[var(--duo-fox)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-fox)]/20">
-              <h3 className="text-xl font-bold">Interested in investing or collaborating?</h3>
-              <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                I'm always working on the next big idea. Check out my ideas repository or connect with me to discuss future ventures.
+              <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                {startup.description}
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild>
-                  <Link href="https://github.com/SH20RAJ/ideas">Browse Ideas Repo</Link>
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link href="mailto:sh20raj@gmail.com">Contact Me</Link>
-                </Button>
-              </div>
-            </div>
-          </BlurFade>
+            </a>
+          ))}
         </div>
       </section>
     </main>

@@ -1,33 +1,31 @@
 import ServicePageLayout from "@/components/service-page-layout";
 import { foundingEngineerConfig } from "@/data/services";
-import BlurFade from "@/components/magicui/blur-fade";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Founding Engineer & Technical Cofounder — Shaswat Raj",
+export const metadata: Metadata = {
+  title: "Founding Engineer & Technical Lead | Shaswat Raj",
   description:
-    "Work with Shaswat Raj as a founding engineer or technical builder for MVPs, AI tools, dashboards, and launch-ready products.",
+    "End-to-end technical execution for high-velocity startups. Architecting MVPs, AI platforms, distributed cloud backends, and responsive frontends.",
   alternates: { canonical: "https://sh20raj.github.io/founding-engineer" },
   openGraph: {
-    title: "Founding Engineer & Technical Cofounder — Shaswat Raj",
+    title: "Founding Engineer & Technical Lead | Shaswat Raj",
     description:
-      "Work with Shaswat Raj as a founding engineer or technical builder for MVPs, AI tools, dashboards, and launch-ready products.",
+      "End-to-end technical execution for high-velocity startups. Architecting MVPs, AI platforms, distributed cloud backends, and responsive frontends.",
     url: "https://sh20raj.github.io/founding-engineer",
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
-    card: "summary_large_image" as const,
-    title: "Founding Engineer & Technical Cofounder — Shaswat Raj",
+    card: "summary_large_image",
+    title: "Founding Engineer & Technical Lead | Shaswat Raj",
     description:
-      "Work with Shaswat Raj as a founding engineer or technical builder for MVPs, AI tools, dashboards, and launch-ready products.",
+      "End-to-end technical execution for high-velocity startups.",
     creator: "@SH20RAJ",
+    images: ["/og.png"],
   },
 };
-
-const BLUR_FADE_DELAY = 0.04;
 
 export default function FoundingEngineerPage() {
   return (
@@ -42,46 +40,25 @@ export default function FoundingEngineerPage() {
       relatedProjects={foundingEngineerConfig.relatedProjects}
       testimonials={foundingEngineerConfig.testimonials}
     >
-      <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <div className="inline-block rounded-full bg-[var(--duo-beetle)]/10 text-[var(--duo-beetle)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-              Best Fit
-            </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Is this right for you?
-            </h2>
-            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[700px] mx-auto">
-              I&apos;m selective about engagements. Here&apos;s what I look for in
-              a founding partner.
-            </p>
-          </div>
+      <div className="space-y-6">
+        <div>
+          <h2 className="text-lg font-bold tracking-tight">Partnership Criteria</h2>
+          <p className="text-sm text-muted-foreground mt-1">
+            Core principles for high-velocity, high-impact product collaboration.
+          </p>
         </div>
-      </BlurFade>
-      <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto">
-        {foundingEngineerConfig.bestFitCriteria?.map((criteria, id) => (
-          <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-            <div className="flex items-start gap-3 rounded-xl border-2 border-[var(--duo-swan)] bg-card p-4 shadow-[0_2px_0_var(--duo-swan)]">
-              <span className="inline-flex items-center justify-center size-8 rounded-full bg-[var(--duo-beetle)] text-white text-sm font-bold shrink-0">
+
+        <div className="space-y-3">
+          {foundingEngineerConfig.bestFitCriteria?.map((criteria, id) => (
+            <div key={id} className="flex items-start gap-3 rounded-lg border border-border p-4">
+              <span className="inline-flex items-center justify-center size-6 rounded-full bg-foreground text-background text-xs font-bold shrink-0 mt-0.5">
                 {id + 1}
               </span>
-              <p className="text-muted-foreground">{criteria}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{criteria}</p>
             </div>
-          </BlurFade>
-        ))}
-      </div>
-      <BlurFade delay={BLUR_FADE_DELAY * 7}>
-        <div className="rounded-2xl bg-[var(--duo-beetle)]/10 p-8 text-center space-y-4 border-2 border-[var(--duo-beetle)]/20 max-w-[800px] mx-auto">
-          <h3 className="text-xl font-bold">Have a startup idea?</h3>
-          <p className="text-sm text-muted-foreground max-w-md mx-auto">
-            Tell me about your idea, market, and what you need. I&apos;ll get
-            back to you within 24 hours if it looks like a good fit.
-          </p>
-          <Button asChild>
-            <Link href="mailto:sh20raj@gmail.com">Pitch Me Your Startup</Link>
-          </Button>
+          ))}
         </div>
-      </BlurFade>
+      </div>
     </ServicePageLayout>
   );
 }

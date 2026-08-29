@@ -1,78 +1,80 @@
-import BlurFade from "@/components/magicui/blur-fade";
-import { MarketplaceBanner } from "@/components/marketplace-banner";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Script from "next/script";
-import {
-  ExternalLinkIcon,
-  ShoppingCartIcon,
-  CreditCardIcon,
-} from "lucide-react";
-
-export const metadata = {
-  title: "Marketplace — Premium Digital Products by Shaswat Raj",
-  description: "Landing page templates, SaaS guides, AI developer tools, and launch kits. Buy on Gumroad or pay via PayPal.",
-};
-
-const BLUR_FADE_DELAY = 0.04;
-
+import { ExternalLink, ShoppingCart, CreditCard } from "lucide-react";
 import { marketplaceProducts as products } from "@/data/marketplace";
+import type { Metadata } from "next";
 
-const tweetIds = [
-  "2056624911373021437",
-  "2056211450071490862",
-  "2056232623673074108",
-  "2056280867430142035",
-];
+export const metadata: Metadata = {
+  title: "Marketplace — Developer Templates, Tools & Assets | Shaswat Raj",
+  description:
+    "Production-ready Next.js templates, AI developer tools, system architectures, and engineering playbooks built by Shaswat Raj.",
+  alternates: {
+    canonical: "https://sh20raj.github.io/marketplace",
+  },
+  openGraph: {
+    type: "website",
+    title: "Marketplace — Developer Templates, Tools & Assets | Shaswat Raj",
+    description:
+      "Production-ready Next.js templates, AI developer tools, system architectures, and engineering playbooks.",
+    url: "https://sh20raj.github.io/marketplace",
+    siteName: "Shaswat Raj Portfolio",
+    locale: "en_US",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketplace — Developer Templates, Tools & Assets | Shaswat Raj",
+    description:
+      "Production-ready Next.js templates, AI developer tools, system architectures, and engineering playbooks.",
+    creator: "@SH20RAJ",
+    images: ["/og.png"],
+  },
+};
 
 export default function MarketplacePage() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-16 py-12">
-      <MarketplaceBanner />
+    <main className="flex flex-col min-h-[100dvh] pb-16">
       {/* Header */}
-      <section id="header" className="mx-auto w-full max-w-5xl px-6 text-center space-y-4">
-        <BlurFade delay={BLUR_FADE_DELAY}>
-          <div className="inline-block rounded-full bg-[var(--duo-feather)]/10 text-[var(--duo-feather)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-            Digital Products
-          </div>
-          <h1 className="text-3xl font-extrabold tracking-tighter sm:text-5xl mt-3">
-            Ship faster with premium assets
-          </h1>
-          <p className="mx-auto max-w-[500px] text-muted-foreground text-sm md:text-base leading-relaxed mt-3">
-            Templates, guides, and tools to launch your next product.
+      <section className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <h1 className="text-xl font-bold tracking-tight">Marketplace</h1>
+          <p className="text-sm text-muted-foreground mt-1">
+            Production-ready templates, AI developer assets, and engineering playbooks.
           </p>
-        </BlurFade>
+        </div>
       </section>
 
-      {/* Products from Gumroad */}
-      <section id="products" className="mx-auto w-full max-w-5xl px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {products.map((product, id) => (
-            <BlurFade key={product.name} delay={BLUR_FADE_DELAY * 2 + id * 0.05}>
-              <div className="group rounded-xl border-2 border-[var(--duo-swan)] bg-card overflow-hidden shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                <div className="aspect-[16/10] overflow-hidden">
+      {/* Products */}
+      <section className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {products.map((product) => (
+              <div
+                key={product.name}
+                className="group rounded-lg border border-border overflow-hidden hover:bg-accent/30 transition-colors flex flex-col"
+              >
+                <div className="aspect-[16/10] overflow-hidden border-b border-border">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
                 <div className="p-4 flex flex-col flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-bold text-sm leading-tight group-hover:text-[var(--duo-feather)] transition-colors line-clamp-1">
-                      {product.name}
-                    </h3>
-                    <span className="text-sm font-extrabold text-[var(--duo-feather)] ml-2 whitespace-nowrap">
-                      {product.price}
-                    </span>
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-medium text-sm truncate">{product.name}</h3>
+                    <span className="text-xs font-semibold whitespace-nowrap">{product.price}</span>
                   </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1">
+                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2 leading-relaxed flex-1">
                     {product.description}
                   </p>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+                  <div className="flex flex-wrap gap-1.5 mt-3 mb-3">
                     {product.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] font-bold uppercase tracking-wider text-[var(--duo-feather)] bg-[var(--duo-feather)]/10 px-2 py-0.5 rounded-full">
+                      <span
+                        key={tag}
+                        className="text-[10px] text-muted-foreground bg-accent px-2 py-0.5 rounded"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -80,116 +82,77 @@ export default function MarketplacePage() {
                   <Link
                     href={product.url}
                     target="_blank"
-                    className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--duo-feather)] w-full text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-1.5"
+                    className="inline-flex items-center justify-center gap-1.5 h-8 rounded-md bg-foreground text-background text-xs font-medium hover:bg-foreground/90 transition-colors w-full"
                   >
-                    <ShoppingCartIcon className="size-3.5" /> Buy on Gumroad
+                    <ShoppingCart className="size-3" /> Buy on Gumroad
                   </Link>
                 </div>
               </div>
-            </BlurFade>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Gumroad store link */}
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="text-center mt-6">
+          <div className="mt-6 text-center">
             <Link
               href="https://sh20raj.gumroad.com/"
               target="_blank"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--duo-feather)] hover:underline"
+              className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              View all on Gumroad <ExternalLinkIcon className="size-3.5" />
+              All products on Gumroad <ExternalLink className="size-3" />
             </Link>
           </div>
-        </BlurFade>
+        </div>
       </section>
 
-      {/* PayPal for international */}
-      <section id="paypal" className="mx-auto w-full max-w-5xl px-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-          <div className="rounded-xl border-2 border-[var(--duo-macaw)]/30 bg-[var(--duo-macaw)]/5 p-6 text-center space-y-3">
-            <div className="flex items-center justify-center gap-2">
-              <CreditCardIcon className="size-5 text-[var(--duo-macaw)]" />
-              <h3 className="font-bold text-sm">International? Pay via PayPal</h3>
+      {/* Alternative Payment Notice */}
+      <section className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <div className="rounded-lg border border-border p-4 space-y-2">
+            <div className="flex items-center gap-2">
+              <CreditCard className="size-4 text-muted-foreground" />
+              <h3 className="text-sm font-medium">Alternative Payment (International)</h3>
             </div>
-            <p className="text-xs text-muted-foreground max-w-md mx-auto">
-              If Gumroad doesn&apos;t work in your country, you can pay via PayPal or Razorpay. Email a screenshot to sh20raj@gmail.com — I&apos;ll send you access personally.
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              If Gumroad isn&apos;t supported in your region, PayPal or Razorpay can be used directly. Email a receipt screenshot to{" "}
+              <a href="mailto:sh20raj@gmail.com" className="text-foreground underline">
+                sh20raj@gmail.com
+              </a>{" "}
+              for immediate manual provisioning.
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex gap-3 pt-1">
               <Link
                 href="https://paypal.me/sh20raj"
                 target="_blank"
-                className="inline-flex h-9 items-center justify-center rounded-full border-2 border-[var(--duo-macaw)] bg-[var(--duo-macaw)] px-5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-1.5"
+                className="text-xs font-medium text-foreground underline underline-offset-4 hover:text-muted-foreground"
               >
-                <CreditCardIcon className="size-3.5" /> PayPal
+                PayPal
               </Link>
               <Link
                 href="https://razorpay.me/@iamsh"
                 target="_blank"
-                className="inline-flex h-9 items-center justify-center rounded-full border-2 border-[var(--duo-macaw)] bg-transparent px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-macaw)] transition-all hover:bg-[var(--duo-macaw)]/10 active:translate-y-1 gap-1.5"
+                className="text-xs font-medium text-foreground underline underline-offset-4 hover:text-muted-foreground"
               >
-                <CreditCardIcon className="size-3.5" /> Razorpay
+                Razorpay
               </Link>
             </div>
           </div>
-        </BlurFade>
-      </section>
-
-      {/* Landing Page Templates from Twitter */}
-      <section id="templates" className="mx-auto w-full max-w-5xl px-6 space-y-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <h2 className="text-xl font-extrabold tracking-tight text-center">Landing Page Templates</h2>
-        </BlurFade>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            "2056211450071490862",
-            "2056232623673074108",
-            "2056624911373021437",
-            "2056280867430142035"
-          ].map((id, index) => (
-            <BlurFade key={id} delay={BLUR_FADE_DELAY * 4.5 + index * 0.05} className="flex flex-col w-full justify-start items-center">
-              <blockquote className="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
-                <a href={`https://twitter.com/ShaswatBuilds/status/${id}`}></a>
-              </blockquote>
-            </BlurFade>
-          ))}
-          <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
         </div>
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="text-center">
-            <a
-              href="https://twitter.com/ShaswatBuilds"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--duo-feather)] hover:underline"
-            >
-              Follow @ShaswatBuilds for more <ExternalLinkIcon className="size-3.5" />
-            </a>
-          </div>
-        </BlurFade>
       </section>
 
-      {/* CTA */}
-      <section id="cta" className="mx-auto w-full max-w-5xl px-6 pb-16">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="relative overflow-hidden rounded-2xl bg-[var(--duo-feather)] p-10 text-center text-white">
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 size-48 rounded-full bg-white/10 blur-2xl" />
-            <div className="relative z-10 space-y-4">
-              <h3 className="text-2xl font-extrabold text-white">Need a custom build?</h3>
-              <p className="mx-auto max-w-[400px] text-white/80 text-sm">
-                I also build custom landing pages and SaaS MVPs tailored to your goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 pt-2">
-                <Link href="/services" className="inline-flex h-10 items-center justify-center rounded-full bg-white px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none">
-                  View Services
-                </Link>
-                <Link href="mailto:sh20raj@gmail.com" className="inline-flex h-10 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-6 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/20 active:translate-y-1">
-                  Contact Me
-                </Link>
+      {/* Templates Preview */}
+      <section className="py-10">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <h2 className="text-lg font-bold tracking-tight mb-4">Template Demonstrations</h2>
+          <div className="space-y-4">
+            {["2056211450071490862", "2056232623673074108"].map((id) => (
+              <div key={id} className="w-full flex justify-center">
+                <blockquote className="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
+                  <a href={`https://twitter.com/ShaswatBuilds/status/${id}`}></a>
+                </blockquote>
               </div>
-            </div>
+            ))}
+            <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
           </div>
-        </BlurFade>
+        </div>
       </section>
     </main>
   );
