@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { StickyCTA } from "@/components/sticky-cta";
+
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ResumeProvider } from "@/lib/resume-context";
@@ -184,17 +184,16 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(var(--duo-swan)_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff10_1px,transparent_1px)] opacity-40"></div>
-        <div className="fixed inset-0 -z-10 h-full w-full bg-gradient-to-tr from-[var(--duo-feather)]/5 via-transparent to-[var(--duo-macaw)]/5"></div>
+
         <ThemeProvider attribute="class" defaultTheme="light">
           <ResumeProvider>
             <TooltipProvider delayDuration={0}>
               <Navbar />
-              <main className="pt-14">
+              <main className="pt-12">
                 {children}
               </main>
               <Footer />
-              <StickyCTA />
+
             </TooltipProvider>
           </ResumeProvider>
         </ThemeProvider>

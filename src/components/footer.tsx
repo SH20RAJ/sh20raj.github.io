@@ -1,33 +1,22 @@
 import { DATA } from "@/data/resume";
-import { IconRenderer } from "@/components/icon-renderer";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-[var(--duo-swan)] py-12 px-6">
-      <div className="mx-auto max-w-5xl flex flex-col items-center gap-6">
-        <div className="flex flex-wrap justify-center gap-3">
-          {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <Link
-              key={name}
-              href={social.url}
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "sm" }),
-                "flex items-center gap-1.5 text-[var(--duo-wolf)] hover:text-[var(--duo-feather)] text-xs"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconRenderer icon={social.icon} className="size-3.5" />
-              <span className="font-medium">{name}</span>
-            </Link>
-          ))}
+    <footer className="border-t border-border py-6 px-6">
+      <div className="mx-auto max-w-2xl flex items-center justify-between text-xs text-muted-foreground">
+        <p>&copy; {new Date().getFullYear()} {DATA.name}</p>
+        <div className="flex items-center gap-4">
+          <Link href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+            GitHub
+          </Link>
+          <Link href="https://linkedin.com/in/sh20raj" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+            LinkedIn
+          </Link>
+          <Link href="https://x.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+            X
+          </Link>
         </div>
-        <p className="text-center text-xs text-[var(--duo-wolf)]">
-          &copy; {new Date().getFullYear()} {DATA.name}
-        </p>
       </div>
     </footer>
   );

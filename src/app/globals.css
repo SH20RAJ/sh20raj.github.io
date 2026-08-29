@@ -211,39 +211,7 @@ code > [data-line]::before { counter-increment: line; content: counter(line); di
 code[data-line-numbers-max-digits="2"] > [data-line]::before { width: 2rem; }
 code[data-line-numbers-max-digits="3"] > [data-line]::before { width: 3rem; }
 
-/* ==========================================================================
-   Clean & Minimal UI - Custom Overrides to bypass legacy 3D/bulky components
-   ========================================================================== */
-
-/* Transform 3D active translations into standard clean hover and active scales */
-[class*="active:translate-y"],
-.active\:translate-y-\[5px\]:active,
-.active\:translate-y-1:active,
-.active\:translate-y-0\.5:active {
-  transform: scale(0.98) !important;
-  transition: transform 0.1s ease-in-out !important;
-}
-
-/* Convert all custom 3D offset shadows to modern soft drop shadows */
-[class*="shadow-[0_2px_0_"],
-[class*="shadow-[0_3px_0_"],
-[class*="shadow-[0_4px_0_"],
-[class*="shadow-[0_5px_0_"] {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.02) !important;
-}
-
-/* Remove chunky active shadows */
-[class*="active:shadow-none"]:active {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
-}
-
-/* Soften all component borders from 2px to 1px */
-.border-2 {
-  border-width: 1px !important;
-}
-
-/* Ensure beautiful modern inputs across the site */
-input, textarea, select {
-  border-width: 1px !important;
-  box-shadow: none !important;
+/* Clean & Minimal UI */
+::selection {
+  background-color: hsl(var(--primary) / 0.15);
 }

@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Github, Star, GitPullRequest, Users, ArrowRightIcon, Activity, Boxes, ExternalLink } from "lucide-react";
+import { Github, GitPullRequest, ExternalLink } from "lucide-react";
 
 const GH_USER = "sh20raj";
 const CACHE_KEY = "gh-stats-v2";
-const CACHE_TTL_MS = 1000 * 60 * 60 * 12; // 12h
+const CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const OWN_REPO_OWNERS = new Set(["sh20raj", "sh20raj-dump"]);
 
 interface ExternalContribution {
@@ -33,8 +33,6 @@ interface MergedPullRequestData {
   topExternalRepos: ExternalRepoSummary[];
 }
 
-// Baseline figures shown instantly (so first paint isn't empty).
-// These are conservative and overwritten as soon as the live API responds.
 const BASELINE = {
   publicRepos: 500,
   followers: 800,
@@ -55,11 +53,11 @@ const BASELINE = {
       number: 228,
     },
     {
-      repo: "corsairdev/corsair",
-      title: "feat: add Zendesk ticketing integration",
-      url: "https://github.com/corsairdev/corsair/pull/224",
-      mergedAt: "2026-05-24T15:03:47Z",
-      number: 224,
+      repo: "google-gemini/gemini-cli",
+      title: "fix(core): thread AbortSignal to chat compression requests",
+      url: "https://github.com/google-gemini/gemini-cli/pull/20778",
+      mergedAt: "2026-03-25T17:12:27Z",
+      number: 20778,
     },
     {
       repo: "mofa-org/mofa",
@@ -68,13 +66,6 @@ const BASELINE = {
       mergedAt: "2026-04-12T15:26:43Z",
       number: 1594,
     },
-    {
-      repo: "google-gemini/gemini-cli",
-      title: "fix(core): thread AbortSignal to chat compression requests (#20405)",
-      url: "https://github.com/google-gemini/gemini-cli/pull/20778",
-      mergedAt: "2026-03-25T17:12:27Z",
-      number: 20778,
-    },
   ] as ExternalContribution[],
   topExternalRepos: [
     {
@@ -82,40 +73,21 @@ const BASELINE = {
       url: "https://github.com/ArticlePlanet/articleplanet.github.io",
       count: 23,
       latestMergedAt: "2024-02-13T13:10:44Z",
-      sampleTitles: ["Bug removed from new.js", "Readme UPDATE", "new"],
+      sampleTitles: ["Bug removed from new.js"],
     },
     {
       repo: "mofa-org/mofa",
       url: "https://github.com/mofa-org/mofa",
       count: 8,
       latestMergedAt: "2026-04-12T15:26:43Z",
-      sampleTitles: [
-        "refactor(foundation): add non_exhaustive to Backoff and CircuitState",
-        "refactor(kernel): add #[non_exhaustive] to public enums",
-        "fix(foundation): replace unwrap() with proper error handling in cron schedule parsing",
-      ],
-    },
-    {
-      repo: "unstory-app/sketchflow",
-      url: "https://github.com/unstory-app/sketchflow",
-      count: 8,
-      latestMergedAt: "2025-10-31T13:38:19Z",
-      sampleTitles: [
-        "Add Cloudflare configuration to .env.example",
-        "Clean up .gitignore by removing empty line",
-        "Add Cloudflare configuration to .env.example",
-      ],
+      sampleTitles: ["refactor(foundation): add non_exhaustive to Backoff and CircuitState"],
     },
     {
       repo: "corsairdev/corsair",
       url: "https://github.com/corsairdev/corsair",
       count: 3,
       latestMergedAt: "2026-05-29T00:36:39Z",
-      sampleTitles: [
-        "feat: add Bluesky integration plugin",
-        "feat: add Zendesk ticketing integration",
-        "feat(studio): add schema-driven operation forms",
-      ],
+      sampleTitles: ["feat: add Bluesky integration plugin"],
     },
   ] as ExternalRepoSummary[],
 };
@@ -249,7 +221,6 @@ async function fetchMergedPullRequests(): Promise<MergedPullRequestData> {
 }
 
 async function fetchContributions(): Promise<{ lastYear: number; allTime: number }> {
-  // jogruber's free, no-auth contribution API: returns total.{lastYear, 2024, 2023, ...}
   const r = await fetch(`https://github-contributions-api.jogruber.de/v4/${GH_USER}?y=all`);
   if (!r.ok) return { lastYear: 0, allTime: 0 };
   const j = await r.json();
@@ -276,11 +247,6 @@ function formatCount(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k+`;
   if (n >= 100) return `${Math.floor(n / 50) * 50}+`;
   return String(n);
-}
-
-function formatMonthYear(value: string): string {
-  if (!value) return "Merged";
-  return new Intl.DateTimeFormat("en", { month: "short", year: "numeric" }).format(new Date(value));
 }
 
 export function GitHubStats() {
@@ -343,253 +309,73 @@ export function GitHubStats() {
     };
   }, []);
 
-  const tiles = [
-    {
-      label: "All-time contributions",
-      value: formatCount(stats.totalContributionsAllTime),
-      icon: Activity,
-    },
-    {
-      label: "Public repos",
-      value: formatCount(stats.publicRepos),
-      icon: Boxes,
-    },
-    {
-      label: "PRs merged",
-      value: formatCount(stats.prsMerged),
-      icon: GitPullRequest,
-    },
-    {
-      label: "External repos",
-      value: formatCount(stats.externalReposContributed),
-      icon: ExternalLink,
-    },
-    {
-      label: "Followers",
-      value: formatCount(stats.followers),
-      icon: Users,
-    },
-    {
-      label: "Last 12 mo.",
-      value: formatCount(stats.totalContributionsLastYear),
-      icon: Activity,
-    },
+  const stats_row = [
+    { label: "Contributions", value: formatCount(stats.totalContributionsAllTime) },
+    { label: "Repos", value: formatCount(stats.publicRepos) },
+    { label: "PRs merged", value: formatCount(stats.prsMerged) },
+    { label: "Followers", value: formatCount(stats.followers) },
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-            Open source, at real scale
-          </h2>
-          <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-            Live from the GitHub API — hand-built repos, real PRs, real history.
-          </p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <a
-            href={`https://gsoc-espionage.vercel.app/?user=${GH_USER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
+    <div className="space-y-5">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-bold tracking-tight">Open source</h2>
+        <a
+          href={`https://github.com/${GH_USER}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <Github className="size-4" /> GitHub
+        </a>
+      </div>
+
+      {/* Stats row */}
+      <div className="grid grid-cols-4 gap-3">
+        {stats_row.map((t) => (
+          <div key={t.label}>
+            <p className="text-xl font-bold tracking-tight">{t.value}</p>
+            <p className="text-xs text-muted-foreground">{t.label}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Languages */}
+      <div className="flex flex-wrap gap-1.5">
+        {stats.topLanguages.map((lang) => (
+          <span
+            key={lang}
+            className="text-xs text-muted-foreground bg-accent px-2 py-0.5 rounded"
           >
-            OSS contributions <ArrowRightIcon className="size-3.5" />
-          </a>
-          <a
-            href={`https://github.com/${GH_USER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-5 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] transition-colors hover:border-[var(--duo-feather)] hover:text-[var(--duo-feather)] whitespace-nowrap"
-          >
-            <Github className="size-3.5" /> GitHub
-          </a>
-        </div>
+            {lang}
+          </span>
+        ))}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-        {tiles.map((t) => {
-          const Icon = t.icon;
-          return (
-            <div
-              key={t.label}
-              className="rounded-xl border border-[var(--duo-swan)] bg-card p-4"
-            >
-              <Icon className="size-4 text-muted-foreground mb-2" />
-              <p className="text-2xl font-extrabold tracking-tight">{t.value}</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-1 leading-tight">
-                {t.label}
-              </p>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Top languages */}
-        <div className="md:col-span-2 rounded-xl border border-[var(--duo-swan)] bg-card p-5">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">
-            Most used languages
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {stats.topLanguages.map((lang, i) => (
-              <span
-                key={lang}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold ${
-                  i === 0
-                    ? "bg-[var(--duo-feather)] text-white"
-                    : "bg-[var(--duo-feather)]/10 text-[var(--duo-feather)]"
-                }`}
-              >
-                {lang}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Organizations */}
-        <div className="rounded-xl border border-[var(--duo-swan)] bg-card p-5">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">
-            Organizations
-          </p>
-          {stats.orgs.length > 0 ? (
-            <div className="flex flex-wrap gap-2">
-              {stats.orgs.map((o) => (
-                <a
-                  key={o.login}
-                  href={o.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={o.login}
-                  className="group"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={o.avatar_url}
-                    alt={o.login}
-                    className="size-9 rounded-lg border border-[var(--duo-swan)] group-hover:border-[var(--duo-feather)] transition-colors"
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
-          ) : (
-            <p className="text-xs text-muted-foreground">Loading…</p>
-          )}
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-4">
-        <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)]">
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--duo-macaw)]">
-                External merged PRs
-              </p>
-              <h3 className="mt-2 text-3xl font-extrabold tracking-tight">
-                {formatCount(stats.externalPrsMerged)}
-              </h3>
-            </div>
-            <GitPullRequest className="size-5 text-[var(--duo-feather)]" />
-          </div>
-          <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-            Accepted pull requests in repos outside my own GitHub accounts, across{" "}
-            <span className="font-bold text-foreground">{formatCount(stats.externalReposContributed)}</span> public repositories.
-          </p>
-          <p className="mt-2 text-[11px] font-bold text-[var(--duo-macaw)]">
-            Including a merged pull request into Google&apos;s own gemini-cli.
-          </p>
-          <div className="mt-4 max-h-80 space-y-2 overflow-y-auto pr-1">
-            {stats.topExternalRepos.map((repo) => (
-              <a
-                key={repo.repo}
-                href={repo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 rounded-lg border border-[var(--duo-swan)] bg-background px-3 py-2 transition-colors hover:border-[var(--duo-feather)]"
-              >
-                <div className="min-w-0">
-                  <p className="truncate text-xs font-extrabold group-hover:text-[var(--duo-feather)] transition-colors">
-                    {repo.repo}
-                  </p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                    Latest {formatMonthYear(repo.latestMergedAt)}
-                  </p>
-                </div>
-                <span className="shrink-0 rounded-full bg-[var(--duo-feather)]/10 px-2 py-1 text-[10px] font-extrabold text-[var(--duo-feather)]">
-                  {repo.count} PR{repo.count === 1 ? "" : "s"}
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)]">
-          <div className="flex items-center justify-between gap-3 mb-3">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-              Recent accepted contributions
-            </p>
+      {/* Recent external PRs */}
+      <div>
+        <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
+          Recent contributions ({formatCount(stats.externalPrsMerged)} external PRs merged)
+        </p>
+        <div className="space-y-1.5">
+          {stats.recentExternalContributions.slice(0, 4).map((pr) => (
             <a
-              href={`https://github.com/search?q=${encodeURIComponent(`author:${GH_USER} type:pr is:merged`)}&type=pullrequests`}
+              key={pr.url}
+              href={pr.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-[var(--duo-feather)] hover:underline"
+              className="group flex items-start gap-2 py-1.5 text-sm hover:bg-accent/50 rounded px-2 -mx-2 transition-colors"
             >
-              All PRs <ExternalLink className="size-3" />
-            </a>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {stats.recentExternalContributions.slice(0, 6).map((pr) => (
-              <a
-                key={pr.url}
-                href={pr.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-lg border border-[var(--duo-swan)] bg-background p-3 transition-colors hover:border-[var(--duo-feather)]"
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="truncate text-[10px] font-bold uppercase tracking-widest text-[var(--duo-macaw)]">
-                    {pr.repo}
-                  </p>
-                  <span className="shrink-0 text-[10px] text-muted-foreground">#{pr.number}</span>
-                </div>
-                <p className="mt-1 line-clamp-2 text-xs font-bold leading-snug group-hover:text-[var(--duo-feather)] transition-colors">
+              <GitPullRequest className="size-3.5 text-muted-foreground mt-0.5 shrink-0" />
+              <div className="min-w-0">
+                <span className="text-xs text-muted-foreground">{pr.repo}</span>
+                <p className="text-sm truncate group-hover:text-foreground transition-colors">
                   {pr.title}
                 </p>
-                <p className="mt-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                  {formatMonthYear(pr.mergedAt)}
-                </p>
-              </a>
-            ))}
-          </div>
+              </div>
+            </a>
+          ))}
         </div>
-      </div>
-
-      <div className="flex flex-wrap items-center gap-4 text-[11px] text-muted-foreground">
-        <a
-          href={`https://gsoc-espionage.vercel.app/?user=${GH_USER}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 font-bold text-[var(--duo-feather)] hover:underline"
-        >
-          Detailed OSS contribution tracker <ExternalLink className="size-3" />
-        </a>
-        <a
-          href={`https://github.com/${GH_USER}?tab=repositories`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 font-bold text-[var(--duo-feather)] hover:underline"
-        >
-          All public repos <ExternalLink className="size-3" />
-        </a>
-        <a
-          href={`https://www.npmjs.com/~${GH_USER}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 font-bold text-[var(--duo-feather)] hover:underline"
-        >
-          Published npm packages <ExternalLink className="size-3" />
-        </a>
       </div>
     </div>
   );
