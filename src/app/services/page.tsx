@@ -220,46 +220,47 @@ export default function ServicesPage() {
             {(servicesHubData as any).packages?.map((pkg: any, id: number) => {
               const gumroadUrl = pkg.gumroadKey ? monetization.gumroad[pkg.gumroadKey as keyof typeof monetization.gumroad] : "";
               return (
-              <BlurFade key={pkg.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
-                <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all h-full flex flex-col">
-                  <h3 className="font-extrabold text-base mb-1">{pkg.name}</h3>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-xl font-extrabold text-[var(--duo-feather)]">{pkg.price}</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{pkg.timeline}</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed mb-3">{pkg.description}</p>
-                  <ul className="space-y-1.5 text-xs text-foreground flex-1">
-                    {pkg.includes.map((inc: string) => (
-                      <li key={inc} className="flex items-start gap-2">
-                        <CheckCircle2 className="size-3.5 text-[var(--duo-feather)] mt-0.5 shrink-0" />
-                        <span>{inc}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-4 pt-3 border-t border-[var(--duo-swan)] text-[11px] text-muted-foreground">
-                    <span className="font-bold text-foreground">Best for:</span> {pkg.bestFor}
-                  </div>
-                  <div className="mt-4 flex flex-col gap-2">
-                    {gumroadUrl ? (
-                      <a
-                        href={gumroadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none"
+                <BlurFade key={pkg.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                  <div className="rounded-xl border-2 border-[var(--duo-swan)] bg-card p-5 shadow-[0_2px_0_var(--duo-swan)] hover:shadow-lg hover:-translate-y-0.5 transition-all h-full flex flex-col">
+                    <h3 className="font-extrabold text-base mb-1">{pkg.name}</h3>
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <span className="text-xl font-extrabold text-[var(--duo-feather)]">{pkg.price}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{pkg.timeline}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">{pkg.description}</p>
+                    <ul className="space-y-1.5 text-xs text-foreground flex-1">
+                      {pkg.includes.map((inc: string) => (
+                        <li key={inc} className="flex items-start gap-2">
+                          <CheckCircle2 className="size-3.5 text-[var(--duo-feather)] mt-0.5 shrink-0" />
+                          <span>{inc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-4 pt-3 border-t border-[var(--duo-swan)] text-[11px] text-muted-foreground">
+                      <span className="font-bold text-foreground">Best for:</span> {pkg.bestFor}
+                    </div>
+                    <div className="mt-4 flex flex-col gap-2">
+                      {gumroadUrl ? (
+                        <a
+                          href={gumroadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none"
+                        >
+                          <ShoppingBag className="size-3.5" /> Buy Now
+                        </a>
+                      ) : null}
+                      <Link
+                        href={monetization.calcom ? "/book" : `mailto:sh20raj@gmail.com?subject=${encodeURIComponent(pkg.name)}`}
+                        className={`inline-flex h-9 items-center justify-center gap-1.5 rounded-full ${gumroadUrl ? "border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground text-[var(--duo-eel)] shadow-[0_3px_0_var(--duo-swan)]" : "bg-[var(--duo-feather)] text-white shadow-[0_3px_0_var(--duo-feather-shadow)]"} px-5 text-[11px] font-bold uppercase tracking-wider transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none`}
                       >
-                        <ShoppingBag className="size-3.5" /> Buy Now
-                      </a>
-                    ) : null}
-                    <Link
-                      href={monetization.calcom ? "/book" : `mailto:sh20raj@gmail.com?subject=${encodeURIComponent(pkg.name)}`}
-                      className={`inline-flex h-9 items-center justify-center gap-1.5 rounded-full ${gumroadUrl ? "border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground text-[var(--duo-eel)] shadow-[0_3px_0_var(--duo-swan)]" : "bg-[var(--duo-feather)] text-white shadow-[0_3px_0_var(--duo-feather-shadow)]"} px-5 text-[11px] font-bold uppercase tracking-wider transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none`}
-                    >
-                      <Calendar className="size-3.5" /> {monetization.calcom ? "Book a Call" : "Book this sprint"}
-                    </Link>
+                        <Calendar className="size-3.5" /> {monetization.calcom ? "Book a Call" : "Book this sprint"}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </BlurFade>
-            );})}
+                </BlurFade>
+              );
+            })}
           </div>
 
           {/* Small task CTA */}

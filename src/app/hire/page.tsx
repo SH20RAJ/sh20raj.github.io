@@ -2,12 +2,8 @@
 
 import { useState, FormEvent } from "react";
 import Link from "next/link";
-import BlurFade from "@/components/magicui/blur-fade";
-import { MarketplaceBanner } from "@/components/marketplace-banner";
 import { monetization } from "@/data/monetization";
-import { CheckCircle2, ArrowRightIcon, Loader2, AlertCircle, Linkedin } from "lucide-react";
-
-const BLUR_FADE_DELAY = 0.04;
+import { Check, ArrowRightIcon, Loader2, AlertCircle } from "lucide-react";
 
 const projectTypes = [
   "Landing page",
@@ -31,7 +27,6 @@ export default function HirePage() {
     e.preventDefault();
 
     if (!monetization.web3formsAccessKey) {
-      // Fallback: open mailto with the brief
       const formData = new FormData(e.currentTarget);
       const lines = Array.from(formData.entries())
         .filter(([k]) => k !== "access_key")
@@ -66,32 +61,26 @@ export default function HirePage() {
   if (status === "success") {
     return (
       <main className="flex flex-col min-h-[60dvh] items-center justify-center px-6 pb-16">
-        <div className="rounded-2xl border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/5 p-8 md:p-12 max-w-2xl w-full text-center space-y-5 shadow-[0_2px_0_var(--duo-swan)]">
-          <CheckCircle2 className="size-12 text-[var(--duo-feather)] mx-auto" />
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">Brief received</h1>
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-md mx-auto">
-            I&apos;ll review and reply within 24 hours. To speed things up, message me on LinkedIn now.
+        <div className="max-w-md w-full text-center space-y-4">
+          <Check className="size-8 text-foreground mx-auto" />
+          <h1 className="text-xl font-bold tracking-tight">Brief received</h1>
+          <p className="text-sm text-muted-foreground">
+            I&apos;ll review and reply within 24 hours.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 pt-2">
+          <div className="flex justify-center gap-4 pt-2">
             <a
               href="https://linkedin.com/in/sh20raj"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--duo-feather)] px-6 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
+              className="text-sm font-medium text-foreground underline underline-offset-4 hover:text-muted-foreground"
             >
-              <Linkedin className="size-4" /> Talk on LinkedIn
+              LinkedIn
             </a>
             <Link
-              href="/book"
-              className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none gap-2"
-            >
-              Book a Call <ArrowRightIcon className="size-4" />
-            </Link>
-            <Link
               href="/"
-              className="inline-flex h-10 items-center justify-center rounded-full border-2 border-[var(--duo-swan)] bg-white dark:bg-transparent dark:text-foreground px-6 text-xs font-bold uppercase tracking-wider text-[var(--duo-eel)] shadow-[0_4px_0_var(--duo-swan)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Back home
+              Home
             </Link>
           </div>
         </div>
@@ -101,131 +90,84 @@ export default function HirePage() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] pb-16">
-      <MarketplaceBanner />
-      <section className="pt-12 pb-8">
-        <div className="mx-auto w-full max-w-3xl px-6 space-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY}>
-            <span className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[var(--duo-feather)]">
-              Send a brief
-            </span>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tighter">
-              Tell me about your project
-            </h1>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Async-friendly. I respond within 24 hours with a fixed quote and timeline.
-            </p>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-            <div className="rounded-xl border-2 border-[var(--duo-feather)]/30 bg-[var(--duo-feather)]/5 p-4 flex flex-col sm:flex-row sm:items-center gap-3">
-              <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-widest text-[var(--duo-feather)] mb-1">
-                  Preferred channel
-                </p>
-                <p className="text-sm text-foreground">
-                  Reach me on LinkedIn first — it&apos;s the fastest way to start a conversation.
-                </p>
-              </div>
-              <a
-                href="https://linkedin.com/in/sh20raj"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-[var(--duo-feather)] px-5 text-xs font-bold uppercase tracking-wider text-white shadow-[0_3px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-0.5 active:shadow-none whitespace-nowrap"
-              >
-                <Linkedin className="size-3.5" /> Talk on LinkedIn
-              </a>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <p className="text-xs text-muted-foreground">
-              Prefer a call?{" "}
-              <Link href="/book" className="font-bold text-[var(--duo-feather)] hover:underline">
-                Book a 15-min slot
-              </Link>{" "}
-              — or send the brief below.
-            </p>
-          </BlurFade>
+      <section className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <h1 className="text-xl font-bold tracking-tight">
+            Tell me about your project
+          </h1>
+          <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+            I respond within 24 hours with a fixed quote and timeline.
+          </p>
+          <p className="text-xs text-muted-foreground mt-3">
+            Prefer a call?{" "}
+            <Link href="/book" className="text-foreground underline underline-offset-4 hover:text-muted-foreground">
+              Book a 15-min slot
+            </Link>
+          </p>
         </div>
       </section>
 
-      <section className="pb-12">
-        <div className="mx-auto w-full max-w-3xl px-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-2xl border-2 border-[var(--duo-swan)] bg-card p-6 md:p-8 shadow-[0_2px_0_var(--duo-swan)] space-y-5"
-            >
-              <input type="hidden" name="access_key" value={monetization.web3formsAccessKey} />
-              <input type="hidden" name="subject" value="New project brief from sh20raj.github.io" />
-              <input type="hidden" name="from_name" value="sh20raj.github.io" />
-              {/* Honeypot */}
-              <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+      <section className="py-10">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-5"
+          >
+            <input type="hidden" name="access_key" value={monetization.web3formsAccessKey} />
+            <input type="hidden" name="subject" value="New project brief from sh20raj.github.io" />
+            <input type="hidden" name="from_name" value="sh20raj.github.io" />
+            <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Field label="Your name" name="name" required type="text" placeholder="Jane Doe" />
-                <Field
-                  label="Email"
-                  name="email"
-                  required
-                  type="email"
-                  placeholder="you@company.com"
-                />
-              </div>
-              <Field
-                label="Company / startup (optional)"
-                name="company"
-                type="text"
-                placeholder="Acme Inc."
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Field label="Your name" name="name" required type="text" placeholder="Jane Doe" />
+              <Field label="Email" name="email" required type="email" placeholder="you@company.com" />
+            </div>
+            <Field label="Company (optional)" name="company" type="text" placeholder="Acme Inc." />
+
+            <RadioGroup label="Project type" name="project_type" options={projectTypes} required />
+            <RadioGroup label="Budget" name="budget" options={budgets} required />
+            <RadioGroup label="Timeline" name="timeline" options={timelines} required />
+
+            <div className="space-y-1.5">
+              <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                Brief <span className="text-destructive">*</span>
+              </label>
+              <textarea
+                name="brief"
+                required
+                rows={5}
+                placeholder="What you're building, the goal, links to references, and anything else I should know."
+                className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-ring transition-colors resize-none"
               />
+            </div>
 
-              <RadioGroup label="Project type" name="project_type" options={projectTypes} required />
-              <RadioGroup label="Budget" name="budget" options={budgets} required />
-              <RadioGroup label="Timeline" name="timeline" options={timelines} required />
-
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-foreground">
-                  Brief <span className="text-[var(--duo-cardinal)]">*</span>
-                </label>
-                <textarea
-                  name="brief"
-                  required
-                  rows={6}
-                  placeholder="What you're building, the goal, links to references, and anything else I should know."
-                  className="w-full rounded-xl border-2 border-[var(--duo-swan)] bg-background px-4 py-3 text-sm focus:outline-none focus:border-[var(--duo-feather)] transition-colors"
-                />
+            {status === "error" && (
+              <div className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-xs text-destructive">
+                <AlertCircle className="size-4 shrink-0 mt-0.5" />
+                <span>{errorMessage}</span>
               </div>
+            )}
 
-              {status === "error" && (
-                <div className="flex items-start gap-2 rounded-lg border-2 border-[var(--duo-cardinal)]/30 bg-[var(--duo-cardinal)]/5 p-3 text-xs text-[var(--duo-cardinal)]">
-                  <AlertCircle className="size-4 shrink-0 mt-0.5" />
-                  <span>{errorMessage}</span>
-                </div>
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-foreground px-5 text-sm font-medium text-background hover:bg-foreground/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {status === "submitting" ? (
+                <>
+                  <Loader2 className="size-4 animate-spin" /> Sending…
+                </>
+              ) : (
+                <>
+                  Send brief <ArrowRightIcon className="size-3.5" />
+                </>
               )}
+            </button>
 
-              <button
-                type="submit"
-                disabled={status === "submitting"}
-                className="inline-flex h-11 w-full md:w-auto items-center justify-center gap-2 rounded-full bg-[var(--duo-feather)] px-8 text-xs font-bold uppercase tracking-wider text-white shadow-[0_4px_0_var(--duo-feather-shadow)] transition-all hover:brightness-105 active:translate-y-1 active:shadow-none disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {status === "submitting" ? (
-                  <>
-                    <Loader2 className="size-4 animate-spin" /> Sending…
-                  </>
-                ) : (
-                  <>
-                    Send brief <ArrowRightIcon className="size-4" />
-                  </>
-                )}
-              </button>
-
-              <p className="text-[11px] text-muted-foreground pt-2 border-t border-[var(--duo-swan)]">
-                Your details stay between us. No spam. No newsletter sign-up.
-              </p>
-            </form>
-          </BlurFade>
+            <p className="text-xs text-muted-foreground pt-2 border-t border-border">
+              Your details stay between us. No spam.
+            </p>
+          </form>
         </div>
       </section>
     </main>
@@ -247,15 +189,15 @@ function Field({
 }) {
   return (
     <div className="space-y-1.5">
-      <label className="text-xs font-bold uppercase tracking-wider text-foreground">
-        {label} {required && <span className="text-[var(--duo-cardinal)]">*</span>}
+      <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+        {label} {required && <span className="text-destructive">*</span>}
       </label>
       <input
         type={type}
         name={name}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-xl border-2 border-[var(--duo-swan)] bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--duo-feather)] transition-colors"
+        className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-ring transition-colors"
       />
     </div>
   );
@@ -274,14 +216,14 @@ function RadioGroup({
 }) {
   return (
     <fieldset className="space-y-1.5">
-      <legend className="text-xs font-bold uppercase tracking-wider text-foreground">
-        {label} {required && <span className="text-[var(--duo-cardinal)]">*</span>}
+      <legend className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+        {label} {required && <span className="text-destructive">*</span>}
       </legend>
       <div className="flex flex-wrap gap-2">
         {options.map((opt) => (
           <label
             key={opt}
-            className="cursor-pointer inline-flex items-center gap-2 rounded-full border-2 border-[var(--duo-swan)] bg-background px-3 py-1.5 text-xs font-bold transition-all hover:border-[var(--duo-feather)] has-[input:checked]:bg-[var(--duo-feather)] has-[input:checked]:text-white has-[input:checked]:border-[var(--duo-feather)]"
+            className="cursor-pointer inline-flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-1.5 text-xs transition-colors hover:bg-accent has-[input:checked]:bg-foreground has-[input:checked]:text-background has-[input:checked]:border-foreground"
           >
             <input
               type="radio"

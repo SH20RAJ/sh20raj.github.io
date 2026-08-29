@@ -250,10 +250,12 @@ function formatCount(n: number): string {
 }
 
 export function GitHubStats() {
-  const [stats, setStats] = useState<Stats>(() => {
-    if (typeof window === "undefined") return BASELINE;
-    return readCache() ?? BASELINE;
-  });
+  const [stats, setStats] = useState<Stats>(BASELINE);
+
+  useEffect(() => {
+    const cached = readCache();
+    if (cached) setStats(cached);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;

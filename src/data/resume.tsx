@@ -61,9 +61,8 @@ export const DATA = {
   navbar: [
     { href: "/", icon: "home", label: "Home" },
     { href: "/projects", icon: "briefcase", label: "Projects" },
-    { href: "https://github.com/SH20RAJ", icon: "github", label: "Open Source" },
-    { href: "/resume.pdf", icon: "notebook", label: "Resume" },
     { href: "https://github.com/SH20RAJ", icon: "github", label: "GitHub" },
+    { href: "/resume.pdf", icon: "notebook", label: "Resume" },
   ],
   contact: {
     email: "sh20raj@gmail.com",
@@ -190,7 +189,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://www.indexfast.co/opengraph-image.png",
+      image: "https://indexfast.co/og-image.png",
       video: "",
     },
     {
@@ -226,7 +225,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "",
+      image: "https://solus.shraj.workers.dev/og-image.png",
       video: "",
     },
     {
@@ -249,7 +248,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "https://algoforge.shraj.workers.dev/og-image.png",
+      image: "/projects/algoforge.png",
       video: "",
     },
     {
