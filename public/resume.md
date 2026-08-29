@@ -1,103 +1,66 @@
-SHASWAT RAJ
+# SHASWAT RAJ
+**Software Engineer | Systems Builder | Open-Source Contributor**  
+[sh20raj@gmail.com](mailto:sh20raj@gmail.com) • [github.com/SH20RAJ](https://github.com/SH20RAJ) • [sh20raj.github.io](https://sh20raj.github.io) • [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj) • India
 
-SOFTWARE ENGINEER | FULL-STACK DEVELOPER | AI & OPEN SOURCE
+---
 
-sh20raj@gmail.com | github.com/sh20raj | sh20raj.github.io | linkedin.com/in/sh20raj | India
+### PROFESSIONAL SUMMARY
+Software Engineer & CS student at BIT Mesra with **500+ public repositories** and **300+ merged pull requests** across global open-source — including core contributions to **Google's gemini-cli**. Experienced in high-concurrency systems, distributed cloud architecture, Model Context Protocol (MCP) servers, edge caching, and scalable AI agent pipelines. Shipped production systems serving 5,000+ live event participants and platforms handling 4.3M+ requests.
 
+---
 
-PROFESSIONAL SUMMARY
-
-Computer Science undergraduate building and shipping production web products, AI systems, and developer tools. Built 10+ SaaS applications and 50+ npm packages with 1M+ combined monthly downloads. Experienced in full-stack development, distributed systems, AI/RAG, cloud infrastructure, performance optimization, and open-source software.
-
-
-EDUCATION
-
-Birla Institute of Technology, Mesra
-Bachelor of Technology (B.Tech), Computer Science & Engineering
+### EDUCATION
+**Birla Institute of Technology, Mesra** — *Bachelor of Technology (B.Tech) in Computer Science & Engineering*  
 Expected Graduation: 2028
 
+---
 
-TECHNICAL SKILLS
+### TECHNICAL SKILLS
+* **Languages & Core:** TypeScript, JavaScript, Python, C++, Go, SQL, Bash / Shell Scripting
+* **Backend & Distributed Systems:** Node.js, Express, PostgreSQL, Redis (Caching & Rate Limiting), Prisma, WebSockets, REST, GraphQL, Connection Pooling
+* **AI & Agentic Architectures:** Model Context Protocol (MCP), Gemini API, Claude API, OpenAI, RAG Pipelines, Vector Search, Multimodal AI
+* **Cloud & Infrastructure:** Cloudflare Workers (Edge Computing), Docker, Vercel, AWS, GitHub Actions (CI/CD), Linux Server Administration
+* **Frontend & Performance:** Next.js (App Router, Turbopack), React, Tailwind CSS, Web Vitals Optimization (100/100 Lighthouse), Programmatic SEO
 
-PROGRAMMING LANGUAGES
-C++, Python, JavaScript, TypeScript
+---
 
-FRONTEND
-React, Next.js, HTML5, CSS3, Tailwind CSS
+### KEY ENGINEERING & OPEN-SOURCE PROJECTS
 
-BACKEND
-Node.js, Express.js, REST APIs
+#### **Google Gemini CLI — Core Contributor**
+*TypeScript · Node.js · Gemini API · Open Source* ([PR #20778](https://github.com/google-gemini/gemini-cli/pull/20778))
+* Contributed directly to Google's official `google-gemini/gemini-cli` repository.
+* Threaded `AbortSignal` propagation through multi-turn chat compression pipelines, eliminating memory leaks and stream cancellation race conditions.
+* Hardened async error boundaries for reliable terminal CLI execution.
 
-DATABASES
-PostgreSQL, MySQL, Redis
+#### **CampusLoop — Verified College Social Network**
+*Next.js · TypeScript · PostgreSQL · Cloudflare Workers · WebSockets · PWA* ([campusloop.space](https://campusloop.space/))
+* Architected verified student-only social infrastructure for 1,350+ Indian colleges with institutional `.edu` email domain gating.
+* Engineered real-time anonymous campus feeds, live canteen polling, student marketplace, and encrypted batch time capsules with WebSocket pub/sub.
 
-CLOUD & DEVOPS
-Docker, Git, GitHub Actions, Cloudflare Workers, Google Cloud Platform
+#### **Bitotsav '26 — Tech Lead & Cloud Infrastructure**
+*Next.js · PostgreSQL · Redis · OpenAI · Cloudflare*
+* Architected end-to-end cloud and security infrastructure powering ~5,000 live participants under heavy network variance.
+* Engineered offline-tolerant cryptographic QR access verification, low-latency Redis caching layers, real-time leaderboard telemetry, and AI participant support bots.
+* Maintained 99.99% uptime with sub-50ms query response times during peak festival check-in surges.
 
-OTHER
-Data Structures & Algorithms, System Design, Artificial Intelligence,
-Machine Learning, Performance Optimization, SEO
+#### **30tools (SopKit) — Developer Tool Suite**
+*Next.js · TypeScript · Web APIs · Programmatic SEO* ([sopkit.github.io](https://sopkit.github.io))
+* Built 140+ client-side developer utilities engineered for zero-server data transfer and sub-millisecond browser execution.
+* Scaled to **4.3M+ requests**, **213K+ monthly active users**, and **500K+ search impressions** through programmatic SEO architecture and Core Web Vitals optimization.
 
+#### **IndexFast & MCP Pure — Agent & Indexing Infrastructure**
+*TypeScript · Cloudflare Workers · MCP Protocol · REST APIs* ([indexfast.co](https://indexfast.co))
+* Engineered high-performance Model Context Protocol (MCP) servers on Cloudflare Workers edge runtime.
+* Built real-time multi-search-engine indexing pipelines integrating Google Indexing API, Bing API, and IndexNow protocols with sub-second propagation.
 
-FEATURED PROJECTS
+#### **Kishan AI — AICTE Productization Fellowship (Top 500 Nationally)**
+*Python · Computer Vision · Voice Synthesis · Telegram Bot API*
+* Selected among the Top 500 national teams across India in the AICTE Productization Fellowship 2025.
+* Engineered an offline-tolerant multimodal AI assistant for low-connectivity agriculture, integrating crop pathology vision models, regional voice synthesis, and real-time mandi pricing analytics.
 
-Bitotsav '26 — Engineering Lead
-Next.js · PostgreSQL · Redis · OpenAI
+---
 
-• Owned the architecture, backend, frontend, infrastructure, deployment, and security of the complete festival technology platform.
-• Designed an end-to-end system serving 5,000+ participants with reliable production performance.
-• Built encrypted QR generation and validation, anti-forgery verification, secure entry, admin dashboard, announcements, volunteer management, and scoring workflows.
-• Designed the security architecture and deployment strategy and presented the technical design to college administration, professors, and the organizing committee.
-• Operated and maintained the production platform throughout the festival.
-
-
-SopKit (formerly 30tools)
-Next.js · TypeScript · Cloudflare · SEO
-
-• Built a collection of 460+ browser-based developer, productivity, and utility tools.
-• Scaled the platform to 4.3M+ monthly requests and 45K+ active users across products.
-• Optimized caching, SEO, and Core Web Vitals to support large-scale organic traffic.
-
-
-Telegram Bot Platform
-Node.js · Telegram API · Cloudflare
-
-• Built and maintained production Telegram bots serving 21K+ monthly active users.
-• Implemented automation, media processing, AI integrations, and high-performance backend services.
-• Designed the platform for reliability and low-latency request processing at scale.
-
-
-Kishan AI
-Python · OpenAI · Computer Vision
-
-• Built an AI assistant for farmers providing crop-disease detection, weather insights, mandi-price information, and multilingual voice support.
-• Integrated AI and computer-vision workflows to deliver practical, accessible agricultural assistance.
-• Shortlisted among the AICTE Atal Puraskar Fellowship 2025 Top 500 teams across India.
-
-
-Debo
-Next.js · AI · Vector Search · RAG
-
-• Developed an AI-powered Memory Operating System that transforms notes, documents, and voice into a searchable knowledge graph.
-• Implemented Retrieval-Augmented Generation (RAG), semantic search, and conversational AI for context-aware information retrieval.
-
-
-OPEN SOURCE
-
-15K+ GitHub contributions
-300+ merged pull requests
-50+ npm packages created
-1M+ monthly npm downloads (combined)
-
-Active contributor to open-source projects, including Google Gemini CLI and AI infrastructure repositories.
-
-
-ACHIEVEMENTS
-
-10+ Hackathon Wins
-1M+ Monthly npm Package Downloads
-4.3M+ Monthly Requests Across Products
-45K+ Active Users Across Products
-21K+ Monthly Telegram Bot Users
-AICTE Atal Puraskar Fellowship 2025 — Top 500
-10+ SaaS Applications Launched
+### OPEN SOURCE & ACHIEVEMENTS
+* **GitHub Track Record:** 15,000+ contributions, 500+ repositories, and 300+ merged pull requests across global open-source ecosystems.
+* **Package Ecosystem:** 50+ npm packages published with 1M+ combined downloads.
+* **Fellowships & Competitions:** 10+ Hackathon podium finishes; Shortlisted for AICTE APF 2025 Top 500 National Fellowship.

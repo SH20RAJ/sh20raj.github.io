@@ -2,6 +2,7 @@
 
 import { ProjectCard } from "@/components/project-card";
 import { GitHubStats } from "@/components/github-stats";
+import { InfraTelemetry } from "@/components/infra-telemetry";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -150,6 +151,13 @@ export function HomeClient({ DATA }: { DATA: any }) {
       <section id="open-source" className="py-10 border-b border-border">
         <div className="mx-auto w-full max-w-2xl px-6">
           <GitHubStats />
+        </div>
+      </section>
+
+      {/* System & Infrastructure Telemetry */}
+      <section id="infra" className="py-10 border-b border-border">
+        <div className="mx-auto w-full max-w-2xl px-6">
+          <InfraTelemetry />
         </div>
       </section>
 
