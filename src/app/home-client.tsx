@@ -16,6 +16,12 @@ import {
 
 const proofPosts = [
   {
+    title: "CampusLoop — Verified College Social Network",
+    text: "Building the verified student-only campus network for 1,350+ Indian colleges. Gatekept by institutional college emails to enable anonymous campus feeds, real-time canteen polls, student marketplace, and encrypted batch time capsules.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Cloudflare Workers", "PWA"],
+    href: "https://campusloop.space/",
+  },
+  {
     title: "Google Gemini CLI — Core Contributor",
     text: "Merged PR into Google's official repository (#20778). Threaded AbortSignal propagation across multi-turn chat compression requests, eliminating memory leaks and cancellation race conditions.",
     tech: ["TypeScript", "Node.js", "Gemini API", "Open Source"],
@@ -260,7 +266,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <div className="mx-auto w-full max-w-2xl px-6">
           <h2 className="text-lg font-bold tracking-tight mb-3">About</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            I am a software engineer focused on building robust, scalable systems and developer tooling. With 500+ repositories and 300+ merged PRs across the global open-source ecosystem, I take pride in end-to-end craftsmanship — from low-level API design and fault-tolerant cloud backends to razor-sharp, accessible frontends. Whether optimizing edge latency, orchestrating AI agents, or shipping production software under live event pressure, I thrive on engineering excellence.
+            I am a software engineer focused on building robust, scalable systems and developer tooling. With 500+ repositories and 300+ merged PRs across the global open-source ecosystem, I take pride in end-to-end craftsmanship — from low-level API design and fault-tolerant cloud backends to razor-sharp, accessible frontends. Currently building <strong className="text-foreground font-semibold">CampusLoop</strong> (the verified campus network for 1,350+ Indian colleges), architecting MCP server infrastructure, and contributing to open source.
           </p>
         </div>
       </section>

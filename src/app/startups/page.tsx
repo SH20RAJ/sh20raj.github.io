@@ -32,6 +32,12 @@ export const metadata: Metadata = {
 
 const startups = [
   {
+    name: "CampusLoop",
+    status: "Active",
+    description: "Verified student-only campus network for 1,350+ Indian colleges. Gatekept by college email verification for anonymous campus feeds, student marketplace, polls, and safe matching.",
+    link: "https://campusloop.space/",
+  },
+  {
     name: "Debo",
     status: "Active",
     description: "Personal AI memory engine. Captures multi-source context and provides instant semantic retrieval over life workflows.",

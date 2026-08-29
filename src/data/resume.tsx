@@ -147,6 +147,24 @@ export const DATA = {
   education: [] as Education[],
   projects: [
     {
+      title: "CampusLoop",
+      href: "https://campusloop.space/",
+      dates: "2026 – Present",
+      active: true,
+      description:
+        "Verified student-only campus network for 1,350+ Indian colleges. Gatekept by institutional college email verification to enable anonymous confessions, real-time campus feeds, student marketplace, canteen polls, and batch time capsules.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Cloudflare Workers", "WebSockets", "PWA"],
+      links: [
+        {
+          type: "Website",
+          href: "https://campusloop.space/",
+          icon: "globe",
+        },
+      ],
+      image: "https://campusloop.space/og-image.png",
+      video: "",
+    },
+    {
       title: "Debo",
       href: "https://debo.life",
       dates: "2025",

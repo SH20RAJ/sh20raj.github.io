@@ -50,9 +50,13 @@ export const metadata: Metadata = {
   authors: [{ name: DATA.name, url: DATA.url }],
   creator: DATA.name,
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Shaswat Raj — Software Engineer & Open-Source Builder",
