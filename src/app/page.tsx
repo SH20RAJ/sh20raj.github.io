@@ -5,11 +5,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shaswat Raj — Software Engineer & Open-Source Builder",
   description:
-    "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+    "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
   openGraph: {
     title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+      "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
     url: DATA.url,
     siteName: DATA.name,
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+      "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
     creator: "@SH20RAJ",
   },
 };
