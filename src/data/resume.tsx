@@ -147,6 +147,29 @@ export const DATA = {
   education: [] as Education[],
   projects: [
     {
+      title: "30tools",
+      href: "/projects/30tools",
+      dates: "2024 – Present",
+      active: true,
+      description:
+        "High-performance developer and creator utility platform engineered for sub-millisecond client-side execution. Scaled to 4.3M+ requests and 213K+ monthly active users via programmatic SEO architecture.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Web APIs", "Programmatic SEO"],
+      links: [
+        {
+          type: "Case Study",
+          href: "/projects/30tools",
+          icon: "globe",
+        },
+        {
+          type: "Website",
+          href: "https://30tools.com",
+          icon: "globe",
+        },
+      ],
+      image: "/projects/30tools-traffic.png",
+      video: "",
+    },
+    {
       title: "CampusLoop",
       href: "https://campusloop.space/",
       dates: "2026 – Present",
@@ -155,6 +178,11 @@ export const DATA = {
         "Verified student-only campus network for 1,350+ Indian colleges. Gatekept by institutional college email verification to enable anonymous confessions, real-time campus feeds, student marketplace, canteen polls, and batch time capsules.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Cloudflare Workers", "WebSockets", "PWA"],
       links: [
+        {
+          type: "Case Study",
+          href: "/projects/campusloop",
+          icon: "globe",
+        },
         {
           type: "Website",
           href: "https://campusloop.space/",
@@ -173,6 +201,11 @@ export const DATA = {
         "An AI memory system that ingests notes, links, audio, and conversations, embeds them for retrieval, and surfaces relevant context through a chat interface — a personal RAG pipeline over everything you capture day to day. Built solo end-to-end: ingestion, vector search, and the agent layer on top.",
       technologies: ["Next.js", "TypeScript", "AI Agents", "AI SDK", "Voice Agent", "Vector Search", "Cloudflare", "Agentic Memory", "OpenAI"],
       links: [
+        {
+          type: "Case Study",
+          href: "/projects/debo",
+          icon: "globe",
+        },
         {
           type: "Website",
           href: "https://debo.life",
@@ -211,6 +244,29 @@ export const DATA = {
       video: "",
     },
     {
+      title: "AlgoForge",
+      href: "https://algoforge.shraj.workers.dev/",
+      dates: "2026",
+      active: true,
+      description:
+        "A self-hosted coding interview preparation platform built to make DSA practice searchable and structured at scale. Pattern-based learning paths, curated collections (Blind 75, Grind 169), multi-language solutions, and SEO-optimized content for organic discovery.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Cloudflare Workers"],
+      links: [
+        {
+          type: "Website",
+          href: "https://algoforge.shraj.workers.dev/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/algoforge",
+          icon: "github",
+        },
+      ],
+      image: "/projects/algoforge.png",
+      video: "",
+    },
+    {
       title: "CodeVisualizer",
       href: "https://github.com/SH20RAJ/codevisualizer",
       dates: "2025",
@@ -244,29 +300,6 @@ export const DATA = {
         },
       ],
       image: "https://solus.shraj.workers.dev/og-image.png",
-      video: "",
-    },
-    {
-      title: "AlgoForge",
-      href: "https://algoforge.shraj.workers.dev/",
-      dates: "2026",
-      active: true,
-      description:
-        "A self-hosted coding interview preparation platform built to make DSA practice searchable and structured at scale. Pattern-based learning paths, curated collections (Blind 75, Grind 169), multi-language solutions, and SEO-optimized content for organic discovery.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Cloudflare Workers"],
-      links: [
-        {
-          type: "Website",
-          href: "https://algoforge.shraj.workers.dev/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/SH20RAJ/algoforge",
-          icon: "github",
-        },
-      ],
-      image: "/projects/algoforge.png",
       video: "",
     },
     {
@@ -857,11 +890,11 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "10+ Hackathon Wins in First 2 Years of College",
+      title: "Collegiate Hackathon Wins",
       dates: "2023 – 2025",
       location: "India",
       description:
-        "Won 10+ hackathons across web, AI, and product tracks during the first two years of college. Built and shipped working prototypes under tight time constraints alongside studies.",
+        "TODO(shaswat): name the 3 largest wins with links/proof — unverifiable aggregate counts are weaker than named, verified wins.",
       image: "https://avatars.githubusercontent.com/u/53382877?v=4",
       links: [
         {
@@ -881,7 +914,7 @@ export const DATA = {
       links: [],
     },
     {
-      title: "Apify $100 Hackathon Winner",
+      title: "Apify Hackathon Winner",
       dates: "2025",
       location: "Online",
       description:

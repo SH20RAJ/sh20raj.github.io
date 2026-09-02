@@ -7,6 +7,9 @@ export default function Footer() {
       <div className="mx-auto max-w-2xl flex items-center justify-between text-xs text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} {DATA.name}</p>
         <div className="flex items-center gap-4">
+          <Link href="/building" className="hover:text-foreground transition-colors">
+            Building
+          </Link>
           <Link href="https://github.com/SH20RAJ" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
             GitHub
           </Link>
