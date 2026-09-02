@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description:
-    "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+    "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
   keywords: [
     "software engineer portfolio",
     "open source contributor",
@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     "RAG MCP developer",
     "MCP server builder",
     "Cloudflare Workers developer",
-    "competitive programmer",
   ],
   authors: [{ name: DATA.name, url: DATA.url }],
   creator: DATA.name,
@@ -61,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+      "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
     url: DATA.url,
     siteName: "Shaswat Raj Portfolio",
     locale: "en_US",
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shaswat Raj — Software Engineer & Open-Source Builder",
     description:
-      "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+      "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
     creator: "@SH20RAJ",
     images: ["/og.png"],
   },
@@ -121,7 +120,7 @@ export default function RootLayout({
       image: "https://sh20raj.github.io/profile.jpg",
       jobTitle: "Software Engineer & Open-Source Builder",
       description:
-        "CS student at BIT Mesra. 500+ public repos, 300+ merged PRs — including one into Google's gemini-cli. Builds full products solo: AI agents, dev tools, MCP servers.",
+        "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
       email: "sh20raj@gmail.com",
       nationality: "Indian",
       knowsAbout: [

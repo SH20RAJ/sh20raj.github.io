@@ -28,9 +28,9 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "CS student at BIT Mesra. Open-source contributor and solo builder.",
+    "Software engineer and open-source builder.",
   summary:
-    "I'm Shaswat Raj, a CS student at BIT Mesra and open-source contributor. I build full products end-to-end: AI agents, dev tools, MCP servers, and large-scale web systems. My strength is taking a rough idea to a working system quickly — backend, frontend, deployment, and iteration.\n\n500+ public repositories, 300+ merged pull requests (including one into Google's own gemini-cli), and 50+ npm packages. I've shipped systems that handled real load at scale, from 5,000-participant cultural fests to million-request browser tool platforms. Coding since class 7, with 4+ years as a technical lead across startups and open-source projects.",
+    "I'm Shaswat Raj, a software engineer and open-source contributor. I build full products end-to-end: AI agents, dev tools, MCP servers, and large-scale web systems. My strength is taking a rough idea to a working system quickly — backend, frontend, deployment, and iteration.\n\n79 merged pull requests across open-source repositories I don't own (including a merged fix into Google's gemini-cli), and 50+ npm packages. I've shipped systems that handled real load at scale, from 5,000-participant cultural fests to million-request browser tool platforms.",
   avatarUrl: "/profile.jpg",
   skills: [
     "UI/UX Design",

@@ -125,7 +125,7 @@ export function CommandPalette() {
     {
       id: "github",
       title: "GitHub Profile",
-      subtitle: "github.com/SH20RAJ (500+ repos)",
+      subtitle: "github.com/SH20RAJ",
       category: "Projects & Work",
       icon: ExternalLink,
       action: () => {

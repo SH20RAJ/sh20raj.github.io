@@ -313,8 +313,8 @@ export function GitHubStats() {
 
   const stats_row = [
     { label: "Contributions", value: formatCount(stats.totalContributionsAllTime) },
-    { label: "Repos", value: formatCount(stats.publicRepos) },
-    { label: "PRs merged", value: formatCount(stats.prsMerged) },
+    { label: "Signal Stat", value: "TODO(shaswat): pick a replacement stat (e.g. total stars, largest repo's stars, npm downloads)" },
+    { label: "External PRs merged", value: formatCount(stats.externalPrsMerged) },
     { label: "Followers", value: formatCount(stats.followers) },
   ];
 
@@ -333,7 +333,7 @@ export function GitHubStats() {
       </div>
 
       {/* Stats row */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {stats_row.map((t) => (
           <div key={t.label}>
             <p className="text-xl font-bold tracking-tight">{t.value}</p>
@@ -357,7 +357,7 @@ export function GitHubStats() {
       {/* Recent external PRs */}
       <div>
         <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
-          Recent contributions ({formatCount(stats.externalPrsMerged)} external PRs merged)
+          Recent contributions ({formatCount(stats.externalPrsMerged)} PRs merged into repos I don&apos;t own)
         </p>
         <div className="space-y-1.5">
           {stats.recentExternalContributions.slice(0, 4).map((pr) => (

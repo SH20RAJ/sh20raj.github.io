@@ -41,7 +41,7 @@ export function ProjectsClient({ projects }: { projects: any[] }) {
           </div>
           <div className="mt-8 pt-6 border-t border-border text-center">
             <p className="text-sm text-muted-foreground">
-              500+ repositories on GitHub.{" "}
+              Repositories on GitHub.{" "}
               <Link
                 href="https://github.com/SH20RAJ"
                 target="_blank"
