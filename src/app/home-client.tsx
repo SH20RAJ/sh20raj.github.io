@@ -23,8 +23,8 @@ const proofPosts = [
     href: "https://campusloop.space/",
   },
   {
-    title: "Google Gemini CLI — Core Contributor",
-    text: "Merged PR into Google's official repository (#20778). Threaded AbortSignal propagation across multi-turn chat compression requests, eliminating memory leaks and cancellation race conditions.",
+    title: "Merged fix into Google's gemini-cli",
+    text: "Traced and fixed a cancellation bug in a 107k-star TypeScript codebase (#20405): the active turn's AbortSignal wasn't reaching chat compression, so Ctrl+C left in-flight LLM calls running on a detached controller. Threaded the signal through LocalAgentExecutor and GeminiClient into the compression service. Reviewed and merged by a Google maintainer.",
     tech: ["TypeScript", "Node.js", "Gemini API", "Open Source"],
     href: "https://github.com/google-gemini/gemini-cli/pull/20778",
   },
@@ -71,7 +71,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
                 Software Engineer · CS @ BIT Mesra · Open-Source Contributor
               </p>
               <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                500+ public repositories, 300+ merged PRs across the open-source ecosystem — including core contributions to <strong className="text-foreground font-semibold">Google&apos;s gemini-cli</strong>. Specializing in high-performance web systems, distributed tools, Model Context Protocol (MCP) infrastructure, and scalable AI agent architectures.
+                79 PRs merged into repos I don&apos;t own — including a merged fix into <strong className="text-foreground font-semibold">Google&apos;s gemini-cli</strong>. Specializing in high-performance web systems, distributed tools, Model Context Protocol (MCP) infrastructure, and scalable AI agent architectures.
               </p>
               <div className="flex flex-wrap items-center gap-3 mt-4">
                 <a
@@ -274,7 +274,7 @@ export function HomeClient({ DATA }: { DATA: any }) {
         <div className="mx-auto w-full max-w-2xl px-6">
           <h2 className="text-lg font-bold tracking-tight mb-3">About</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            I am a software engineer focused on building robust, scalable systems and developer tooling. With 500+ repositories and 300+ merged PRs across the global open-source ecosystem, I take pride in end-to-end craftsmanship — from low-level API design and fault-tolerant cloud backends to razor-sharp, accessible frontends. Currently building <strong className="text-foreground font-semibold">CampusLoop</strong> (the verified campus network for 1,350+ Indian colleges), architecting MCP server infrastructure, and contributing to open source.
+            I am a software engineer focused on building robust, scalable systems and developer tooling. With 79 external PRs merged into open-source repositories I don&apos;t own, I take pride in end-to-end craftsmanship — from low-level API design and fault-tolerant cloud backends to razor-sharp, accessible frontends. Currently building <strong className="text-foreground font-semibold">CampusLoop</strong> (the verified campus network for 1,350+ Indian colleges), architecting MCP server infrastructure, and contributing to open source.
           </p>
         </div>
       </section>
