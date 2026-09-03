@@ -68,6 +68,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: "https://sh20raj.github.io/projects/sopplayer",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: "https://sh20raj.github.io/building",
       lastModified: new Date(),
       changeFrequency: "monthly",

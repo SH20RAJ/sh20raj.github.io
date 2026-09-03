@@ -43,10 +43,16 @@ Expected Graduation: 2028
 * Engineered offline-tolerant cryptographic QR access verification, low-latency Redis caching layers, real-time leaderboard telemetry, and AI participant support bots.
 * Maintained 99.99% uptime with sub-50ms query response times during peak festival check-in surges.
 
-#### **30tools (SopKit) — Developer Tool Suite**
-*Next.js · TypeScript · Web APIs · Programmatic SEO* ([sopkit.github.io](https://sopkit.github.io))
-* Built 140+ client-side developer utilities engineered for zero-server data transfer and sub-millisecond browser execution.
-* Scaled to **4.3M+ requests**, **213K+ monthly active users**, and **500K+ search impressions** through programmatic SEO architecture and Core Web Vitals optimization.
+#### **SopKit (formerly 30tools) — Privacy-First WebAssembly Tool Suite**
+*Next.js · TypeScript · WebAssembly · Web APIs · Programmatic SEO* ([sopkit.github.io](https://sopkit.github.io))
+* Built 605+ zero-upload, client-side developer, image, and PDF utilities running in WebAssembly and browser V8 sandboxes.
+* Scaled to **4.3M+ requests**, **213K+ monthly active users**, and **500K+ search impressions** with $0 server compute bills.
+* Migrated to `sopkit.github.io` for permanent, sustainable open-source hosting.
+
+#### **SopPlayer — Open-Source HTML5 Video Player Library**
+*JavaScript · HTML5 Media API · jsDelivr CDN* ([github.com/sh20raj/sopplayer](https://github.com/sh20raj/sopplayer))
+* Engineered an ultra-lightweight (< 15KB), zero-dependency HTML5 media player with custom CSS skins and Picture-in-Picture support.
+* Scaled to **1.18M+ CDN requests** and **38GB+ bandwidth** served globally via jsDelivr.
 
 #### **IndexFast & MCP Pure — Agent & Indexing Infrastructure**
 *TypeScript · Cloudflare Workers · MCP Protocol · REST APIs* ([indexfast.co](https://indexfast.co))

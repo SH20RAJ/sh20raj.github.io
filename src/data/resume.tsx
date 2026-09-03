@@ -277,6 +277,34 @@ export const DATA = {
       video: "",
     },
     {
+      title: "SopPlayer",
+      href: "/projects/sopplayer",
+      dates: "2024 – Present",
+      active: true,
+      description:
+        "Ultra-lightweight (< 15KB), zero-dependency open-source HTML5 video player library. Scaled to 1.18M+ requests and 38GB+ CDN bandwidth on jsDelivr with customizable skins, scrub preview, and Picture-in-Picture support.",
+      technologies: ["JavaScript", "HTML5 Video", "Web APIs", "jsDelivr", "Open Source"],
+      links: [
+        {
+          type: "Case Study",
+          href: "/projects/sopplayer",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/sh20raj/sopplayer",
+          icon: "github",
+        },
+        {
+          type: "Proof",
+          href: "https://www.linkedin.com/posts/sh20raj_sopplayer-html5videoplayer-opensourcelove-activity-7279897143249715201-4gO6",
+          icon: "globe",
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "IndexFast",
       href: "https://indexfast.co",
       dates: "2025",
