@@ -147,26 +147,31 @@ export const DATA = {
   education: [] as Education[],
   projects: [
     {
-      title: "30tools",
-      href: "/projects/30tools",
+      title: "SopKit (formerly 30tools)",
+      href: "/projects/sopkit",
       dates: "2024 – Present",
       active: true,
       description:
-        "High-performance developer and creator utility platform engineered for sub-millisecond client-side execution. Scaled to 4.3M+ requests and 213K+ monthly active users via programmatic SEO architecture.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Web APIs", "Programmatic SEO"],
+        "Privacy-first suite of 605+ free online developer, image, PDF, and productivity tools running 100% client-side via WebAssembly. Scaled to 4.3M+ requests and 213K+ monthly active users with zero server compute bills. Switched from 30tools.com to sopkit.github.io for sustainable, permanent open-source hosting.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "WebAssembly", "Web APIs", "Programmatic SEO"],
       links: [
         {
           type: "Case Study",
-          href: "/projects/30tools",
+          href: "/projects/sopkit",
           icon: "globe",
         },
         {
           type: "Website",
-          href: "https://30tools.com",
+          href: "https://sopkit.github.io/",
           icon: "globe",
         },
+        {
+          type: "Source",
+          href: "https://github.com/SopKit/sopkit.github.io",
+          icon: "github",
+        },
       ],
-      image: "/projects/30tools-traffic.png",
+      image: "https://sopkit.github.io/og-image.jpg",
       video: "",
     },
     {
@@ -188,8 +193,59 @@ export const DATA = {
           href: "https://campusloop.space/",
           icon: "globe",
         },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/campusloop",
+          icon: "github",
+        },
       ],
       image: "https://campusloop.space/og-image.png",
+      video: "",
+    },
+    {
+      title: "Google Gemini CLI (PR #20778)",
+      href: "https://github.com/google-gemini/gemini-cli/pull/20778",
+      dates: "2025",
+      active: true,
+      description:
+        "Core contribution to Google's official gemini-cli. Fixed in-flight stream cancellation race conditions and memory leaks by threading AbortSignal through multi-turn chat compression pipelines. Reviewed and merged upstream by Google engineers.",
+      technologies: ["TypeScript", "Node.js", "Gemini API", "Open Source", "Streams"],
+      links: [
+        {
+          type: "Case Study",
+          href: "/projects/gemini-cli",
+          icon: "globe",
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/google-gemini/gemini-cli/pull/20778",
+          icon: "github",
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Bitotsav '26 Tech Platform",
+      href: "/projects/bitotsav-2026",
+      dates: "2026",
+      active: true,
+      description:
+        "Architected high-concurrency event infrastructure serving 5,000+ live participants. Built offline-resilient cryptographic QR access verification, low-latency Redis state caches, real-time leaderboard telemetry, and AI participant services.",
+      technologies: ["Next.js", "PostgreSQL", "Redis", "OpenAI", "Cloudflare", "QR Cryptography"],
+      links: [
+        {
+          type: "Case Study",
+          href: "/projects/bitotsav-2026",
+          icon: "globe",
+        },
+        {
+          type: "Proof",
+          href: "https://www.linkedin.com/posts/sh20raj_bitotsav-2026-what-a-journey-what-a-responsibility-activity-7442608760193216512-Y_nn",
+          icon: "globe",
+        },
+      ],
+      image: "",
       video: "",
     },
     {

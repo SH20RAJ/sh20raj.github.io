@@ -62,10 +62,10 @@ const startups = [
     link: "https://mcppure.shraj.workers.dev/",
   },
   {
-    name: "30tools",
+    name: "SopKit (formerly 30tools)",
     status: "Active",
-    description: "Suite of 140+ client-side developer and creator utilities processing millions of operations with zero server telemetry.",
-    link: "https://sopkit.github.io",
+    description: "Suite of 605+ privacy-first client-side utilities with 4.3M+ requests. Switched from 30tools.com to sopkit.github.io for permanent, sustainable open-source hosting.",
+    link: "https://sopkit.github.io/",
   },
 ];
 

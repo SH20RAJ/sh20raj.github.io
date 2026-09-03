@@ -40,12 +40,12 @@ export const proofItems: ProofItem[] = [
       "https://www.linkedin.com/posts/sh20raj_apf2025-yukti2025-aicte-activity-7396536427284447233-9KYM",
   },
   {
-    id: "30tools",
-    title: "30tools — Solo SEO/product growth",
+    id: "sopkit",
+    title: "SopKit (formerly 30tools) — 605+ Tools & SEO Growth",
     label: "SEO + product growth proof",
     description:
-      "Built and grew 30tools with solo SEO and product execution. Reported 4.3M+ requests in 30 days, 213,790 visits, 329,860 page views, 2,134 registered users, 55,800+ Bing clicks, 500,000+ impressions, and 45,000 active users.",
-    tech: ["Next.js", "TypeScript", "SEO", "Browser APIs", "Utility tools", "Analytics"],
+      "Built and scaled SopKit (formerly 30tools) to 605+ browser-based utilities with solo SEO and product execution. Reported 4.3M+ requests in 30 days, 213,790 visits, 329,860 page views, 55,800+ Bing clicks, 500,000+ impressions, and 45,000 active users. Switched to sopkit.github.io for sustainable open-source hosting.",
+    tech: ["Next.js", "TypeScript", "WebAssembly", "SEO", "Browser APIs", "Zero-Knowledge"],
     linkedinUrl:
       "https://www.linkedin.com/posts/sh20raj_indiedev-seo-growthhacking-activity-7392263918737498112-Adp_",
   },

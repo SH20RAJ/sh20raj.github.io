@@ -16,10 +16,10 @@ import {
 
 const proofPosts = [
   {
-    title: "30tools — Scaled to 4.3M+ Requests",
-    text: "High-performance developer utility platform engineered for sub-millisecond client-side execution. Scaled to 4.3M+ requests, 213K+ monthly active users, and 500K+ search impressions via programmatic SEO architecture.",
-    tech: ["Next.js", "TypeScript", "Web APIs", "Programmatic SEO"],
-    href: "/projects/30tools",
+    title: "SopKit (formerly 30tools) — 605+ Tools & 4.3M+ Requests",
+    text: "High-performance privacy-first utility platform with 605+ tools running 100% client-side via WebAssembly. Scaled to 4.3M+ requests and 213K+ MAU via programmatic SEO. Migrated to https://sopkit.github.io/ for permanent, sustainable open-source hosting.",
+    tech: ["Next.js", "TypeScript", "WebAssembly", "Programmatic SEO"],
+    href: "/projects/sopkit",
   },
   {
     title: "CampusLoop — Verified College Social Network",
