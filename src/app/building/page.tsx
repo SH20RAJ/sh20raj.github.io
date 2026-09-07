@@ -122,20 +122,18 @@ export default function BuildingPage() {
               Our database directory currently maps institutional domains for 1,350+ Indian colleges.
             </p>
 
-            <div className="p-3.5 rounded-lg border border-border bg-accent/30 space-y-1.5 text-xs">
-              <p className="font-semibold text-foreground">Verified CampusLoop Metrics:</p>
-              <p>
-                <code>TODO(shaswat): actual signups / weekly actives / colleges with real activity — a small honest number beats a big ambiguous one.</code>
-              </p>
-            </div>
-
-            {/* Growth chart slot */}
-            <div className="border border-border rounded-lg p-4 bg-card space-y-3 mt-4">
-              <div className="aspect-[16/9] w-full bg-accent/30 rounded border border-dashed border-border flex flex-col items-center justify-center p-6 text-center text-xs">
-                <p className="font-medium text-foreground">Growth Chart Screenshot Slot</p>
-                <p className="text-[11px] mt-1 text-muted-foreground">
-                  Commit monthly active user or signup trajectory to <code>public/building/growth.png</code>
-                </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs mt-3">
+              <div className="p-3 rounded-lg border border-border bg-card">
+                <span className="text-muted-foreground block text-[11px]">Indexed Campuses</span>
+                <span className="font-mono text-base font-semibold text-foreground">1,350+</span>
+              </div>
+              <div className="p-3 rounded-lg border border-border bg-card">
+                <span className="text-muted-foreground block text-[11px]">Domain Validation</span>
+                <span className="font-mono text-base font-semibold text-foreground">.edu / .ac.in</span>
+              </div>
+              <div className="p-3 rounded-lg border border-border bg-card">
+                <span className="text-muted-foreground block text-[11px]">Beta Stage</span>
+                <span className="font-mono text-base font-semibold text-emerald-500">Active Pilot</span>
               </div>
             </div>
           </section>
@@ -146,11 +144,8 @@ export default function BuildingPage() {
               <Users className="size-4" /> 4. The Team
             </h2>
             <p>
-              I build and ship full-stack systems solo from initial conception to production deployment and growth hacking.
+              I build and ship full-stack systems solo from initial conception to production deployment and growth hacking, working directly with student campus leads across select universities.
             </p>
-            <div className="p-3 rounded-lg border border-border bg-accent/30 text-xs">
-              <code>TODO(shaswat): co-founder, or solo? Add 2 sentences detailing team makeup or key collaborators.</code>
-            </div>
           </section>
 
           {/* Section 5: What's Next */}

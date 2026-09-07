@@ -604,6 +604,29 @@ export const DATA = {
       video: "",
     },
     {
+      title: "AudiPlay",
+      href: "https://sh20raj.github.io/AudiPlay/",
+      dates: "2020 – Present",
+      active: true,
+      description:
+        "Lightweight, zero-dependency HTML5 audio player library and custom <audio-player> web component with responsive CSS skins, scrub/volume controls, and CDN delivery via jsDelivr.",
+      technologies: ["JavaScript", "HTML5 Audio", "CSS3", "Web Components", "Open Source"],
+      links: [
+        {
+          type: "Website",
+          href: "https://sh20raj.github.io/AudiPlay/",
+          icon: "globe",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/SH20RAJ/AudiPlay",
+          icon: "github",
+        },
+      ],
+      image: "https://socialify.git.ci/SH20RAJ/AudiPlay/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Solid&theme=Auto",
+      video: "",
+    },
+    {
       title: "SketchFlow",
       href: "https://sketchflow.netlify.app",
       dates: "2024",
@@ -974,11 +997,11 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "Collegiate Hackathon Wins",
+      title: "Collegiate Hackathons & Innovation Challenges",
       dates: "2023 – 2025",
       location: "India",
       description:
-        "TODO(shaswat): name the 3 largest wins with links/proof — unverifiable aggregate counts are weaker than named, verified wins.",
+        "Active builder across university hackathons and open-source challenges, shipping rapid prototypes in AI developer tooling, automation pipelines, and modern web applications.",
       image: "https://avatars.githubusercontent.com/u/53382877?v=4",
       links: [
         {

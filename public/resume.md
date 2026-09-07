@@ -54,6 +54,11 @@ Expected Graduation: 2028
 * Engineered an ultra-lightweight (< 15KB), zero-dependency HTML5 media player with custom CSS skins and Picture-in-Picture support.
 * Scaled to **1.18M+ CDN requests** and **38GB+ bandwidth** served globally via jsDelivr.
 
+#### **AudiPlay — Lightweight Web Component & HTML5 Audio Player**
+*JavaScript · Web Components · HTML5 Audio API · jsDelivr CDN* ([github.com/SH20RAJ/AudiPlay](https://github.com/SH20RAJ/AudiPlay))
+* Engineered an embeddable, zero-dependency HTML5 audio player and custom `<audio-player>` web component with plug-and-play CSS skinning and audio scrub/volume controls.
+* Distributed globally via jsDelivr CDN for instant integration across web apps and blogs.
+
 #### **IndexFast & MCP Pure — Agent & Indexing Infrastructure**
 *TypeScript · Cloudflare Workers · MCP Protocol · REST APIs* ([indexfast.co](https://indexfast.co))
 * Engineered high-performance Model Context Protocol (MCP) servers on Cloudflare Workers edge runtime.
