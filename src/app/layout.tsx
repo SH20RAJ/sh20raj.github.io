@@ -117,7 +117,7 @@ export default function RootLayout({
       name: "Shaswat Raj",
       alternateName: "SH20RAJ",
       url: "https://sh20raj.github.io/",
-      image: "https://sh20raj.github.io/profile.jpg",
+      image: "https://avatars.githubusercontent.com/u/66713844",
       jobTitle: "Software Engineer & Open-Source Builder",
       description:
         "Software engineer. 79 external PRs merged into open-source repositories — including a fix in Google's gemini-cli. Builds full products: AI agents, dev tools, and web systems.",
