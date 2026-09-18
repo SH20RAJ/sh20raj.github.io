@@ -31,7 +31,7 @@ export const DATA = {
     "Software engineer and open-source builder.",
   summary:
     "I'm Shaswat Raj, a software engineer and open-source contributor. I build full products end-to-end: AI agents, dev tools, MCP servers, and large-scale web systems. My strength is taking a rough idea to a working system quickly — backend, frontend, deployment, and iteration.\n\n79 merged pull requests across open-source repositories I don't own (including a merged fix into Google's gemini-cli), and 50+ npm packages. I've shipped systems that handled real load at scale, from 5,000-participant cultural fests to million-request browser tool platforms.",
-  avatarUrl: "/profile.jpg",
+  avatarUrl: "https://avatars.githubusercontent.com/u/66713844",
   skills: [
     "UI/UX Design",
     "Landing Pages",
