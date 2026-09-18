@@ -90,7 +90,7 @@ export default async function Blog({
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/profile.jpg`,
+              : "https://avatars.githubusercontent.com/u/66713844",
             url: `${DATA.url}/blog/${post.slug}`,
             mainEntityOfPage: {
               "@type": "WebPage",
